@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nexawork.com/sitemap.xml
+Sitemap: https://kodvanta.com/sitemap.xml

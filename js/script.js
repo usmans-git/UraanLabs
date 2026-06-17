@@ -1,4 +1,5 @@
 const initSiteScripts = () => {
+  initServiceMenu();
   initServiceReveal();
   initWebBuildReveal();
   initCounters();
@@ -12,6 +13,51 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initSiteScripts);
 } else {
   initSiteScripts();
+}
+
+function initServiceMenu() {
+  const serviceMenu = document.querySelector(".service-mega");
+
+  if (!serviceMenu) return;
+
+  const parentLinks = serviceMenu.querySelectorAll(".mega-parent-link");
+
+  parentLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const group = link.closest(".mega-service-group");
+
+      if (!group) return;
+
+      event.preventDefault();
+
+      parentLinks.forEach((item) => {
+        const itemGroup = item.closest(".mega-service-group");
+
+        if (itemGroup && itemGroup !== group) {
+          itemGroup.classList.remove("is-open");
+          item.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      const isOpen = group.classList.toggle("is-open");
+      link.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    link.setAttribute("aria-expanded", "false");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (serviceMenu.contains(event.target)) return;
+
+    parentLinks.forEach((link) => {
+      const group = link.closest(".mega-service-group");
+
+      if (group) {
+        group.classList.remove("is-open");
+        link.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
 }
 
 function initServiceReveal() {

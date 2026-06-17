@@ -1,0 +1,33 @@
+<svg width="520" height="150" viewBox="0 0 520 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Kodvanta Logo</title>
+  <desc id="desc">Kodvanta wordmark with a stylized K, forward arrows, deep indigo and electric blue gradients.</desc>
+  <defs>
+    <linearGradient id="markGradient" x1="33" y1="120" x2="150" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050B35"/>
+      <stop offset="0.55" stop-color="#1028B6"/>
+      <stop offset="1" stop-color="#2F80FF"/>
+    </linearGradient>
+    <linearGradient id="arrowGradient" x1="98" y1="75" x2="164" y2="75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5F2FF"/>
+      <stop offset="0.22" stop-color="#2F80FF"/>
+      <stop offset="1" stop-color="#5B2EFF"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="122" y1="54" x2="170" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5B2EFF"/>
+      <stop offset="1" stop-color="#2F80FF"/>
+    </linearGradient>
+    <filter id="softGlow" x="0" y="0" width="190" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#2F80FF" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softGlow)">
+    <path d="M120.25 37.75C109.25 27.25 94.45 20.8 78.15 20.8C44.15 20.8 16.6 48.35 16.6 82.35C16.6 116.35 44.15 143.9 78.15 143.9C94.8 143.9 109.9 137.3 120.95 126.55" stroke="url(#markGradient)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M117.4 29.65H149.6L100.3 75.1L149.6 120.5H117.4L71.35 79.75C68.35 77.1 68.35 72.45 71.35 69.8L117.4 29.65Z" fill="url(#markGradient)"/>
+    <path d="M117.15 57.35L152.55 75.05L117.15 92.8L128.85 75.05L117.15 57.35Z" fill="url(#accentGradient)"/>
+    <path d="M82.5 75H148.6" stroke="url(#arrowGradient)" stroke-width="13" stroke-linecap="square"/>
+    <path d="M139.4 52.65L169.2 75.05L139.4 97.4L150.75 75.05L139.4 52.65Z" fill="#2F80FF"/>
+  </g>
+
+  <text x="198" y="94" font-family="Sora, Inter, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-1" fill="#061451">Kodvanta</text>
+</svg>
