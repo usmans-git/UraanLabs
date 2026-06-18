@@ -1,5 +1,6 @@
 const initSiteScripts = () => {
   initServiceMenu();
+  initIndustryReveal();
   initServiceReveal();
   initWebBuildReveal();
   initCounters();
@@ -16,47 +17,129 @@ if (document.readyState === "loading") {
 }
 
 function initServiceMenu() {
-  const serviceMenu = document.querySelector(".service-mega");
+  const serviceMenus = document.querySelectorAll(".service-mega");
 
-  if (!serviceMenu) return;
+  if (!serviceMenus.length) return;
 
-  const parentLinks = serviceMenu.querySelectorAll(".mega-parent-link");
+  serviceMenus.forEach((serviceMenu) => {
+    const navItem = serviceMenu.closest(".has-mega");
+    const menuToggle = navItem ? navItem.querySelector(".services-menu-toggle") : null;
+    const groups = Array.from(serviceMenu.querySelectorAll(".mega-service-group"));
+    let closeTimer;
 
-  parentLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const group = link.closest(".mega-service-group");
+    if (!navItem || !menuToggle) return;
 
-      if (!group) return;
+    const openMenu = () => {
+      window.clearTimeout(closeTimer);
+      navItem.classList.add("is-services-open");
+    };
 
-      event.preventDefault();
+    const isMenuOpen = () => navItem.classList.contains("is-services-open");
 
-      parentLinks.forEach((item) => {
-        const itemGroup = item.closest(".mega-service-group");
+    const closeMenu = () => {
+      closeTimer = window.setTimeout(() => {
+        navItem.classList.remove("is-services-open");
+      }, 140);
+    };
 
-        if (itemGroup && itemGroup !== group) {
-          itemGroup.classList.remove("is-open");
-          item.setAttribute("aria-expanded", "false");
+    const openGroup = (targetGroup) => {
+      groups.forEach((group) => {
+        const link = group.querySelector(".mega-parent-link");
+        const isActive = group === targetGroup;
+
+        group.classList.toggle("is-open", isActive);
+
+        if (link) {
+          link.setAttribute("aria-expanded", String(isActive));
+        }
+      });
+    };
+
+    groups.forEach((group, index) => {
+      const link = group.querySelector(".mega-parent-link");
+
+      if (!link) return;
+
+      link.setAttribute("aria-expanded", group.classList.contains("is-open") ? "true" : "false");
+
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (isMenuOpen()) {
+          openGroup(group);
         }
       });
 
-      const isOpen = group.classList.toggle("is-open");
-      link.setAttribute("aria-expanded", String(isOpen));
-    });
+      link.addEventListener("mouseenter", () => {
+        if (isMenuOpen()) {
+          openGroup(group);
+        }
+      });
 
-    link.setAttribute("aria-expanded", "false");
-  });
+      link.addEventListener("focus", () => {
+        if (isMenuOpen()) {
+          openGroup(group);
+        }
+      });
 
-  document.addEventListener("click", (event) => {
-    if (serviceMenu.contains(event.target)) return;
-
-    parentLinks.forEach((link) => {
-      const group = link.closest(".mega-service-group");
-
-      if (group) {
-        group.classList.remove("is-open");
-        link.setAttribute("aria-expanded", "false");
+      if (index === 0 && !groups.some((item) => item.classList.contains("is-open"))) {
+        openGroup(group);
       }
     });
+
+    menuToggle.addEventListener("mouseenter", openMenu);
+    menuToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+    });
+
+    navItem.addEventListener("mouseleave", closeMenu);
+    serviceMenu.addEventListener("mouseenter", () => {
+      window.clearTimeout(closeTimer);
+    });
+    serviceMenu.addEventListener("mouseleave", () => {
+      if (groups[0]) {
+        openGroup(groups[0]);
+      }
+
+      closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        navItem.classList.remove("is-services-open");
+        menuToggle.blur();
+      }
+    });
+  });
+}
+
+function initIndustryReveal() {
+  const revealItems = document.querySelectorAll(".industry-reveal");
+
+  if (!revealItems.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("reveal-in"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.16,
+      rootMargin: "0px 0px -40px"
+    }
+  );
+
+  revealItems.forEach((item, index) => {
+    item.style.transitionDelay = `${Math.min(index % 6, 5) * 0.06}s`;
+    observer.observe(item);
   });
 }
 
