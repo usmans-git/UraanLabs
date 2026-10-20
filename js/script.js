@@ -6,6 +6,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   initMobileDrawer();
   initStickyHeader();
+  initMegaMenuTabs();
+  initDesktopDropdowns();
   initSmoothScrollAndSpy();
   initAccordion();
   initLeadForm();
@@ -13,14 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==========================================================================
-   01. Mobile Navigation Drawer
+   01. Mobile Navigation Drawer & Accordions
    ========================================================================== */
 function initMobileDrawer() {
   const toggleBtn = document.getElementById("mobileToggle");
   const closeBtn = document.getElementById("mobileClose");
   const drawer = document.getElementById("mobileDrawer");
   const backdrop = document.getElementById("drawerBackdrop");
-  const navLinks = document.querySelectorAll(".mobile-nav-link");
+  const closeLinks = drawer ? drawer.querySelectorAll(".mobile-nav-link, .mobile-sublink, .mobile-drawer-footer a") : [];
 
   if (!toggleBtn || !drawer || !backdrop) return;
 
@@ -44,8 +46,19 @@ function initMobileDrawer() {
   if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
   backdrop.addEventListener("click", closeDrawer);
 
-  navLinks.forEach((link) => {
+  closeLinks.forEach((link) => {
     link.addEventListener("click", closeDrawer);
+  });
+
+  // Mobile Accordion items inside drawer
+  const accItems = drawer.querySelectorAll(".mobile-acc-item");
+  accItems.forEach((item) => {
+    const toggle = item.querySelector(".mobile-acc-toggle");
+    if (!toggle) return;
+
+    toggle.addEventListener("click", () => {
+      item.classList.toggle("is-open");
+    });
   });
 
   document.addEventListener("keydown", (e) => {
@@ -78,22 +91,194 @@ function initStickyHeader() {
 }
 
 /* ==========================================================================
-   03. Smooth Scroll & Active Nav Spy
+   03. Desktop Mega Menu Tab Switcher (5 Pillars)
+   ========================================================================== */
+function initMegaMenuTabs() {
+  const tabs = document.querySelectorAll(".mega-tab");
+  const panels = document.querySelectorAll(".mega-panel");
+  if (!tabs.length || !panels.length) return;
+
+  const activateTab = (tab) => {
+    const targetId = tab.getAttribute("data-target");
+    if (!targetId) return;
+
+    tabs.forEach((t) => {
+      t.classList.remove("active");
+      t.setAttribute("aria-selected", "false");
+    });
+    panels.forEach((p) => {
+      p.classList.remove("active");
+    });
+
+    tab.classList.add("active");
+    tab.setAttribute("aria-selected", "true");
+
+    const targetPanel = document.getElementById(targetId);
+    if (targetPanel) {
+      targetPanel.classList.add("active");
+    }
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("mouseenter", () => activateTab(tab));
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+      activateTab(tab);
+    });
+  });
+}
+
+/* ==========================================================================
+   04. Desktop Dropdowns (Keyboard & Click Fallback)
+   ========================================================================== */
+function initDesktopDropdowns() {
+  const dropdownItems = document.querySelectorAll(".nav-item.has-dropdown");
+
+  dropdownItems.forEach((item) => {
+    const toggleBtn = item.querySelector(".dropdown-toggle");
+    if (!toggleBtn) return;
+
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const wasOpen = item.classList.contains("is-open");
+
+      // Close all other dropdowns
+      dropdownItems.forEach((other) => {
+        if (other !== item) {
+          other.classList.remove("is-open");
+          const otherToggle = other.querySelector(".dropdown-toggle");
+          if (otherToggle) otherToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      if (wasOpen) {
+        item.classList.remove("is-open");
+        toggleBtn.setAttribute("aria-expanded", "false");
+      } else {
+        item.classList.add("is-open");
+        toggleBtn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  // Close dropdowns on outside click or Escape
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".has-dropdown")) {
+      dropdownItems.forEach((item) => {
+        item.classList.remove("is-open");
+        const toggle = item.querySelector(".dropdown-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      dropdownItems.forEach((item) => {
+        item.classList.remove("is-open");
+        const toggle = item.querySelector(".dropdown-toggle");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
+      });
+    }
+  });
+}
+
+/* ==========================================================================
+   05. Smooth Scroll & Deep-Linking to Contact Form
    ========================================================================== */
 function initSmoothScrollAndSpy() {
   const navLinks = document.querySelectorAll(".site-header .nav-link");
   const sections = document.querySelectorAll("section[id], header[id]");
 
-  // Smooth scroll offset calculation
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      const targetId = this.getAttribute("href");
-      if (targetId === "#") return;
+  // Pillar mapping for child services
+  const servicePillarMap = {
+    // Design & Branding
+    "design": "1. Design & Branding",
+    "logo-design": "1. Design & Branding",
+    "brand-identity": "1. Design & Branding",
+    "print-stationery": "1. Design & Branding",
+    "ui-ux-design": "1. Design & Branding",
+    "product-prototyping": "1. Design & Branding",
+    "social-creatives": "1. Design & Branding",
+    // Web & Mobile Apps
+    "app-dev": "2. Web & Mobile Apps",
+    "business-websites": "2. Web & Mobile Apps",
+    "custom-web-apps": "2. Web & Mobile Apps",
+    "mobile-apps": "2. Web & Mobile Apps",
+    "pwa": "2. Web & Mobile Apps",
+    "api-integrations": "2. Web & Mobile Apps",
+    "maintenance": "2. Web & Mobile Apps",
+    // Business Platforms
+    "platforms": "3. Business Platforms",
+    "ecommerce": "3. Business Platforms",
+    "lms": "3. Business Platforms",
+    "custom-erp": "3. Business Platforms",
+    "custom-crm": "3. Business Platforms",
+    "marketplaces": "3. Business Platforms",
+    "saas-dev": "3. Business Platforms",
+    // AI & Automation
+    "ai-automation": "4. AI & Automation",
+    "workflow-automation": "4. AI & Automation",
+    "ai-chatbots": "4. AI & Automation",
+    "autonomous-agents": "4. AI & Automation",
+    "voice-assistants": "4. AI & Automation",
+    "custom-llm": "4. AI & Automation",
+    "predictive-ai": "4. AI & Automation",
+    "nlp-ai": "4. AI & Automation",
+    "vision-document-ai": "4. AI & Automation",
+    // Cybersecurity
+    "cybersecurity": "5. Cybersecurity",
+    "vapt": "5. Cybersecurity",
+    "code-review": "5. Cybersecurity",
+    "web-app-security": "5. Cybersecurity",
+    "cloud-security": "5. Cybersecurity",
+    "network-audits": "5. Cybersecurity",
+    "api-security": "5. Cybersecurity",
+    "devsecops": "5. Cybersecurity",
+    "compliance": "5. Cybersecurity"
+  };
 
-      const targetEl = document.querySelector(targetId);
+  // Smooth scroll offset calculation & auto-select service
+  document.querySelectorAll('a[href*="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const rawHref = this.getAttribute("href");
+      if (!rawHref) return;
+
+      const hashIndex = rawHref.indexOf("#");
+      if (hashIndex === -1) return;
+
+      const hashPart = rawHref.substring(hashIndex);
+      const [anchorId, queryPart] = hashPart.split("?");
+
+      if (!anchorId || anchorId === "#") return;
+
+      const targetEl = document.querySelector(anchorId);
       if (targetEl) {
         e.preventDefault();
-        const headerHeight = 90;
+
+        // Close any open desktop dropdowns
+        document.querySelectorAll(".nav-item.has-dropdown.is-open").forEach((item) => {
+          item.classList.remove("is-open");
+        });
+
+        // Pre-select service in lead form if passed
+        if (queryPart && anchorId === "#contact") {
+          const params = new URLSearchParams(queryPart);
+          const serviceParam = params.get("service");
+          const intentParam = params.get("intent");
+          const serviceSelect = document.getElementById("service");
+          const messageInput = document.getElementById("message");
+
+          if (serviceSelect && serviceParam && servicePillarMap[serviceParam]) {
+            serviceSelect.value = servicePillarMap[serviceParam];
+          }
+
+          if (intentParam === "careers" && messageInput) {
+            messageInput.placeholder = "Tell us about your background, GitHub/portfolio links, and what you would like to build with UraanLabs...";
+          }
+        }
+
+        const headerHeight = 85;
         const elementPosition = targetEl.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
@@ -119,7 +304,8 @@ function initSmoothScrollAndSpy() {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute("id");
         navLinks.forEach((link) => {
-          if (link.getAttribute("href") === `#${id}`) {
+          const href = link.getAttribute("href");
+          if (href === `#${id}`) {
             link.classList.add("active");
           } else {
             link.classList.remove("active");
@@ -133,7 +319,7 @@ function initSmoothScrollAndSpy() {
 }
 
 /* ==========================================================================
-   04. Interactive FAQ Accordion
+   06. Interactive FAQ Accordion
    ========================================================================== */
 function initAccordion() {
   const accordion = document.getElementById("faqAccordion");
@@ -170,7 +356,7 @@ function initAccordion() {
 }
 
 /* ==========================================================================
-   05. Project Inquiry Lead Form with Math Captcha
+   07. Project Inquiry Lead Form with Math Captcha
    ========================================================================== */
 function initLeadForm() {
   const form = document.getElementById("leadForm");
@@ -299,7 +485,7 @@ function initLeadForm() {
 }
 
 /* ==========================================================================
-   06. Live Telemetry Simulator (Hero Dashboard)
+   08. Live Telemetry Simulator (Hero Dashboard)
    ========================================================================== */
 function initLiveTelemetrySimulator() {
   const sparklineSpans = document.querySelectorAll(".metric-sparkline span");
