@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
   <url>
     <loc>https://uraanlabs.com/</loc>
     <lastmod>2026-10-21</lastmod>
@@ -18,6 +19,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Service Pillars -->
   <url>
     <loc>https://uraanlabs.com/services/design-branding.html</loc>
     <lastmod>2026-10-21</lastmod>
@@ -48,6 +51,34 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- High-Demand Regional Hubs -->
+  <url>
+    <loc>https://uraanlabs.com/locations/dubai-uae.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://uraanlabs.com/locations/riyadh-saudi-arabia.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://uraanlabs.com/locations/usa.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://uraanlabs.com/locations/uk.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Industries & Insights -->
   <url>
     <loc>https://uraanlabs.com/industries.html</loc>
     <lastmod>2026-10-21</lastmod>

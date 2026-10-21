@@ -1512,6 +1512,11 @@ body.dark-canvas {
   gap: 24px;
 }
 
+.hubs-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
 .bento-card {
   background: var(--surface-card);
   border: 1px solid var(--border-subtle);
@@ -2534,8 +2539,8 @@ body.dark-canvas {
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
+  gap: 36px;
   margin-bottom: 60px;
 }
 
@@ -2626,7 +2631,8 @@ body.dark-canvas {
   .stat-item:nth-child(2) {
     border-right: none;
   }
-  .bento-grid {
+  .bento-grid,
+  .hubs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .bento-span-2 {
@@ -2688,7 +2694,8 @@ body.dark-canvas {
   .section {
     padding: 70px 0;
   }
-  .bento-grid {
+  .bento-grid,
+  .hubs-grid {
     grid-template-columns: 1fr;
   }
   .bento-span-2 {
