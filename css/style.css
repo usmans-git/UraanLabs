@@ -342,9 +342,24 @@ body.dark-canvas {
 }
 
 .brand-logo-img {
-  width: 155px;
+  width: 200px;
+  max-width: 100%;
   height: auto;
   display: block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.site-header .brand-logo-img {
+  width: 200px;
+}
+
+.site-footer .brand-logo-img {
+  width: 230px;
+}
+
+.mobile-drawer-header .brand-logo-img,
+.mobile-drawer-header img {
+  width: 175px;
 }
 
 .nav-links {
@@ -2305,6 +2320,126 @@ body.dark-canvas {
   box-shadow: var(--card-highlight), 0 25px 70px rgba(0, 0, 0, 0.6);
 }
 
+/* Compact Homepage Form Styling */
+.contact-section.compact-section {
+  padding: 50px 0 70px;
+}
+
+.compact-form-wrapper {
+  max-width: 1040px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1.3fr;
+}
+
+.compact-form-wrapper .contact-info-col {
+  padding: 36px 32px;
+}
+
+.compact-form-wrapper .contact-title {
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+  margin-bottom: 10px;
+}
+
+.compact-form-wrapper .contact-lead {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.compact-form-wrapper .contact-details-list {
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.compact-form-wrapper .contact-icon {
+  padding: 6px;
+  font-size: 0.95rem;
+}
+
+.compact-form-wrapper .detail-label {
+  font-size: 0.68rem;
+}
+
+.compact-form-wrapper .detail-val {
+  font-size: 0.88rem;
+}
+
+.compact-form-wrapper .trust-mini-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+}
+
+.compact-form-wrapper .trust-mini strong {
+  font-size: 0.8rem;
+}
+
+.compact-form-wrapper .trust-mini small {
+  font-size: 0.72rem;
+}
+
+.compact-form-wrapper .contact-form-col {
+  padding: 36px 36px;
+}
+
+.compact-form-wrapper .form-title {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.compact-form-wrapper .form-subtitle {
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.compact-form-wrapper .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.compact-form-wrapper .form-group {
+  margin-bottom: 12px;
+}
+
+.compact-form-wrapper .form-group label {
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.compact-form-wrapper .form-group input,
+.compact-form-wrapper .form-group select,
+.compact-form-wrapper .form-group textarea {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.compact-form-wrapper .form-group textarea {
+  min-height: 60px;
+}
+
+.compact-form-wrapper .captcha-group {
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.compact-form-wrapper .btn-refresh {
+  padding: 0 10px;
+}
+
+.compact-form-wrapper .field-error {
+  font-size: 0.68rem;
+  min-height: 14px;
+  margin-top: 2px;
+}
+
+.compact-form-wrapper #submitBtn {
+  padding: 11px 20px;
+  font-size: 0.9rem;
+}
+
 .contact-info-col {
   padding: 50px 44px;
   background: linear-gradient(180deg, rgba(22, 28, 60, 0.95) 0%, rgba(14, 18, 40, 0.95) 100%);
@@ -2691,6 +2826,12 @@ body.dark-canvas {
 }
 
 @media (max-width: 640px) {
+  .site-header .brand-logo-img {
+    width: 170px;
+  }
+  .site-footer .brand-logo-img {
+    width: 195px;
+  }
   .section {
     padding: 70px 0;
   }
