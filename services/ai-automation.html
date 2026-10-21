@@ -307,7 +307,7 @@
   <main>
 
     <!-- 02. HERO SECTION -->
-    <section class="hero-section" style="padding-top: 150px; padding-bottom: 70px;">
+    <section class="hero-section inner-hero">
       <div class="container">
         <div class="hero-content">
           <div class="section-eyebrow">
@@ -679,8 +679,10 @@
               <span>How long does it take to deploy a live AI workflow to production?</span>
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
-            <div class="accordion-body">
-              <p>A focused single-process pipeline (such as invoice parsing or customer ticket triage) is deployed to production staging within 2 to 4 weeks. Multi-system enterprise deployments connecting to legacy ERPs take 4 to 8 weeks, structured into weekly demo sprints.</p>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>A focused single-process pipeline (such as invoice parsing or customer ticket triage) is deployed to production staging within 2 to 4 weeks. Multi-system enterprise deployments connecting to legacy ERPs take 4 to 8 weeks, structured into weekly demo sprints.</p>
+              </div>
             </div>
           </div>
 
@@ -689,8 +691,10 @@
               <span>What is your pricing and engagement model?</span>
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
-            <div class="accordion-body">
-              <p>We work exclusively on a fixed-scope milestone model. Following our technical discovery call, you receive a scoped architecture proposal with exact deliverables, timeline dates, and a fixed cost. You never encounter open-ended hourly billing or surprise invoices.</p>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>We work exclusively on a fixed-scope milestone model. Following our technical discovery call, you receive a scoped architecture proposal with exact deliverables, timeline dates, and a fixed cost. You never encounter open-ended hourly billing or surprise invoices.</p>
+              </div>
             </div>
           </div>
 
@@ -699,8 +703,10 @@
               <span>Who owns the intellectual property and code?</span>
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
-            <div class="accordion-body">
-              <p>You own 100% of the code, schemas, and configurations from day one. Upon final milestone settlement, all Git repositories, infrastructure containers, and documentation are formally assigned to your company. We retain zero proprietary claims and charge no recurring licensing fees.</p>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>You own 100% of the code, schemas, and configurations from day one. Upon final milestone settlement, all Git repositories, infrastructure containers, and documentation are formally assigned to your company. We retain zero proprietary claims and charge no recurring licensing fees.</p>
+              </div>
             </div>
           </div>
 
@@ -709,8 +715,10 @@
               <span>What happens if an external API changes or goes down?</span>
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
-            <div class="accordion-body">
-              <p>We build for failure states. Every workflow includes persistent message queues, idempotency keys (preventing duplicate actions), and automated retry logic. If an external API fails, the payload safely buffers in a Dead Letter Queue (DLQ) and alerts your team via Slack or PagerDuty.</p>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>We build for failure states. Every workflow includes persistent message queues, idempotency keys (preventing duplicate actions), and automated retry logic. If an external API fails, the payload safely buffers in a Dead Letter Queue (DLQ) and alerts your team via Slack or PagerDuty.</p>
+              </div>
             </div>
           </div>
 
@@ -719,8 +727,10 @@
               <span>Will our company data train public third-party AI models?</span>
               <span class="accordion-icon" aria-hidden="true">+</span>
             </button>
-            <div class="accordion-body">
-              <p>Never. We enforce binding Zero Data Retention (ZDR) agreements with enterprise model providers. For regulated industries (FinTech, Healthcare), we deploy self-hosted open-source models inside your own isolated VPC, ensuring zero proprietary records ever leave your perimeter.</p>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>Never. We enforce binding Zero Data Retention (ZDR) agreements with enterprise model providers. For regulated industries (FinTech, Healthcare), we deploy self-hosted open-source models inside your own isolated VPC, ensuring zero proprietary records ever leave your perimeter.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -728,7 +738,7 @@
     </section>
 
     <!-- 10. CLOSING CTA -->
-    <section class="section text-center" style="padding-bottom: 120px;">
+    <section class="section text-center cta-closing-section">
       <div class="container max-w-4xl">
         <div class="section-eyebrow">
           <span class="eyebrow-dot"></span>
