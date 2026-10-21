@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights &amp; Engineering Research | UraanLabs Studio</title>
+  <meta name="description" content="Technical blueprints, AI agent architectures, cybersecurity checklists, and enterprise software engineering research from the UraanLabs technical desk.">
+  <meta name="keywords" content="Software engineering insights, AI agent architecture, RAG systems guide, penetration testing checklist, cloud security blueprint">
+  <link rel="canonical" href="https://uraanlabs.com/insights.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uraanlabs.com/insights.html">
+  <meta property="og:title" content="Insights &amp; Engineering Research | UraanLabs Studio">
+  <meta property="og:description" content="Technical blueprints, AI agent architectures, and zero-trust security research.">
+  <meta property="og:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <link rel="icon" type="image/svg+xml" href="images/uraanlabs-mark.svg">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="dark-canvas">
+  <div class="ambient-glow orb-top-left"></div>
+  <div class="ambient-glow orb-top-right"></div>
+  <div class="ambient-glow orb-center"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="logo"><img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160" height="35"></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="about.html" class="nav-link dropdown-toggle"><span>About Us</span><span class="chevron">&#9662;</span></a>
+            <div class="dropdown-menu dropdown-simple">
+              <a href="about.html#story" class="dropdown-item"><span class="dropdown-title">Our Story</span><small class="dropdown-desc">Why UraanLabs was built.</small></a>
+              <a href="about.html#why-uraanlabs" class="dropdown-item"><span class="dropdown-title">Why UraanLabs</span><small class="dropdown-desc">4 core engineering differentiators.</small></a>
+              <a href="careers.html" class="dropdown-item"><span class="dropdown-title">Careers</span><small class="dropdown-desc">Join our senior team.</small></a>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown has-mega">
+            <a href="services.html" class="nav-link dropdown-toggle"><span>Services</span><span class="chevron">&#9662;</span></a>
+            <div class="mega-menu" id="servicesMegaMenu">
+              <div class="mega-inner">
+                <div class="mega-tabs">
+                  <a href="services/design-branding.html" class="mega-tab"><span class="tab-icon">&#10024;</span><div class="tab-text"><strong>1. Design &amp; Branding</strong><small>6 Core Services</small></div></a>
+                  <a href="services/web-mobile-apps.html" class="mega-tab"><span class="tab-icon">&#128187;</span><div class="tab-text"><strong>2. Web &amp; Mobile Apps</strong><small>6 Core Services</small></div></a>
+                  <a href="services/business-platforms.html" class="mega-tab"><span class="tab-icon">&#128200;</span><div class="tab-text"><strong>3. Business Platforms</strong><small>6 Core Services</small></div></a>
+                  <a href="services/ai-automation.html" class="mega-tab"><span class="tab-icon">&#9889;</span><div class="tab-text"><strong>4. AI &amp; Automation</strong><small>8 Core Services</small></div></a>
+                  <a href="services/cybersecurity.html" class="mega-tab"><span class="tab-icon">&#128737;</span><div class="tab-text"><strong>5. Cybersecurity</strong><small>8 Core Services</small></div></a>
+                </div>
+                <div class="mega-panels">
+                  <div class="mega-panel active">
+                    <div class="panel-header">
+                      <div><span class="panel-badge">SERVICES OVERVIEW</span><h4>The 5 UraanLabs Engineering Pillars</h4><p>Select any pillar to review tangible deliverables and architecture blueprints.</p></div>
+                      <a href="services.html" class="panel-cta">Browse All 34 Services &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="industries.html" class="nav-link dropdown-toggle"><span>Industries</span><span class="chevron">&#9662;</span></a>
+            <div class="dropdown-menu dropdown-simple dropdown-industries">
+              <a href="industries.html#retail" class="dropdown-item"><span class="dropdown-title">Retail &amp; E-Commerce</span><small class="dropdown-desc">Headless stores &amp; automated checkout.</small></a>
+              <a href="industries.html#edtech" class="dropdown-item"><span class="dropdown-title">Education (EdTech)</span><small class="dropdown-desc">Interactive LMS &amp; student tracking.</small></a>
+              <a href="industries.html#fintech" class="dropdown-item"><span class="dropdown-title">Finance (FinTech)</span><small class="dropdown-desc">Zero-trust architecture &amp; ledger sync.</small></a>
+              <a href="industries.html#healthcare" class="dropdown-item"><span class="dropdown-title">Healthcare</span><small class="dropdown-desc">Encrypted patient portals &amp; reminders.</small></a>
+              <a href="industries.html#realestate" class="dropdown-item"><span class="dropdown-title">Real Estate</span><small class="dropdown-desc">Property showcase &amp; instant AI triage.</small></a>
+              <a href="industries.html#logistics" class="dropdown-item"><span class="dropdown-title">Logistics &amp; Supply Chain</span><small class="dropdown-desc">Fleet tracking backends &amp; automated BOLs.</small></a>
+              <a href="industries.html#saas" class="dropdown-item"><span class="dropdown-title">Startups &amp; SaaS</span><small class="dropdown-desc">Fixed-scope 4-week MVP development.</small></a>
+            </div>
+          </li>
+          <li><a href="insights.html" class="nav-link active">Insights</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-shimmer nav-cta"><span>Book a Call</span><span class="btn-arrow">&rarr;</span></a>
+          <button class="mobile-toggle" id="mobileToggle" type="button"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="140">
+      <button class="mobile-close" id="mobileClose" type="button">&times;</button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Services Hub</a></li>
+        <li><a href="industries.html" class="mobile-nav-link">Industries</a></li>
+        <li><a href="insights.html" class="mobile-nav-link active">Insights</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section" style="padding-top: 150px; padding-bottom: 70px;">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-eyebrow"><span class="eyebrow-dot"></span><span>THE TECHNICAL DISPATCH</span></div>
+          <h1 class="hero-title" style="margin-bottom: 20px;">
+            Engineering Blueprints, Architecture Analysis &amp; <span class="gradient-text">Security Research.</span>
+          </h1>
+          <p class="hero-subtitle" style="max-width: 780px;">
+            In-depth technical guides written by senior systems architects, AI engineers, and security researchers. Concrete schemas, real-world trade-offs, and practical code—zero marketing fluff.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTICLE -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="card" style="padding: 44px; position: relative; border-color: rgba(56, 189, 248, 0.35);">
+          <div class="card-glow" aria-hidden="true"></div>
+          <span class="panel-badge" style="background: rgba(56, 189, 248, 0.15); color: #BAE6FD;">FEATURED RESEARCH // AI &amp; SYSTEMS ARCHITECTURE</span>
+          <h2 style="font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: #FFFFFF; margin: 14px 0 16px; line-height: 1.25;">
+            Building Deterministic AI Agents: Why RAG + JSON Schemas Beat Raw Prompt Engineering in Production
+          </h2>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; max-width: 820px; margin-bottom: 24px;">
+            Most enterprise AI pilots fail because engineers treat LLMs like magical conversationalists rather than stochastic probability engines. In this architecture breakdown, we explain how we ground multi-agent systems with vector knowledge indexing, strict JSON Schema payload enforcement, and deterministic state machines to eliminate hallucination risks completely.
+          </p>
+          <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--cyan-sonic);">12 MIN READ &bull; ARCHITECTURE DISPATCH</span>
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">BY URAANLABS AI DESK</span>
+            <a href="services/ai-automation.html" class="btn btn-shimmer" style="margin-left: auto;"><span>Explore AI Pillar</span><span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLES GRID -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">CYBERSECURITY</span>
+            <h3 style="font-size: 1.25rem; color: #FFFFFF; margin: 12px 0 10px; line-height: 1.35;">
+              The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+              A step-by-step audit guide covering broken authorization (BOLA), S3 bucket configurations, and dependency supply-chain vulnerabilities that trigger investor red flags.
+            </p>
+            <a href="services/cybersecurity.html" style="color: var(--cyan-sonic); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read Technical Guide &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">WEB PLATFORMS</span>
+            <h3 style="font-size: 1.25rem; color: #FFFFFF; margin: 12px 0 10px; line-height: 1.35;">
+              Migrating from Monolithic ERPs to Modular Microservices Without Downtime
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+              How to implement the Strangler Fig pattern with event-driven webhooks to replace brittle legacy software incrementally with modern custom platforms.
+            </p>
+            <a href="services/business-platforms.html" style="color: var(--cyan-sonic); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read Technical Guide &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">PRODUCT DESIGN</span>
+            <h3 style="font-size: 1.25rem; color: #FFFFFF; margin: 12px 0 10px; line-height: 1.35;">
+              From Figma to React: Structuring Design Tokens to Eliminate Frontend Friction
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+              Why mathematical 8pt spacing and CSS variable mapping allow developers to build pixel-perfect user interfaces 40% faster.
+            </p>
+            <a href="services/design-branding.html" style="color: var(--cyan-sonic); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read Technical Guide &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">FINTECH ENGINEERING</span>
+            <h3 style="font-size: 1.25rem; color: #FFFFFF; margin: 12px 0 10px; line-height: 1.35;">
+              Designing Immutable Double-Entry Ledger Systems in PostgreSQL
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+              Database constraints, transaction isolation levels, and append-only patterns to ensure financial records can never be corrupted or modified without audit traces.
+            </p>
+            <a href="industries.html#fintech" style="color: var(--cyan-sonic); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read Technical Guide &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">MOBILE ARCHITECTURE</span>
+            <h3 style="font-size: 1.25rem; color: #FFFFFF; margin: 12px 0 10px; line-height: 1.35;">
+              Offline-First Mobile Data Synchronization: Handling Edge Conflicts
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+              How we use SQLite, local vector clocks, and deterministic CRDTs to synchronize field technician data when connectivity is completely lost.
+            </p>
+            <a href="services/web-mobile-apps.html" style="color: var(--cyan-sonic); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read Technical Guide &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">CLOUD SECURITY</span>
+            <h3 style="font-size: 1.25rem; color: #FFFFFF; margin: 12px 0 10px; line-height: 1.35;">
+              Zero-Trust Cloud Architecture on AWS: Container Security &amp; IAM
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+              Eliminating long-lived API keys, implementing ephemeral IRSA roles, and isolating containerized microservices in air-gapped private subnets.
+            </p>
+            <a href="services/cybersecurity.html" style="color: var(--cyan-sonic); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Read Technical Guide &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER DISPATCH -->
+    <section class="section">
+      <div class="container max-w-4xl">
+        <div class="card text-center" style="padding: 44px;">
+          <div class="section-eyebrow"><span>STAY INFORMED</span></div>
+          <h2 style="font-size: 1.8rem; color: #FFFFFF; margin: 10px 0 12px;">Get Our Architecture Dispatches</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 580px; margin: 0 auto 24px;">
+            Join engineering leaders receiving our monthly breakdown of production software blueprints, AI agent schemas, and zero-day security advisories. Zero spam.
+          </p>
+          <div style="display: flex; gap: 12px; justify-content: center; max-width: 480px; margin: 0 auto; flex-wrap: wrap;">
+            <input type="email" placeholder="Enter your work email" style="background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle); color: #fff; padding: 12px 18px; border-radius: var(--radius-md); flex: 1; min-width: 240px; font-size: 0.9rem;">
+            <button class="btn btn-shimmer" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section text-center" style="padding-bottom: 120px;">
+      <div class="container max-w-4xl">
+        <div class="section-eyebrow"><span>HAVE A TECHNICAL CHALLENGE?</span></div>
+        <h2 class="section-title">Discuss Your Architecture with a <span class="gradient-text">Senior Engineer.</span></h2>
+        <p class="section-subtitle">Book a 30-minute discovery call directly with an Architect. We analyze your bottlenecks and provide an actionable blueprint.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="contact.html" class="btn btn-shimmer btn-lg"><span>Book Technical Discovery Call</span><span class="btn-arrow">&rarr;</span></a>
+          <a href="services.html" class="btn btn-glass btn-lg">View All Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="index.html" class="logo"><img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160"></a>
+          <p class="footer-bio">Next-generation software engineering, autonomous AI automation, and bank-grade cybersecurity.</p>
+          <div class="system-status-pill"><span class="status-dot"></span><span>All Global Systems Live (99.98% Uptime)</span></div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services/design-branding.html">1. Design &amp; Branding</a></li>
+            <li><a href="services/web-mobile-apps.html">2. Web &amp; Mobile Apps</a></li>
+            <li><a href="services/business-platforms.html">3. Business Platforms</a></li>
+            <li><a href="services/ai-automation.html">4. AI &amp; Automation</a></li>
+            <li><a href="services/cybersecurity.html">5. Cybersecurity</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries</h4>
+          <ul class="footer-links">
+            <li><a href="industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="industries.html#fintech">Finance (FinTech)</a></li>
+            <li><a href="industries.html#saas">Startups &amp; SaaS</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
+            <li><a href="tel:+923170128047">0317-0128047</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 UraanLabs. All Rights Reserved.</p>
+        <div class="footer-legal-links"><a href="#header">Back to Top &uarr;</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

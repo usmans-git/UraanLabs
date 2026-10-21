@@ -380,6 +380,38 @@ function initLeadForm() {
   const formSuccess = document.getElementById("formSuccess");
   const formFail = document.getElementById("formFail");
 
+  // Auto-preselect service or careers intent from URL query params
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get("service");
+    const intentParam = urlParams.get("intent");
+
+    const paramMap = {
+      "design": "1. Design & Branding",
+      "logo-design": "1. Design & Branding",
+      "brand-identity": "1. Design & Branding",
+      "app-dev": "2. Web & Mobile Apps",
+      "business-websites": "2. Web & Mobile Apps",
+      "platforms": "3. Business Platforms",
+      "ecommerce": "3. Business Platforms",
+      "custom-erp": "3. Business Platforms",
+      "ai-automation": "4. AI & Automation",
+      "workflow-automation": "4. AI & Automation",
+      "cybersecurity": "5. Cybersecurity",
+      "vapt": "5. Cybersecurity"
+    };
+
+    if (serviceInput && serviceParam && paramMap[serviceParam]) {
+      serviceInput.value = paramMap[serviceParam];
+    }
+
+    if (intentParam === "careers" && messageInput) {
+      messageInput.placeholder = "Tell us about your background, GitHub/portfolio links, and what you would like to build with UraanLabs...";
+    }
+  } catch (err) {
+    // Ignore URL param parsing errors
+  }
+
   let expectedCaptchaAnswer = 0;
 
   // Generate a random math challenge (e.g. 7 + 4 = ?)

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About UraanLabs | Engineering, AI &amp; Cybersecurity Studio</title>
+  <meta name="description" content="Discover why UraanLabs was established. We bridge creative brand design, high-performance software engineering, autonomous AI workflows, and bank-grade cybersecurity under one unified studio.">
+  <meta name="keywords" content="About UraanLabs, software engineering studio, AI automation agency, cybersecurity firm, enterprise software development">
+  <link rel="canonical" href="https://uraanlabs.com/about.html">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uraanlabs.com/about.html">
+  <meta property="og:title" content="About UraanLabs | Engineering, AI &amp; Cybersecurity Studio">
+  <meta property="og:description" content="Bridging creative design, scalable code, autonomous AI, and bank-grade security under one multidisciplinary studio.">
+  <meta property="og:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <link rel="icon" type="image/svg+xml" href="images/uraanlabs-mark.svg">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="dark-canvas">
+
+  <!-- Background Ambient Glow Orbs -->
+  <div class="ambient-glow orb-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow orb-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow orb-center" aria-hidden="true"></div>
+
+  <!-- ================= 01. FLOATING GLASS NAVBAR ================= -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Logo -->
+        <a href="index.html" class="logo" aria-label="UraanLabs Homepage">
+          <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160" height="35" class="brand-logo-img">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+
+          <!-- 1. About Us Dropdown -->
+          <li class="nav-item has-dropdown">
+            <button class="nav-link dropdown-toggle active" type="button" aria-expanded="false" aria-haspopup="true">
+              <span>About Us</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </button>
+            <div class="dropdown-menu dropdown-simple">
+              <a href="about.html#story" class="dropdown-item">
+                <span class="dropdown-title">Our Story</span>
+                <small class="dropdown-desc">Why UraanLabs was built and our mission.</small>
+              </a>
+              <a href="about.html#why-uraanlabs" class="dropdown-item">
+                <span class="dropdown-title">Why UraanLabs</span>
+                <small class="dropdown-desc">Our 4 core engineering differentiators.</small>
+              </a>
+              <a href="careers.html" class="dropdown-item">
+                <span class="dropdown-title">Careers</span>
+                <small class="dropdown-desc">Join our senior technical &amp; creative studio.</small>
+              </a>
+            </div>
+          </li>
+
+          <!-- 2. Services Mega Menu -->
+          <li class="nav-item has-dropdown has-mega">
+            <a href="services.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>Services</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+
+            <div class="mega-menu" id="servicesMegaMenu">
+              <div class="mega-inner">
+                <!-- Left: 5 Pillar Selector Tabs -->
+                <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
+                  <button class="mega-tab active" type="button" role="tab" id="tab-design" aria-selected="true" aria-controls="panel-design" data-target="panel-design">
+                    <span class="tab-icon">&#10024;</span>
+                    <div class="tab-text">
+                      <strong>1. Design &amp; Branding</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-webmob" aria-selected="false" aria-controls="panel-webmob" data-target="panel-webmob">
+                    <span class="tab-icon">&#128187;</span>
+                    <div class="tab-text">
+                      <strong>2. Web &amp; Mobile Apps</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-platforms" aria-selected="false" aria-controls="panel-platforms" data-target="panel-platforms">
+                    <span class="tab-icon">&#128200;</span>
+                    <div class="tab-text">
+                      <strong>3. Business Platforms</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-ai" aria-selected="false" aria-controls="panel-ai" data-target="panel-ai">
+                    <span class="tab-icon">&#9889;</span>
+                    <div class="tab-text">
+                      <strong>4. AI &amp; Automation</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-security" aria-selected="false" aria-controls="panel-security" data-target="panel-security">
+                    <span class="tab-icon">&#128737;</span>
+                    <div class="tab-text">
+                      <strong>5. Cybersecurity</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+
+                <!-- Right: Panels -->
+                <div class="mega-panels">
+                  <!-- Panel 1: Design & Branding -->
+                  <div class="mega-panel active" id="panel-design" role="tabpanel" aria-labelledby="tab-design">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 01</span>
+                        <h4>Design &amp; Branding</h4>
+                        <p>Brand systems and interfaces crafted for recognition, trust, and conversion.</p>
+                      </div>
+                      <a href="services/design-branding.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="services/design-branding.html#logo-design" class="service-item">
+                        <strong>Logo Design</strong>
+                        <small>Distinct marks built for recognition and long-term brand equity.</small>
+                      </a>
+                      <a href="services/design-branding.html#brand-identity" class="service-item">
+                        <strong>Brand Identity</strong>
+                        <small>Complete design systems, typography, color palettes, and guidelines.</small>
+                      </a>
+                      <a href="services/design-branding.html#print-stationery" class="service-item">
+                        <strong>Print &amp; Stationery</strong>
+                        <small>Tangible marketing collateral, business cards, packaging, and decks.</small>
+                      </a>
+                      <a href="services/design-branding.html#ui-ux-design" class="service-item">
+                        <strong>UI/UX Design</strong>
+                        <small>Clean, high-converting digital interfaces mapped to real customer journeys.</small>
+                      </a>
+                      <a href="services/design-branding.html#product-prototyping" class="service-item">
+                        <strong>Product Prototyping</strong>
+                        <small>Clickable Figma prototypes to test assumptions before writing code.</small>
+                      </a>
+                      <a href="services/design-branding.html#social-creatives" class="service-item">
+                        <strong>Social Media Creatives</strong>
+                        <small>Visual templates and creative assets tailored for active social feeds.</small>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Panel 2: Web & Mobile Apps -->
+                  <div class="mega-panel" id="panel-webmob" role="tabpanel" aria-labelledby="tab-webmob">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 02</span>
+                        <h4>Web &amp; Mobile Apps</h4>
+                        <p>High-speed web platforms and cross-platform apps built with modern JavaScript stacks.</p>
+                      </div>
+                      <a href="services/web-mobile-apps.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="services/web-mobile-apps.html#business-websites" class="service-item">
+                        <strong>Business Websites</strong>
+                        <small>Fast, responsive web experiences engineered to convert qualified leads.</small>
+                      </a>
+                      <a href="services/web-mobile-apps.html#custom-web-apps" class="service-item">
+                        <strong>Custom Web Apps</strong>
+                        <small>Scalable, database-driven web applications built with modern JavaScript stacks.</small>
+                      </a>
+                      <a href="services/web-mobile-apps.html#mobile-apps" class="service-item">
+                        <strong>Mobile Apps (iOS &amp; Android)</strong>
+                        <small>High-performance Flutter and React Native mobile applications.</small>
+                      </a>
+                      <a href="services/web-mobile-apps.html#pwa" class="service-item">
+                        <strong>Progressive Web Apps (PWA)</strong>
+                        <small>App-like browser experiences with offline persistence and push notifications.</small>
+                      </a>
+                      <a href="services/web-mobile-apps.html#api-integrations" class="service-item">
+                        <strong>API Integrations</strong>
+                        <small>Reliable backend connectors linking third-party tools, payment gateways, and databases.</small>
+                      </a>
+                      <a href="services/web-mobile-apps.html#maintenance" class="service-item">
+                        <strong>Support &amp; Maintenance</strong>
+                        <small>Proactive performance monitoring, security patches, and ongoing feature updates.</small>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Panel 3: Business Platforms -->
+                  <div class="mega-panel" id="panel-platforms" role="tabpanel" aria-labelledby="tab-platforms">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 03</span>
+                        <h4>Business Platforms</h4>
+                        <p>Centralized operating systems engineered around how your company actually works.</p>
+                      </div>
+                      <a href="services/business-platforms.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="services/business-platforms.html#ecommerce" class="service-item">
+                        <strong>E-Commerce Stores</strong>
+                        <small>Fast, frictionless storefronts engineered for high transaction volume and conversions.</small>
+                      </a>
+                      <a href="services/business-platforms.html#lms" class="service-item">
+                        <strong>LMS &amp; E-Learning</strong>
+                        <small>Structured digital course platforms, learner tracking, and automated student assessments.</small>
+                      </a>
+                      <a href="services/business-platforms.html#custom-erp" class="service-item">
+                        <strong>Custom ERP Systems</strong>
+                        <small>Centralized operations software connecting finance, inventory, supply chain, and staff.</small>
+                      </a>
+                      <a href="services/business-platforms.html#custom-crm" class="service-item">
+                        <strong>Custom CRM Solutions</strong>
+                        <small>Tailored sales pipelines, contact management, and customer interaction records.</small>
+                      </a>
+                      <a href="services/business-platforms.html#marketplaces" class="service-item">
+                        <strong>Online Marketplaces</strong>
+                        <small>Multi-vendor platforms with split payments, user dashboards, and review engines.</small>
+                      </a>
+                      <a href="services/business-platforms.html#saas-dev" class="service-item">
+                        <strong>SaaS Development</strong>
+                        <small>Multi-tenant cloud software with subscription billing and role-based access.</small>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Panel 4: AI & Automation -->
+                  <div class="mega-panel" id="panel-ai" role="tabpanel" aria-labelledby="tab-ai">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 04</span>
+                        <h4>AI &amp; Automation</h4>
+                        <p>Bespoke LLM agents and multi-system automated workflows that remove manual friction.</p>
+                      </div>
+                      <a href="services/ai-automation.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="services/ai-automation.html#workflow-automation" class="service-item">
+                        <strong>Workflow Automation</strong>
+                        <small>Connect operational tools and remove hours of repetitive manual data entry.</small>
+                      </a>
+                      <a href="services/ai-automation.html#ai-chatbots" class="service-item">
+                        <strong>AI Chatbots</strong>
+                        <small>Context-aware conversational assistants that resolve customer tickets around the clock.</small>
+                      </a>
+                      <a href="services/ai-automation.html#autonomous-agents" class="service-item">
+                        <strong>Autonomous AI Agents</strong>
+                        <small>Independent task-running agents that process records, drafts, and system tasks.</small>
+                      </a>
+                      <a href="services/ai-automation.html#voice-assistants" class="service-item">
+                        <strong>AI Voice Assistants</strong>
+                        <small>Natural spoken audio interfaces for real-time customer support and routing.</small>
+                      </a>
+                      <a href="services/ai-automation.html#custom-llm" class="service-item">
+                        <strong>Custom LLM Solutions</strong>
+                        <small>Secure language models fine-tuned exclusively on your private company knowledge.</small>
+                      </a>
+                      <a href="services/ai-automation.html#predictive-ai" class="service-item">
+                        <strong>Data &amp; Predictive AI</strong>
+                        <small>Machine learning algorithms that forecast trends, churn, and operational capacity.</small>
+                      </a>
+                      <a href="services/ai-automation.html#nlp-ai" class="service-item">
+                        <strong>Text &amp; Language AI (NLP)</strong>
+                        <small>Automated document summarization, sentiment extraction, and contract language review.</small>
+                      </a>
+                      <a href="services/ai-automation.html#vision-document-ai" class="service-item">
+                        <strong>Vision &amp; Document AI</strong>
+                        <small>OCR systems that scan, extract, and classify receipts, invoices, and IDs.</small>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Panel 5: Cybersecurity -->
+                  <div class="mega-panel" id="panel-security" role="tabpanel" aria-labelledby="tab-security">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 05</span>
+                        <h4>Cybersecurity &amp; Audits</h4>
+                        <p>Real-world penetration testing, source code audits, and zero-trust cloud hardening.</p>
+                      </div>
+                      <a href="services/cybersecurity.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="services/cybersecurity.html#vapt" class="service-item">
+                        <strong>Penetration Testing (VAPT)</strong>
+                        <small>Simulated hacker attacks to find and fix vulnerabilities before exploitation.</small>
+                      </a>
+                      <a href="services/cybersecurity.html#code-review" class="service-item">
+                        <strong>Source Code Review</strong>
+                        <small>Manual and automated audits finding logic flaws and hidden security backdoors.</small>
+                      </a>
+                      <a href="services/cybersecurity.html#web-app-security" class="service-item">
+                        <strong>Web &amp; App Security</strong>
+                        <small>OWASP-aligned hardening preventing SQL injection, cross-site scripting, and credential stuffing.</small>
+                      </a>
+                      <a href="services/cybersecurity.html#cloud-security" class="service-item">
+                        <strong>Cloud Security</strong>
+                        <small>Secure configuration reviews for AWS, Google Cloud, and containerized Docker environments.</small>
+                      </a>
+                      <a href="services/cybersecurity.html#network-audits" class="service-item">
+                        <strong>Network Audits</strong>
+                        <small>Perimeter scans detecting open ports, rogue endpoints, and firewall weaknesses.</small>
+                      </a>
+                      <a href="services/cybersecurity.html#api-security" class="service-item">
+                        <strong>API Security</strong>
+                        <small>Token validation, rate-limiting, and payload sanitization audits for backend endpoints.</small>
+                      </a>
+                      <a href="services/cybersecurity.html#devsecops" class="service-item">
+                        <strong>DevSecOps</strong>
+                        <small>Automated security testing baked directly into your continuous integration and deployment pipelines.</small>
+                      </a>
+                      <a href="services/cybersecurity.html#compliance" class="service-item">
+                        <strong>Compliance &amp; Audits</strong>
+                        <small>Readiness reviews mapping your technical controls to SOC2, ISO, and GDPR standards.</small>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3. Industries Dropdown -->
+          <li class="nav-item has-dropdown">
+            <a href="industries.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>Industries</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple dropdown-industries">
+              <a href="industries.html#retail" class="dropdown-item">
+                <span class="dropdown-title">Retail &amp; E-Commerce</span>
+                <small class="dropdown-desc">Headless stores, automated inventory &amp; checkout funnels.</small>
+              </a>
+              <a href="industries.html#edtech" class="dropdown-item">
+                <span class="dropdown-title">Education (EdTech)</span>
+                <small class="dropdown-desc">Interactive LMS, student tracking &amp; AI tutor bots.</small>
+              </a>
+              <a href="industries.html#fintech" class="dropdown-item">
+                <span class="dropdown-title">Finance (FinTech)</span>
+                <small class="dropdown-desc">Zero-trust architecture, automated ledger &amp; KYC sync.</small>
+              </a>
+              <a href="industries.html#healthcare" class="dropdown-item">
+                <span class="dropdown-title">Healthcare</span>
+                <small class="dropdown-desc">Encrypted patient portals &amp; automated appointment reminders.</small>
+              </a>
+              <a href="industries.html#realestate" class="dropdown-item">
+                <span class="dropdown-title">Real Estate</span>
+                <small class="dropdown-desc">Interactive property portals &amp; instant WhatsApp AI triage.</small>
+              </a>
+              <a href="industries.html#logistics" class="dropdown-item">
+                <span class="dropdown-title">Logistics &amp; Supply Chain</span>
+                <small class="dropdown-desc">Fleet tracking backends, driver apps &amp; automated BOLs.</small>
+              </a>
+              <a href="industries.html#saas" class="dropdown-item">
+                <span class="dropdown-title">Startups &amp; SaaS</span>
+                <small class="dropdown-desc">Fixed-scope 4-week MVP development &amp; Stripe billing.</small>
+              </a>
+            </div>
+          </li>
+
+          <!-- 4. Insights -->
+          <li><a href="insights.html" class="nav-link">Insights</a></li>
+
+          <!-- 5. Contact Us -->
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+
+        <!-- Action: Book a Call -->
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-shimmer nav-cta">
+            <span>Book a Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" class="brand-logo-img" width="140">
+      <button class="mobile-close" id="mobileClose" type="button" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+
+        <li class="mobile-acc-item">
+          <button class="mobile-acc-toggle" type="button">
+            <span>About Us</span>
+            <span class="acc-arrow">&#9662;</span>
+          </button>
+          <div class="mobile-acc-panel">
+            <a href="about.html#story" class="mobile-sublink">Our Story</a>
+            <a href="about.html#why-uraanlabs" class="mobile-sublink">Why UraanLabs</a>
+            <a href="careers.html" class="mobile-sublink">Careers</a>
+          </div>
+        </li>
+
+        <li class="mobile-acc-item">
+          <button class="mobile-acc-toggle" type="button">
+            <span>Services (5 Pillars)</span>
+            <span class="acc-arrow">&#9662;</span>
+          </button>
+          <div class="mobile-acc-panel">
+            <a href="services.html" class="mobile-sublink font-bold text-cyan">All Services Overview &rarr;</a>
+            <div class="mobile-pillar-label">1. Design &amp; Branding</div>
+            <a href="services/design-branding.html" class="mobile-sublink">Explore Design Pillar</a>
+            <div class="mobile-pillar-label mt-2">2. Web &amp; Mobile Apps</div>
+            <a href="services/web-mobile-apps.html" class="mobile-sublink">Explore Web &amp; Mobile Apps</a>
+            <div class="mobile-pillar-label mt-2">3. Business Platforms</div>
+            <a href="services/business-platforms.html" class="mobile-sublink">Explore Business Platforms</a>
+            <div class="mobile-pillar-label mt-2">4. AI &amp; Automation</div>
+            <a href="services/ai-automation.html" class="mobile-sublink">Explore AI &amp; Automation</a>
+            <div class="mobile-pillar-label mt-2">5. Cybersecurity</div>
+            <a href="services/cybersecurity.html" class="mobile-sublink">Explore Cybersecurity</a>
+          </div>
+        </li>
+
+        <li class="mobile-acc-item">
+          <button class="mobile-acc-toggle" type="button">
+            <span>Industries</span>
+            <span class="acc-arrow">&#9662;</span>
+          </button>
+          <div class="mobile-acc-panel">
+            <a href="industries.html" class="mobile-sublink font-bold text-cyan">All 7 Industries &rarr;</a>
+            <a href="industries.html#retail" class="mobile-sublink">Retail &amp; E-Commerce</a>
+            <a href="industries.html#edtech" class="mobile-sublink">Education (EdTech)</a>
+            <a href="industries.html#fintech" class="mobile-sublink">Finance (FinTech)</a>
+            <a href="industries.html#healthcare" class="mobile-sublink">Healthcare</a>
+            <a href="industries.html#realestate" class="mobile-sublink">Real Estate</a>
+            <a href="industries.html#logistics" class="mobile-sublink">Logistics &amp; Supply Chain</a>
+            <a href="industries.html#saas" class="mobile-sublink">Startups &amp; SaaS</a>
+          </div>
+        </li>
+
+        <li><a href="insights.html" class="mobile-nav-link">Insights</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="contact.html" class="btn btn-shimmer full-width">Book a Call &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Backdrop overlay -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" style="padding-top: 150px; padding-bottom: 70px;">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>ABOUT URAANLABS STUDIO</span>
+          </div>
+          <h1 class="hero-title" style="margin-bottom: 20px;">
+            Built for Leaders Who Refuse to Compromise on <span class="gradient-text">Engineering Craft</span>
+          </h1>
+          <p class="hero-subtitle" style="max-width: 740px;">
+            UraanLabs is a multidisciplinary software, AI automation, and cybersecurity studio. We bridge the void between distinctive brand design, scalable distributed systems, intelligent autonomous workflows, and bank-grade security.
+          </p>
+          <div class="hero-actions" style="margin-top: 32px;">
+            <a href="contact.html" class="btn btn-shimmer btn-lg">
+              <span>Book an Architecture Discovery Call</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#why-uraanlabs" class="btn btn-glass btn-lg">Why We Are Different</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR STORY & MISSION ================= -->
+    <section class="section" id="story" style="padding-top: 40px;">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-story-card card bento-span-2">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="about-story-content">
+              <span class="chip-badge">OUR STORY &amp; ORIGIN</span>
+              <h3>Why UraanLabs Was Built</h3>
+              <p>
+                In Urdu, the word <strong>"Uraan"</strong> embodies flight, ascent, and fearless upward momentum. We founded UraanLabs because the traditional agency landscape is broken by fragmentation.
+              </p>
+              <p>
+                When a growing company wants to build a modern software asset, they are typically forced to hire four disconnected vendors: a creative design agency that doesn't understand distributed databases, a low-cost dev shop that builds clunky interfaces and fragile code, a hype-driven AI freelancer who exposes private credentials to public models, and a legacy penetration testing auditor who only hands over a confusing PDF checklist without writing code.
+              </p>
+              <p>
+                The result is technical debt, finger-pointing, and bloated timelines. UraanLabs replaces that fragmentation with a single, highly integrated engineering studio where senior systems architects, AI engineers, product designers, and security researchers sit together from day zero.
+              </p>
+
+              <div class="about-meta-row">
+                <div class="meta-item">
+                  <span class="meta-num">100%</span>
+                  <span class="meta-lbl">In-House Senior Engineers &amp; Designers</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-num">0</span>
+                  <span class="meta-lbl">Account Executive "Telephone" Layers</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-num">2-4 Wk</span>
+                  <span class="meta-lbl">Focused Milestone Delivery Cycles</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-num">100%</span>
+                  <span class="meta-lbl">Client IP &amp; Code Ownership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY URAANLABS: 4 DIFFERENTIATORS ================= -->
+    <section class="section" id="why-uraanlabs">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>CORE DIFFERENTIATORS</span>
+          </div>
+          <h2 class="section-title">
+            How We Build Trust <span class="gradient-text">Without Fluff</span>
+          </h2>
+          <p class="section-subtitle">
+            We don't hide behind stock client logos or generic buzzwords. Our reputation is built on transparent code architecture, uncompromising security standards, and measurable velocity.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Diff 1 -->
+          <div class="about-diff-card card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="diff-icon">&#128737;</div>
+            <h4>1. Security-by-Design, Not an Afterthought</h4>
+            <p>
+              Every backend route, cloud container, and database schema is subjected to rigorous OWASP Top 10 hardening, input sanitation, and simulated penetration testing before reaching staging. We build software ready for SOC2, ISO27001, and GDPR compliance audits on day one.
+            </p>
+          </div>
+
+          <!-- Diff 2 -->
+          <div class="about-diff-card card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="diff-icon">&#9889;</div>
+            <h4>2. Production AI &amp; Deterministic Automations</h4>
+            <p>
+              We avoid fragile no-code rigs. Our AI systems utilize structured schema validation, private RAG vector pipelines, and deterministic fallback logic so your business processes never fail from model hallucinations or API rate limits.
+            </p>
+          </div>
+
+          <!-- Diff 3 -->
+          <div class="about-diff-card card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="diff-icon">&#128269;</div>
+            <h4>3. Direct Senior Engineering Access</h4>
+            <p>
+              You communicate directly with the software architects and product designers building your application via Slack or Discord. Zero middle-management account executives playing telephone with your technical requirements.
+            </p>
+          </div>
+
+          <!-- Diff 4 -->
+          <div class="about-diff-card card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="diff-icon">&#128640;</div>
+            <h4>4. Rapid 4-Week Milestone Execution Sprints</h4>
+            <p>
+              We structure projects into disciplined 2-to-4 week milestone sprints with automated CI/CD deployment. You review clickable interactive prototypes and live staging previews every week—with zero surprise invoices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR ARCHITECTURAL PRINCIPLES ================= -->
+    <section class="section" style="background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>OUR ENGINEERING PRINCIPLES</span>
+          </div>
+          <h2 class="section-title">
+            The Code Standards We <span class="gradient-text">Live By</span>
+          </h2>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#128273;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Zero Vendor Lock-in</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              You own 100% of the Git repositories, Docker containers, database seeds, and Figma design tokens upon milestone completion.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#128187;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Deterministic Reliability</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              We prioritize type-safe TypeScript, resilient Python microservices, and idempotent webhook handlers over brittle shortcuts.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#9881;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Strict Data Governance</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              We enforce Zero Data Retention agreements with model providers and offer localized VPC self-hosting for enterprise clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CAREERS BANNER ================= -->
+    <section class="section" id="careers">
+      <div class="container">
+        <div class="careers-strip card" style="padding: 40px;">
+          <div class="careers-strip-content">
+            <div>
+              <span class="chip-badge">JOIN THE FLIGHT</span>
+              <h3 style="font-size: 1.6rem; color: #FFFFFF; margin: 10px 0 8px;">We Are Hiring Senior Technical Craftspeople</h3>
+              <p style="font-size: 0.95rem; color: var(--text-muted); max-width: 650px;">
+                Tired of corporate bureaucracy and junior code review loops? We're actively looking for senior full-stack engineers, AI researchers, and UI/UX product craftspeople worldwide.
+              </p>
+            </div>
+            <a href="careers.html" class="btn btn-shimmer btn-lg">
+              <span>View Open Roles &amp; Apply</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="section text-center" style="padding-bottom: 120px;">
+      <div class="container max-w-4xl">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>GET STARTED</span>
+        </div>
+        <h2 class="section-title">
+          Ready to Work with a Senior Studio That <span class="gradient-text">Actually Delivers?</span>
+        </h2>
+        <p class="section-subtitle">
+          Book a 30-minute discovery call directly with a Senior Systems Architect. We will review your project scope and provide an actionable technical blueprint within 24 hours.
+        </p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="contact.html" class="btn btn-shimmer btn-lg">
+            <span>Book Your Discovery Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="services.html" class="btn btn-glass btn-lg">Explore All 5 Service Pillars</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="index.html" class="logo" aria-label="UraanLabs Homepage">
+            <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160" height="35" class="brand-logo-img">
+          </a>
+          <p class="footer-bio">
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+          </p>
+          <div class="system-status-pill">
+            <span class="status-dot"></span>
+            <span>All Global Systems Live (99.98% Uptime)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="services/design-branding.html">1. Design &amp; Branding</a></li>
+            <li><a href="services/web-mobile-apps.html">2. Web &amp; Mobile Apps</a></li>
+            <li><a href="services/business-platforms.html">3. Business Platforms</a></li>
+            <li><a href="services/ai-automation.html">4. AI &amp; Automation</a></li>
+            <li><a href="services/cybersecurity.html">5. Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries</h4>
+          <ul class="footer-links">
+            <li><a href="industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="industries.html#edtech">Education (EdTech)</a></li>
+            <li><a href="industries.html#fintech">Finance (FinTech)</a></li>
+            <li><a href="industries.html#healthcare">Healthcare</a></li>
+            <li><a href="industries.html#realestate">Real Estate</a></li>
+            <li><a href="industries.html#logistics">Logistics &amp; Supply Chain</a></li>
+            <li><a href="industries.html#saas">Startups &amp; SaaS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Company &amp; Contact</h4>
+          <ul class="footer-links">
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#why-uraanlabs">Why UraanLabs</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
+            <li><a href="tel:+923170128047">0317-0128047</a></li>
+            <li><span>Karachi, Pakistan</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 UraanLabs. All Rights Reserved. Built with precision and venture-grade craft.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#header">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About UraanLabs",
+    "url": "https://uraanlabs.com/about.html",
+    "description": "Why UraanLabs was established: bridging design, software engineering, AI automation, and cybersecurity.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "UraanLabs",
+      "logo": "https://uraanlabs.com/images/uraanlabs-logo.svg"
+    }
+  }
+  </script>
+</body>
+
+</html>

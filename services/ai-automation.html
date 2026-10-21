@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom AI Workflow Automation | UraanLabs Studio</title>
+  <meta name="description" content="Automate manual operations with private, production-grade AI agents and custom APIs. Zero vendor lock-in, SOC2-ready data privacy, and rapid deployment.">
+  <meta name="keywords" content="custom AI workflow automation, autonomous enterprise AI agents, business process automation agency, secure LLM integration, API workflow automation">
+  <link rel="canonical" href="https://uraanlabs.com/services/ai-automation.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uraanlabs.com/services/ai-automation.html">
+  <meta property="og:title" content="Custom AI Workflow Automation | UraanLabs Studio">
+  <meta property="og:description" content="Automate manual operations with private, production-grade AI agents and custom APIs. Zero vendor lock-in, SOC2-ready data privacy.">
+  <meta property="og:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../images/uraanlabs-mark.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="dark-canvas">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow orb-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow orb-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow orb-center" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+          <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160" height="35" class="brand-logo-img">
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+
+          <li class="nav-item has-dropdown">
+            <a href="../about.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>About Us</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple">
+              <a href="../about.html#story" class="dropdown-item">
+                <span class="dropdown-title">Our Story</span>
+                <small class="dropdown-desc">Why UraanLabs was built and our mission.</small>
+              </a>
+              <a href="../about.html#why-uraanlabs" class="dropdown-item">
+                <span class="dropdown-title">Why UraanLabs</span>
+                <small class="dropdown-desc">Our 4 core engineering differentiators.</small>
+              </a>
+              <a href="../careers.html" class="dropdown-item">
+                <span class="dropdown-title">Careers</span>
+                <small class="dropdown-desc">Join our senior technical &amp; creative studio.</small>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown has-mega">
+            <a href="../services.html" class="nav-link dropdown-toggle active" aria-haspopup="true">
+              <span>Services</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+
+            <div class="mega-menu" id="servicesMegaMenu">
+              <div class="mega-inner">
+                <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
+                  <button class="mega-tab" type="button" role="tab" id="tab-design" aria-selected="false" data-target="panel-design">
+                    <span class="tab-icon">&#10024;</span>
+                    <div class="tab-text">
+                      <strong>1. Design &amp; Branding</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-webmob" aria-selected="false" data-target="panel-webmob">
+                    <span class="tab-icon">&#128187;</span>
+                    <div class="tab-text">
+                      <strong>2. Web &amp; Mobile Apps</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-platforms" aria-selected="false" data-target="panel-platforms">
+                    <span class="tab-icon">&#128200;</span>
+                    <div class="tab-text">
+                      <strong>3. Business Platforms</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab active" type="button" role="tab" id="tab-ai" aria-selected="true" data-target="panel-ai">
+                    <span class="tab-icon">&#9889;</span>
+                    <div class="tab-text">
+                      <strong>4. AI &amp; Automation</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-security" aria-selected="false" data-target="panel-security">
+                    <span class="tab-icon">&#128737;</span>
+                    <div class="tab-text">
+                      <strong>5. Cybersecurity</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+
+                <div class="mega-panels">
+                  <!-- Active Panel: AI & Automation -->
+                  <div class="mega-panel active" id="panel-ai" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 04</span>
+                        <h4>AI &amp; Automation</h4>
+                        <p>Bespoke LLM agents and multi-system automated workflows that remove manual friction.</p>
+                      </div>
+                      <a href="ai-automation.html" class="panel-cta">Active Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="#workflow-automation" class="service-item">
+                        <strong>Workflow Automation</strong>
+                        <small>Connect operational tools and remove hours of repetitive manual data entry.</small>
+                      </a>
+                      <a href="#ai-chatbots" class="service-item">
+                        <strong>AI Chatbots</strong>
+                        <small>Context-aware conversational assistants that resolve customer tickets around the clock.</small>
+                      </a>
+                      <a href="#autonomous-agents" class="service-item">
+                        <strong>Autonomous AI Agents</strong>
+                        <small>Independent task-running agents that process records, drafts, and system tasks.</small>
+                      </a>
+                      <a href="#voice-assistants" class="service-item">
+                        <strong>AI Voice Assistants</strong>
+                        <small>Natural spoken audio interfaces for real-time customer support and routing.</small>
+                      </a>
+                      <a href="#custom-llm" class="service-item">
+                        <strong>Custom LLM Solutions</strong>
+                        <small>Secure language models fine-tuned exclusively on your private company knowledge.</small>
+                      </a>
+                      <a href="#predictive-ai" class="service-item">
+                        <strong>Data &amp; Predictive AI</strong>
+                        <small>Machine learning algorithms that forecast trends, churn, and operational capacity.</small>
+                      </a>
+                      <a href="#nlp-ai" class="service-item">
+                        <strong>Text &amp; Language AI (NLP)</strong>
+                        <small>Automated document summarization, sentiment extraction, and contract language review.</small>
+                      </a>
+                      <a href="#vision-document-ai" class="service-item">
+                        <strong>Vision &amp; Document AI</strong>
+                        <small>OCR systems that scan, extract, and classify receipts, invoices, and IDs.</small>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="mega-panel" id="panel-design" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 01</span>
+                        <h4>Design &amp; Branding</h4>
+                        <p>Brand systems and interfaces crafted for recognition, trust, and conversion.</p>
+                      </div>
+                      <a href="design-branding.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                  </div>
+
+                  <div class="mega-panel" id="panel-webmob" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 02</span>
+                        <h4>Web &amp; Mobile Apps</h4>
+                        <p>High-speed web platforms and cross-platform apps built with modern JavaScript stacks.</p>
+                      </div>
+                      <a href="web-mobile-apps.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                  </div>
+
+                  <div class="mega-panel" id="panel-platforms" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 03</span>
+                        <h4>Business Platforms</h4>
+                        <p>Centralized operating systems engineered around how your company actually works.</p>
+                      </div>
+                      <a href="business-platforms.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                  </div>
+
+                  <div class="mega-panel" id="panel-security" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 05</span>
+                        <h4>Cybersecurity &amp; Audits</h4>
+                        <p>Real-world penetration testing, source code audits, and zero-trust cloud hardening.</p>
+                      </div>
+                      <a href="cybersecurity.html" class="panel-cta">Explore Pillar &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="../industries.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>Industries</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple dropdown-industries">
+              <a href="../industries.html#retail" class="dropdown-item">
+                <span class="dropdown-title">Retail &amp; E-Commerce</span>
+                <small class="dropdown-desc">Headless stores, automated inventory &amp; checkout funnels.</small>
+              </a>
+              <a href="../industries.html#edtech" class="dropdown-item">
+                <span class="dropdown-title">Education (EdTech)</span>
+                <small class="dropdown-desc">Interactive LMS, student tracking &amp; AI tutor bots.</small>
+              </a>
+              <a href="../industries.html#fintech" class="dropdown-item">
+                <span class="dropdown-title">Finance (FinTech)</span>
+                <small class="dropdown-desc">Zero-trust architecture, automated ledger &amp; KYC sync.</small>
+              </a>
+              <a href="../industries.html#healthcare" class="dropdown-item">
+                <span class="dropdown-title">Healthcare</span>
+                <small class="dropdown-desc">Encrypted patient portals &amp; automated appointment reminders.</small>
+              </a>
+              <a href="../industries.html#realestate" class="dropdown-item">
+                <span class="dropdown-title">Real Estate</span>
+                <small class="dropdown-desc">Interactive property portals &amp; instant WhatsApp AI triage.</small>
+              </a>
+              <a href="../industries.html#logistics" class="dropdown-item">
+                <span class="dropdown-title">Logistics &amp; Supply Chain</span>
+                <small class="dropdown-desc">Fleet tracking backends, driver apps &amp; automated BOLs.</small>
+              </a>
+              <a href="../industries.html#saas" class="dropdown-item">
+                <span class="dropdown-title">Startups &amp; SaaS</span>
+                <small class="dropdown-desc">Fixed-scope 4-week MVP development &amp; Stripe billing.</small>
+              </a>
+            </div>
+          </li>
+
+          <li><a href="../insights.html" class="nav-link">Insights</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="../contact.html?service=ai-automation" class="btn btn-shimmer nav-cta">
+            <span>Book a Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" class="brand-logo-img" width="140">
+      <button class="mobile-close" id="mobileClose" type="button" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="../about.html" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-acc-item">
+          <button class="mobile-acc-toggle" type="button">
+            <span>Services (5 Pillars)</span>
+            <span class="acc-arrow">&#9662;</span>
+          </button>
+          <div class="mobile-acc-panel">
+            <a href="../services.html" class="mobile-sublink font-bold text-cyan">All Services Hub &rarr;</a>
+            <a href="design-branding.html" class="mobile-sublink">1. Design &amp; Branding</a>
+            <a href="web-mobile-apps.html" class="mobile-sublink">2. Web &amp; Mobile Apps</a>
+            <a href="business-platforms.html" class="mobile-sublink">3. Business Platforms</a>
+            <a href="ai-automation.html" class="mobile-sublink active">4. AI &amp; Automation</a>
+            <a href="cybersecurity.html" class="mobile-sublink">5. Cybersecurity</a>
+          </div>
+        </li>
+        <li><a href="../industries.html" class="mobile-nav-link">Industries</a></li>
+        <li><a href="../insights.html" class="mobile-nav-link">Insights</a></li>
+        <li><a href="../contact.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="../contact.html?service=ai-automation" class="btn btn-shimmer full-width">Book a Call &rarr;</a>
+    </div>
+  </aside>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- 02. HERO SECTION -->
+    <section class="hero-section" style="padding-top: 150px; padding-bottom: 70px;">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PILLAR 04 // AI &amp; AUTOMATION</span>
+          </div>
+          <h1 class="hero-title" style="margin-bottom: 20px;">
+            Stop Paying Humans to Do What Deterministic Code and AI Agents Can <span class="gradient-text">Solve in Seconds.</span>
+          </h1>
+          <p class="hero-subtitle" style="max-width: 780px;">
+            We architect and deploy secure, event-driven AI pipelines that eliminate repetitive operational bottlenecks across your tech stack. No brittle no-code workarounds—only production-grade code running inside your private infrastructure.
+          </p>
+          <div class="hero-actions" style="margin-top: 32px;">
+            <a href="../contact.html?service=ai-automation" class="btn btn-shimmer btn-lg">
+              <span>Schedule Architecture Audit</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#blueprints" class="btn btn-glass btn-lg">Review System Blueprints ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. BOTTLENECK VS URAANLABS FIX -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>THE REALITY CHECK</span>
+          </div>
+          <h2 class="section-title">
+            Traditional AI Agency Chaos vs. <span class="gradient-text">The UraanLabs Engineering Fix</span>
+          </h2>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="padding: 32px;">
+            <span class="panel-badge" style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.3);">THE PROBLEM</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Brittle No-Code Zapier Rigs</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+              Workflows break the moment an API changes, creating silent data drops, zero retry queues, and untraceable failures.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <strong style="color: var(--cyan-sonic); font-size: 0.82rem; display: block; margin-bottom: 4px;">THE URAANLABS FIX:</strong>
+              <p style="font-size: 0.82rem; color: #CBD5E1; line-height: 1.5; margin: 0;">
+                Custom event-driven Python &amp; Node.js microservices with idempotency keys, automated retry queues, and dead-letter tracking.
+              </p>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 32px;">
+            <span class="panel-badge" style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.3);">THE PROBLEM</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Public LLM Hallucinations</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+              Off-the-shelf bots invent company policies, hallucinate customer records, and fail multi-step logic verification.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <strong style="color: var(--cyan-sonic); font-size: 0.82rem; display: block; margin-bottom: 4px;">THE URAANLABS FIX:</strong>
+              <p style="font-size: 0.82rem; color: #CBD5E1; line-height: 1.5; margin: 0;">
+                Structured RAG knowledge cores with exact vector source citations; deterministic schemas validate every payload before execution.
+              </p>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 32px;">
+            <span class="panel-badge" style="background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border-color: rgba(239, 68, 68, 0.3);">THE PROBLEM</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Data Privacy Violations</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+              Proprietary customer data, API tokens, and contracts are leaked directly into third-party public training pipelines.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <strong style="color: var(--cyan-sonic); font-size: 0.82rem; display: block; margin-bottom: 4px;">THE URAANLABS FIX:</strong>
+              <p style="font-size: 0.82rem; color: #CBD5E1; line-height: 1.5; margin: 0;">
+                In-flight PII masking, local tokenization proxies, binding Zero Data Retention agreements, and isolated VPC container hosting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CORE DELIVERABLES -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>TANGIBLE ASSETS</span>
+          </div>
+          <h2 class="section-title">
+            What You Receive in Every <span class="gradient-text">Automation Deployment</span>
+          </h2>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#128506;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">1. System Topology &amp; Blueprint</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              A complete visual schematic detailing webhook routes, authentication handshakes, database state management, and fallback mechanics.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#9881;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">2. Hardened Microservice Engine</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Production Python/TypeScript codebases running in isolated Docker containers inside your private cloud infrastructure.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#129302;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">3. Structured RAG Knowledge Core</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Vector database indexing (pgvector, Pinecone, or Qdrant) that grounds agent actions strictly in verified company records.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#128640;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">4. Autonomous Multi-Agent Handlers</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Specialized background agents that extract documents, cross-check records across CRMs/ERPs, and trigger multi-step actions.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#128202;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">5. Observability &amp; Tracing Dashboard</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Real-time telemetry tracking token consumption, latency, API execution success rates, and Slack/PagerDuty alert triggers.
+            </p>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon">&#128273;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">6. 100% IP &amp; Code Ownership</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              Clean Git repository transfer with complete Dockerfiles, environment variables, CI/CD pipelines, and maintenance manuals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. ARCHITECTURAL BLUEPRINTS -->
+    <section class="section" id="blueprints">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PRODUCTION BLUEPRINTS</span>
+          </div>
+          <h2 class="section-title">
+            Real-World Architecture <span class="gradient-text">Deployments</span>
+          </h2>
+          <p class="section-subtitle">
+            How we solve complex business bottlenecks without reliance on hype or hand-waving.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          <!-- Blueprint 1 -->
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 01 // RETAIL &amp; LOGISTICS</span>
+            <h3 style="font-size: 1.6rem; color: #FFFFFF; margin: 10px 0 16px;">Multi-Vendor Invoice &amp; PO Reconciliation Engine</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  An e-commerce distributor receives 1,400 monthly invoices via email. A 4-person accounting team spends 25 hours weekly cross-checking line items against ERP inventory records, causing 5-day payment delays and recurring ledger errors.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Processing time cut from 5 days to 4 minutes; manual overhead reduced by 84% with zero ledger drift.</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;"><strong>Ingestion:</strong> Email webhooks deposit raw PDF invoices into an encrypted AWS S3 bucket.</li>
+                  <li style="margin-bottom: 6px;"><strong>Extraction:</strong> A containerized Vision-LLM parser converts PDFs into strict JSON Schema payloads.</li>
+                  <li style="margin-bottom: 6px;"><strong>Deterministic Validation:</strong> Microservice executes database checks against SAP/PostgreSQL ERP purchase orders.</li>
+                  <li><strong>Auto-Settlement:</strong> Balanced invoices automatically post to QuickBooks/Xero APIs; discrepancies route to Slack diff queues.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blueprint 2 -->
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 02 // FINTECH &amp; BANKING</span>
+            <h3 style="font-size: 1.6rem; color: #FFFFFF; margin: 10px 0 16px;">Real-Time Digital KYC &amp; Document Underwriting Pipeline</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  A digital credit provider faces a 42% sign-up drop-off because manual verification of national ID cards and bank statements takes 48 to 72 hours per borrower.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Verification completed in under 90 seconds; user onboarding completion improved by 31%.</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;"><strong>Secure Ingestion:</strong> Applicant uploads identity documents via signed temporary URLs.</li>
+                  <li style="margin-bottom: 6px;"><strong>PII Scrubbing:</strong> Local container parses statements, immediately hashing sensitive tax numbers.</li>
+                  <li style="margin-bottom: 6px;"><strong>Agentic Risk Scoring:</strong> Fine-tuned model analyzes statement cash-flow patterns and income stability.</li>
+                  <li><strong>Instant Triage:</strong> Verified records trigger backend webhook account approvals with automated audit trails.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. DYNAMIC REGIONAL SWAP BLOCK -->
+    <section class="section" style="background: rgba(124, 58, 237, 0.06); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>GLOBAL &amp; REGIONAL READINESS</span>
+          </div>
+          <h2 class="section-title">
+            Architected for International Scale &amp; <span class="gradient-text">Regional Compliance</span>
+          </h2>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">GLOBAL / DEFAULT</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Multi-Cloud &amp; Currency</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Universal event-driven backends deployed on AWS, GCP, or Azure. Seamlessly integrates with Stripe, modern ERPs, and global API ecosystems.
+            </p>
+            <a href="../contact.html?service=ai-automation" class="btn btn-glass full-width">Book Technical Call &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px; border-color: rgba(56, 189, 248, 0.4);">
+            <span class="panel-badge" style="background: rgba(56, 189, 248, 0.2); color: #BAE6FD;">GCC / UAE &amp; KSA</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Bilingual Arabic &amp; PDPL Ready</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Native Arabic/English OCR, UAE Data Law and Saudi NDMO compliance, enterprise ERP connectors, and instant WhatsApp Business API routing.
+            </p>
+            <a href="https://wa.me/923170128047" target="_blank" rel="noopener" class="btn btn-shimmer full-width">WhatsApp Engineering Desk 💬</a>
+          </div>
+
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">US &amp; UK EXPANSION</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Cost-Reduction &amp; SOC2</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Combat domestic payroll inflation without hiring additional back-office staff. Fully aligned with SOC2 Type II, GDPR, and California CCPA guidelines.
+            </p>
+            <a href="../contact.html?service=ai-automation" class="btn btn-glass full-width">Book Architecture Sprint &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. 4-STEP EXECUTION PROCESS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>DELIVERY TIMELINE</span>
+          </div>
+          <h2 class="section-title">
+            The 4-Week AI Deployment <span class="gradient-text">Sprint Cadence</span>
+          </h2>
+        </div>
+
+        <div class="workflow-steps-grid">
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 01 // WEEK 1</div>
+            <h4 class="step-title">Bottleneck Audit &amp; Schema</h4>
+            <p class="step-desc">
+              We map your operational workflows, audit manual touchpoints, define API schemas, and calculate token economics.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 02 // WEEK 2</div>
+            <h4 class="step-title">Prototype &amp; Guardrails</h4>
+            <p class="step-desc">
+              We build sandbox integration mocks. You inspect input/output JSON payloads and verify hallucination guardrails.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 03 // WEEKS 2-3</div>
+            <h4 class="step-title">Core Engineering &amp; VAPT</h4>
+            <p class="step-desc">
+              We containerize microservices, index vector stores, wire up retry queues, and execute security tests across all endpoints.
+            </p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 04 // WEEK 4</div>
+            <h4 class="step-title">Staging &amp; IP Handover</h4>
+            <p class="step-desc">
+              We deploy to your live infrastructure, conduct parallel data runs, train your engineering team, and transfer 100% IP ownership.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. TECH STACK & COMPLIANCE -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="card" style="padding: 40px; border-radius: var(--radius-lg);">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>ENTERPRISE SPECIFICATIONS</span>
+          </div>
+          <h3 style="font-size: 1.6rem; color: #FFFFFF; margin: 10px 0 24px;">Tools, Frameworks &amp; Security Standards</h3>
+          
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+            <div>
+              <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block; margin-bottom: 8px;">LANGUAGES &amp; RUNTIMES</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin: 0;">Python 3.11+, Node.js 20 LTS, TypeScript, Go (high-throughput workers).</p>
+            </div>
+            <div>
+              <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block; margin-bottom: 8px;">AI &amp; ORCHESTRATION</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin: 0;">LangChain, LlamaIndex, LiteLLM, Temporal.io, Celery / Redis Queues.</p>
+            </div>
+            <div>
+              <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block; margin-bottom: 8px;">VECTOR DATABASES</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin: 0;">PostgreSQL (pgvector), Pinecone, Qdrant, Milvus.</p>
+            </div>
+            <div>
+              <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block; margin-bottom: 8px;">DATA GOVERNANCE</strong>
+              <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin: 0;">Zero-Data Retention contracts, OWASP API Top 10, AES-256 encryption.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. 5 FAQS -->
+    <section class="section" id="faq">
+      <div class="container max-w-4xl">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>ANSWERS &amp; ASSURANCES</span>
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="gradient-text">Questions</span>
+          </h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item is-open">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <span>How long does it take to deploy a live AI workflow to production?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>A focused single-process pipeline (such as invoice parsing or customer ticket triage) is deployed to production staging within 2 to 4 weeks. Multi-system enterprise deployments connecting to legacy ERPs take 4 to 8 weeks, structured into weekly demo sprints.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>What is your pricing and engagement model?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We work exclusively on a fixed-scope milestone model. Following our technical discovery call, you receive a scoped architecture proposal with exact deliverables, timeline dates, and a fixed cost. You never encounter open-ended hourly billing or surprise invoices.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Who owns the intellectual property and code?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>You own 100% of the code, schemas, and configurations from day one. Upon final milestone settlement, all Git repositories, infrastructure containers, and documentation are formally assigned to your company. We retain zero proprietary claims and charge no recurring licensing fees.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>What happens if an external API changes or goes down?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>We build for failure states. Every workflow includes persistent message queues, idempotency keys (preventing duplicate actions), and automated retry logic. If an external API fails, the payload safely buffers in a Dead Letter Queue (DLQ) and alerts your team via Slack or PagerDuty.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Will our company data train public third-party AI models?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Never. We enforce binding Zero Data Retention (ZDR) agreements with enterprise model providers. For regulated industries (FinTech, Healthcare), we deploy self-hosted open-source models inside your own isolated VPC, ensuring zero proprietary records ever leave your perimeter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CLOSING CTA -->
+    <section class="section text-center" style="padding-bottom: 120px;">
+      <div class="container max-w-4xl">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>READY TO ELIMINATE REPETITIVE WORK?</span>
+        </div>
+        <h2 class="section-title">
+          Reclaim Hundreds of Operational Hours <span class="gradient-text">Every Month.</span>
+        </h2>
+        <p class="section-subtitle">
+          Book a 30-minute discovery call directly with a Senior AI Systems Architect. We will review your current workflow bottlenecks and provide a practical deployment roadmap—no sales pitch, no commitment.
+        </p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="../contact.html?service=ai-automation" class="btn btn-shimmer btn-lg">
+            <span>Schedule Your Architecture Audit</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="../services.html" class="btn btn-glass btn-lg">Explore Other Pillars</a>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 18px;">
+          Or email our technical desk directly at: <a href="mailto:info@uraanlabs.com" style="color: var(--cyan-sonic);">info@uraanlabs.com</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+            <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160" height="35" class="brand-logo-img">
+          </a>
+          <p class="footer-bio">
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+          </p>
+          <div class="system-status-pill">
+            <span class="status-dot"></span>
+            <span>All Global Systems Live (99.98% Uptime)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="design-branding.html">1. Design &amp; Branding</a></li>
+            <li><a href="web-mobile-apps.html">2. Web &amp; Mobile Apps</a></li>
+            <li><a href="business-platforms.html">3. Business Platforms</a></li>
+            <li><a href="ai-automation.html">4. AI &amp; Automation</a></li>
+            <li><a href="cybersecurity.html">5. Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries</h4>
+          <ul class="footer-links">
+            <li><a href="../industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="../industries.html#edtech">Education (EdTech)</a></li>
+            <li><a href="../industries.html#fintech">Finance (FinTech)</a></li>
+            <li><a href="../industries.html#healthcare">Healthcare</a></li>
+            <li><a href="../industries.html#realestate">Real Estate</a></li>
+            <li><a href="../industries.html#logistics">Logistics &amp; Supply Chain</a></li>
+            <li><a href="../industries.html#saas">Startups &amp; SaaS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Company &amp; Contact</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html#story">Our Story</a></li>
+            <li><a href="../about.html#why-uraanlabs">Why UraanLabs</a></li>
+            <li><a href="../careers.html">Careers</a></li>
+            <li><a href="../insights.html">Insights</a></li>
+            <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
+            <li><a href="tel:+923170128047">0317-0128047</a></li>
+            <li><span>Karachi, Pakistan</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 UraanLabs. All Rights Reserved. Built with precision and venture-grade craft.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#header">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom AI Workflow Automation",
+    "provider": {
+      "@type": "Organization",
+      "name": "UraanLabs",
+      "url": "https://uraanlabs.com",
+      "logo": "https://uraanlabs.com/images/uraanlabs-logo.svg"
+    },
+    "serviceType": "Enterprise AI & Process Automation",
+    "description": "Bespoke autonomous agents, multi-system API pipelines, and secure LLM workflows that remove manual operational overhead.",
+    "areaServed": "Global"
+  }
+  </script>
+</body>
+
+</html>
