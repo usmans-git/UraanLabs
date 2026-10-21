@@ -322,35 +322,37 @@ function initSmoothScrollAndSpy() {
    06. Interactive FAQ Accordion
    ========================================================================== */
 function initAccordion() {
-  const accordion = document.getElementById("faqAccordion");
-  if (!accordion) return;
+  const accordions = document.querySelectorAll("#faqAccordion, .accordion-wrapper, .faq-modern-list");
+  if (!accordions.length) return;
 
-  const items = accordion.querySelectorAll(".accordion-item");
+  accordions.forEach((accordion) => {
+    const items = accordion.querySelectorAll(".accordion-item");
 
-  items.forEach((item) => {
-    const header = item.querySelector(".accordion-header");
-    if (!header) return;
+    items.forEach((item) => {
+      const header = item.querySelector(".accordion-header");
+      if (!header) return;
 
-    header.addEventListener("click", () => {
-      const isOpen = item.classList.contains("is-open");
+      header.addEventListener("click", () => {
+        const isOpen = item.classList.contains("is-open");
 
-      // Close all other items for clean accordion UX
-      items.forEach((other) => {
-        if (other !== item) {
-          other.classList.remove("is-open");
-          const otherHeader = other.querySelector(".accordion-header");
-          if (otherHeader) otherHeader.setAttribute("aria-expanded", "false");
+        // Close all other items for clean accordion UX
+        items.forEach((other) => {
+          if (other !== item) {
+            other.classList.remove("is-open");
+            const otherHeader = other.querySelector(".accordion-header");
+            if (otherHeader) otherHeader.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // Toggle current
+        if (isOpen) {
+          item.classList.remove("is-open");
+          header.setAttribute("aria-expanded", "false");
+        } else {
+          item.classList.add("is-open");
+          header.setAttribute("aria-expanded", "true");
         }
       });
-
-      // Toggle current
-      if (isOpen) {
-        item.classList.remove("is-open");
-        header.setAttribute("aria-expanded", "false");
-      } else {
-        item.classList.add("is-open");
-        header.setAttribute("aria-expanded", "true");
-      }
     });
   });
 }
