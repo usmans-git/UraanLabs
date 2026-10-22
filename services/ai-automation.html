@@ -523,54 +523,119 @@
           </h2>
         </div>
 
-        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
-          <div class="card" style="padding: 30px;">
-            <div class="diff-icon">&#128506;</div>
-            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">1. System Topology &amp; Blueprint</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-              A complete visual schematic detailing webhook routes, authentication handshakes, database state management, and fallback mechanics.
-            </p>
-          </div>
-
-          <div class="card" style="padding: 30px;">
-            <div class="diff-icon">&#9881;</div>
-            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">2. Hardened Microservice Engine</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-              Production Python/TypeScript codebases running in isolated Docker containers inside your private cloud infrastructure.
-            </p>
-          </div>
-
-          <div class="card" style="padding: 30px;">
-            <div class="diff-icon">&#129302;</div>
-            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">3. Structured RAG Knowledge Core</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-              Vector database indexing (pgvector, Pinecone, or Qdrant) that grounds agent actions strictly in verified company records.
-            </p>
-          </div>
-
-          <div class="card" style="padding: 30px;">
-            <div class="diff-icon">&#128640;</div>
-            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">4. Autonomous Multi-Agent Handlers</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-              Specialized background agents that extract documents, cross-check records across CRMs/ERPs, and trigger multi-step actions.
-            </p>
-          </div>
-
-          <div class="card" style="padding: 30px;">
-            <div class="diff-icon">&#128202;</div>
-            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">5. Observability &amp; Tracing Dashboard</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-              Real-time telemetry tracking token consumption, latency, API execution success rates, and Slack/PagerDuty alert triggers.
-            </p>
-          </div>
-
-          <div class="card" style="padding: 30px;">
-            <div class="diff-icon">&#128273;</div>
-            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">6. 100% IP &amp; Code Ownership</h4>
-            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
-              Clean Git repository transfer with complete Dockerfiles, environment variables, CI/CD pipelines, and maintenance manuals.
-            </p>
-          </div>
+        <div class="panel-grid" style="grid-template-columns: repeat(4, 1fr); gap: 16px;">
+            <a href="workflow-automation.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">01</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Workflow Automation</h3>
+                <p class="csc-desc">Streamline repetitive operations by integrating platforms, forms, and databases via event-driven n8n &amp; Python pipelines.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="ai-chatbots.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">02</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">AI Chatbots</h3>
+                <p class="csc-desc">Trained customer service bots that resolve customer queries, book meetings, and qualify leads 24/7 with sub-second TTFT.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="autonomous-ai-agents.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">03</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Autonomous AI Agents</h3>
+                <p class="csc-desc">Deterministic multi-agent workflows executing multi-step research, coding, or data tasks with JSON Schema verification.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="ai-voice-assistants.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">04</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">AI Voice Assistants</h3>
+                <p class="csc-desc">Low-latency conversational voice bots for inbound call centers, appointment scheduling, and telephony triage.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="custom-llm-solutions.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">05</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Custom LLM Solutions (RAG)</h3>
+                <p class="csc-desc">Private AI models grounded on internal documentation and proprietary databases with 1536-D vector embeddings.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="data-predictive-ai.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">06</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Data &amp; Predictive AI</h3>
+                <p class="csc-desc">Forecast demand, identify customer churn patterns, detect financial fraud, and uncover actionable business anomalies.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="text-language-ai.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">07</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Text &amp; Language AI (NLP)</h3>
+                <p class="csc-desc">Automated document summarization, sentiment extraction, entity recognition, and contract language review.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="vision-document-ai.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">08</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Vision &amp; Document AI</h3>
+                <p class="csc-desc">OCR computer vision systems that scan, extract, and classify receipts, invoices, IDs, and engineering schematics.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
         </div>
       </div>
     </section>

@@ -509,47 +509,119 @@
           <h2 class="section-title">Complete Defensive &amp; <span class="gradient-text">Offensive Protection</span></h2>
         </div>
 
-        <div class="panel-grid" style="grid-template-columns: repeat(4, 1fr);">
-          <div class="card" style="padding: 24px;" id="vapt">
-            <span class="panel-badge">01</span>
-            <h4 style="margin: 10px 0 6px;">Penetration Testing (VAPT)</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">Grey-box and black-box manual exploitation across web, mobile, and network interfaces.</p>
-          </div>
-          <div class="card" style="padding: 24px;" id="code-review">
-            <span class="panel-badge">02</span>
-            <h4 style="margin: 10px 0 6px;">Source Code Review</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">Manual and automated code audits finding cryptographic flaws and hidden authorization bypasses.</p>
-          </div>
-          <div class="card" style="padding: 24px;" id="web-app-security">
-            <span class="panel-badge">03</span>
-            <h4 style="margin: 10px 0 6px;">Web &amp; App Security</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">OWASP Top 10 hardening preventing SQL injection, XSS, SSRF, and session hijacking.</p>
-          </div>
-          <div class="card" style="padding: 24px;" id="cloud-security">
-            <span class="panel-badge">04</span>
-            <h4 style="margin: 10px 0 6px;">Cloud Security</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">IAM permission audits, S3 bucket lockdowns, and Docker Kubernetes security reviews.</p>
-          </div>
-          <div class="card" style="padding: 24px;" id="network-audits">
-            <span class="panel-badge">05</span>
-            <h4 style="margin: 10px 0 6px;">Network Audits</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">Perimeter network vulnerability scans detecting open ports, outdated daemons, and rogue VPNs.</p>
-          </div>
-          <div class="card" style="padding: 24px;" id="api-security">
-            <span class="panel-badge">06</span>
-            <h4 style="margin: 10px 0 6px;">API Security</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">Broken Object Level Authorization (BOLA), rate-limiting bypass, and token validation testing.</p>
-          </div>
-          <div class="card" style="padding: 24px;" id="devsecops">
-            <span class="panel-badge">07</span>
-            <h4 style="margin: 10px 0 6px;">DevSecOps</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">Automated Semgrep and Snyk vulnerability gates embedded directly in your merge request workflows.</p>
-          </div>
-          <div class="card" style="padding: 24px;" id="compliance">
-            <span class="panel-badge">08</span>
-            <h4 style="margin: 10px 0 6px;">Compliance &amp; Audits</h4>
-            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">Technical readiness audits mapping security controls to SOC2 Type II, ISO 27001, and GDPR.</p>
-          </div>
+        <div class="panel-grid" style="grid-template-columns: repeat(4, 1fr); gap: 16px;">
+            <a href="penetration-testing-vapt.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">01</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Penetration Testing (VAPT)</h3>
+                <p class="csc-desc">Simulated adversary attacks finding and fixing vulnerabilities across web apps, APIs, networks, and mobile before breaches.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="source-code-review.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">02</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Source Code Review</h3>
+                <p class="csc-desc">White-box manual and automated security auditing identifying business logic flaws, memory leaks, and injection points.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="web-app-security.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">03</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Web &amp; App Security</h3>
+                <p class="csc-desc">OWASP ASVS 4.0 hardening preventing SQL injection, XSS, broken access controls, and credential stuffing attacks.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="cloud-security.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">04</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Cloud Security</h3>
+                <p class="csc-desc">Secure configuration reviews and IAM least-privilege hardening for AWS, Google Cloud, and Docker/Kubernetes.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="network-audits.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">05</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Network Audits</h3>
+                <p class="csc-desc">Perimeter penetration scans detecting rogue ports, outdated firmware, DNS leaks, and firewall weaknesses.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="api-security.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">06</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">API Security</h3>
+                <p class="csc-desc">Token validation, rate-limiting, HMAC signature checks, and payload sanitization audits for backend endpoints.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="devsecops.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">07</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">DevSecOps</h3>
+                <p class="csc-desc">Automated SAST/DAST security scanning baked directly into CI/CD pipelines to block vulnerable code before production.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
+            <a href="compliance-audits.html" class="child-service-card">
+              <div class="csc-header">
+                <span class="csc-badge">08</span>
+                <span class="csc-icon-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+              <div class="csc-body">
+                <h3 class="csc-title">Compliance &amp; Audits</h3>
+                <p class="csc-desc">Readiness reviews mapping technical controls to ISO/IEC 27001, SOC 2 Type II, HIPAA, and GDPR standards.</p>
+              </div>
+              <div class="csc-footer">
+                <span class="csc-action-text">Explore Service</span>
+                <span class="csc-action-arrow" aria-hidden="true">&rarr;</span>
+              </div>
+            </a>
         </div>
       </div>
     </section>
