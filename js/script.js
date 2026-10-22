@@ -1143,6 +1143,7 @@ function initUraanChatbot() {
   launcher.addEventListener("click", () => {
     const isOpen = modal.classList.toggle("is-open");
     launcher.classList.toggle("is-active", isOpen);
+    document.body.classList.toggle("chatbot-is-open", isOpen);
     toast.classList.add("is-hidden");
     if (isOpen) {
       setTimeout(() => chatbotInput.focus(), 150);
@@ -1153,6 +1154,7 @@ function initUraanChatbot() {
   toast.addEventListener("click", () => {
     modal.classList.add("is-open");
     launcher.classList.add("is-active");
+    document.body.classList.add("chatbot-is-open");
     toast.classList.add("is-hidden");
     setTimeout(() => chatbotInput.focus(), 150);
     chatbotBody.scrollTop = chatbotBody.scrollHeight;
@@ -1161,6 +1163,7 @@ function initUraanChatbot() {
   chatbotCloseBtn.addEventListener("click", () => {
     modal.classList.remove("is-open");
     launcher.classList.remove("is-active");
+    document.body.classList.remove("chatbot-is-open");
   });
 
   chatbotResetBtn.addEventListener("click", () => {
