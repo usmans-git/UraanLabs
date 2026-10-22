@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHero3DParallax();
   initPillars3DParallax();
   initUraanChatbot();
+  initMobileCardSwipers();
 });
 
 /* ==========================================================================
@@ -1208,4 +1209,93 @@ function initUraanChatbot() {
       }, 7000);
     }
   }, 3500);
+}
+
+
+/* ==========================================================================
+   12. Mobile Card Swipers (Touch-driven Carousel with Dynamic Indicator Dots)
+   Automatically transforms card grids into smooth swipeable carousels on mobile
+   ========================================================================== */
+function initMobileCardSwipers() {
+  const swiperSelectors = [
+    ".bento-grid",
+    ".workflow-steps-grid",
+    ".accreditations-grid",
+    ".vision-mission-grid",
+    ".pillar-card-wrapper .panel-grid"
+  ];
+
+  const buildSwiper = (container) => {
+    // Prevent duplicate nav-bar
+    if (!container || (container.nextElementSibling && container.nextElementSibling.classList.contains("swiper-nav-bar"))) {
+      return;
+    }
+
+    const items = Array.from(container.children).filter(
+      (el) => !el.classList.contains("swiper-nav-bar")
+    );
+    if (items.length <= 1) return;
+
+    // Create Navigation Bar (Swipe Hint + Active Dots)
+    const navBar = document.createElement("div");
+    navBar.className = "swiper-nav-bar";
+
+    const hintPill = document.createElement("div");
+    hintPill.className = "swiper-hint-pill";
+    hintPill.innerHTML = '<span class="hint-arrow">&larr;</span><span class="hint-text">Swipe to explore</span><span class="hint-arrow">&rarr;</span>';
+
+    const dotsTrack = document.createElement("div");
+    dotsTrack.className = "swiper-dots-track";
+
+    items.forEach((item, idx) => {
+      const dot = document.createElement("button");
+      dot.className = "swiper-dot" + (idx === 0 ? " active" : "");
+      dot.setAttribute("type", "button");
+      dot.setAttribute("aria-label", "Go to slide " + (idx + 1));
+
+      dot.addEventListener("click", () => {
+        const offset = item.offsetLeft - container.offsetLeft - 16;
+        container.scrollTo({
+          left: Math.max(0, offset),
+          behavior: "smooth"
+        });
+      });
+
+      dotsTrack.appendChild(dot);
+    });
+
+    navBar.appendChild(hintPill);
+    navBar.appendChild(dotsTrack);
+
+    container.insertAdjacentElement("afterend", navBar);
+
+    // Track active dot on scroll
+    let isScrollingTimeout;
+    container.addEventListener("scroll", () => {
+      window.clearTimeout(isScrollingTimeout);
+      isScrollingTimeout = setTimeout(() => {
+        const scrollCenter = container.scrollLeft + container.offsetWidth / 2;
+        let closestIdx = 0;
+        let minDistance = Infinity;
+
+        items.forEach((item, idx) => {
+          const itemCenter = item.offsetLeft - container.offsetLeft + item.offsetWidth / 2;
+          const dist = Math.abs(scrollCenter - itemCenter);
+          if (dist < minDistance) {
+            minDistance = dist;
+            closestIdx = idx;
+          }
+        });
+
+        const dots = dotsTrack.querySelectorAll(".swiper-dot");
+        dots.forEach((d, i) => {
+          d.classList.toggle("active", i === closestIdx);
+        });
+      }, 35);
+    }, { passive: true });
+  };
+
+  swiperSelectors.forEach((sel) => {
+    document.querySelectorAll(sel).forEach(buildSwiper);
+  });
 }

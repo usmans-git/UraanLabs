@@ -69,6 +69,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body.dark-canvas {
@@ -4398,8 +4399,8 @@ h6 {
    ========================================================================== */
 .floating-whatsapp {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: 24px;
+  left: 24px;
   z-index: 9999;
   display: inline-flex;
   align-items: center;
@@ -4464,7 +4465,8 @@ h6 {
 
 .floating-whatsapp-tooltip {
   position: absolute;
-  right: 70px;
+  left: 68px;
+  right: auto;
   background: rgba(13, 17, 23, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: #F0F6FC;
@@ -4490,8 +4492,8 @@ h6 {
 
 @media (max-width: 640px) {
   .floating-whatsapp {
-    bottom: 20px;
-    right: 20px;
+    bottom: 16px;
+    left: 16px;
     width: 52px;
     height: 52px;
   }
@@ -6572,5 +6574,124 @@ h6 {
     right: 12px;
     width: calc(100vw - 24px);
     height: calc(100vh - 100px);
+  }
+}
+
+
+/* ==========================================================================
+   21. MOBILE CARDS SWIPER (TOUCH-DRIVEN HORIZONTAL SCROLL-SNAP CAROUSEL)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Transform card containers into horizontal swipers on mobile */
+  .bento-grid,
+  .workflow-steps-grid,
+  .accreditations-grid,
+  .vision-mission-grid,
+  .pillar-card-wrapper .panel-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 14px !important;
+    padding: 8px 16px 18px 16px !important;
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    scrollbar-width: none !important;
+    width: calc(100% + 32px) !important;
+  }
+
+  .bento-grid::-webkit-scrollbar,
+  .workflow-steps-grid::-webkit-scrollbar,
+  .accreditations-grid::-webkit-scrollbar,
+  .vision-mission-grid::-webkit-scrollbar,
+  .pillar-card-wrapper .panel-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Slide Cards */
+  .bento-grid > .bento-card,
+  .workflow-steps-grid > .workflow-step-card,
+  .accreditations-grid > .accreditation-card,
+  .vision-mission-grid > .vision-card,
+  .pillar-card-wrapper .panel-grid > .service-item {
+    flex: 0 0 84vw !important;
+    max-width: 320px !important;
+    scroll-snap-align: center !important;
+    scroll-snap-stop: normal !important;
+    margin-bottom: 0 !important;
+    min-width: 270px !important;
+  }
+
+  .bento-span-2 {
+    grid-column: auto !important;
+  }
+
+  /* Swiper Navigation Bar (Swipe Hint + Active Dots) */
+  .swiper-nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+    margin-bottom: 22px;
+    user-select: none;
+    width: 100%;
+  }
+
+  .swiper-hint-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #94A3B8;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3px 12px;
+    border-radius: 9999px;
+  }
+
+  .swiper-hint-pill .hint-arrow {
+    color: #FF1744;
+    font-weight: 800;
+    animation: hintArrowBounce 1.5s infinite alternate ease-in-out;
+  }
+
+  @keyframes hintArrowBounce {
+    0% { transform: translateX(-2px); }
+    100% { transform: translateX(2px); }
+  }
+
+  .swiper-dots-track {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+  }
+
+  .swiper-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .swiper-dot.active {
+    width: 22px;
+    border-radius: 9999px;
+    background: #FF1744;
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.55);
+  }
+}
+
+/* Hide Swiper Navigation Bar on Desktop & Tablets (>768px) */
+@media (min-width: 769px) {
+  .swiper-nav-bar {
+    display: none !important;
   }
 }
