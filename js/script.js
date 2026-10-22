@@ -75,19 +75,18 @@ function initStickyHeader() {
   const header = document.getElementById("header");
   if (!header) return;
 
-  let lastScroll = 0;
-
-  window.addEventListener("scroll", () => {
+  const handleScroll = () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScroll > 40) {
+    if (currentScroll > 20) {
       header.classList.add("is-scrolled");
     } else {
       header.classList.remove("is-scrolled");
     }
+  };
 
-    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
-  }, { passive: true });
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 }
 
 /* ==========================================================================
