@@ -4,46 +4,47 @@
    ========================================================================== */
 
 :root {
-  /* Canvas & Surface Colors - Crystal Luminous Midnight */
-  --canvas: #0A0E24;
-  --canvas-subtle: #0F1636;
-  --surface: #141C44;
-  --surface-elevated: #1C265C;
-  --surface-glass: rgba(20, 28, 64, 0.78);
-  --surface-card: rgba(22, 32, 74, 0.65);
+  /* Canvas & Surface Colors - Precision Obsidian Monochrome */
+  --canvas: #060913;
+  --canvas-subtle: #0B1021;
+  --surface: rgba(14, 21, 42, 0.72);
+  --surface-elevated: rgba(18, 27, 54, 0.85);
+  --surface-glass: rgba(10, 15, 30, 0.82);
+  --surface-card: rgba(12, 18, 36, 0.75);
   
-  /* Crystal Glossy Bevel & Specular Highlight */
-  --card-highlight: inset 0 1px 1px 0 rgba(255, 255, 255, 0.45), inset 0 0 20px 0 rgba(255, 255, 255, 0.03);
-  --card-highlight-strong: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.65), inset 0 0 25px 0 rgba(255, 255, 255, 0.06);
+  /* Specular Highlight (Optical Glass Bevel) */
+  --card-highlight: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16), inset 0 0 15px 0 rgba(56, 189, 248, 0.02);
+  --card-highlight-strong: inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.28), inset 0 0 20px 0 rgba(56, 189, 248, 0.04);
 
-  /* Brand Accents */
-  --violet-core: #7C3AED;
-  --purple-glow: #A855F7;
+  /* Brand Accents - Minimal Monochrome with Sharp Cyan Hits */
   --cyan-sonic: #38BDF8;
-  --cyan-deep: #06B6D4;
+  --cyan-deep: #0284C7;
   --cyan-crystal: #7DD3FC;
+  --cyan-glow: rgba(56, 189, 248, 0.35);
+  --violet-core: #6366F1;
+  --purple-glow: #818CF8;
   --emerald-live: #10B981;
-  --indigo-edge: #6366F1;
+  --indigo-edge: #4F46E5;
 
-  /* Typography Colors - Crisp & High Contrast */
+  /* Typography Colors - Crisp Optic White & Slate Spectrum */
   --text-main: #FFFFFF;
-  --text-body: #E6EDF6;
-  --text-muted: #CBD5E1;
-  --text-dim: #94A3B8;
+  --text-body: #E2E8F0;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
 
-  /* Borders & Crystal Glows */
-  --border-subtle: rgba(255, 255, 255, 0.18);
-  --border-hover: rgba(56, 189, 248, 0.65);
-  --border-cyan: rgba(56, 189, 248, 0.55);
-  --glow-primary: 0 16px 40px -5px rgba(124, 58, 237, 0.45), 0 0 25px rgba(168, 85, 247, 0.25);
-  --glow-cyan: 0 16px 35px -5px rgba(56, 189, 248, 0.40), 0 0 25px rgba(56, 189, 248, 0.25);
-  --glow-crystal: 0 20px 50px -10px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 0 30px rgba(56, 189, 248, 0.18);
+  /* Borders & Precision Glows */
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --border-hover: rgba(56, 189, 248, 0.50);
+  --border-cyan: rgba(56, 189, 248, 0.40);
+  --glow-primary: 0 16px 36px -5px rgba(2, 132, 199, 0.35), 0 0 20px rgba(56, 189, 248, 0.20);
+  --glow-cyan: 0 16px 35px -5px rgba(56, 189, 248, 0.35), 0 0 20px rgba(56, 189, 248, 0.20);
+  --glow-crystal: 0 20px 45px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 0 25px rgba(56, 189, 248, 0.12);
 
-  /* Gradients - Prismatic & Crystal Sheen */
-  --grad-kinetic: linear-gradient(135deg, #7C3AED 0%, #A855F7 45%, #38BDF8 100%);
-  --grad-text: linear-gradient(135deg, #FFFFFF 0%, #EDE9FE 40%, #7DD3FC 75%, #C084FC 100%);
-  --grad-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.02) 100%);
-  --grad-gloss: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.04) 40%, rgba(56, 189, 248, 0.08) 100%);
+  /* Gradients - Calibrated Minimal Cyan Kinetic */
+  --grad-kinetic: linear-gradient(135deg, #0284C7 0%, #0EA5E9 45%, #38BDF8 100%);
+  --grad-text: linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 55%, #38BDF8 100%);
+  --grad-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+  --grad-gloss: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(56, 189, 248, 0.06) 100%);
 
   /* Fonts */
   --font-display: 'Sora', sans-serif;
@@ -75,11 +76,9 @@ html {
 body.dark-canvas {
   background-color: var(--canvas);
   background-image: 
-    radial-gradient(ellipse 90% 55% at 50% -12%, rgba(124, 58, 237, 0.38), transparent 70%),
-    radial-gradient(ellipse 70% 45% at 88% 30%, rgba(56, 189, 248, 0.24), transparent 60%),
-    radial-gradient(ellipse 65% 45% at 12% 60%, rgba(168, 85, 247, 0.24), transparent 60%),
-    radial-gradient(ellipse 75% 50% at 85% 85%, rgba(56, 189, 248, 0.20), transparent 65%),
-    radial-gradient(ellipse 60% 40% at 20% 98%, rgba(124, 58, 237, 0.22), transparent 60%);
+    radial-gradient(ellipse 80% 45% at 50% -8%, rgba(56, 189, 248, 0.14), transparent 65%),
+    radial-gradient(ellipse 60% 40% at 90% 40%, rgba(2, 132, 199, 0.07), transparent 60%),
+    radial-gradient(ellipse 70% 45% at 10% 80%, rgba(56, 189, 248, 0.05), transparent 65%);
   background-attachment: fixed;
   color: var(--text-body);
   font-family: var(--font-body);
@@ -105,41 +104,41 @@ body.dark-canvas {
 }
 
 ::selection {
-  background: var(--violet-core);
+  background: var(--cyan-deep);
   color: #FFFFFF;
 }
 
-/* Ambient Background Glow Orbs - Luminous Crystal Aurora */
+/* Ambient Background Glow Orbs - Minimal Subtle Atmosphere */
 .ambient-glow {
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  filter: blur(100px);
-  opacity: 0.75;
+  filter: blur(140px);
+  opacity: 0.28;
   mix-blend-mode: screen;
 }
 .orb-top-left {
   top: -120px;
   left: -120px;
-  width: 680px;
-  height: 680px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.65) 0%, rgba(56, 189, 248, 0.35) 45%, transparent 70%);
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.40) 0%, rgba(2, 132, 199, 0.15) 50%, transparent 70%);
 }
 .orb-top-right {
   top: 50px;
   right: -150px;
-  width: 780px;
-  height: 780px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.55) 0%, rgba(168, 85, 247, 0.35) 48%, transparent 70%);
+  width: 720px;
+  height: 720px;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.35) 0%, rgba(56, 189, 248, 0.12) 50%, transparent 70%);
 }
 .orb-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 950px;
-  height: 950px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.32) 0%, rgba(56, 189, 248, 0.22) 40%, transparent 70%);
+  width: 820px;
+  height: 820px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
 }
 
 /* Layout Utilities */
@@ -316,8 +315,8 @@ h6 {
 .btn-shimmer {
   background: var(--grad-kinetic);
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 8px 30px rgba(124, 58, 237, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.55), 0 8px 24px rgba(2, 132, 199, 0.40), 0 0 16px rgba(56, 189, 248, 0.25);
   position: relative;
   overflow: hidden;
 }
@@ -339,35 +338,42 @@ h6 {
 
 .btn-shimmer:hover {
   transform: translateY(-2px);
-  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8), 0 12px 35px rgba(56, 189, 248, 0.65);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.75), 0 12px 35px rgba(56, 189, 248, 0.55);
 }
 
 .btn-glass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.18), 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .btn-glass:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.24) 0%, rgba(56, 189, 248, 0.15) 100%);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 10px 30px rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #FFFFFF;
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.3), 0 10px 30px rgba(56, 189, 248, 0.25);
   transform: translateY(-2px);
 }
 
 .btn-outline {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #FFFFFF;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 6px 18px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(56, 189, 248, 0.30);
+  color: var(--cyan-sonic);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 6px 18px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 
 .btn-outline:hover {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: var(--cyan-sonic);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.28);
+}
   border-color: rgba(56, 189, 248, 0.65);
   color: #FFFFFF;
   background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(168, 85, 247, 0.18) 100%);
@@ -2328,12 +2334,12 @@ h6 {
    04. Crystal Glass Cards & Capabilities Bento Grid
    ========================================================================== */
 .card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.03) 30%, rgba(24, 34, 76, 0.65) 65%, rgba(14, 20, 52, 0.90) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 25%, rgba(13, 19, 38, 0.70) 65%, rgba(9, 13, 28, 0.92) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.5), inset 0 0 20px 0 rgba(255, 255, 255, 0.03), 0 20px 45px -10px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16), 0 20px 45px -10px rgba(0, 0, 0, 0.65);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -2346,14 +2352,14 @@ h6 {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65) 30%, rgba(56, 189, 248, 0.8) 50%, rgba(255, 255, 255, 0.65) 70%, transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25) 25%, rgba(56, 189, 248, 0.75) 50%, rgba(255, 255, 255, 0.25) 75%, transparent);
   pointer-events: none;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.7);
-  box-shadow: inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.75), 0 25px 60px -5px rgba(0, 0, 0, 0.55), 0 0 35px rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.25), 0 25px 60px -5px rgba(0, 0, 0, 0.75), 0 0 25px rgba(56, 189, 248, 0.16);
 }
 
 .card-glow {
@@ -2362,7 +2368,7 @@ h6 {
   right: -40px;
   width: 280px;
   height: 280px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(168, 85, 247, 0.15) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, rgba(2, 132, 199, 0.06) 50%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -2379,8 +2385,8 @@ h6 {
 }
 
 .bento-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.03) 30%, rgba(24, 34, 76, 0.65) 65%, rgba(14, 20, 52, 0.88) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 25%, rgba(13, 19, 38, 0.70) 65%, rgba(9, 13, 28, 0.90) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: var(--radius-lg);
   padding: 24px 22px;
   position: relative;
@@ -2388,9 +2394,9 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
-  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.5), inset 0 0 20px 0 rgba(255, 255, 255, 0.03), 0 20px 45px -10px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.16), 0 20px 45px -10px rgba(0, 0, 0, 0.65);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -4625,7 +4631,7 @@ body.chatbot-is-open .floating-whatsapp {
 }
 
 .section-light .section-title .gradient-text {
-  background: linear-gradient(135deg, #4338CA 0%, #7C3AED 50%, #0284C7 100%) !important;
+  background: linear-gradient(135deg, #0F172A 0%, #0284C7 55%, #38BDF8 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -6794,7 +6800,7 @@ body.chatbot-is-open .floating-whatsapp {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
-/* Moving Glossy Outline (Radiant Conic Beam) */
+/* Moving Glossy Outline (Radiant Conic Beam) - Minimal Electric Cyan */
 .child-service-card::before {
   content: '';
   position: absolute;
@@ -6805,10 +6811,10 @@ body.chatbot-is-open .floating-whatsapp {
   background: conic-gradient(
     from 0deg,
     transparent 0deg,
-    transparent 65deg,
+    transparent 60deg,
     rgba(56, 189, 248, 0.95) 120deg,
-    rgba(255, 23, 68, 0.95) 180deg,
-    rgba(124, 58, 237, 0.95) 240deg,
+    rgba(14, 165, 233, 0.95) 180deg,
+    rgba(2, 132, 199, 0.90) 240deg,
     transparent 295deg,
     transparent 360deg
   );
@@ -6829,7 +6835,7 @@ body.chatbot-is-open .floating-whatsapp {
   position: absolute;
   inset: 1.5px;
   border-radius: calc(var(--radius-md) - 1.5px);
-  background: linear-gradient(145deg, #0A0F26 0%, #060918 100%);
+  background: linear-gradient(145deg, #090E20 0%, #060915 100%);
   z-index: 1;
   transition: background 0.3s ease;
 }
