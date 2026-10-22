@@ -471,19 +471,6 @@
 
   <!-- Mobile Drawer Backdrop -->
   <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
-    <ul class="drawer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">All Services</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="insights.html">Insights</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-    <div class="drawer-footer">
-      <a href="contact.html" class="btn btn-primary btn-block"><span>Start a Project</span><span class="btn-arrow">&rarr;</span></a>
-    </div>
-  </div>
 
   <main id="mainContent">
     <!-- Breadcrumbs -->
@@ -500,46 +487,84 @@
     <!-- Legal Header -->
     <section class="section pt-4 pb-8">
       <div class="container max-w-4xl">
-        <div class="section-eyebrow"><span>GOVERNANCE &amp; COMMITMENTS</span></div>
+        <div class="section-eyebrow"><span>COMMERCIAL GOVERNANCE &amp; SOW TERMS</span></div>
         <h1 class="section-title">Terms of <span class="gradient-text">Service</span></h1>
-        <p class="section-subtitle">Last updated: October 2026. Clear, fair, and venture-grade terms governing all engineering, consulting, and design engagements.</p>
+        <p class="section-subtitle">Last updated: October 2026. Standard commercial conditions governing all software engineering, AI deployment, VAPT auditing, and architecture engagements executed by UraanLabs.</p>
 
         <!-- Summary Card -->
         <div class="card p-6 mt-8 mb-8" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1);">
-          <h2 style="font-size: 1.25rem; color: #FFFFFF; margin-bottom: 12px;">Engagement Principles at a Glance</h2>
+          <h2 style="font-size: 1.25rem; color: #FFFFFF; margin-bottom: 12px;">Key Commercial Terms at a Glance</h2>
           <ul style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; padding-left: 20px;">
-            <li><strong>Complete IP Assignment:</strong> 100% of custom source code, design assets, and architectural documents belong to you upon final invoice settlement.</li>
-            <li><strong>Milestone-Based Invoicing:</strong> Clear delivery gates, sprint demos, and code check-ins before milestone funds are disbursed.</li>
-            <li><strong>30-Day Warranty Period:</strong> Bug-fix warranty on all production releases covering functional scope defects.</li>
-            <li><strong>Zero Hidden Lock-In:</strong> Fully containerized, cleanly documented repositories deployed to your own cloud infrastructure (AWS/GCP/Azure).</li>
+            <li><strong>Conditional IP Assignment:</strong> Custom code and deliverables transfer to the Client strictly upon 100% receipt of cleared milestone funds. UraanLabs withholds all IP rights until full payment.</li>
+            <li><strong>Scope Containment:</strong> Features or changes outside the agreed Statement of Work (SOW) require a written Change Order at architectural hourly rates ($75–$150/hr).</li>
+            <li><strong>7-Day Deemed Acceptance:</strong> Sprints and deliverables submitted for review are deemed 100% accepted if no itemized written defects are submitted within 7 calendar days.</li>
+            <li><strong>Liability Cap:</strong> UraanLabs' aggregate liability for any engagement is strictly capped at the fees actually received for the specific milestone in dispute.</li>
           </ul>
         </div>
 
         <div class="article-content" style="color: var(--text-secondary); line-height: 1.8; font-size: 1rem;">
-          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">1. Scope of Engagement</h2>
-          <p>Every commercial engagement between UraanLabs ("Studio", "we", "us") and the Client ("Customer", "you") is executed via a Statement of Work (SOW) defining explicit architectural deliverables, timelines, acceptance criteria, and fee structures. In the event of any conflict between these Terms and a specific SOW, the terms of the signed SOW shall take precedence.</p>
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">1. Scope of Agreement &amp; Contractual Hierarchy</h2>
+          <p>These Terms of Service ("Terms") constitute a legally binding agreement between UraanLabs ("Studio", "Agency", "we", "us") and the ordering entity ("Client", "Customer", "you"). All projects, architecture discovery calls, and software deployments are executed pursuant to a Statement of Work (SOW) or proposal. In the event of any ambiguity, the signed SOW governs milestone specifics, while these Terms govern all payments, IP retention, liability, and dispute proceedings.</p>
 
-          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">2. Intellectual Property (IP) Ownership</h2>
-          <p>Upon full settlement of agreed milestone fees, UraanLabs irrevocably assigns all right, title, and interest in and to all custom deliverables (including source code, UI designs, schemas, and technical documentation) directly to the Client. Any open-source libraries or third-party frameworks incorporated into the build remain governed by their respective permissive licenses (e.g., MIT, Apache 2.0).</p>
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">2. Milestone Payments, Deposits &amp; Stop-Work Rights</h2>
+          <p>Engineering sprints and technical allocations are scheduled based on clear financial commitments:</p>
+          <ul style="padding-left: 20px; margin-bottom: 20px;">
+            <li><strong>Non-Refundable Onboarding Deposits:</strong> Project initiation requires an initial deposit (typically 30% to 50% of the SOW valuation). All deposits and sprint disbursements are strictly non-refundable once architectural work or engineering allocations have commenced.</li>
+            <li><strong>Invoicing &amp; Due Dates:</strong> Milestone invoices are payable upon presentation (Net-7). Any invoice unpaid after seven (7) calendar days shall accrue a compounding late finance charge of 1.5% per month (or the maximum statutory limit).</li>
+            <li><strong>Immediate Stop-Work Remedy:</strong> If the Client fails to pay any milestone invoice when due, UraanLabs reserves the absolute right, without breach or liability, to immediately pause all active engineering, freeze staging environments, revoke repository commit privileges, and withhold deployment credentials until all balances are settled in full.</li>
+          </ul>
 
-          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">3. Code Delivery and Hosting Sovereignty</h2>
-          <p>All production builds are deployed directly to Client-owned infrastructure accounts (such as AWS, Google Cloud, Azure, Cloudflare, or Vercel). UraanLabs does not hold client software hostage on proprietary proprietary clouds. Clients maintain root administrative access to their code repositories and hosting tenancies at all times.</p>
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">3. Intellectual Property Reservation &amp; Background IP</h2>
+          <p>UraanLabs maintains strict protection over its engineering outputs and proprietary tooling:</p>
+          <ul style="padding-left: 20px; margin-bottom: 20px;">
+            <li><strong>Retention of Title:</strong> Full title, copyright, and intellectual property in all custom code, UI designs, database schemas, and deliverables remain the exclusive property of UraanLabs until all fees, taxes, and change orders associated with the project have been paid in full with cleared funds.</li>
+            <li><strong>Unauthorized Pre-Payment Use:</strong> The Client is granted zero license to deploy, compile, distribute, or commercially exploit any deliverable prior to 100% invoice settlement. Any deployment of unpaid software constitutes willful copyright infringement and an immediate breach of contract.</li>
+            <li><strong>Background IP &amp; Developer Tooling:</strong> UraanLabs retains perpetual, global, unencumbered ownership of all pre-existing design tokens, boilerplate repositories, AI agent scaffolding, CI/CD pipelines, cryptographic scripts, and architectural methodologies ("Background IP"). Upon final payment, the Client receives a perpetual, non-exclusive license to use such Background IP solely as integrated within the deliverable.</li>
+          </ul>
 
-          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">4. Acceptance Testing &amp; Warranty</h2>
-          <p>Clients are granted a standard 14-day User Acceptance Testing (UAT) window following milestone delivery to verify performance against agreed functional specifications. Following final production handover, UraanLabs provides a complimentary 30-day bug-fix warranty to resolve any defects arising directly from out-of-spec implementation.</p>
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">4. Scope Creep, Change Orders &amp; 7-Day Deemed Acceptance</h2>
+          <p>To ensure project momentum and protect against uncompensated scope expansion:</p>
+          <ul style="padding-left: 20px; margin-bottom: 20px;">
+            <li><strong>Strict Scope Boundaries:</strong> UraanLabs is obligated to build only the deliverables explicitly itemized in the approved SOW. Any extra feature, altered user flow, third-party API substitution, or design overhaul requested by the Client constitutes an out-of-scope "Change Order", billable at UraanLabs' standard architectural rate of $75 to $150 per hour or a separate fixed addendum.</li>
+            <li><strong>7-Day Deemed Acceptance:</strong> Following milestone delivery to staging or git commit check-in, the Client is granted seven (7) calendar days to perform verification. If the Client does not submit an itemized written defect notice within this 7-day period, the milestone shall be deemed irrevocably approved, accepted, and cleared for milestone disbursement.</li>
+          </ul>
 
-          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">5. Confidentiality &amp; Non-Disclosure</h2>
-          <p>Both parties agree to protect and treat all technical, business, and financial data received as confidential. UraanLabs enforces internal data segregation protocols, encrypted laptops, and zero-logging proxy rules to guarantee the security of client assets.</p>
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">5. Client Dependencies &amp; Inactivity Freeze</h2>
+          <p>Timely project completion depends on prompt Client collaboration. The Client agrees to deliver requested database access, third-party API credentials, domain DNS records, and design feedback within five (5) business days of request. If a project is delayed for more than ten (10) consecutive business days due to Client unresponsive conduct, UraanLabs may freeze the project, release scheduled engineering resources without penalty, and require a 15% reactivation fee to reschedule.</p>
 
-          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">6. Governing Law &amp; Dispute Resolution</h2>
-          <p>These Terms and related agreements shall be governed by and interpreted in accordance with applicable commercial laws. In the event of a dispute, both parties commit to an initial 30-day executive consultation in good faith prior to initiating any formal legal or arbitration proceedings.</p>
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">6. Absolute Limitation of Liability</h2>
+          <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+          <ul style="padding-left: 20px; margin-bottom: 20px;">
+            <li>IN NO EVENT SHALL URAANLABS, ITS SENIOR ARCHITECTS, DIRECTORS, CONTRACTORS, OR AFFILIATES BE LIABLE FOR ANY CONSEQUENTIAL, INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF BUSINESS OPPORTUNITY, LOSS OF DATA, SYSTEM DOWNTIME, OR REPUTATIONAL DAMAGE, ARISING OUT OF OR IN CONNECTION WITH THE SERVICES.</li>
+            <li>URAANLABS' TOTAL CUMULATIVE AGGREGATE LIABILITY FOR ALL CLAIMS OF ANY KIND (WHETHER IN CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY, OR INDEMNITY) SHALL NOT EXCEED THE TOTAL NET AMOUNT ACTUALLY RECEIVED BY URAANLABS FROM THE CLIENT FOR THE SPECIFIC MILESTONE IN DISPUTE DURING THE THIRTY (30) DAYS IMMEDIATELY PRECEDING THE OCCURRENCE GIVING RISE TO LIABILITY.</li>
+          </ul>
 
-          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">7. Contact Our Contracts Office</h2>
-          <p>For custom Master Services Agreements, vendor onboarding compliance forms, or legal questions, reach out to our team:</p>
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">7. Cybersecurity, Penetration Testing &amp; VAPT Disclaimers</h2>
+          <p>For cybersecurity assessments, vulnerability assessments, and penetration testing (VAPT):</p>
+          <ul style="padding-left: 20px; margin-bottom: 20px;">
+            <li>VAPT audits and source code reviews evaluate security posture at a single point in time based on agreed scopes and publicly known vulnerability signatures. UraanLabs DOES NOT warrant that an audited application, network, or smart contract is 100% impenetrable or immune from future zero-day vulnerabilities, social engineering, credential stuffing, or subsequent code changes.</li>
+            <li>The Client assumes full operational responsibility for patching identified vulnerabilities. The Client agrees to indemnify, defend, and hold UraanLabs harmless against any regulatory fines, ransomware losses, or third-party lawsuits resulting from security breaches on the Client's infrastructure.</li>
+          </ul>
+
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">8. Limited 30-Day Bug Warranty &amp; "As-Is" Cloud Deployments</h2>
+          <p>Following final production handover, UraanLabs provides a complimentary thirty (30) day functional defect warranty strictly covering reproducible deviations from the signed SOW specifications. This warranty is voided immediately if the codebase is modified, refactored, or updated by the Client or any third-party engineer. EXCEPT AS EXPRESSLY PROVIDED, ALL SERVICES, SCRIPTS, AND DELIVERABLES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR UNINTERRUPTED AVAILABILITY.</p>
+
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">9. Portfolio &amp; Marketing Attribution</h2>
+          <p>Unless the Client executes an explicit, paid White-Label Non-Disclosure Addendum prior to project kickoff, UraanLabs reserves the perpetual right to display non-confidential screenshots, design mockups, architectural case studies, and the Client's corporate logo in UraanLabs' promotional portfolio, social channels, and technical articles.</p>
+
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">10. Contract Termination &amp; Settlement</h2>
+          <p>Either party may terminate an active SOW upon fourteen (14) days written notice. In the event of early termination by the Client, the Client shall immediately compensate UraanLabs for all work completed, unbilled developer hours, and milestones in progress up to the effective termination date. Under no circumstances shall previously disbursed milestone fees or deposits be subject to clawback or refund.</p>
+
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">11. Governing Law, Exclusive Venue &amp; Mandatory Arbitration</h2>
+          <p>These Terms, all SOWs, and any commercial disputes arising from engagements with UraanLabs shall be governed exclusively by the laws of Sindh, Pakistan, without regard to conflict-of-law principles. Any controversy or dispute shall be settled exclusively through binding, confidential commercial arbitration in Karachi, Pakistan, under the Arbitration Act, 1940. Each party shall bear its own legal and representation expenses, and judgments may be entered in any court having competent jurisdiction.</p>
+
+          <h2 style="color: #FFFFFF; font-size: 1.4rem; margin-top: 36px; margin-bottom: 14px;">12. Commercial Inquiries &amp; Legal Notices</h2>
+          <p>Official contractual notices and Master Services Agreement (MSA) requests should be submitted to:</p>
           <p style="margin-top: 10px;">
-            <strong>UraanLabs Studio</strong><br>
-            Email: <a href="mailto:info@uraanlabs.com" style="color: var(--accent-cyan);">info@uraanlabs.com</a><br>
-            Direct WhatsApp / Phone: <a href="tel:+923170128047" style="color: var(--accent-cyan);">+92 317 0128047</a>
+            <strong>UraanLabs Studio — Contracts &amp; Governance</strong><br>
+            Email: <a href="mailto:info@uraanlabs.com" style="color: var(--cyan-sonic);">info@uraanlabs.com</a><br>
+            Direct Telephone &amp; WhatsApp: <a href="tel:+923170128047" style="color: var(--cyan-sonic);">+92 317 0128047</a><br>
+            Headquarters: Karachi, Pakistan
           </p>
         </div>
       </div>
@@ -620,7 +645,6 @@
         <div class="footer-legal-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
-          <a href="#header">Back to Top &uarr;</a>
         </div>
       </div>
     </div>
