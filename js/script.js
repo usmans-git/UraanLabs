@@ -401,6 +401,18 @@ function initLeadForm() {
   const formSuccess = document.getElementById("formSuccess");
   const formFail = document.getElementById("formFail");
 
+  // Initialize International Telephone Input (Country Flags & Dial Codes)
+  let itiInstance = null;
+  if (phoneInput && typeof window.intlTelInput === "function") {
+    itiInstance = window.intlTelInput(phoneInput, {
+      initialCountry: "pk",
+      preferredCountries: ["pk", "ae", "sa", "gb", "us", "ca", "au"],
+      separateDialCode: true,
+      autoPlaceholder: "polite",
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+    });
+  }
+
   // Auto-preselect service or careers intent from URL query params
   try {
     const urlParams = new URLSearchParams(window.location.search);
@@ -522,6 +534,9 @@ function initLeadForm() {
       if (formSuccess) formSuccess.style.display = "block";
       if (formFail) formFail.style.display = "none";
       form.reset();
+      if (itiInstance) {
+        itiInstance.setCountry("pk");
+      }
       generateCaptcha();
 
       if (submitBtn) {
