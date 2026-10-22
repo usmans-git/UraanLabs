@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLeadForm();
   initLiveTelemetrySimulator();
   initHero3DParallax();
+  initPillars3DParallax();
 });
 
 /* ==========================================================================
@@ -609,3 +610,50 @@ function initHero3DParallax() {
 
   requestAnimationFrame(updateTilt);
 }
+
+/* ==========================================================================
+   10. Interactive 3D Pillar Showcase Parallax Tilt (Services Listing Page)
+   ========================================================================== */
+function initPillars3DParallax() {
+  const cards = document.querySelectorAll(".pillar-card-wrapper");
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    const scene = card.querySelector(".pillar-3d-scene");
+    if (!scene) return;
+
+    let currentX = 0, currentY = 0;
+    let targetX = 0, targetY = 0;
+    let isHovered = false;
+
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      targetX = x * 20;
+      targetY = -y * 16;
+      isHovered = true;
+    }, { passive: true });
+
+    card.addEventListener("mouseleave", () => {
+      targetX = 0;
+      targetY = 0;
+      isHovered = false;
+    });
+
+    const updateTilt = () => {
+      currentX += (targetX - currentX) * 0.08;
+      currentY += (targetY - currentY) * 0.08;
+
+      if (isHovered || Math.abs(currentX) > 0.02 || Math.abs(currentY) > 0.02) {
+        scene.style.transform = `rotateY(${currentX.toFixed(2)}deg) rotateX(${currentY.toFixed(2)}deg)`;
+      } else {
+        scene.style.transform = "";
+      }
+      requestAnimationFrame(updateTilt);
+    };
+
+    requestAnimationFrame(updateTilt);
+  });
+}
+
