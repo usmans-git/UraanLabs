@@ -28,13 +28,16 @@
   <div class="ambient-glow orb-center" aria-hidden="true"></div>
 
   <!-- ================= 01. FLOATING GLASS NAVBAR ================= -->
+  <!-- ================= 01. FLOATING GLASS NAVBAR ================= -->
   <header class="site-header" id="header">
     <div class="container">
       <nav class="navbar" aria-label="Main Navigation">
+        <!-- Logo -->
         <a href="index.html" class="logo" aria-label="UraanLabs Homepage">
-          <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo"  width="255" height="56" class="brand-logo-img">
+          <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="255" height="56" class="brand-logo-img">
         </a>
 
+        <!-- Desktop Navigation Links (Restructured as per Sitemap) -->
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="nav-link">Home</a></li>
 
@@ -60,7 +63,7 @@
             </div>
           </li>
 
-          <!-- 2. Services Mega Menu -->
+          <!-- 2. Services Mega Menu (5 Pillars, 34 Child Services) -->
           <li class="nav-item has-dropdown has-mega">
             <a href="services.html" class="nav-link dropdown-toggle active" aria-haspopup="true">
               <span>Services</span>
@@ -69,6 +72,7 @@
 
             <div class="mega-menu" id="servicesMegaMenu">
               <div class="mega-inner">
+                <!-- Left: 5 Pillar Selector Tabs -->
                 <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
                   <button class="mega-tab active" type="button" role="tab" id="tab-design" aria-selected="true" aria-controls="panel-design" data-target="panel-design">
                     <span class="tab-icon">&#10024;</span>
@@ -116,8 +120,9 @@
                   </button>
                 </div>
 
+                <!-- Right: Content Panels corresponding to the 5 pillars with 34 child services -->
                 <div class="mega-panels">
-                  <!-- Panel 1 -->
+                  <!-- Panel 1: Design & Branding (6) -->
                   <div class="mega-panel active" id="panel-design" role="tabpanel" aria-labelledby="tab-design">
                     <div class="panel-header">
                       <div>
@@ -144,7 +149,7 @@
                         <strong>UI/UX Design</strong>
                         <small>Clean, high-converting digital interfaces mapped to real customer journeys.</small>
                       </a>
-                      <a href="services/design-branding.html#product-prototyping" class="service-item">
+                      <a href="services/product-prototyping.html" class="service-item">
                         <strong>Product Prototyping</strong>
                         <small>Clickable Figma prototypes to test assumptions before writing code.</small>
                       </a>
@@ -155,7 +160,7 @@
                     </div>
                   </div>
 
-                  <!-- Panel 2 -->
+                  <!-- Panel 2: Web & Mobile Apps (6) -->
                   <div class="mega-panel" id="panel-webmob" role="tabpanel" aria-labelledby="tab-webmob">
                     <div class="panel-header">
                       <div>
@@ -193,7 +198,7 @@
                     </div>
                   </div>
 
-                  <!-- Panel 3 -->
+                  <!-- Panel 3: Business Platforms (6) -->
                   <div class="mega-panel" id="panel-platforms" role="tabpanel" aria-labelledby="tab-platforms">
                     <div class="panel-header">
                       <div>
@@ -231,7 +236,7 @@
                     </div>
                   </div>
 
-                  <!-- Panel 4 -->
+                  <!-- Panel 4: AI & Automation (8) -->
                   <div class="mega-panel" id="panel-ai" role="tabpanel" aria-labelledby="tab-ai">
                     <div class="panel-header">
                       <div>
@@ -277,7 +282,7 @@
                     </div>
                   </div>
 
-                  <!-- Panel 5 -->
+                  <!-- Panel 5: Cybersecurity (8) -->
                   <div class="mega-panel" id="panel-security" role="tabpanel" aria-labelledby="tab-security">
                     <div class="panel-header">
                       <div>
@@ -316,7 +321,7 @@
                         <strong>DevSecOps</strong>
                         <small>Automated security testing baked directly into your continuous integration and deployment pipelines.</small>
                       </a>
-                      <a href="services/cybersecurity.html#compliance" class="service-item">
+                      <a href="services/compliance-audits.html" class="service-item">
                         <strong>Compliance &amp; Audits</strong>
                         <small>Readiness reviews mapping your technical controls to SOC2, ISO, and GDPR standards.</small>
                       </a>
@@ -327,8 +332,7 @@
             </div>
           </li>
 
-          <!-- 3. Industries Dropdown -->
-
+          <!-- 3. Industries Dropdown (7 Sectors) -->
           <li class="nav-item has-dropdown">
             <a href="industries.html" class="nav-link dropdown-toggle" aria-haspopup="true">
               <span>Industries</span>
@@ -366,15 +370,21 @@
             </div>
           </li>
 
-          <!-- 4. Insights -->
+          <!-- 4. Insights (Blog) -->
           <li><a href="insights.html" class="nav-link">Insights</a></li>
 
           <!-- 5. Contact Us -->
           <li><a href="contact.html" class="nav-link">Contact Us</a></li>
         </ul>
 
-        <!-- Action: Book a Call -->
+        <!-- Action: Book a Call & AI/Cyber Badge -->
         <div class="nav-actions">
+          <div class="nav-cyber-pill d-none-mobile" title="Autonomous AI &amp; Zero-Trust Cybersecurity">
+            <span class="nav-cyber-pulse"></span>
+            <span class="nav-cyber-icon">&#128737;</span>
+            <span class="nav-cyber-text">AI &amp; Cyber Studio</span>
+          </div>
+
           <a href="contact.html" class="btn btn-shimmer nav-cta">
             <span>Book a Call</span>
             <span class="btn-arrow" aria-hidden="true">&rarr;</span>
@@ -390,6 +400,7 @@
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
   <!-- Mobile Drawer -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="mobile-drawer-header">
@@ -779,15 +790,18 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
+  <!-- ================= 10. EXPANDED SITE FOOTER ================= -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
+
+        <!-- Col 1: Brand Info -->
         <div class="footer-col-brand">
           <a href="index.html" class="logo" aria-label="UraanLabs Homepage">
-            <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo"  width="290" height="64" class="brand-logo-img">
+            <img src="images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="290" height="64" class="brand-logo-img">
           </a>
           <p class="footer-bio">
-            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth companies.
           </p>
           <div class="system-status-pill">
             <span class="status-dot"></span>
@@ -795,6 +809,7 @@
           </div>
         </div>
 
+        <!-- Col 2: Services (5 Pillars) -->
         <div class="footer-col">
           <h4 class="footer-heading">Services</h4>
           <ul class="footer-links">
@@ -806,9 +821,7 @@
           </ul>
         </div>
 
-
-
-
+        <!-- Col 3: Industries (7 Sectors) -->
         <div class="footer-col">
           <h4 class="footer-heading">Industries</h4>
           <ul class="footer-links">
@@ -846,6 +859,7 @@
             <li><a href="contact.html">Book an Audit &rarr;</a></li>
           </ul>
         </div>
+
       </div>
 
       <div class="footer-bottom-bar">

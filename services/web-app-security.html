@@ -130,16 +130,20 @@
   <div class="ambient-glow orb-center" aria-hidden="true"></div>
 
   <!-- Navbar -->
+  <!-- ================= 01. FLOATING GLASS NAVBAR ================= -->
   <header class="site-header" id="header">
     <div class="container">
       <nav class="navbar" aria-label="Main Navigation">
+        <!-- Logo -->
         <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
-          <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo"  width="255" height="56" class="brand-logo-img">
+          <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="255" height="56" class="brand-logo-img">
         </a>
 
+        <!-- Desktop Navigation Links (Restructured as per Sitemap) -->
         <ul class="nav-links" id="navLinks">
           <li><a href="../index.html" class="nav-link">Home</a></li>
 
+          <!-- 1. About Us Dropdown -->
           <li class="nav-item has-dropdown">
             <a href="../about.html" class="nav-link dropdown-toggle" aria-haspopup="true">
               <span>About Us</span>
@@ -156,11 +160,12 @@
               </a>
               <a href="../careers.html" class="dropdown-item">
                 <span class="dropdown-title">Careers</span>
-                <small class="dropdown-desc">Join our senior technical studio.</small>
+                <small class="dropdown-desc">Join our senior technical &amp; creative studio.</small>
               </a>
             </div>
           </li>
 
+          <!-- 2. Services Mega Menu (5 Pillars, 34 Child Services) -->
           <li class="nav-item has-dropdown has-mega">
             <a href="../services.html" class="nav-link dropdown-toggle active" aria-haspopup="true">
               <span>Services</span>
@@ -169,8 +174,9 @@
 
             <div class="mega-menu" id="servicesMegaMenu">
               <div class="mega-inner">
+                <!-- Left: 5 Pillar Selector Tabs -->
                 <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
-                  <button class="mega-tab " type="button" role="tab" id="tab-design" aria-selected="false" data-target="panel-design">
+                  <button class="mega-tab active" type="button" role="tab" id="tab-design" aria-selected="true" aria-controls="panel-design" data-target="panel-design">
                     <span class="tab-icon">&#10024;</span>
                     <div class="tab-text">
                       <strong>Design &amp; Branding</strong>
@@ -179,7 +185,7 @@
                     <span class="tab-arrow" aria-hidden="true">&rarr;</span>
                   </button>
 
-                  <button class="mega-tab " type="button" role="tab" id="tab-webmob" aria-selected="false" data-target="panel-webmob">
+                  <button class="mega-tab" type="button" role="tab" id="tab-webmob" aria-selected="false" aria-controls="panel-webmob" data-target="panel-webmob">
                     <span class="tab-icon">&#128187;</span>
                     <div class="tab-text">
                       <strong>Web &amp; Mobile Apps</strong>
@@ -188,7 +194,7 @@
                     <span class="tab-arrow" aria-hidden="true">&rarr;</span>
                   </button>
 
-                  <button class="mega-tab " type="button" role="tab" id="tab-platforms" aria-selected="false" data-target="panel-platforms">
+                  <button class="mega-tab" type="button" role="tab" id="tab-platforms" aria-selected="false" aria-controls="panel-platforms" data-target="panel-platforms">
                     <span class="tab-icon">&#128200;</span>
                     <div class="tab-text">
                       <strong>Business Platforms</strong>
@@ -197,7 +203,7 @@
                     <span class="tab-arrow" aria-hidden="true">&rarr;</span>
                   </button>
 
-                  <button class="mega-tab " type="button" role="tab" id="tab-ai" aria-selected="false" data-target="panel-ai">
+                  <button class="mega-tab" type="button" role="tab" id="tab-ai" aria-selected="false" aria-controls="panel-ai" data-target="panel-ai">
                     <span class="tab-icon">&#9889;</span>
                     <div class="tab-text">
                       <strong>AI &amp; Automation</strong>
@@ -206,7 +212,7 @@
                     <span class="tab-arrow" aria-hidden="true">&rarr;</span>
                   </button>
 
-                  <button class="mega-tab active" type="button" role="tab" id="tab-security" aria-selected="true" data-target="panel-security">
+                  <button class="mega-tab" type="button" role="tab" id="tab-security" aria-selected="false" aria-controls="panel-security" data-target="panel-security">
                     <span class="tab-icon">&#128737;</span>
                     <div class="tab-text">
                       <strong>Cybersecurity</strong>
@@ -216,108 +222,211 @@
                   </button>
                 </div>
 
+                <!-- Right: Content Panels corresponding to the 5 pillars with 34 child services -->
                 <div class="mega-panels">
-                  <!-- Panel: Design & Branding -->
-                  <div class="mega-panel " id="panel-design" role="tabpanel">
+                  <!-- Panel 1: Design & Branding (6) -->
+                  <div class="mega-panel active" id="panel-design" role="tabpanel" aria-labelledby="tab-design">
                     <div class="panel-header">
                       <div>
                         <span class="panel-badge">PILLAR 01</span>
                         <h4>Design &amp; Branding</h4>
-                        <p>Identity systems, UI/UX craft, and digital product prototypes.</p>
+                        <p>Brand systems and interfaces crafted for recognition, trust, and conversion.</p>
                       </div>
-                      <a href="design-branding.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                      <a href="../services/design-branding.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
                     </div>
                     <div class="panel-grid">
-                      <a href="logo-design.html" class="service-item"><strong>Logo Design</strong><small>Distinctive brand marks.</small></a>
-                      <a href="brand-identity.html" class="service-item"><strong>Brand Identity</strong><small>Design systems &amp; tokens.</small></a>
-                      <a href="print-stationery.html" class="service-item"><strong>Print &amp; Stationery</strong><small>Physical collateral.</small></a>
-                      <a href="ui-ux-design.html" class="service-item"><strong>UI/UX Design</strong><small>User flows &amp; interfaces.</small></a>
-                      <a href="product-prototyping.html" class="service-item"><strong>Product Prototyping</strong><small>Clickable Figma models.</small></a>
-                      <a href="social-media-creatives.html" class="service-item"><strong>Social Media Creatives</strong><small>Performance assets.</small></a>
+                      <a href="../services/logo-design.html" class="service-item">
+                        <strong>Logo Design</strong>
+                        <small>Distinct marks built for recognition and long-term brand equity.</small>
+                      </a>
+                      <a href="../services/brand-identity.html" class="service-item">
+                        <strong>Brand Identity</strong>
+                        <small>Complete design systems, typography, color palettes, and guidelines.</small>
+                      </a>
+                      <a href="../services/print-stationery.html" class="service-item">
+                        <strong>Print &amp; Stationery</strong>
+                        <small>Tangible marketing collateral, business cards, packaging, and decks.</small>
+                      </a>
+                      <a href="../services/ui-ux-design.html" class="service-item">
+                        <strong>UI/UX Design</strong>
+                        <small>Clean, high-converting digital interfaces mapped to real customer journeys.</small>
+                      </a>
+                      <a href="../services/product-prototyping.html" class="service-item">
+                        <strong>Product Prototyping</strong>
+                        <small>Clickable Figma prototypes to test assumptions before writing code.</small>
+                      </a>
+                      <a href="../services/social-media-creatives.html" class="service-item">
+                        <strong>Social Media Creatives</strong>
+                        <small>Visual templates and creative assets tailored for active social feeds.</small>
+                      </a>
                     </div>
                   </div>
 
-                  <!-- Panel: Web & Mobile Apps -->
-                  <div class="mega-panel " id="panel-webmob" role="tabpanel">
+                  <!-- Panel 2: Web & Mobile Apps (6) -->
+                  <div class="mega-panel" id="panel-webmob" role="tabpanel" aria-labelledby="tab-webmob">
                     <div class="panel-header">
                       <div>
                         <span class="panel-badge">PILLAR 02</span>
                         <h4>Web &amp; Mobile Apps</h4>
-                        <p>Sub-second web platforms and fluid native mobile applications.</p>
+                        <p>High-speed web platforms and cross-platform apps built with modern JavaScript stacks.</p>
                       </div>
-                      <a href="web-mobile-apps.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                      <a href="../services/web-mobile-apps.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
                     </div>
                     <div class="panel-grid">
-                      <a href="business-websites.html" class="service-item"><strong>Business Websites</strong><small>High-speed corporate sites.</small></a>
-                      <a href="custom-web-apps.html" class="service-item"><strong>Custom Web Apps</strong><small>Full-stack portal engineering.</small></a>
-                      <a href="mobile-apps.html" class="service-item"><strong>Mobile Apps</strong><small>Flutter &amp; React Native.</small></a>
-                      <a href="pwa.html" class="service-item"><strong>PWAs</strong><small>Installable offline web apps.</small></a>
-                      <a href="api-integrations.html" class="service-item"><strong>API Integrations</strong><small>Secure microservice mesh.</small></a>
-                      <a href="support-maintenance.html" class="service-item"><strong>Support &amp; Maintenance</strong><small>SLA DevOps retainers.</small></a>
+                      <a href="../services/business-websites.html" class="service-item">
+                        <strong>Business Websites</strong>
+                        <small>Fast, responsive web experiences engineered to convert qualified leads.</small>
+                      </a>
+                      <a href="../services/custom-web-apps.html" class="service-item">
+                        <strong>Custom Web Apps</strong>
+                        <small>Scalable, database-driven web applications built with modern JavaScript stacks.</small>
+                      </a>
+                      <a href="../services/mobile-apps.html" class="service-item">
+                        <strong>Mobile Apps (iOS &amp; Android)</strong>
+                        <small>High-performance Flutter and React Native mobile applications.</small>
+                      </a>
+                      <a href="../services/pwa.html" class="service-item">
+                        <strong>Progressive Web Apps (PWA)</strong>
+                        <small>App-like browser experiences with offline persistence and push notifications.</small>
+                      </a>
+                      <a href="../services/api-integrations.html" class="service-item">
+                        <strong>API Integrations</strong>
+                        <small>Reliable backend connectors linking third-party tools, payment gateways, and databases.</small>
+                      </a>
+                      <a href="../services/support-maintenance.html" class="service-item">
+                        <strong>Support &amp; Maintenance</strong>
+                        <small>Proactive performance monitoring, security patches, and ongoing feature updates.</small>
+                      </a>
                     </div>
                   </div>
 
-                  <!-- Panel: Business Platforms -->
-                  <div class="mega-panel " id="panel-platforms" role="tabpanel">
+                  <!-- Panel 3: Business Platforms (6) -->
+                  <div class="mega-panel" id="panel-platforms" role="tabpanel" aria-labelledby="tab-platforms">
                     <div class="panel-header">
                       <div>
                         <span class="panel-badge">PILLAR 03</span>
                         <h4>Business Platforms</h4>
-                        <p>Tailored ERP, CRM, and marketplace engines that streamline operations.</p>
+                        <p>Centralized operating systems engineered around how your company actually works.</p>
                       </div>
-                      <a href="business-platforms.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                      <a href="../services/business-platforms.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
                     </div>
                     <div class="panel-grid">
-                      <a href="ecommerce-stores.html" class="service-item"><strong>E-Commerce Stores</strong><small>Custom headless carts.</small></a>
-                      <a href="lms-elearning.html" class="service-item"><strong>LMS &amp; E-Learning</strong><small>Courseware &amp; tracking.</small></a>
-                      <a href="custom-erp-systems.html" class="service-item"><strong>Custom ERP Systems</strong><small>Enterprise resource planning.</small></a>
-                      <a href="custom-crm-solutions.html" class="service-item"><strong>Custom CRM Solutions</strong><small>Pipelines &amp; lead flows.</small></a>
-                      <a href="online-marketplaces.html" class="service-item"><strong>Online Marketplaces</strong><small>Multi-vendor commission hubs.</small></a>
-                      <a href="saas-development.html" class="service-item"><strong>SaaS Development</strong><small>Multi-tenant architectures.</small></a>
+                      <a href="../services/ecommerce-stores.html" class="service-item">
+                        <strong>E-Commerce Stores</strong>
+                        <small>Fast, frictionless storefronts engineered for high transaction volume and conversions.</small>
+                      </a>
+                      <a href="../services/lms-elearning.html" class="service-item">
+                        <strong>LMS &amp; E-Learning</strong>
+                        <small>Structured digital course platforms, learner tracking, and automated student assessments.</small>
+                      </a>
+                      <a href="../services/custom-erp-systems.html" class="service-item">
+                        <strong>Custom ERP Systems</strong>
+                        <small>Centralized operations software connecting finance, inventory, supply chain, and staff.</small>
+                      </a>
+                      <a href="../services/custom-crm-solutions.html" class="service-item">
+                        <strong>Custom CRM Solutions</strong>
+                        <small>Tailored sales pipelines, contact management, and customer interaction records.</small>
+                      </a>
+                      <a href="../services/online-marketplaces.html" class="service-item">
+                        <strong>Online Marketplaces</strong>
+                        <small>Multi-vendor platforms with split payments, user dashboards, and review engines.</small>
+                      </a>
+                      <a href="../services/saas-development.html" class="service-item">
+                        <strong>SaaS Development</strong>
+                        <small>Multi-tenant cloud software with subscription billing and role-based access.</small>
+                      </a>
                     </div>
                   </div>
 
-                  <!-- Panel: AI & Automation -->
-                  <div class="mega-panel " id="panel-ai" role="tabpanel">
+                  <!-- Panel 4: AI & Automation (8) -->
+                  <div class="mega-panel" id="panel-ai" role="tabpanel" aria-labelledby="tab-ai">
                     <div class="panel-header">
                       <div>
                         <span class="panel-badge">PILLAR 04</span>
                         <h4>AI &amp; Automation</h4>
-                        <p>Bespoke LLM agents and multi-system automated workflows.</p>
+                        <p>Bespoke LLM agents and multi-system automated workflows that remove manual friction.</p>
                       </div>
-                      <a href="ai-automation.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                      <a href="../services/ai-automation.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
                     </div>
                     <div class="panel-grid">
-                      <a href="workflow-automation.html" class="service-item"><strong>Workflow Automation</strong><small>Remove repetitive friction.</small></a>
-                      <a href="ai-chatbots.html" class="service-item"><strong>AI Chatbots</strong><small>Conversational support engines.</small></a>
-                      <a href="autonomous-ai-agents.html" class="service-item"><strong>Autonomous AI Agents</strong><small>Task-running execution agents.</small></a>
-                      <a href="ai-voice-assistants.html" class="service-item"><strong>AI Voice Assistants</strong><small>Real-time conversational voice.</small></a>
-                      <a href="custom-llm-solutions.html" class="service-item"><strong>Custom LLM Solutions</strong><small>Private fine-tuning &amp; RAG.</small></a>
-                      <a href="data-predictive-ai.html" class="service-item"><strong>Data &amp; Predictive AI</strong><small>Forecasting &amp; insights.</small></a>
-                      <a href="text-language-ai.html" class="service-item"><strong>Text &amp; Language AI</strong><small>NLP entity extraction.</small></a>
-                      <a href="vision-document-ai.html" class="service-item"><strong>Vision &amp; Document AI</strong><small>OCR invoice parsing.</small></a>
+                      <a href="../services/workflow-automation.html" class="service-item">
+                        <strong>Workflow Automation</strong>
+                        <small>Connect operational tools and remove hours of repetitive manual data entry.</small>
+                      </a>
+                      <a href="../services/ai-chatbots.html" class="service-item">
+                        <strong>AI Chatbots</strong>
+                        <small>Context-aware conversational assistants that resolve customer tickets around the clock.</small>
+                      </a>
+                      <a href="../services/autonomous-ai-agents.html" class="service-item">
+                        <strong>Autonomous AI Agents</strong>
+                        <small>Independent task-running agents that process records, drafts, and system tasks.</small>
+                      </a>
+                      <a href="../services/ai-voice-assistants.html" class="service-item">
+                        <strong>AI Voice Assistants</strong>
+                        <small>Natural spoken audio interfaces for real-time customer support and routing.</small>
+                      </a>
+                      <a href="../services/custom-llm-solutions.html" class="service-item">
+                        <strong>Custom LLM Solutions</strong>
+                        <small>Secure language models fine-tuned exclusively on your private company knowledge.</small>
+                      </a>
+                      <a href="../services/data-predictive-ai.html" class="service-item">
+                        <strong>Data &amp; Predictive AI</strong>
+                        <small>Machine learning algorithms that forecast trends, churn, and operational capacity.</small>
+                      </a>
+                      <a href="../services/text-language-ai.html" class="service-item">
+                        <strong>Text &amp; Language AI (NLP)</strong>
+                        <small>Automated document summarization, sentiment extraction, and contract language review.</small>
+                      </a>
+                      <a href="../services/vision-document-ai.html" class="service-item">
+                        <strong>Vision &amp; Document AI</strong>
+                        <small>OCR systems that scan, extract, and classify receipts, invoices, and IDs.</small>
+                      </a>
                     </div>
                   </div>
 
-                  <!-- Panel: Cybersecurity -->
-                  <div class="mega-panel active" id="panel-security" role="tabpanel">
+                  <!-- Panel 5: Cybersecurity (8) -->
+                  <div class="mega-panel" id="panel-security" role="tabpanel" aria-labelledby="tab-security">
                     <div class="panel-header">
                       <div>
                         <span class="panel-badge">PILLAR 05</span>
-                        <h4>Cybersecurity</h4>
-                        <p>VAPT penetration testing, source code audits, and SOC2 readiness.</p>
+                        <h4>Cybersecurity &amp; Audits</h4>
+                        <p>Real-world penetration testing, source code audits, and zero-trust cloud hardening.</p>
                       </div>
-                      <a href="cybersecurity.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                      <a href="../services/cybersecurity.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
                     </div>
                     <div class="panel-grid">
-                      <a href="penetration-testing-vapt.html" class="service-item"><strong>Penetration Testing / VAPT</strong><small>Ethical hacking assessments.</small></a>
-                      <a href="source-code-review.html" class="service-item"><strong>Source Code Review</strong><small>Static &amp; dynamic code audits.</small></a>
-                      <a href="web-app-security.html" class="service-item"><strong>Web &amp; App Security</strong><small>OWASP Top 10 hardening.</small></a>
-                      <a href="cloud-security.html" class="service-item"><strong>Cloud Security</strong><small>AWS/GCP IAM governance.</small></a>
-                      <a href="network-audits.html" class="service-item"><strong>Network Audits</strong><small>Perimeter vulnerability checks.</small></a>
-                      <a href="api-security.html" class="service-item"><strong>API Security</strong><small>BOLA &amp; token security.</small></a>
-                      <a href="devsecops.html" class="service-item"><strong>DevSecOps</strong><small>Automated CI/CD security.</small></a>
-                      <a href="compliance-audits.html" class="service-item"><strong>Compliance &amp; Audits</strong><small>SOC2, ISO 27001 &amp; GDPR.</small></a>
+                      <a href="../services/penetration-testing-vapt.html" class="service-item">
+                        <strong>Penetration Testing (VAPT)</strong>
+                        <small>Simulated hacker attacks to find and fix vulnerabilities before exploitation.</small>
+                      </a>
+                      <a href="../services/source-code-review.html" class="service-item">
+                        <strong>Source Code Review</strong>
+                        <small>Manual and automated audits finding logic flaws and hidden security backdoors.</small>
+                      </a>
+                      <a href="../services/web-app-security.html" class="service-item">
+                        <strong>Web &amp; App Security</strong>
+                        <small>OWASP-aligned hardening preventing SQL injection, cross-site scripting, and credential stuffing.</small>
+                      </a>
+                      <a href="../services/cloud-security.html" class="service-item">
+                        <strong>Cloud Security</strong>
+                        <small>Secure configuration reviews for AWS, Google Cloud, and containerized Docker environments.</small>
+                      </a>
+                      <a href="../services/network-audits.html" class="service-item">
+                        <strong>Network Audits</strong>
+                        <small>Perimeter scans detecting open ports, rogue endpoints, and firewall weaknesses.</small>
+                      </a>
+                      <a href="../services/api-security.html" class="service-item">
+                        <strong>API Security</strong>
+                        <small>Token validation, rate-limiting, and payload sanitization audits for backend endpoints.</small>
+                      </a>
+                      <a href="../services/devsecops.html" class="service-item">
+                        <strong>DevSecOps</strong>
+                        <small>Automated security testing baked directly into your continuous integration and deployment pipelines.</small>
+                      </a>
+                      <a href="../services/compliance-audits.html" class="service-item">
+                        <strong>Compliance &amp; Audits</strong>
+                        <small>Readiness reviews mapping your technical controls to SOC2, ISO, and GDPR standards.</small>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -325,26 +434,75 @@
             </div>
           </li>
 
-          <li><a href="../industries.html" class="nav-link">Industries</a></li>
+          <!-- 3. Industries Dropdown (7 Sectors) -->
+          <li class="nav-item has-dropdown">
+            <a href="../industries.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>Industries</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple dropdown-industries">
+              <a href="../industries.html#retail" class="dropdown-item">
+                <span class="dropdown-title">Retail &amp; E-Commerce</span>
+                <small class="dropdown-desc">Headless stores, automated inventory &amp; checkout funnels.</small>
+              </a>
+              <a href="../industries.html#edtech" class="dropdown-item">
+                <span class="dropdown-title">Education (EdTech)</span>
+                <small class="dropdown-desc">Interactive LMS, student tracking &amp; AI tutor bots.</small>
+              </a>
+              <a href="../industries.html#fintech" class="dropdown-item">
+                <span class="dropdown-title">Finance (FinTech)</span>
+                <small class="dropdown-desc">Zero-trust architecture, automated ledger &amp; KYC sync.</small>
+              </a>
+              <a href="../industries.html#healthcare" class="dropdown-item">
+                <span class="dropdown-title">Healthcare</span>
+                <small class="dropdown-desc">Encrypted patient portals &amp; automated appointment reminders.</small>
+              </a>
+              <a href="../industries.html#realestate" class="dropdown-item">
+                <span class="dropdown-title">Real Estate</span>
+                <small class="dropdown-desc">Interactive property portals &amp; instant WhatsApp AI triage.</small>
+              </a>
+              <a href="../industries.html#logistics" class="dropdown-item">
+                <span class="dropdown-title">Logistics &amp; Supply Chain</span>
+                <small class="dropdown-desc">Fleet tracking backends, driver apps &amp; automated BOLs.</small>
+              </a>
+              <a href="../industries.html#saas" class="dropdown-item">
+                <span class="dropdown-title">Startups &amp; SaaS</span>
+                <small class="dropdown-desc">Fixed-scope 4-week MVP development &amp; Stripe billing.</small>
+              </a>
+            </div>
+          </li>
+
+          <!-- 4. Insights (Blog) -->
           <li><a href="../insights.html" class="nav-link">Insights</a></li>
-          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+
+          <!-- 5. Contact Us -->
+          <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
         </ul>
 
+        <!-- Action: Book a Call & AI/Cyber Badge -->
         <div class="nav-actions">
-          <a href="../contact.html?service=web-app-security" class="btn btn-shimmer btn-compact">
-            <span>Schedule Discovery Call</span>
+          <div class="nav-cyber-pill d-none-mobile" title="Autonomous AI &amp; Zero-Trust Cybersecurity">
+            <span class="nav-cyber-pulse"></span>
+            <span class="nav-cyber-icon">&#128737;</span>
+            <span class="nav-cyber-text">AI &amp; Cyber Studio</span>
+          </div>
+
+          <a href="../contact.html" class="btn btn-shimmer nav-cta">
+            <span>Book a Call</span>
             <span class="btn-arrow" aria-hidden="true">&rarr;</span>
           </a>
-          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+
+          <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
           </button>
         </div>
       </nav>
     </div>
   </header>
 
+  <!-- Mobile Drawer -->
   <!-- Mobile Drawer -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="mobile-drawer-header">
@@ -893,15 +1051,18 @@
     </section>
   </main>
 
+  <!-- ================= 10. EXPANDED SITE FOOTER ================= -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
+
+        <!-- Col 1: Brand Info -->
         <div class="footer-col-brand">
           <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
-            <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo"  width="290" height="64" class="brand-logo-img">
+            <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="290" height="64" class="brand-logo-img">
           </a>
           <p class="footer-bio">
-            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth companies.
           </p>
           <div class="system-status-pill">
             <span class="status-dot"></span>
@@ -909,6 +1070,7 @@
           </div>
         </div>
 
+        <!-- Col 2: Services (5 Pillars) -->
         <div class="footer-col">
           <h4 class="footer-heading">Services</h4>
           <ul class="footer-links">
@@ -920,9 +1082,7 @@
           </ul>
         </div>
 
-
-
-
+        <!-- Col 3: Industries (7 Sectors) -->
         <div class="footer-col">
           <h4 class="footer-heading">Industries</h4>
           <ul class="footer-links">
@@ -960,6 +1120,7 @@
             <li><a href="../contact.html">Book an Audit &rarr;</a></li>
           </ul>
         </div>
+
       </div>
 
       <div class="footer-bottom-bar">
