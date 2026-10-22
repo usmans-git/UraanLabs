@@ -117,6 +117,8 @@ function initStickyHeader() {
 function initMegaMenuTabs() {
   const tabs = document.querySelectorAll(".mega-tab");
   const panels = document.querySelectorAll(".mega-panel");
+  const headlineEl = document.getElementById("spotlightHeadline");
+  const ctaEl = document.getElementById("spotlightCta");
   if (!tabs.length || !panels.length) return;
 
   const activateTab = (tab) => {
@@ -137,6 +139,15 @@ function initMegaMenuTabs() {
     const targetPanel = document.getElementById(targetId);
     if (targetPanel) {
       targetPanel.classList.add("active");
+    }
+
+    const headline = tab.getAttribute("data-headline");
+    const ctaUrl = tab.getAttribute("data-cta");
+    if (headlineEl && headline) {
+      headlineEl.textContent = headline;
+    }
+    if (ctaEl && ctaUrl) {
+      ctaEl.setAttribute("href", ctaUrl);
     }
   };
 
