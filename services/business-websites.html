@@ -347,11 +347,76 @@
 
   <!-- Mobile Drawer -->
   <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-    <div class="mobile-drawer-inner">
-      <div class="mobile-drawer-header">
-        <a href="../index.html" class="logo"><img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160"></a>
-        <button class="drawer-close-btn" id="mobileClose" aria-label="Close menu">&times;</button>
-      </div>
+    <div class="mobile-drawer-header">
+      <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" class="brand-logo-img" width="140">
+      <button class="mobile-close" id="mobileClose" type="button" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-list">
+        <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+
+        <li class="mobile-acc-item">
+          <button class="mobile-acc-toggle" type="button">
+            <span>About Us</span>
+            <span class="acc-arrow">&#9662;</span>
+          </button>
+          <div class="mobile-acc-panel">
+            <a href="../about.html#story" class="mobile-sublink">Our Story</a>
+            <a href="../about.html#why-uraanlabs" class="mobile-sublink">Why UraanLabs</a>
+            <a href="../careers.html" class="mobile-sublink">Careers</a>
+          </div>
+        </li>
+
+        <li class="mobile-acc-item">
+          <button class="mobile-acc-toggle" type="button">
+            <span>Services (5 Pillars)</span>
+            <span class="acc-arrow">&#9662;</span>
+          </button>
+          <div class="mobile-acc-panel">
+            <a href="../services.html" class="mobile-sublink font-bold text-cyan">All Services Overview &rarr;</a>
+            <div class="mobile-pillar-label">Design &amp; Branding</div>
+            <a href="../services/design-branding.html" class="mobile-sublink">Explore Design Pillar</a>
+            <div class="mobile-pillar-label mt-2">Web &amp; Mobile Apps</div>
+            <a href="../services/web-mobile-apps.html" class="mobile-sublink">Explore Web &amp; Mobile Apps</a>
+            <div class="mobile-pillar-label mt-2">Business Platforms</div>
+            <a href="../services/business-platforms.html" class="mobile-sublink">Explore Business Platforms</a>
+            <div class="mobile-pillar-label mt-2">AI &amp; Automation</div>
+            <a href="../services/ai-automation.html" class="mobile-sublink">Explore AI &amp; Automation</a>
+            <div class="mobile-pillar-label mt-2">Cybersecurity</div>
+            <a href="../services/cybersecurity.html" class="mobile-sublink">Explore Cybersecurity</a>
+          </div>
+        </li>
+
+        <li class="mobile-acc-item">
+          <button class="mobile-acc-toggle" type="button">
+            <span>Industries</span>
+            <span class="acc-arrow">&#9662;</span>
+          </button>
+          <div class="mobile-acc-panel">
+            <a href="../industries.html" class="mobile-sublink font-bold text-cyan">All 7 Industries &rarr;</a>
+            <a href="../industries.html#retail" class="mobile-sublink">Retail &amp; E-Commerce</a>
+            <a href="../industries.html#edtech" class="mobile-sublink">Education (EdTech)</a>
+            <a href="../industries.html#fintech" class="mobile-sublink">Finance (FinTech)</a>
+            <a href="../industries.html#healthcare" class="mobile-sublink">Healthcare</a>
+            <a href="../industries.html#realestate" class="mobile-sublink">Real Estate</a>
+            <a href="../industries.html#logistics" class="mobile-sublink">Logistics &amp; Supply Chain</a>
+            <a href="../industries.html#saas" class="mobile-sublink">Startups &amp; SaaS</a>
+          </div>
+        </li>
+
+        <li><a href="../insights.html" class="mobile-nav-link">Insights</a></li>
+        <li><a href="../contact.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <a href="../contact.html" class="btn btn-shimmer full-width">Book a Call &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
       <div class="mobile-drawer-body">
         <ul class="mobile-nav-list">
           <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
@@ -364,8 +429,6 @@
       </div>
     </div>
   </aside>
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
-
   <main>
     <!-- Breadcrumbs -->
     <div class="container">
@@ -841,7 +904,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
@@ -869,30 +931,41 @@
           </ul>
         </div>
 
+
+
+
         <div class="footer-col">
           <h4 class="footer-heading">Industries</h4>
           <ul class="footer-links">
             <li><a href="../industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="../industries.html#edtech">Education (EdTech)</a></li>
             <li><a href="../industries.html#fintech">Finance (FinTech)</a></li>
             <li><a href="../industries.html#healthcare">Healthcare</a></li>
+            <li><a href="../industries.html#realestate">Real Estate</a></li>
+            <li><a href="../industries.html#logistics">Logistics &amp; Supply Chain</a></li>
             <li><a href="../industries.html#saas">Startups &amp; SaaS</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-heading">Connect</h4>
+          <h4 class="footer-heading">Company &amp; Contact</h4>
           <ul class="footer-links">
-            <li><a href="../about.html">Our Story</a></li>
+            <li><a href="../about.html#story">Our Story</a></li>
+            <li><a href="../about.html#why-uraanlabs">Why UraanLabs</a></li>
             <li><a href="../careers.html">Careers</a></li>
+            <li><a href="../insights.html">Insights</a></li>
             <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
             <li><a href="tel:+923170128047">0317-0128047</a></li>
+            <li><span>Karachi, Pakistan</span></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
-        <p>&copy; 2026 UraanLabs. All Rights Reserved. Production-grade engineering studio.</p>
+        <p>&copy; 2026 UraanLabs. All Rights Reserved. Built with precision and venture-grade craft.</p>
         <div class="footer-legal-links">
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Service</a>
           <a href="#header">Back to Top &uarr;</a>
         </div>
       </div>
