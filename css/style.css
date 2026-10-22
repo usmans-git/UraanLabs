@@ -4830,27 +4830,27 @@ h6 {
 
 .radar-wave-1 {
   animation: radarWave 2.4s ease-out infinite;
-  transform-origin: 635px 245px;
+  transform-origin: 0 0;
 }
 
 .radar-wave-2 {
   animation: radarWave 2.4s ease-out infinite 0.8s;
-  transform-origin: 635px 245px;
+  transform-origin: 0 0;
 }
 
 .radar-wave-3 {
   animation: radarWave 2.4s ease-out infinite 1.6s;
-  transform-origin: 635px 245px;
+  transform-origin: 0 0;
 }
 
 @keyframes radarWave {
   0% {
     r: 6;
-    opacity: 0.9;
+    opacity: 0.95;
     stroke-width: 2;
   }
   100% {
-    r: 36;
+    r: 40;
     opacity: 0;
     stroke-width: 0.5;
   }
@@ -4863,35 +4863,36 @@ h6 {
 @keyframes nodeGlow {
   0% {
     r: 4;
-    opacity: 0.7;
+    opacity: 0.75;
   }
   100% {
     r: 6.5;
     opacity: 1;
-    filter: drop-shadow(0 0 8px #38BDF8);
+    filter: drop-shadow(0 0 10px #38BDF8);
   }
 }
 
 /* Map Hubs Grid & Trust Badges */
 .map-hubs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 32px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-top: 28px;
 }
 
 .map-hub-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
-  padding: 18px 16px;
+  padding: 16px 14px;
   text-align: left;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
 .map-hub-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(56, 189, 248, 0.06);
 }
 
 .map-hub-icon {
@@ -4908,12 +4909,18 @@ h6 {
 
 .map-hub-desc {
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   line-height: 1.45;
   margin: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  .map-hubs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
   .map-hubs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
