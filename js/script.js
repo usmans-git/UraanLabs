@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAccordion();
   initLeadForm();
   initLiveTelemetrySimulator();
+  initHero3DParallax();
 });
 
 /* ==========================================================================
@@ -550,4 +551,46 @@ function initLiveTelemetrySimulator() {
       span.style.height = `${randomHeight}%`;
     });
   }, 2800);
+}
+
+/* ==========================================================================
+   09. Interactive 3D AI & Cybersecurity Parallax Tilt
+   ========================================================================== */
+function initHero3DParallax() {
+  const heroSection = document.querySelector(".hero-section");
+  const scene = document.getElementById("cyber3DScene");
+  if (!heroSection || !scene) return;
+
+  let currentX = 0, currentY = 0;
+  let targetX = 0, targetY = 0;
+  let isHovered = false;
+
+  heroSection.addEventListener("mousemove", (e) => {
+    const rect = heroSection.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    targetX = x * 22; // max tilt degrees on Y axis
+    targetY = -y * 18; // max tilt degrees on X axis
+    isHovered = true;
+  }, { passive: true });
+
+  heroSection.addEventListener("mouseleave", () => {
+    targetX = 0;
+    targetY = 0;
+    isHovered = false;
+  });
+
+  const updateTilt = () => {
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+
+    if (isHovered || Math.abs(currentX) > 0.02 || Math.abs(currentY) > 0.02) {
+      scene.style.transform = `rotateY(${currentX.toFixed(2)}deg) rotateX(${currentY.toFixed(2)}deg)`;
+    } else {
+      scene.style.transform = "";
+    }
+    requestAnimationFrame(updateTilt);
+  };
+
+  requestAnimationFrame(updateTilt);
 }

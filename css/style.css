@@ -886,6 +886,60 @@ body.dark-canvas {
   gap: 14px;
 }
 
+/* Navbar Micro Cyber/AI Pill */
+.nav-cyber-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(124, 58, 237, 0.18) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 9999px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 0 16px rgba(56, 189, 248, 0.2);
+  cursor: default;
+  transition: all 0.25s ease;
+}
+
+.nav-cyber-pill:hover {
+  border-color: rgba(56, 189, 248, 0.65);
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.6), 0 0 22px rgba(56, 189, 248, 0.35);
+  transform: translateY(-1px);
+}
+
+.nav-cyber-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: cyberPulseDot 2s infinite;
+}
+
+@keyframes cyberPulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.nav-cyber-icon {
+  font-size: 0.85rem;
+  color: #38BDF8;
+  display: inline-flex;
+}
+
+.nav-cyber-text {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #F1F5F9;
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .d-none-mobile {
+    display: none !important;
+  }
+}
+
 .nav-cta {
   padding: 8px 18px;
   font-size: 0.8125rem;
@@ -1138,6 +1192,79 @@ body.dark-canvas {
   filter: blur(70px);
 }
 
+/* Hero Split Grid (Copy Left, 3D Centerpiece Right) */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content-col {
+  text-align: left;
+}
+
+.hero-content-col .hero-badge {
+  margin-bottom: 22px;
+}
+
+.hero-content-col .hero-title {
+  text-align: left;
+  margin-bottom: 22px;
+  font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+  line-height: 1.14;
+}
+
+.hero-content-col .hero-lead {
+  text-align: left;
+  margin: 0 0 32px 0;
+  max-width: 620px;
+  font-size: clamp(1.02rem, 1.3vw, 1.18rem);
+}
+
+.hero-content-col .hero-cta-group {
+  justify-content: flex-start;
+  margin-bottom: 28px;
+}
+
+.hero-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.78rem;
+  font-weight: 550;
+  color: #CBD5E1;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.2s ease;
+}
+
+.trust-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #FFFFFF;
+}
+
+.trust-pill .trust-icon {
+  font-size: 0.85rem;
+  color: #38BDF8;
+}
+
+/* Legacy fallback container for other pages */
 .hero-content {
   text-align: center;
   max-width: 900px;
@@ -1216,6 +1343,488 @@ body.dark-canvas {
   gap: 16px;
   margin-bottom: 38px;
   flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   3D AI & CYBERSECURITY CENTERPIECE
+   ========================================================================== */
+.hero-visual-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-3d-visual {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 470px;
+  perspective: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+/* Ambient Cyber Grid Floor */
+.cyber-grid-floor {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) rotateX(72deg);
+  width: 440px;
+  height: 240px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(124, 58, 237, 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient Glowing Singularity Core Behind 3D Elements */
+.cyber-glow-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.38) 0%, rgba(56, 189, 248, 0.25) 45%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+}
+
+/* Interactive 3D Parallax Scene Container */
+.cyber-3d-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Gyroscopic Orbit Rings */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.ring-ai-outer {
+  width: 390px;
+  height: 390px;
+  margin-top: -195px;
+  margin-left: -195px;
+  border: 1.5px dashed rgba(56, 189, 248, 0.45);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.1);
+  animation: orbitSpinOuter 26s linear infinite;
+}
+
+.ring-cyber-mid {
+  width: 300px;
+  height: 300px;
+  margin-top: -150px;
+  margin-left: -150px;
+  border: 1.5px solid rgba(168, 85, 247, 0.5);
+  border-top-color: #38BDF8;
+  border-bottom-color: #EC4899;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
+  animation: orbitSpinMid 18s linear infinite reverse;
+}
+
+.ring-threat-inner {
+  width: 220px;
+  height: 220px;
+  margin-top: -110px;
+  margin-left: -110px;
+  border: 1px dotted rgba(56, 189, 248, 0.6);
+  animation: orbitSpinInner 12s linear infinite;
+}
+
+@keyframes orbitSpinOuter {
+  0% { transform: rotateX(66deg) rotateY(18deg) rotateZ(0deg); }
+  100% { transform: rotateX(66deg) rotateY(18deg) rotateZ(360deg); }
+}
+
+@keyframes orbitSpinMid {
+  0% { transform: rotateX(-54deg) rotateY(26deg) rotateZ(0deg); }
+  100% { transform: rotateX(-54deg) rotateY(26deg) rotateZ(360deg); }
+}
+
+@keyframes orbitSpinInner {
+  0% { transform: rotateX(32deg) rotateY(-40deg) rotateZ(0deg); }
+  100% { transform: rotateX(32deg) rotateY(-40deg) rotateZ(360deg); }
+}
+
+/* Orbital Nodes */
+.orbit-node {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #38BDF8;
+  box-shadow: 0 0 12px #38BDF8, 0 0 22px rgba(56, 189, 248, 0.8);
+}
+
+.node-1 { top: 0; left: 50%; transform: translate(-50%, -50%); background: #38BDF8; }
+.node-2 { bottom: 20%; right: 5%; background: #A855F7; box-shadow: 0 0 14px #A855F7; }
+.node-3 { bottom: 15%; left: 10%; background: #10B981; box-shadow: 0 0 14px #10B981; }
+
+.node-4 { top: 25%; right: 0; background: #67E8F9; box-shadow: 0 0 12px #67E8F9; }
+.node-5 { bottom: 25%; left: 0; background: #EC4899; box-shadow: 0 0 14px #EC4899; }
+
+.node-6 { top: 50%; right: -5px; width: 8px; height: 8px; background: #38BDF8; }
+
+/* Central Core Wrapper */
+.cyber-core-wrapper {
+  position: relative;
+  width: 240px;
+  height: 280px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* 3D Aegis Cybersecurity Shield */
+.aegis-shield-3d {
+  position: relative;
+  width: 240px;
+  height: 280px;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.65));
+}
+
+.shield-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.shield-laser-scan {
+  animation: laserScanMove 3.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px #38BDF8);
+}
+
+@keyframes laserScanMove {
+  0%, 100% { transform: translateY(-75px); opacity: 0.15; }
+  50% { transform: translateY(75px); opacity: 0.95; }
+}
+
+/* 3D AI Neural Crystal Nucleus */
+.ai-neural-crystal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 84px;
+  height: 84px;
+  margin-top: -42px;
+  margin-left: -42px;
+  transform-style: preserve-3d;
+  animation: crystal3DSpin 14s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes crystal3DSpin {
+  0% { transform: rotateX(20deg) rotateY(0deg) rotateZ(0deg); }
+  50% { transform: rotateX(-20deg) rotateY(180deg) rotateZ(15deg); }
+  100% { transform: rotateX(20deg) rotateY(360deg) rotateZ(0deg); }
+}
+
+/* Crystal 3D Faces */
+.crystal-face {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.35) 0%, rgba(124, 58, 237, 0.4) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 15px rgba(56, 189, 248, 0.35), 0 0 20px rgba(124, 58, 237, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.face-front  { transform: translateZ(42px); }
+.face-back   { transform: rotateY(180deg) translateZ(42px); }
+.face-left   { transform: rotateY(-90deg) translateZ(42px); }
+.face-right  { transform: rotateY(90deg) translateZ(42px); }
+.face-top    { transform: rotateX(90deg) translateZ(42px); }
+.face-bottom { transform: rotateX(-90deg) translateZ(42px); }
+
+/* AI Singularity Center & Micro Chip */
+.ai-singularity-glow {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 0 35px #38BDF8, 0 0 65px #7C3AED, 0 0 100px #38BDF8;
+  animation: corePulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes corePulse {
+  0% { transform: scale(0.85); opacity: 0.8; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+.ai-core-chip {
+  position: relative;
+  z-index: 10;
+  color: #090D22;
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating 3D Holographic HUD Telemetry Chips */
+.hud-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(20, 27, 65, 0.94) 0%, rgba(9, 13, 34, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  z-index: 10;
+}
+
+.hud-chip:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+.hud-chip-top {
+  top: 15px;
+  left: -20px;
+  transform: translateZ(55px);
+  animation: hudFloat1 5s ease-in-out infinite;
+}
+
+.hud-chip-right {
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%) translateZ(75px);
+  animation: hudFloat2 6s ease-in-out infinite;
+}
+
+.hud-chip-bottom {
+  bottom: 25px;
+  left: -10px;
+  transform: translateZ(45px);
+  animation: hudFloat3 5.5s ease-in-out infinite;
+}
+
+@keyframes hudFloat1 {
+  0%, 100% { transform: translateZ(55px) translateY(0); }
+  50% { transform: translateZ(65px) translateY(-8px); }
+}
+
+@keyframes hudFloat2 {
+  0%, 100% { transform: translateY(-50%) translateZ(75px); }
+  50% { transform: translateY(-50%) translateZ(85px) translateY(7px); }
+}
+
+@keyframes hudFloat3 {
+  0%, 100% { transform: translateZ(45px) translateY(0); }
+  50% { transform: translateZ(55px) translateY(-7px); }
+}
+
+.hud-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.hud-sec {
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34D399;
+}
+
+.hud-ai {
+  background: rgba(56, 189, 248, 0.18);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38BDF8;
+}
+
+.hud-threat {
+  background: rgba(168, 85, 247, 0.18);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #C084FC;
+}
+
+.hud-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hud-label {
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #94A3B8;
+  text-transform: uppercase;
+}
+
+.hud-val {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.hud-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-green {
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: cyberPulse 2s infinite;
+}
+
+.dot-cyan {
+  background: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
+  animation: cyberPulse 2s infinite 0.5s;
+}
+
+.dot-purple {
+  background: #A855F7;
+  box-shadow: 0 0 8px #A855F7;
+  animation: cyberPulse 2s infinite 1s;
+}
+
+@keyframes cyberPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Responsive adjustments for Hero Grid & 3D Visual */
+@media (max-width: 1040px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 40px;
+  }
+  .hero-content-col {
+    text-align: center;
+  }
+  .hero-content-col .hero-title {
+    text-align: center;
+  }
+  .hero-content-col .hero-lead {
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+  .hero-content-col .hero-cta-group {
+    justify-content: center;
+  }
+  .hero-trust-strip {
+    justify-content: center;
+  }
+  .hero-visual-col {
+    order: 0;
+  }
+  .hud-chip-top {
+    left: 0;
+  }
+  .hud-chip-right {
+    right: 0;
+  }
+  .hud-chip-bottom {
+    left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-3d-visual {
+    height: 380px;
+    max-width: 350px;
+  }
+  .ring-ai-outer {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+  }
+  .ring-cyber-mid {
+    width: 240px;
+    height: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+  }
+  .ring-threat-inner {
+    width: 180px;
+    height: 180px;
+    margin-top: -90px;
+    margin-left: -90px;
+  }
+  .cyber-core-wrapper,
+  .aegis-shield-3d {
+    width: 190px;
+    height: 220px;
+  }
+  .ai-neural-crystal {
+    width: 64px;
+    height: 64px;
+    margin-top: -32px;
+    margin-left: -32px;
+  }
+  .crystal-face {
+    width: 64px;
+    height: 64px;
+  }
+  .face-front  { transform: translateZ(32px); }
+  .face-back   { transform: rotateY(180deg) translateZ(32px); }
+  .face-left   { transform: rotateY(-90deg) translateZ(32px); }
+  .face-right  { transform: rotateY(90deg) translateZ(32px); }
+  .face-top    { transform: rotateX(90deg) translateZ(32px); }
+  .face-bottom { transform: rotateX(-90deg) translateZ(32px); }
+  .hud-chip {
+    padding: 7px 12px;
+    gap: 8px;
+  }
+  .hud-val {
+    font-size: 0.72rem;
+  }
 }
 
 .hero-stats-grid {
