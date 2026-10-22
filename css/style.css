@@ -6730,7 +6730,7 @@ body.chatbot-is-open .floating-whatsapp {
   }
 
   .swiper-hint-pill .hint-arrow {
-    color: #FF1744;
+    color: var(--cyan-sonic);
     font-weight: 800;
     animation: hintArrowBounce 1.5s infinite alternate ease-in-out;
   }
@@ -6761,8 +6761,8 @@ body.chatbot-is-open .floating-whatsapp {
   .swiper-dot.active {
     width: 22px;
     border-radius: 9999px;
-    background: #FF1744;
-    box-shadow: 0 0 10px rgba(255, 23, 68, 0.55);
+    background: var(--grad-kinetic);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
   }
 }
 
@@ -6892,7 +6892,7 @@ body.chatbot-is-open .floating-whatsapp {
 }
 
 .child-service-card:hover .csc-icon-arrow {
-  color: #FF1744;
+  color: var(--cyan-sonic);
   transform: translate(2px, -2px);
 }
 
