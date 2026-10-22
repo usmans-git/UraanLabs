@@ -89,16 +89,21 @@ export default function ClientEffects() {
         if (formFail) formFail.style.display = "none";
         if (formSuccess) formSuccess.style.display = "none";
 
+        const hasMaliciousChars = (str) => /<[^>]*>|javascript:|vbscript:|data:text\/html|on\w+\s*=/i.test(str);
+
         let isValid = true;
         const nameVal = nameInput ? nameInput.value.trim() : "";
         if (!nameVal || nameVal.length < 3) {
           if (nameError) nameError.textContent = "Please enter your full name (minimum 3 characters).";
           isValid = false;
+        } else if (hasMaliciousChars(nameVal)) {
+          if (nameError) nameError.textContent = "HTML tags or script characters are not allowed.";
+          isValid = false;
         }
 
         const emailVal = emailInput ? emailInput.value.trim() : "";
         if (!emailVal || !isValidEmail(emailVal)) {
-          if (emailError) nameError.textContent = "Please enter a valid business email address.";
+          if (emailError) emailError.textContent = "Please enter a valid business email address.";
           isValid = false;
         }
 
@@ -111,6 +116,9 @@ export default function ClientEffects() {
         const msgVal = messageInput ? messageInput.value.trim() : "";
         if (!msgVal || msgVal.length < 10) {
           if (messageError) messageError.textContent = "Please share a few details about your project.";
+          isValid = false;
+        } else if (hasMaliciousChars(msgVal)) {
+          if (messageError) messageError.textContent = "HTML tags or script characters are not allowed.";
           isValid = false;
         }
 

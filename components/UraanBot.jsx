@@ -506,7 +506,11 @@ export default function UraanBot() {
           {messages.map((m, idx) => (
             <div key={idx} className={`chatbot-msg-row ${m.role}`}>
               <div className="chatbot-msg-bubble">
-                <span dangerouslySetInnerHTML={{ __html: m.text }} />
+                {m.role === "user" ? (
+                  <span>{m.text}</span>
+                ) : (
+                  <span dangerouslySetInnerHTML={{ __html: m.text }} />
+                )}
 
                 {/* Callout Cards & Action Buttons */}
                 {m.cta && m.cta.links && m.cta.links.length > 0 && (
