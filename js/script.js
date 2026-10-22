@@ -83,9 +83,28 @@ function initStickyHeader() {
     } else {
       header.classList.remove("is-scrolled");
     }
+
+    // Dynamic contrast check when scrolling over white / light-crystal sections
+    const lightSections = document.querySelectorAll(".section-light");
+    if (lightSections.length > 0) {
+      const headerRect = header.getBoundingClientRect();
+      const headerMiddle = headerRect.top + (headerRect.height / 2 || 35);
+
+      let isOverLight = false;
+      for (let i = 0; i < lightSections.length; i++) {
+        const secRect = lightSections[i].getBoundingClientRect();
+        if (secRect.top <= headerMiddle && secRect.bottom >= headerMiddle) {
+          isOverLight = true;
+          break;
+        }
+      }
+
+      header.classList.toggle("is-over-light", isOverLight);
+    }
   };
 
   window.addEventListener("scroll", handleScroll, { passive: true });
+  window.addEventListener("resize", handleScroll, { passive: true });
   handleScroll();
 }
 
