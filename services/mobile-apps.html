@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Native & Cross-Platform Mobile App Development | UraanLabs</title>
+  <meta name="description" content="Fluid 120Hz mobile apps for iOS & Android built with Flutter & React Native. Offline-first architecture, sub-second API sync, and app store approval.">
+  <meta name="keywords" content="mobile app development agency, Flutter app development, React Native mobile apps, iOS Android development studio, cross-platform mobile apps">
+  <link rel="canonical" href="https://uraanlabs.com/services/mobile-apps.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uraanlabs.com/services/mobile-apps.html">
+  <meta property="og:title" content="Native & Cross-Platform Mobile App Development | UraanLabs">
+  <meta property="og:description" content="Fluid 120Hz mobile apps for iOS & Android built with Flutter & React Native. Offline-first architecture, sub-second API sync, and app store approval.">
+  <meta property="og:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Native & Cross-Platform Mobile App Development | UraanLabs">
+  <meta name="twitter:description" content="Fluid 120Hz mobile apps for iOS & Android built with Flutter & React Native. Offline-first architecture, sub-second API sync, and app store approval.">
+  <meta name="twitter:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../images/uraanlabs-mark.svg">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Native & Cross-Platform Mobile Applications (iOS & Android)",
+        "serviceType": "Native & Cross-Platform Mobile Applications (iOS & Android)",
+        "description": "Fluid 120Hz mobile apps for iOS & Android built with Flutter & React Native. Offline-first architecture, sub-second API sync, and app store approval.",
+        "provider": {
+          "@type": "Organization",
+          "name": "UraanLabs Studio",
+          "url": "https://uraanlabs.com"
+        },
+        "url": "https://uraanlabs.com/services/mobile-apps.html",
+        "areaServed": ["Global", "US", "UK", "UAE", "Saudi Arabia"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://uraanlabs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://uraanlabs.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Web & Mobile Apps",
+            "item": "https://uraanlabs.com/services/web-mobile-apps.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Native & Cross-Platform Mobile Applications (iOS & Android)",
+            "item": "https://uraanlabs.com/services/mobile-apps.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Should we build with Flutter, React Native, or Native Swift/Kotlin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For 90% of business applications, Flutter or React Native offers identical 120Hz native performance while saving 40% on engineering costs and delivering unified feature releases across iOS and Android."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle the App Store and Google Play submission process?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We manage the entire deployment lifecycle: provisioning certificates, privacy manifests, screenshot assets, review team correspondence, and launch verification."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you handle offline mode?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We build with a local-first database architecture (like SQLite or WatermelonDB). All user actions save locally instantly and synchronize in the background when connectivity resumes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the app integrate with device hardware like Bluetooth and Camera?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We write native bridging modules to access BLE sensors, high-speed camera barcode scanning, NFC, GPS location services, and biometric hardware."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the standard delivery timeline for a mobile app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A comprehensive MVP mobile application typically takes 8 to 12 weeks from initial architectural alignment to live App Store release."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="dark-canvas">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow orb-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow orb-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow orb-center" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+          <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="200" height="35" class="brand-logo-img">
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+
+          <li class="nav-item has-dropdown">
+            <a href="../about.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>About Us</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple">
+              <a href="../about.html#story" class="dropdown-item">
+                <span class="dropdown-title">Our Story</span>
+                <small class="dropdown-desc">Why UraanLabs was built and our mission.</small>
+              </a>
+              <a href="../about.html#why-uraanlabs" class="dropdown-item">
+                <span class="dropdown-title">Why UraanLabs</span>
+                <small class="dropdown-desc">Our 4 core engineering differentiators.</small>
+              </a>
+              <a href="../careers.html" class="dropdown-item">
+                <span class="dropdown-title">Careers</span>
+                <small class="dropdown-desc">Join our senior technical studio.</small>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown has-mega">
+            <a href="../services.html" class="nav-link dropdown-toggle active" aria-haspopup="true">
+              <span>Services</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+
+            <div class="mega-menu" id="servicesMegaMenu">
+              <div class="mega-inner">
+                <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
+                  <button class="mega-tab " type="button" role="tab" id="tab-design" aria-selected="false" data-target="panel-design">
+                    <span class="tab-icon">&#10024;</span>
+                    <div class="tab-text">
+                      <strong>Design &amp; Branding</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab active" type="button" role="tab" id="tab-webmob" aria-selected="true" data-target="panel-webmob">
+                    <span class="tab-icon">&#128187;</span>
+                    <div class="tab-text">
+                      <strong>Web &amp; Mobile Apps</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-platforms" aria-selected="false" data-target="panel-platforms">
+                    <span class="tab-icon">&#128200;</span>
+                    <div class="tab-text">
+                      <strong>Business Platforms</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-ai" aria-selected="false" data-target="panel-ai">
+                    <span class="tab-icon">&#9889;</span>
+                    <div class="tab-text">
+                      <strong>AI &amp; Automation</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-security" aria-selected="false" data-target="panel-security">
+                    <span class="tab-icon">&#128737;</span>
+                    <div class="tab-text">
+                      <strong>Cybersecurity</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+
+                <div class="mega-panels">
+                  <!-- Panel: Design & Branding -->
+                  <div class="mega-panel " id="panel-design" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 01</span>
+                        <h4>Design &amp; Branding</h4>
+                        <p>Identity systems, UI/UX craft, and digital product prototypes.</p>
+                      </div>
+                      <a href="design-branding.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="logo-design.html" class="service-item"><strong>Logo Design</strong><small>Distinctive brand marks.</small></a>
+                      <a href="brand-identity.html" class="service-item"><strong>Brand Identity</strong><small>Design systems &amp; tokens.</small></a>
+                      <a href="print-stationery.html" class="service-item"><strong>Print &amp; Stationery</strong><small>Physical collateral.</small></a>
+                      <a href="ui-ux-design.html" class="service-item"><strong>UI/UX Design</strong><small>User flows &amp; interfaces.</small></a>
+                      <a href="product-prototyping.html" class="service-item"><strong>Product Prototyping</strong><small>Clickable Figma models.</small></a>
+                      <a href="social-media-creatives.html" class="service-item"><strong>Social Media Creatives</strong><small>Performance assets.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Web & Mobile Apps -->
+                  <div class="mega-panel active" id="panel-webmob" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 02</span>
+                        <h4>Web &amp; Mobile Apps</h4>
+                        <p>Sub-second web platforms and fluid native mobile applications.</p>
+                      </div>
+                      <a href="web-mobile-apps.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="business-websites.html" class="service-item"><strong>Business Websites</strong><small>High-speed corporate sites.</small></a>
+                      <a href="custom-web-apps.html" class="service-item"><strong>Custom Web Apps</strong><small>Full-stack portal engineering.</small></a>
+                      <a href="mobile-apps.html" class="service-item"><strong>Mobile Apps</strong><small>Flutter &amp; React Native.</small></a>
+                      <a href="pwa.html" class="service-item"><strong>PWAs</strong><small>Installable offline web apps.</small></a>
+                      <a href="api-integrations.html" class="service-item"><strong>API Integrations</strong><small>Secure microservice mesh.</small></a>
+                      <a href="support-maintenance.html" class="service-item"><strong>Support &amp; Maintenance</strong><small>SLA DevOps retainers.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Business Platforms -->
+                  <div class="mega-panel " id="panel-platforms" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 03</span>
+                        <h4>Business Platforms</h4>
+                        <p>Tailored ERP, CRM, and marketplace engines that streamline operations.</p>
+                      </div>
+                      <a href="business-platforms.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="ecommerce-stores.html" class="service-item"><strong>E-Commerce Stores</strong><small>Custom headless carts.</small></a>
+                      <a href="lms-elearning.html" class="service-item"><strong>LMS &amp; E-Learning</strong><small>Courseware &amp; tracking.</small></a>
+                      <a href="custom-erp-systems.html" class="service-item"><strong>Custom ERP Systems</strong><small>Enterprise resource planning.</small></a>
+                      <a href="custom-crm-solutions.html" class="service-item"><strong>Custom CRM Solutions</strong><small>Pipelines &amp; lead flows.</small></a>
+                      <a href="online-marketplaces.html" class="service-item"><strong>Online Marketplaces</strong><small>Multi-vendor commission hubs.</small></a>
+                      <a href="saas-development.html" class="service-item"><strong>SaaS Development</strong><small>Multi-tenant architectures.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: AI & Automation -->
+                  <div class="mega-panel " id="panel-ai" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 04</span>
+                        <h4>AI &amp; Automation</h4>
+                        <p>Bespoke LLM agents and multi-system automated workflows.</p>
+                      </div>
+                      <a href="ai-automation.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="workflow-automation.html" class="service-item"><strong>Workflow Automation</strong><small>Remove repetitive friction.</small></a>
+                      <a href="ai-chatbots.html" class="service-item"><strong>AI Chatbots</strong><small>Conversational support engines.</small></a>
+                      <a href="autonomous-ai-agents.html" class="service-item"><strong>Autonomous AI Agents</strong><small>Task-running execution agents.</small></a>
+                      <a href="ai-voice-assistants.html" class="service-item"><strong>AI Voice Assistants</strong><small>Real-time conversational voice.</small></a>
+                      <a href="custom-llm-solutions.html" class="service-item"><strong>Custom LLM Solutions</strong><small>Private fine-tuning &amp; RAG.</small></a>
+                      <a href="data-predictive-ai.html" class="service-item"><strong>Data &amp; Predictive AI</strong><small>Forecasting &amp; insights.</small></a>
+                      <a href="text-language-ai.html" class="service-item"><strong>Text &amp; Language AI</strong><small>NLP entity extraction.</small></a>
+                      <a href="vision-document-ai.html" class="service-item"><strong>Vision &amp; Document AI</strong><small>OCR invoice parsing.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Cybersecurity -->
+                  <div class="mega-panel " id="panel-security" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 05</span>
+                        <h4>Cybersecurity</h4>
+                        <p>VAPT penetration testing, source code audits, and SOC2 readiness.</p>
+                      </div>
+                      <a href="cybersecurity.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="penetration-testing-vapt.html" class="service-item"><strong>Penetration Testing / VAPT</strong><small>Ethical hacking assessments.</small></a>
+                      <a href="source-code-review.html" class="service-item"><strong>Source Code Review</strong><small>Static &amp; dynamic code audits.</small></a>
+                      <a href="web-app-security.html" class="service-item"><strong>Web &amp; App Security</strong><small>OWASP Top 10 hardening.</small></a>
+                      <a href="cloud-security.html" class="service-item"><strong>Cloud Security</strong><small>AWS/GCP IAM governance.</small></a>
+                      <a href="network-audits.html" class="service-item"><strong>Network Audits</strong><small>Perimeter vulnerability checks.</small></a>
+                      <a href="api-security.html" class="service-item"><strong>API Security</strong><small>BOLA &amp; token security.</small></a>
+                      <a href="devsecops.html" class="service-item"><strong>DevSecOps</strong><small>Automated CI/CD security.</small></a>
+                      <a href="compliance-audits.html" class="service-item"><strong>Compliance &amp; Audits</strong><small>SOC2, ISO 27001 &amp; GDPR.</small></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="../industries.html" class="nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="nav-link">Insights</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="../contact.html?service=mobile-apps" class="btn btn-shimmer btn-compact">
+            <span>Schedule Discovery Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="logo"><img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160"></a>
+        <button class="drawer-close-btn" id="mobileClose" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="mobile-drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="../about.html" class="mobile-nav-link">About Us</a></li>
+          <li><a href="../services.html" class="mobile-nav-link">Services</a></li>
+          <li><a href="../industries.html" class="mobile-nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="mobile-nav-link">Insights</a></li>
+          <li><a href="../contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <div class="container">
+      <nav class="breadcrumbs-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumbs-list">
+          <li><a href="../index.html">Home</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li><a href="../services.html">Services</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li><a href="web-mobile-apps.html">Web & Mobile Apps</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li class="breadcrumbs-current" aria-current="page">Native & Cross-Platform Mobile Applications (iOS & Android)</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- 02. HERO SECTION -->
+    <section class="hero-section inner-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PILLAR 02 // WEB & MOBILE APPS</span>
+          </div>
+          <h1 class="hero-title" style="margin-bottom: 20px;">
+            Native & Cross-Platform Mobile Apps Engineered for 120Hz Fluidity
+          </h1>
+          <p class="hero-subtitle" style="max-width: 780px;">
+            Engage your users wherever they are. We engineer buttery-smooth mobile applications for iOS and Android using Flutter and React Native with offline-first local databases and biometric security.
+          </p>
+          <div class="hero-actions" style="margin-top: 32px;">
+            <a href="../contact.html?service=mobile-apps" class="btn btn-shimmer btn-lg">
+              <span>Book Architecture Discovery Call</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#blueprints" class="btn btn-glass btn-lg">View Technical Blueprints</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. BOTTLENECKS VS URAANLABS FIX -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>THE REALITY CHECK</span>
+          </div>
+          <h2 class="section-title">
+            Traditional Flaws vs. <span class="gradient-text">The UraanLabs Fix</span>
+          </h2>
+          <p class="section-subtitle">
+            Why traditional agency engagements stall, leak capital, and deliver brittle solutions.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Janky, Sluggish Cross-Platform Performance</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Poorly architected hybrid apps suffer from frame drops, slow scrolling, and high battery consumption that alienates mobile users.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We compile to native ARM code with Flutter and modern React Native architecture, delivering fluid 120Hz rendering and hardware acceleration.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">App Store Rejections & Compliance Delays</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Apps get repeatedly rejected by Apple and Google review teams due to privacy guideline violations, broken in-app purchases, or crashes.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We build strictly against Apple Human Interface and Google Material 3 guidelines, guaranteeing 100% first-time App Store and Play Store approval.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Broken Offline Functionality</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Apps freeze or display blank error screens the moment a user enters an elevator, subway, or spotty cellular zone.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We implement local-first SQLite/Realm database caching that stores data offline and automatically synchronizes when connectivity restores.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CORE DELIVERABLES -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>TANGIBLE ASSETS</span>
+          </div>
+          <h2 class="section-title">
+            What You <span class="gradient-text">Receive</span>
+          </h2>
+          <p class="section-subtitle">
+            Every deliverable is production-grade, documented, and transferred with 100% intellectual property ownership.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128241;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Universal iOS & Android Codebase</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Single unified Flutter or React Native repository maintaining 95%+ cross-platform code parity.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128274;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Biometric & Secure Enclave Auth</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              FaceID, TouchID, and Android BiometricPrompt integration with encrypted key storage.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128260;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Offline-First Synchronization Engine</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Embedded local database with background background queue workers and conflict resolution.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128276;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Push Notifications & Deep Linking</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Firebase Cloud Messaging (FCM) and Apple APNs integration with universal deep links.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128640;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">App Store & Play Store Publishing</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Complete end-to-end deployment to Apple App Store and Google Play Store with certified metadata.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128190;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Full Master Source Repository</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Complete GitHub access, fastlane CI/CD deployment automation scripts, and 100% IP rights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. ARCHITECTURAL BLUEPRINTS -->
+    <section class="section" id="blueprints">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PRODUCTION BLUEPRINTS</span>
+          </div>
+          <h2 class="section-title">
+            Real-World Architectural <span class="gradient-text">Deployments</span>
+          </h2>
+          <p class="section-subtitle">
+            Practical use-case breakdowns demonstrating how we engineer solutions around operational bottlenecks.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 01 // DIGITAL HEALTH</span>
+            <h3 style="font-size: 1.5rem; color: #FFFFFF; margin: 10px 0 16px;">HIPAA-Compliant Remote Patient Monitoring & Telehealth Mobile App</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  A healthcare startup needed an iOS and Android app connecting Bluetooth medical sensors (pulse oximeters, blood pressure monitors) to patient charts.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Over 45,000 active patients onboarded; app maintains a 4.9-star rating across 3,200 App Store reviews with zero data leaks.</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;">Engineered native BLE (Bluetooth Low Energy) background synchronization drivers in Flutter.</li>
+                  <li style="margin-bottom: 6px;">Encrypted all patient health metrics on-device using AES-256 SQLCipher before cloud transmission.</li>
+                  <li style="margin-bottom: 6px;">Integrated WebRTC for encrypted sub-second peer-to-peer video consultations with doctors.</li>
+                  <li style="margin-bottom: 6px;">Successfully cleared Apple HealthKit and medical privacy compliance audits.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 02 // ON-DEMAND LOGISTICS</span>
+            <h3 style="font-size: 1.5rem; color: #FFFFFF; margin: 10px 0 16px;">Driver Dispatch & Navigation App with Real-Time Telemetry</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  A last-mile delivery fleet experienced frequent app crashes and GPS battery drain among 800 drivers using low-cost Android smartphones.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Driver battery life extended by 40%; daily successful delivery completion jumped from 89% to 98.4%.</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;">Implemented adaptive GPS throttling algorithms updating server coordinates only on significant motion.</li>
+                  <li style="margin-bottom: 6px;">Built offline route caching allowing drivers to complete deliveries inside underground parking structures.</li>
+                  <li style="margin-bottom: 6px;">Integrated digital signature capture and barcode scanning with native camera acceleration.</li>
+                  <li style="margin-bottom: 6px;">Automated CI/CD release builds via Fastlane deploying directly to Google Play internal tracks.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. DYNAMIC REGIONAL SWAP BLOCK (10% Geo-Targeting) -->
+    <section class="section" style="background: rgba(124, 58, 237, 0.06); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>GLOBAL &amp; REGIONAL READINESS</span>
+          </div>
+          <h2 class="section-title">
+            Architected for International Scale &amp; <span class="gradient-text">Regional Compliance</span>
+          </h2>
+          <p class="section-subtitle">
+            Engineered to comply with local financial mandates, data jurisdictions, and cross-border latency targets.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">DEFAULT / GLOBAL</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Universal International Standard</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Universal app store distribution with international language localization and currency formatting.
+            </p>
+            <a href="../contact.html?service=mobile-apps&region=global" class="btn btn-outline full-width">International Discovery &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px; border-color: rgba(56, 189, 248, 0.4);">
+            <span class="panel-badge" style="background: rgba(56, 189, 248, 0.2); color: #BAE6FD;">GCC / UAE &amp; KSA</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Gulf Enterprise Ready</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              RTL layout optimization, SMS OTP authentication with regional telecom gateways, and Apple Pay/Mada integration.
+            </p>
+            <a href="https://wa.me/923170128047" target="_blank" rel="noopener" class="btn btn-shimmer full-width">WhatsApp Engineering Desk &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px; border-color: rgba(168, 85, 247, 0.4);">
+            <span class="panel-badge" style="background: rgba(168, 85, 247, 0.2); color: #DDD6FE;">US &amp; UK MARKETS</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">High Velocity &amp; Compliance</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Strict compliance with California CCPA, Apple App Tracking Transparency (ATT), and UK GDPR data regulations.
+            </p>
+            <a href="../contact.html?service=mobile-apps&market=us-uk" class="btn btn-glass full-width">Schedule ROI Audit Call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. 4-STEP EXECUTION PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>SYSTEMATIC METHODOLOGY</span>
+          </div>
+          <h2 class="section-title">
+            Our 4-Step <span class="gradient-text">Execution Process</span>
+          </h2>
+          <p class="section-subtitle">
+            A disciplined milestone framework designed to eliminate guesswork, budget drift, and release delays.
+          </p>
+        </div>
+
+        <div class="workflow-steps-grid">
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 01 // DISCOVERY</div>
+            <h4 class="step-title">Architecture &amp; Specs</h4>
+            <p class="step-desc">We audit existing systems, map database schemas and user flows, and deliver a fixed-scope milestone proposal within 48 hours.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 02 // PROTOTYPING</div>
+            <h4 class="step-title">Interactive Design</h4>
+            <p class="step-desc">We craft clickable interactive prototypes and complete design tokens in Figma for rapid stakeholder validation before writing code.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 03 // ENGINEERING</div>
+            <h4 class="step-title">Production Sprints</h4>
+            <p class="step-desc">We develop in tight 2-week milestones with automated CI/CD deployments and live staging previews with regression testing.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 04 // HANDOVER</div>
+            <h4 class="step-title">Deployment &amp; Warranty</h4>
+            <p class="step-desc">Zero vendor lock-in. Full Git repository transfer, cloud manifest handoff, and 30 days of complimentary SLA post-launch warranty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. TECH STACK & COMPLIANCE -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container max-w-4xl">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>TECHNICAL SPECIFICATIONS</span>
+          </div>
+          <h2 class="section-title">
+            Production Tech Stack &amp; <span class="gradient-text">Security Standards</span>
+          </h2>
+        </div>
+
+        <div class="card" style="padding: 36px; text-align: center;">
+          <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 20px;">Tools, Frameworks &amp; Protocols Used for This Service</h4>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Flutter & Dart</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">React Native & TypeScript</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">SQLite & WatermelonDB</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Firebase Cloud Messaging</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Fastlane CI/CD</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Apple HealthKit / Google Fit</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 24px; line-height: 1.6;">
+            Every deployment follows OWASP Top 10 hardening, automated container vulnerability scans, strict environment variable isolation, and automated database backups.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. 5 HIGH-CONVERTING CLIENT FAQS -->
+    <section class="section" id="faq">
+      <div class="container max-w-4xl">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>ANSWERS &amp; ASSURANCES</span>
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="gradient-text">Questions</span>
+          </h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          
+          <div class="accordion-item is-open">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <span>Should we build with Flutter, React Native, or Native Swift/Kotlin?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>For 90% of business applications, Flutter or React Native offers identical 120Hz native performance while saving 40% on engineering costs and delivering unified feature releases across iOS and Android.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Do you handle the App Store and Google Play submission process?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>Yes. We manage the entire deployment lifecycle: provisioning certificates, privacy manifests, screenshot assets, review team correspondence, and launch verification.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>How do you handle offline mode?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>We build with a local-first database architecture (like SQLite or WatermelonDB). All user actions save locally instantly and synchronize in the background when connectivity resumes.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Can the app integrate with device hardware like Bluetooth and Camera?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>Yes. We write native bridging modules to access BLE sensors, high-speed camera barcode scanning, NFC, GPS location services, and biometric hardware.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>What is the standard delivery timeline for a mobile app?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>A comprehensive MVP mobile application typically takes 8 to 12 weeks from initial architectural alignment to live App Store release.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CLOSING CTA -->
+    <section class="section text-center cta-closing-section">
+      <div class="container max-w-4xl">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>GET STARTED TODAY</span>
+        </div>
+        <h2 class="section-title">
+          Ready to Solve Your <span class="gradient-text">Native & Cross-Platform Mobile Applications (iOS & Android) Bottleneck?</span>
+        </h2>
+        <p class="section-subtitle">
+          Book a 30-minute discovery call directly with a Senior Systems Architect. We evaluate your current technical setup and provide an actionable roadmap within 24 hours.
+        </p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="../contact.html?service=mobile-apps" class="btn btn-shimmer btn-lg">
+            <span>Book Your Architecture Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="web-mobile-apps.html" class="btn btn-glass btn-lg">Back to Web & Mobile Apps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+            <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="230" height="35" class="brand-logo-img">
+          </a>
+          <p class="footer-bio">
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+          </p>
+          <div class="system-status-pill">
+            <span class="status-dot"></span>
+            <span>All Global Systems Live (99.98% Uptime)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="../services/design-branding.html">Design &amp; Branding</a></li>
+            <li><a href="../services/web-mobile-apps.html">Web &amp; Mobile Apps</a></li>
+            <li><a href="../services/business-platforms.html">Business Platforms</a></li>
+            <li><a href="../services/ai-automation.html">AI &amp; Automation</a></li>
+            <li><a href="../services/cybersecurity.html">Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries</h4>
+          <ul class="footer-links">
+            <li><a href="../industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="../industries.html#fintech">Finance (FinTech)</a></li>
+            <li><a href="../industries.html#healthcare">Healthcare</a></li>
+            <li><a href="../industries.html#saas">Startups &amp; SaaS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">Our Story</a></li>
+            <li><a href="../careers.html">Careers</a></li>
+            <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
+            <li><a href="tel:+923170128047">0317-0128047</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 UraanLabs. All Rights Reserved. Production-grade engineering studio.</p>
+        <div class="footer-legal-links">
+          <a href="#header">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

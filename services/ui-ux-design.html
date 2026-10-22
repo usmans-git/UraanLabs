@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Design & High-Fidelity Design Systems | UraanLabs</title>
+  <meta name="description" content="Conversion-focused UI/UX design, interactive Figma prototypes, and modular design systems for SaaS and mobile apps. 100% developer-ready specs.">
+  <meta name="keywords" content="UI UX design agency, SaaS product design, Figma design system, web application UX design, conversion rate optimization UI">
+  <link rel="canonical" href="https://uraanlabs.com/services/ui-ux-design.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uraanlabs.com/services/ui-ux-design.html">
+  <meta property="og:title" content="UI/UX Design & High-Fidelity Design Systems | UraanLabs">
+  <meta property="og:description" content="Conversion-focused UI/UX design, interactive Figma prototypes, and modular design systems for SaaS and mobile apps. 100% developer-ready specs.">
+  <meta property="og:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UI/UX Design & High-Fidelity Design Systems | UraanLabs">
+  <meta name="twitter:description" content="Conversion-focused UI/UX design, interactive Figma prototypes, and modular design systems for SaaS and mobile apps. 100% developer-ready specs.">
+  <meta name="twitter:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../images/uraanlabs-mark.svg">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "UI/UX Design, Design Systems & High-Fidelity Prototypes",
+        "serviceType": "UI/UX Design, Design Systems & High-Fidelity Prototypes",
+        "description": "Conversion-focused UI/UX design, interactive Figma prototypes, and modular design systems for SaaS and mobile apps. 100% developer-ready specs.",
+        "provider": {
+          "@type": "Organization",
+          "name": "UraanLabs Studio",
+          "url": "https://uraanlabs.com"
+        },
+        "url": "https://uraanlabs.com/services/ui-ux-design.html",
+        "areaServed": ["Global", "US", "UK", "UAE", "Saudi Arabia"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://uraanlabs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://uraanlabs.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design & Branding",
+            "item": "https://uraanlabs.com/services/design-branding.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "UI/UX Design, Design Systems & High-Fidelity Prototypes",
+            "item": "https://uraanlabs.com/services/ui-ux-design.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you design in Figma?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We build exclusively in Figma using Auto Layout, Component Variants, and Design Tokens to ensure absolute developer parity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you create both desktop and mobile versions?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every screen is engineered with explicit responsive breakpoints for mobile (375px), tablet (768px), and desktop (1440px)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you handle developer handoff?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We organize pages with clear user flow markers, annotate interaction states, and provide CSS variables so engineers never have to guess padding or behavior."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you redesign our existing application without breaking current user habits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We conduct UX audits to identify pain points while preserving established muscle memory for core workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast can an MVP UI/UX sprint be delivered?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard 15 to 25 screen MVP prototype is typically completed within 3 to 4 weeks, with weekly sprint walk-throughs."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="dark-canvas">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow orb-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow orb-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow orb-center" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+          <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="200" height="35" class="brand-logo-img">
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+
+          <li class="nav-item has-dropdown">
+            <a href="../about.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>About Us</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple">
+              <a href="../about.html#story" class="dropdown-item">
+                <span class="dropdown-title">Our Story</span>
+                <small class="dropdown-desc">Why UraanLabs was built and our mission.</small>
+              </a>
+              <a href="../about.html#why-uraanlabs" class="dropdown-item">
+                <span class="dropdown-title">Why UraanLabs</span>
+                <small class="dropdown-desc">Our 4 core engineering differentiators.</small>
+              </a>
+              <a href="../careers.html" class="dropdown-item">
+                <span class="dropdown-title">Careers</span>
+                <small class="dropdown-desc">Join our senior technical studio.</small>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown has-mega">
+            <a href="../services.html" class="nav-link dropdown-toggle active" aria-haspopup="true">
+              <span>Services</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+
+            <div class="mega-menu" id="servicesMegaMenu">
+              <div class="mega-inner">
+                <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
+                  <button class="mega-tab active" type="button" role="tab" id="tab-design" aria-selected="true" data-target="panel-design">
+                    <span class="tab-icon">&#10024;</span>
+                    <div class="tab-text">
+                      <strong>Design &amp; Branding</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-webmob" aria-selected="false" data-target="panel-webmob">
+                    <span class="tab-icon">&#128187;</span>
+                    <div class="tab-text">
+                      <strong>Web &amp; Mobile Apps</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-platforms" aria-selected="false" data-target="panel-platforms">
+                    <span class="tab-icon">&#128200;</span>
+                    <div class="tab-text">
+                      <strong>Business Platforms</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-ai" aria-selected="false" data-target="panel-ai">
+                    <span class="tab-icon">&#9889;</span>
+                    <div class="tab-text">
+                      <strong>AI &amp; Automation</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-security" aria-selected="false" data-target="panel-security">
+                    <span class="tab-icon">&#128737;</span>
+                    <div class="tab-text">
+                      <strong>Cybersecurity</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+
+                <div class="mega-panels">
+                  <!-- Panel: Design & Branding -->
+                  <div class="mega-panel active" id="panel-design" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 01</span>
+                        <h4>Design &amp; Branding</h4>
+                        <p>Identity systems, UI/UX craft, and digital product prototypes.</p>
+                      </div>
+                      <a href="design-branding.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="logo-design.html" class="service-item"><strong>Logo Design</strong><small>Distinctive brand marks.</small></a>
+                      <a href="brand-identity.html" class="service-item"><strong>Brand Identity</strong><small>Design systems &amp; tokens.</small></a>
+                      <a href="print-stationery.html" class="service-item"><strong>Print &amp; Stationery</strong><small>Physical collateral.</small></a>
+                      <a href="ui-ux-design.html" class="service-item"><strong>UI/UX Design</strong><small>User flows &amp; interfaces.</small></a>
+                      <a href="product-prototyping.html" class="service-item"><strong>Product Prototyping</strong><small>Clickable Figma models.</small></a>
+                      <a href="social-media-creatives.html" class="service-item"><strong>Social Media Creatives</strong><small>Performance assets.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Web & Mobile Apps -->
+                  <div class="mega-panel " id="panel-webmob" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 02</span>
+                        <h4>Web &amp; Mobile Apps</h4>
+                        <p>Sub-second web platforms and fluid native mobile applications.</p>
+                      </div>
+                      <a href="web-mobile-apps.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="business-websites.html" class="service-item"><strong>Business Websites</strong><small>High-speed corporate sites.</small></a>
+                      <a href="custom-web-apps.html" class="service-item"><strong>Custom Web Apps</strong><small>Full-stack portal engineering.</small></a>
+                      <a href="mobile-apps.html" class="service-item"><strong>Mobile Apps</strong><small>Flutter &amp; React Native.</small></a>
+                      <a href="pwa.html" class="service-item"><strong>PWAs</strong><small>Installable offline web apps.</small></a>
+                      <a href="api-integrations.html" class="service-item"><strong>API Integrations</strong><small>Secure microservice mesh.</small></a>
+                      <a href="support-maintenance.html" class="service-item"><strong>Support &amp; Maintenance</strong><small>SLA DevOps retainers.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Business Platforms -->
+                  <div class="mega-panel " id="panel-platforms" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 03</span>
+                        <h4>Business Platforms</h4>
+                        <p>Tailored ERP, CRM, and marketplace engines that streamline operations.</p>
+                      </div>
+                      <a href="business-platforms.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="ecommerce-stores.html" class="service-item"><strong>E-Commerce Stores</strong><small>Custom headless carts.</small></a>
+                      <a href="lms-elearning.html" class="service-item"><strong>LMS &amp; E-Learning</strong><small>Courseware &amp; tracking.</small></a>
+                      <a href="custom-erp-systems.html" class="service-item"><strong>Custom ERP Systems</strong><small>Enterprise resource planning.</small></a>
+                      <a href="custom-crm-solutions.html" class="service-item"><strong>Custom CRM Solutions</strong><small>Pipelines &amp; lead flows.</small></a>
+                      <a href="online-marketplaces.html" class="service-item"><strong>Online Marketplaces</strong><small>Multi-vendor commission hubs.</small></a>
+                      <a href="saas-development.html" class="service-item"><strong>SaaS Development</strong><small>Multi-tenant architectures.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: AI & Automation -->
+                  <div class="mega-panel " id="panel-ai" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 04</span>
+                        <h4>AI &amp; Automation</h4>
+                        <p>Bespoke LLM agents and multi-system automated workflows.</p>
+                      </div>
+                      <a href="ai-automation.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="workflow-automation.html" class="service-item"><strong>Workflow Automation</strong><small>Remove repetitive friction.</small></a>
+                      <a href="ai-chatbots.html" class="service-item"><strong>AI Chatbots</strong><small>Conversational support engines.</small></a>
+                      <a href="autonomous-ai-agents.html" class="service-item"><strong>Autonomous AI Agents</strong><small>Task-running execution agents.</small></a>
+                      <a href="ai-voice-assistants.html" class="service-item"><strong>AI Voice Assistants</strong><small>Real-time conversational voice.</small></a>
+                      <a href="custom-llm-solutions.html" class="service-item"><strong>Custom LLM Solutions</strong><small>Private fine-tuning &amp; RAG.</small></a>
+                      <a href="data-predictive-ai.html" class="service-item"><strong>Data &amp; Predictive AI</strong><small>Forecasting &amp; insights.</small></a>
+                      <a href="text-language-ai.html" class="service-item"><strong>Text &amp; Language AI</strong><small>NLP entity extraction.</small></a>
+                      <a href="vision-document-ai.html" class="service-item"><strong>Vision &amp; Document AI</strong><small>OCR invoice parsing.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Cybersecurity -->
+                  <div class="mega-panel " id="panel-security" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 05</span>
+                        <h4>Cybersecurity</h4>
+                        <p>VAPT penetration testing, source code audits, and SOC2 readiness.</p>
+                      </div>
+                      <a href="cybersecurity.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="penetration-testing-vapt.html" class="service-item"><strong>Penetration Testing / VAPT</strong><small>Ethical hacking assessments.</small></a>
+                      <a href="source-code-review.html" class="service-item"><strong>Source Code Review</strong><small>Static &amp; dynamic code audits.</small></a>
+                      <a href="web-app-security.html" class="service-item"><strong>Web &amp; App Security</strong><small>OWASP Top 10 hardening.</small></a>
+                      <a href="cloud-security.html" class="service-item"><strong>Cloud Security</strong><small>AWS/GCP IAM governance.</small></a>
+                      <a href="network-audits.html" class="service-item"><strong>Network Audits</strong><small>Perimeter vulnerability checks.</small></a>
+                      <a href="api-security.html" class="service-item"><strong>API Security</strong><small>BOLA &amp; token security.</small></a>
+                      <a href="devsecops.html" class="service-item"><strong>DevSecOps</strong><small>Automated CI/CD security.</small></a>
+                      <a href="compliance-audits.html" class="service-item"><strong>Compliance &amp; Audits</strong><small>SOC2, ISO 27001 &amp; GDPR.</small></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="../industries.html" class="nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="nav-link">Insights</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="../contact.html?service=ui-ux-design" class="btn btn-shimmer btn-compact">
+            <span>Schedule Discovery Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="logo"><img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160"></a>
+        <button class="drawer-close-btn" id="mobileClose" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="mobile-drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="../about.html" class="mobile-nav-link">About Us</a></li>
+          <li><a href="../services.html" class="mobile-nav-link">Services</a></li>
+          <li><a href="../industries.html" class="mobile-nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="mobile-nav-link">Insights</a></li>
+          <li><a href="../contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <div class="container">
+      <nav class="breadcrumbs-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumbs-list">
+          <li><a href="../index.html">Home</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li><a href="../services.html">Services</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li><a href="design-branding.html">Design & Branding</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li class="breadcrumbs-current" aria-current="page">UI/UX Design, Design Systems & High-Fidelity Prototypes</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- 02. HERO SECTION -->
+    <section class="hero-section inner-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PILLAR 01 // DESIGN & BRANDING</span>
+          </div>
+          <h1 class="hero-title" style="margin-bottom: 20px;">
+            Digital Product Interfaces Engineered for Conversion, Usability & Velocity
+          </h1>
+          <p class="hero-subtitle" style="max-width: 780px;">
+            Eliminate friction from your user onboarding and complex dashboard workflows. We architect intuitive, developer-ready UI/UX systems in Figma that reduce customer churn and accelerate engineering sprints.
+          </p>
+          <div class="hero-actions" style="margin-top: 32px;">
+            <a href="../contact.html?service=ui-ux-design" class="btn btn-shimmer btn-lg">
+              <span>Book Architecture Discovery Call</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#blueprints" class="btn btn-glass btn-lg">View Technical Blueprints</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. BOTTLENECKS VS URAANLABS FIX -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>THE REALITY CHECK</span>
+          </div>
+          <h2 class="section-title">
+            Traditional Flaws vs. <span class="gradient-text">The UraanLabs Fix</span>
+          </h2>
+          <p class="section-subtitle">
+            Why traditional agency engagements stall, leak capital, and deliver brittle solutions.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Clunky, Non-Intuitive User Flows</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Users abandon registration or fail to activate due to multi-step friction, ambiguous button hierarchies, and cognitive overload.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We map user journeys with data-backed heuristic analysis, stripping unnecessary steps and optimizing critical activation funnels.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Design Files That Developers Dread</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Designers deliver unorganized artboards without auto-layout, inconsistent paddings, and missing error or hover state edge cases.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                Every component is built with Figma Auto Layout 5.0, explicit variant properties, responsive constraints, and complete interaction states.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Feature Creep & Subjective Opinions</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Projects stall in endless subjective design critique loops without empirical validation or clear user objective benchmarks.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We prototype interactive user flows and stress-test them through quantitative task-completion metrics and usability benchmarks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CORE DELIVERABLES -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>TANGIBLE ASSETS</span>
+          </div>
+          <h2 class="section-title">
+            What You <span class="gradient-text">Receive</span>
+          </h2>
+          <p class="section-subtitle">
+            Every deliverable is production-grade, documented, and transferred with 100% intellectual property ownership.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128396;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">High-Fidelity Wireframes & User Flows</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Comprehensive interaction blueprints covering every happy path, edge case, and system error state.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#127912;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Scalable Figma Design System</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Atomic component library with tokens, auto-layout, nested variants, and light/dark theme modes.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128073;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Interactive Clickable Prototype</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Realistic prototype replicating complex micro-interactions, drawer states, and modal transitions for user testing.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128241;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Multi-Device Responsive Breakpoints</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Precision desktop (1440px), tablet (768px), and mobile (375px) layouts for every screen.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128221;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Detailed Developer Handoff Specs</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Exportable SVG icons, CSS token documentation, and UX interaction notes directly inside Figma.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128274;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">100% Figma Source Ownership</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Immediate transfer of clean, organized Figma files with zero proprietary lock-in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. ARCHITECTURAL BLUEPRINTS -->
+    <section class="section" id="blueprints">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PRODUCTION BLUEPRINTS</span>
+          </div>
+          <h2 class="section-title">
+            Real-World Architectural <span class="gradient-text">Deployments</span>
+          </h2>
+          <p class="section-subtitle">
+            Practical use-case breakdowns demonstrating how we engineer solutions around operational bottlenecks.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 01 // FINTECH DASHBOARD</span>
+            <h3 style="font-size: 1.5rem; color: #FFFFFF; margin: 10px 0 16px;">Redesigning Multi-Currency FX Dashboard to Reduce Settlement Errors</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  Traders at a cross-border FX platform complained of cognitive fatigue and execution errors due to cramped tables and delayed status confirmations.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Order execution velocity accelerated by 38%; order entry error rates dropped to near zero (0.04%).</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;">Restructured data tables with customizable column visibility and fixed monospace numeric alignments.</li>
+                  <li style="margin-bottom: 6px;">Introduced tactile micro-interaction confirmations for high-value foreign exchange orders.</li>
+                  <li style="margin-bottom: 6px;">Built an adaptive dark-mode palette engineered for prolonged low-glare trading sessions.</li>
+                  <li style="margin-bottom: 6px;">Delivered a modular design system of 180+ interactive React-ready Figma components.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 02 // B2B SAAS ONBOARDING</span>
+            <h3 style="font-size: 1.5rem; color: #FFFFFF; margin: 10px 0 16px;">Frictionless Self-Serve Onboarding Flow for Developer Cloud Tool</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  A developer observability platform was experiencing a 62% drop-off during the initial API integration onboarding step.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Onboarding completion surged from 38% to 74% within 3 weeks of the redesigned flow going live.</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;">Replaced a single 12-field form with a progressive 3-step wizard with contextual syntax highlighting.</li>
+                  <li style="margin-bottom: 6px;">Added real-time webhook validation indicators confirming successful data ingestion before moving to step 2.</li>
+                  <li style="margin-bottom: 6px;">Designed one-click copy-paste CLI installation snippets with instant feedback states.</li>
+                  <li style="margin-bottom: 6px;">Created responsive mobile views allowing CTOs to monitor deployment health on the go.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. DYNAMIC REGIONAL SWAP BLOCK (10% Geo-Targeting) -->
+    <section class="section" style="background: rgba(124, 58, 237, 0.06); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>GLOBAL &amp; REGIONAL READINESS</span>
+          </div>
+          <h2 class="section-title">
+            Architected for International Scale &amp; <span class="gradient-text">Regional Compliance</span>
+          </h2>
+          <p class="section-subtitle">
+            Engineered to comply with local financial mandates, data jurisdictions, and cross-border latency targets.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">DEFAULT / GLOBAL</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Universal International Standard</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Universal UX standards adhering to Nielsen Norman heuristics and modern cross-platform design conventions.
+            </p>
+            <a href="../contact.html?service=ui-ux-design&region=global" class="btn btn-outline full-width">International Discovery &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px; border-color: rgba(56, 189, 248, 0.4);">
+            <span class="panel-badge" style="background: rgba(56, 189, 248, 0.2); color: #BAE6FD;">GCC / UAE &amp; KSA</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Gulf Enterprise Ready</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              RTL (Right-to-Left) Arabic layout mirroring, bilingual typography, and culturally attuned transactional user flows.
+            </p>
+            <a href="https://wa.me/923170128047" target="_blank" rel="noopener" class="btn btn-shimmer full-width">WhatsApp Engineering Desk &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px; border-color: rgba(168, 85, 247, 0.4);">
+            <span class="panel-badge" style="background: rgba(168, 85, 247, 0.2); color: #DDD6FE;">US &amp; UK MARKETS</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">High Velocity &amp; Compliance</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              High-density enterprise SaaS layouts optimized for maximum data visibility and keyboard-first shortcut navigation.
+            </p>
+            <a href="../contact.html?service=ui-ux-design&market=us-uk" class="btn btn-glass full-width">Schedule ROI Audit Call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. 4-STEP EXECUTION PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>SYSTEMATIC METHODOLOGY</span>
+          </div>
+          <h2 class="section-title">
+            Our 4-Step <span class="gradient-text">Execution Process</span>
+          </h2>
+          <p class="section-subtitle">
+            A disciplined milestone framework designed to eliminate guesswork, budget drift, and release delays.
+          </p>
+        </div>
+
+        <div class="workflow-steps-grid">
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 01 // DISCOVERY</div>
+            <h4 class="step-title">Architecture &amp; Specs</h4>
+            <p class="step-desc">We audit existing systems, map database schemas and user flows, and deliver a fixed-scope milestone proposal within 48 hours.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 02 // PROTOTYPING</div>
+            <h4 class="step-title">Interactive Design</h4>
+            <p class="step-desc">We craft clickable interactive prototypes and complete design tokens in Figma for rapid stakeholder validation before writing code.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 03 // ENGINEERING</div>
+            <h4 class="step-title">Production Sprints</h4>
+            <p class="step-desc">We develop in tight 2-week milestones with automated CI/CD deployments and live staging previews with regression testing.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 04 // HANDOVER</div>
+            <h4 class="step-title">Deployment &amp; Warranty</h4>
+            <p class="step-desc">Zero vendor lock-in. Full Git repository transfer, cloud manifest handoff, and 30 days of complimentary SLA post-launch warranty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. TECH STACK & COMPLIANCE -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container max-w-4xl">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>TECHNICAL SPECIFICATIONS</span>
+          </div>
+          <h2 class="section-title">
+            Production Tech Stack &amp; <span class="gradient-text">Security Standards</span>
+          </h2>
+        </div>
+
+        <div class="card" style="padding: 36px; text-align: center;">
+          <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 20px;">Tools, Frameworks &amp; Protocols Used for This Service</h4>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Figma Auto Layout 5.0</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Tokens Studio</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Framer Prototyping</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Maze Usability Testing</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Miro User Journey Mapping</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">WCAG Contrast Checker</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 24px; line-height: 1.6;">
+            Every deployment follows OWASP Top 10 hardening, automated container vulnerability scans, strict environment variable isolation, and automated database backups.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. 5 HIGH-CONVERTING CLIENT FAQS -->
+    <section class="section" id="faq">
+      <div class="container max-w-4xl">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>ANSWERS &amp; ASSURANCES</span>
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="gradient-text">Questions</span>
+          </h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          
+          <div class="accordion-item is-open">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <span>Do you design in Figma?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>Yes. We build exclusively in Figma using Auto Layout, Component Variants, and Design Tokens to ensure absolute developer parity.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Do you create both desktop and mobile versions?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>Yes. Every screen is engineered with explicit responsive breakpoints for mobile (375px), tablet (768px), and desktop (1440px).</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>How do you handle developer handoff?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>We organize pages with clear user flow markers, annotate interaction states, and provide CSS variables so engineers never have to guess padding or behavior.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Can you redesign our existing application without breaking current user habits?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>Yes. We conduct UX audits to identify pain points while preserving established muscle memory for core workflows.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>How fast can an MVP UI/UX sprint be delivered?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>A standard 15 to 25 screen MVP prototype is typically completed within 3 to 4 weeks, with weekly sprint walk-throughs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CLOSING CTA -->
+    <section class="section text-center cta-closing-section">
+      <div class="container max-w-4xl">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>GET STARTED TODAY</span>
+        </div>
+        <h2 class="section-title">
+          Ready to Solve Your <span class="gradient-text">UI/UX Design, Design Systems & High-Fidelity Prototypes Bottleneck?</span>
+        </h2>
+        <p class="section-subtitle">
+          Book a 30-minute discovery call directly with a Senior Systems Architect. We evaluate your current technical setup and provide an actionable roadmap within 24 hours.
+        </p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="../contact.html?service=ui-ux-design" class="btn btn-shimmer btn-lg">
+            <span>Book Your Architecture Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="design-branding.html" class="btn btn-glass btn-lg">Back to Design & Branding</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+            <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="230" height="35" class="brand-logo-img">
+          </a>
+          <p class="footer-bio">
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+          </p>
+          <div class="system-status-pill">
+            <span class="status-dot"></span>
+            <span>All Global Systems Live (99.98% Uptime)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="../services/design-branding.html">Design &amp; Branding</a></li>
+            <li><a href="../services/web-mobile-apps.html">Web &amp; Mobile Apps</a></li>
+            <li><a href="../services/business-platforms.html">Business Platforms</a></li>
+            <li><a href="../services/ai-automation.html">AI &amp; Automation</a></li>
+            <li><a href="../services/cybersecurity.html">Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries</h4>
+          <ul class="footer-links">
+            <li><a href="../industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="../industries.html#fintech">Finance (FinTech)</a></li>
+            <li><a href="../industries.html#healthcare">Healthcare</a></li>
+            <li><a href="../industries.html#saas">Startups &amp; SaaS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">Our Story</a></li>
+            <li><a href="../careers.html">Careers</a></li>
+            <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
+            <li><a href="tel:+923170128047">0317-0128047</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 UraanLabs. All Rights Reserved. Production-grade engineering studio.</p>
+        <div class="footer-legal-links">
+          <a href="#header">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

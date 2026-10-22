@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automated DevSecOps CI/CD Pipeline Implementation | UraanLabs</title>
+  <meta name="description" content="Embed automated security into GitHub Actions & GitLab CI/CD pipelines. SAST, secret scanning, container audits, and automated compliance gates.">
+  <meta name="keywords" content="DevSecOps implementation services, CI/CD pipeline security, automated security testing, shift left security agency, container image vulnerability scanner">
+  <link rel="canonical" href="https://uraanlabs.com/services/devsecops.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uraanlabs.com/services/devsecops.html">
+  <meta property="og:title" content="Automated DevSecOps CI/CD Pipeline Implementation | UraanLabs">
+  <meta property="og:description" content="Embed automated security into GitHub Actions & GitLab CI/CD pipelines. SAST, secret scanning, container audits, and automated compliance gates.">
+  <meta property="og:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automated DevSecOps CI/CD Pipeline Implementation | UraanLabs">
+  <meta name="twitter:description" content="Embed automated security into GitHub Actions & GitLab CI/CD pipelines. SAST, secret scanning, container audits, and automated compliance gates.">
+  <meta name="twitter:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../images/uraanlabs-mark.svg">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Automated DevSecOps CI/CD Security Pipelines",
+        "serviceType": "Automated DevSecOps CI/CD Security Pipelines",
+        "description": "Embed automated security into GitHub Actions & GitLab CI/CD pipelines. SAST, secret scanning, container audits, and automated compliance gates.",
+        "provider": {
+          "@type": "Organization",
+          "name": "UraanLabs Studio",
+          "url": "https://uraanlabs.com"
+        },
+        "url": "https://uraanlabs.com/services/devsecops.html",
+        "areaServed": ["Global", "US", "UK", "UAE", "Saudi Arabia"]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://uraanlabs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://uraanlabs.com/services.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Cybersecurity",
+            "item": "https://uraanlabs.com/services/cybersecurity.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Automated DevSecOps CI/CD Security Pipelines",
+            "item": "https://uraanlabs.com/services/devsecops.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Will adding security scans to our CI/CD pipeline slow down our build times?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. We configure optimized caching and lightweight, targeted rulesets (using modern tools like Semgrep and Trivy) that execute in less than 90 seconds, running in parallel with your existing unit test suites."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you prevent developers from simply bypassing security checks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We configure branch protection rules in GitHub or GitLab that require passing security checks before any code can be merged into production or staging branches."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a Software Bill of Materials (SBOM) and do we need one?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An SBOM is a formal, machine-readable inventory of every open-source library and component inside your software. Enterprise procurement departments and government regulators increasingly mandate an SBOM before purchasing software."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can this work with our existing deployment tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our DevSecOps configurations integrate natively with GitHub Actions, GitLab CI, Bitbucket Pipelines, Jenkins, ArgoCD, and AWS CodePipeline."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does a complete DevSecOps pipeline implementation take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A standard organization-wide DevSecOps implementation across your primary repositories is typically completed within 2 to 3 weeks."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="dark-canvas">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow orb-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow orb-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow orb-center" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+          <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="200" height="35" class="brand-logo-img">
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+
+          <li class="nav-item has-dropdown">
+            <a href="../about.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>About Us</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple">
+              <a href="../about.html#story" class="dropdown-item">
+                <span class="dropdown-title">Our Story</span>
+                <small class="dropdown-desc">Why UraanLabs was built and our mission.</small>
+              </a>
+              <a href="../about.html#why-uraanlabs" class="dropdown-item">
+                <span class="dropdown-title">Why UraanLabs</span>
+                <small class="dropdown-desc">Our 4 core engineering differentiators.</small>
+              </a>
+              <a href="../careers.html" class="dropdown-item">
+                <span class="dropdown-title">Careers</span>
+                <small class="dropdown-desc">Join our senior technical studio.</small>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown has-mega">
+            <a href="../services.html" class="nav-link dropdown-toggle active" aria-haspopup="true">
+              <span>Services</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+
+            <div class="mega-menu" id="servicesMegaMenu">
+              <div class="mega-inner">
+                <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
+                  <button class="mega-tab " type="button" role="tab" id="tab-design" aria-selected="false" data-target="panel-design">
+                    <span class="tab-icon">&#10024;</span>
+                    <div class="tab-text">
+                      <strong>Design &amp; Branding</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-webmob" aria-selected="false" data-target="panel-webmob">
+                    <span class="tab-icon">&#128187;</span>
+                    <div class="tab-text">
+                      <strong>Web &amp; Mobile Apps</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-platforms" aria-selected="false" data-target="panel-platforms">
+                    <span class="tab-icon">&#128200;</span>
+                    <div class="tab-text">
+                      <strong>Business Platforms</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab " type="button" role="tab" id="tab-ai" aria-selected="false" data-target="panel-ai">
+                    <span class="tab-icon">&#9889;</span>
+                    <div class="tab-text">
+                      <strong>AI &amp; Automation</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab active" type="button" role="tab" id="tab-security" aria-selected="true" data-target="panel-security">
+                    <span class="tab-icon">&#128737;</span>
+                    <div class="tab-text">
+                      <strong>Cybersecurity</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+
+                <div class="mega-panels">
+                  <!-- Panel: Design & Branding -->
+                  <div class="mega-panel " id="panel-design" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 01</span>
+                        <h4>Design &amp; Branding</h4>
+                        <p>Identity systems, UI/UX craft, and digital product prototypes.</p>
+                      </div>
+                      <a href="design-branding.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="logo-design.html" class="service-item"><strong>Logo Design</strong><small>Distinctive brand marks.</small></a>
+                      <a href="brand-identity.html" class="service-item"><strong>Brand Identity</strong><small>Design systems &amp; tokens.</small></a>
+                      <a href="print-stationery.html" class="service-item"><strong>Print &amp; Stationery</strong><small>Physical collateral.</small></a>
+                      <a href="ui-ux-design.html" class="service-item"><strong>UI/UX Design</strong><small>User flows &amp; interfaces.</small></a>
+                      <a href="product-prototyping.html" class="service-item"><strong>Product Prototyping</strong><small>Clickable Figma models.</small></a>
+                      <a href="social-media-creatives.html" class="service-item"><strong>Social Media Creatives</strong><small>Performance assets.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Web & Mobile Apps -->
+                  <div class="mega-panel " id="panel-webmob" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 02</span>
+                        <h4>Web &amp; Mobile Apps</h4>
+                        <p>Sub-second web platforms and fluid native mobile applications.</p>
+                      </div>
+                      <a href="web-mobile-apps.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="business-websites.html" class="service-item"><strong>Business Websites</strong><small>High-speed corporate sites.</small></a>
+                      <a href="custom-web-apps.html" class="service-item"><strong>Custom Web Apps</strong><small>Full-stack portal engineering.</small></a>
+                      <a href="mobile-apps.html" class="service-item"><strong>Mobile Apps</strong><small>Flutter &amp; React Native.</small></a>
+                      <a href="pwa.html" class="service-item"><strong>PWAs</strong><small>Installable offline web apps.</small></a>
+                      <a href="api-integrations.html" class="service-item"><strong>API Integrations</strong><small>Secure microservice mesh.</small></a>
+                      <a href="support-maintenance.html" class="service-item"><strong>Support &amp; Maintenance</strong><small>SLA DevOps retainers.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Business Platforms -->
+                  <div class="mega-panel " id="panel-platforms" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 03</span>
+                        <h4>Business Platforms</h4>
+                        <p>Tailored ERP, CRM, and marketplace engines that streamline operations.</p>
+                      </div>
+                      <a href="business-platforms.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="ecommerce-stores.html" class="service-item"><strong>E-Commerce Stores</strong><small>Custom headless carts.</small></a>
+                      <a href="lms-elearning.html" class="service-item"><strong>LMS &amp; E-Learning</strong><small>Courseware &amp; tracking.</small></a>
+                      <a href="custom-erp-systems.html" class="service-item"><strong>Custom ERP Systems</strong><small>Enterprise resource planning.</small></a>
+                      <a href="custom-crm-solutions.html" class="service-item"><strong>Custom CRM Solutions</strong><small>Pipelines &amp; lead flows.</small></a>
+                      <a href="online-marketplaces.html" class="service-item"><strong>Online Marketplaces</strong><small>Multi-vendor commission hubs.</small></a>
+                      <a href="saas-development.html" class="service-item"><strong>SaaS Development</strong><small>Multi-tenant architectures.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: AI & Automation -->
+                  <div class="mega-panel " id="panel-ai" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 04</span>
+                        <h4>AI &amp; Automation</h4>
+                        <p>Bespoke LLM agents and multi-system automated workflows.</p>
+                      </div>
+                      <a href="ai-automation.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="workflow-automation.html" class="service-item"><strong>Workflow Automation</strong><small>Remove repetitive friction.</small></a>
+                      <a href="ai-chatbots.html" class="service-item"><strong>AI Chatbots</strong><small>Conversational support engines.</small></a>
+                      <a href="autonomous-ai-agents.html" class="service-item"><strong>Autonomous AI Agents</strong><small>Task-running execution agents.</small></a>
+                      <a href="ai-voice-assistants.html" class="service-item"><strong>AI Voice Assistants</strong><small>Real-time conversational voice.</small></a>
+                      <a href="custom-llm-solutions.html" class="service-item"><strong>Custom LLM Solutions</strong><small>Private fine-tuning &amp; RAG.</small></a>
+                      <a href="data-predictive-ai.html" class="service-item"><strong>Data &amp; Predictive AI</strong><small>Forecasting &amp; insights.</small></a>
+                      <a href="text-language-ai.html" class="service-item"><strong>Text &amp; Language AI</strong><small>NLP entity extraction.</small></a>
+                      <a href="vision-document-ai.html" class="service-item"><strong>Vision &amp; Document AI</strong><small>OCR invoice parsing.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Cybersecurity -->
+                  <div class="mega-panel active" id="panel-security" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 05</span>
+                        <h4>Cybersecurity</h4>
+                        <p>VAPT penetration testing, source code audits, and SOC2 readiness.</p>
+                      </div>
+                      <a href="cybersecurity.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="penetration-testing-vapt.html" class="service-item"><strong>Penetration Testing / VAPT</strong><small>Ethical hacking assessments.</small></a>
+                      <a href="source-code-review.html" class="service-item"><strong>Source Code Review</strong><small>Static &amp; dynamic code audits.</small></a>
+                      <a href="web-app-security.html" class="service-item"><strong>Web &amp; App Security</strong><small>OWASP Top 10 hardening.</small></a>
+                      <a href="cloud-security.html" class="service-item"><strong>Cloud Security</strong><small>AWS/GCP IAM governance.</small></a>
+                      <a href="network-audits.html" class="service-item"><strong>Network Audits</strong><small>Perimeter vulnerability checks.</small></a>
+                      <a href="api-security.html" class="service-item"><strong>API Security</strong><small>BOLA &amp; token security.</small></a>
+                      <a href="devsecops.html" class="service-item"><strong>DevSecOps</strong><small>Automated CI/CD security.</small></a>
+                      <a href="compliance-audits.html" class="service-item"><strong>Compliance &amp; Audits</strong><small>SOC2, ISO 27001 &amp; GDPR.</small></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="../industries.html" class="nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="nav-link">Insights</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="../contact.html?service=devsecops" class="btn btn-shimmer btn-compact">
+            <span>Schedule Discovery Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="logo"><img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160"></a>
+        <button class="drawer-close-btn" id="mobileClose" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="mobile-drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="../about.html" class="mobile-nav-link">About Us</a></li>
+          <li><a href="../services.html" class="mobile-nav-link">Services</a></li>
+          <li><a href="../industries.html" class="mobile-nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="mobile-nav-link">Insights</a></li>
+          <li><a href="../contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <div class="container">
+      <nav class="breadcrumbs-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumbs-list">
+          <li><a href="../index.html">Home</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li><a href="../services.html">Services</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li><a href="cybersecurity.html">Cybersecurity</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li class="breadcrumbs-current" aria-current="page">Automated DevSecOps CI/CD Security Pipelines</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- 02. HERO SECTION -->
+    <section class="hero-section inner-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PILLAR 05 // CYBERSECURITY</span>
+          </div>
+          <h1 class="hero-title" style="margin-bottom: 20px;">
+            Automate Security Across Your CI/CD Pipelines with DevSecOps
+          </h1>
+          <p class="hero-subtitle" style="max-width: 780px;">
+            Stop treating security as an end-of-quarter bottleneck that delays software releases. We "shift security left" by embedding automated static analysis (SAST), dependency scanning, secret detection, and container hardening directly into your CI/CD pipelines.
+          </p>
+          <div class="hero-actions" style="margin-top: 32px;">
+            <a href="../contact.html?service=devsecops" class="btn btn-shimmer btn-lg">
+              <span>Book Architecture Discovery Call</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#blueprints" class="btn btn-glass btn-lg">View Technical Blueprints</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. BOTTLENECKS VS URAANLABS FIX -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>THE REALITY CHECK</span>
+          </div>
+          <h2 class="section-title">
+            Traditional Flaws vs. <span class="gradient-text">The UraanLabs Fix</span>
+          </h2>
+          <p class="section-subtitle">
+            Why traditional agency engagements stall, leak capital, and deliver brittle solutions.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Security Reviews That Delay Product Launches for Weeks</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Developers finish a major feature, but the release sits blocked for weeks waiting for an external security team to manually review the code.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We embed automated security gates directly into GitHub Actions or GitLab CI that test code on every commit in under 90 seconds.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Developers Ignoring Security Alerts Due to High Noise</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              When CI/CD pipelines fail on hundreds of non-critical linting issues, developers disable security checks entirely just to ship their code.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We fine-tune security gates to block builds ONLY on verified High and Critical CVEs, delivering clear, actionable fix instructions in pull request comments.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div style="color: #F87171; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 8px;">THE FRUSTRATION</div>
+            <h4 style="color: #FFFFFF; font-size: 1.15rem; margin-bottom: 12px;">Vulnerable Docker Images Shipped to Production</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Container images built on bloated, unpatched base operating systems introduce hundreds of known vulnerabilities into live cloud environments.
+            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px;">
+              <div style="color: var(--cyan-sonic); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">THE URAANLABS FIX</div>
+              <p style="font-size: 0.85rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                We enforce minimal Alpine/Distroless container builds and automated image vulnerability scanning (Trivy) that rejects insecure images before registry push.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CORE DELIVERABLES -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>TANGIBLE ASSETS</span>
+          </div>
+          <h2 class="section-title">
+            What You <span class="gradient-text">Receive</span>
+          </h2>
+          <p class="section-subtitle">
+            Every deliverable is production-grade, documented, and transferred with 100% intellectual property ownership.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#9881;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Automated CI/CD Security Workflow YAMLs</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Battle-tested GitHub Actions or GitLab CI pipelines executing fast, multi-stage automated security scans.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128273;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Pre-Commit Secret Scanning Guards</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Git hooks (TruffleHog / GitGuardian) preventing engineers from committing API keys or credentials to repositories.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128065;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Software Composition Analysis (SCA)</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Automated dependency vulnerability audits flagging vulnerable npm, pip, and Go packages with automated PR updates.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128230;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Container Image Hardening & Scanning</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Automated Trivy container scanning and minimal Distroless Dockerfile refactoring eliminating base OS vulnerabilities.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128203;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">Software Bill of Materials (SBOM) Generator</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Automated generation of CycloneDX and SPDX SBOM manifests required for enterprise sales and government contracts.
+            </p>
+          </div>
+          
+          <div class="card" style="padding: 30px;">
+            <div class="diff-icon" style="margin-bottom: 16px;">&#128190;</div>
+            <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 10px;">100% Pipeline Code & Config Ownership</h4>
+            <p style="font-size: 0.86rem; color: var(--text-muted); line-height: 1.6; margin: 0;">
+              Complete transfer of all CI/CD configuration files, scanner rules, and developer documentation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. ARCHITECTURAL BLUEPRINTS -->
+    <section class="section" id="blueprints">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>PRODUCTION BLUEPRINTS</span>
+          </div>
+          <h2 class="section-title">
+            Real-World Architectural <span class="gradient-text">Deployments</span>
+          </h2>
+          <p class="section-subtitle">
+            Practical use-case breakdowns demonstrating how we engineer solutions around operational bottlenecks.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 01 // ENTERPRISE SAAS SCALE</span>
+            <h3 style="font-size: 1.5rem; color: #FFFFFF; margin: 10px 0 16px;">Shifting Security Left Across 40 Repositories for 60-Engineer Team</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  A B2B SaaS company had security issues discovered only during annual customer audits, requiring stressful multi-week emergency code refactorings.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Vulnerabilities caught before merging surged to 94%; release cycle frequency accelerated from monthly to multiple daily deployments.</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;">Implemented standardized GitHub Actions security workflows across all 40 engineering repositories.</li>
+                  <li style="margin-bottom: 6px;">Configured Semgrep SAST scanning running in under 45 seconds on every open pull request.</li>
+                  <li style="margin-bottom: 6px;">Integrated automated Dependabot and Snyk alerts creating automated pull requests for patched dependencies.</li>
+                  <li style="margin-bottom: 6px;">Trained engineering leads on triaging and resolving automated security findings natively in GitHub.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" style="padding: 40px; border-radius: var(--radius-lg); position: relative;">
+            <div class="card-glow" aria-hidden="true"></div>
+            <span class="panel-badge">BLUEPRINT 02 // FINTECH MOBILE & CLOUD</span>
+            <h3 style="font-size: 1.5rem; color: #FFFFFF; margin: 10px 0 16px;">Automated Container Hardening & Registry Vulnerability Gate</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+              <div>
+                <strong style="color: #F87171; display: block; margin-bottom: 8px; font-size: 0.9rem;">The Business Bottleneck:</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+                  A fintech firm was failing institutional investor audits because production Docker containers contained 80+ inherited operating system CVEs.
+                </p>
+                <div style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid var(--cyan-sonic); padding: 12px 16px; margin-top: 16px; border-radius: 4px;">
+                  <strong style="color: var(--cyan-sonic); font-size: 0.85rem; display: block;">Business Impact:</strong>
+                  <span style="font-size: 0.85rem; color: #E2E8F0;">Container vulnerabilities dropped from 84 to 0; container image size reduced by 72%, speeding up cloud deployment times.</span>
+                </div>
+              </div>
+
+              <div>
+                <strong style="color: var(--cyan-sonic); display: block; margin-bottom: 8px; font-size: 0.9rem;">The Engineered Architecture:</strong>
+                <ol style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; padding-left: 20px; margin: 0;">
+                  <li style="margin-bottom: 6px;">Refactored heavy Ubuntu/Debian Dockerfiles to minimal, rootless Google Distroless base images.</li>
+                  <li style="margin-bottom: 6px;">Configured Trivy container scanning in GitLab CI blocking image pushes if Critical vulnerabilities exist.</li>
+                  <li style="margin-bottom: 6px;">Implemented cryptographic image signing using Cosign (Sigstore) verifying image integrity before ECS deployment.</li>
+                  <li style="margin-bottom: 6px;">Automated daily vulnerability re-scans of stored registry images to detect emerging zero-day vulnerabilities.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. DYNAMIC REGIONAL SWAP BLOCK (10% Geo-Targeting) -->
+    <section class="section" style="background: rgba(124, 58, 237, 0.06); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>GLOBAL &amp; REGIONAL READINESS</span>
+          </div>
+          <h2 class="section-title">
+            Architected for International Scale &amp; <span class="gradient-text">Regional Compliance</span>
+          </h2>
+          <p class="section-subtitle">
+            Engineered to comply with local financial mandates, data jurisdictions, and cross-border latency targets.
+          </p>
+        </div>
+
+        <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" style="padding: 30px;">
+            <span class="panel-badge">DEFAULT / GLOBAL</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Universal International Standard</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Universal CI/CD security compatible with GitHub Actions, GitLab CI, Bitbucket Pipelines, and Jenkins.
+            </p>
+            <a href="../contact.html?service=devsecops&region=global" class="btn btn-outline full-width">International Discovery &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px; border-color: rgba(56, 189, 248, 0.4);">
+            <span class="panel-badge" style="background: rgba(56, 189, 248, 0.2); color: #BAE6FD;">GCC / UAE &amp; KSA</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">Gulf Enterprise Ready</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              Compliance-ready DevSecOps workflows aligned with Gulf enterprise cybersecurity and sovereign cloud requirements.
+            </p>
+            <a href="https://wa.me/923170128047" target="_blank" rel="noopener" class="btn btn-shimmer full-width">WhatsApp Engineering Desk &rarr;</a>
+          </div>
+
+          <div class="card" style="padding: 30px; border-color: rgba(168, 85, 247, 0.4);">
+            <span class="panel-badge" style="background: rgba(168, 85, 247, 0.2); color: #DDD6FE;">US &amp; UK MARKETS</span>
+            <h4 style="margin: 12px 0 8px; font-size: 1.15rem;">High Velocity &amp; Compliance</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px;">
+              NIST Secure Software Development Framework (SSDF) and US Executive Order 14028 software supply-chain compliance.
+            </p>
+            <a href="../contact.html?service=devsecops&market=us-uk" class="btn btn-glass full-width">Schedule ROI Audit Call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. 4-STEP EXECUTION PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>SYSTEMATIC METHODOLOGY</span>
+          </div>
+          <h2 class="section-title">
+            Our 4-Step <span class="gradient-text">Execution Process</span>
+          </h2>
+          <p class="section-subtitle">
+            A disciplined milestone framework designed to eliminate guesswork, budget drift, and release delays.
+          </p>
+        </div>
+
+        <div class="workflow-steps-grid">
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 01 // DISCOVERY</div>
+            <h4 class="step-title">Architecture &amp; Specs</h4>
+            <p class="step-desc">We audit existing systems, map database schemas and user flows, and deliver a fixed-scope milestone proposal within 48 hours.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 02 // PROTOTYPING</div>
+            <h4 class="step-title">Interactive Design</h4>
+            <p class="step-desc">We craft clickable interactive prototypes and complete design tokens in Figma for rapid stakeholder validation before writing code.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 03 // ENGINEERING</div>
+            <h4 class="step-title">Production Sprints</h4>
+            <p class="step-desc">We develop in tight 2-week milestones with automated CI/CD deployments and live staging previews with regression testing.</p>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="step-badge">PHASE 04 // HANDOVER</div>
+            <h4 class="step-title">Deployment &amp; Warranty</h4>
+            <p class="step-desc">Zero vendor lock-in. Full Git repository transfer, cloud manifest handoff, and 30 days of complimentary SLA post-launch warranty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. TECH STACK & COMPLIANCE -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container max-w-4xl">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>TECHNICAL SPECIFICATIONS</span>
+          </div>
+          <h2 class="section-title">
+            Production Tech Stack &amp; <span class="gradient-text">Security Standards</span>
+          </h2>
+        </div>
+
+        <div class="card" style="padding: 36px; text-align: center;">
+          <h4 style="font-size: 1.15rem; color: #FFFFFF; margin-bottom: 20px;">Tools, Frameworks &amp; Protocols Used for This Service</h4>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">GitHub Actions & GitLab CI</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Semgrep & Snyk</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Trivy Container Scanner</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">TruffleHog Secret Detection</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Cosign (Sigstore) Image Signing</span>
+            <span class="badge-tag" style="padding: 8px 16px; font-size: 0.82rem;">Docker Distroless</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 24px; line-height: 1.6;">
+            Every deployment follows OWASP Top 10 hardening, automated container vulnerability scans, strict environment variable isolation, and automated database backups.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. 5 HIGH-CONVERTING CLIENT FAQS -->
+    <section class="section" id="faq">
+      <div class="container max-w-4xl">
+        <div class="section-heading text-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>ANSWERS &amp; ASSURANCES</span>
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="gradient-text">Questions</span>
+          </h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          
+          <div class="accordion-item is-open">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <span>Will adding security scans to our CI/CD pipeline slow down our build times?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>No. We configure optimized caching and lightweight, targeted rulesets (using modern tools like Semgrep and Trivy) that execute in less than 90 seconds, running in parallel with your existing unit test suites.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>How do you prevent developers from simply bypassing security checks?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>We configure branch protection rules in GitHub or GitLab that require passing security checks before any code can be merged into production or staging branches.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>What is a Software Bill of Materials (SBOM) and do we need one?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>An SBOM is a formal, machine-readable inventory of every open-source library and component inside your software. Enterprise procurement departments and government regulators increasingly mandate an SBOM before purchasing software.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>Can this work with our existing deployment tools?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>Yes. Our DevSecOps configurations integrate natively with GitHub Actions, GitLab CI, Bitbucket Pipelines, Jenkins, ArgoCD, and AWS CodePipeline.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item ">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span>How long does a complete DevSecOps pipeline implementation take?</span>
+              <span class="accordion-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="accordion-collapse">
+              <div class="accordion-body">
+                <p>A standard organization-wide DevSecOps implementation across your primary repositories is typically completed within 2 to 3 weeks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CLOSING CTA -->
+    <section class="section text-center cta-closing-section">
+      <div class="container max-w-4xl">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>GET STARTED TODAY</span>
+        </div>
+        <h2 class="section-title">
+          Ready to Solve Your <span class="gradient-text">Automated DevSecOps CI/CD Security Pipelines Bottleneck?</span>
+        </h2>
+        <p class="section-subtitle">
+          Book a 30-minute discovery call directly with a Senior Systems Architect. We evaluate your current technical setup and provide an actionable roadmap within 24 hours.
+        </p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="../contact.html?service=devsecops" class="btn btn-shimmer btn-lg">
+            <span>Book Your Architecture Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="cybersecurity.html" class="btn btn-glass btn-lg">Back to Cybersecurity</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+            <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="230" height="35" class="brand-logo-img">
+          </a>
+          <p class="footer-bio">
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+          </p>
+          <div class="system-status-pill">
+            <span class="status-dot"></span>
+            <span>All Global Systems Live (99.98% Uptime)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="../services/design-branding.html">Design &amp; Branding</a></li>
+            <li><a href="../services/web-mobile-apps.html">Web &amp; Mobile Apps</a></li>
+            <li><a href="../services/business-platforms.html">Business Platforms</a></li>
+            <li><a href="../services/ai-automation.html">AI &amp; Automation</a></li>
+            <li><a href="../services/cybersecurity.html">Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries</h4>
+          <ul class="footer-links">
+            <li><a href="../industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="../industries.html#fintech">Finance (FinTech)</a></li>
+            <li><a href="../industries.html#healthcare">Healthcare</a></li>
+            <li><a href="../industries.html#saas">Startups &amp; SaaS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">Our Story</a></li>
+            <li><a href="../careers.html">Careers</a></li>
+            <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
+            <li><a href="tel:+923170128047">0317-0128047</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 UraanLabs. All Rights Reserved. Production-grade engineering studio.</p>
+        <div class="footer-legal-links">
+          <a href="#header">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

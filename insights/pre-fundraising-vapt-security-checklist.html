@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For | UraanLabs Insights</title>
+  <meta name="description" content="A comprehensive pre-fundraising VAPT and cybersecurity checklist for founders and CTOs preparing for Series A/B technical due diligence audits.">
+  <meta name="keywords" content="pre-fundraising VAPT checklist, technical due diligence security, BOLA vulnerabilities, cloud IAM audit, startup penetration testing">
+  <link rel="canonical" href="https://uraanlabs.com/insights/pre-fundraising-vapt-security-checklist.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://uraanlabs.com/insights/pre-fundraising-vapt-security-checklist.html">
+  <meta property="og:title" content="The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For | UraanLabs Insights">
+  <meta property="og:description" content="A comprehensive pre-fundraising VAPT and cybersecurity checklist for founders and CTOs preparing for Series A/B technical due diligence audits.">
+  <meta property="og:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+  <meta property="article:published_time" content="2026-10-21">
+  <meta property="article:author" content="UraanLabs Cybersecurity Desk">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For">
+  <meta name="twitter:description" content="A comprehensive pre-fundraising VAPT and cybersecurity checklist for founders and CTOs preparing for Series A/B technical due diligence audits.">
+  <meta name="twitter:image" content="https://uraanlabs.com/images/uraanlabs-mark.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../images/uraanlabs-mark.svg">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "headline": "The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For",
+        "description": "A comprehensive pre-fundraising VAPT and cybersecurity checklist for founders and CTOs preparing for Series A/B technical due diligence audits.",
+        "url": "https://uraanlabs.com/insights/pre-fundraising-vapt-security-checklist.html",
+        "datePublished": "2026-10-21",
+        "dateModified": "2026-10-21",
+        "author": {
+          "@type": "Organization",
+          "name": "UraanLabs Studio",
+          "url": "https://uraanlabs.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "UraanLabs",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://uraanlabs.com/images/uraanlabs-logo.svg"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://uraanlabs.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Insights",
+            "item": "https://uraanlabs.com/insights.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For",
+            "item": "https://uraanlabs.com/insights/pre-fundraising-vapt-security-checklist.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="dark-canvas">
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow orb-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow orb-top-right" aria-hidden="true"></div>
+  <div class="ambient-glow orb-center" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+          <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="200" height="35" class="brand-logo-img">
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+
+          <li class="nav-item has-dropdown">
+            <a href="../about.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>About Us</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+            <div class="dropdown-menu dropdown-simple">
+              <a href="../about.html#story" class="dropdown-item">
+                <span class="dropdown-title">Our Story</span>
+                <small class="dropdown-desc">Why UraanLabs was built and our mission.</small>
+              </a>
+              <a href="../about.html#why-uraanlabs" class="dropdown-item">
+                <span class="dropdown-title">Why UraanLabs</span>
+                <small class="dropdown-desc">Our 4 core engineering differentiators.</small>
+              </a>
+              <a href="../careers.html" class="dropdown-item">
+                <span class="dropdown-title">Careers</span>
+                <small class="dropdown-desc">Join our senior technical studio.</small>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown has-mega">
+            <a href="../services.html" class="nav-link dropdown-toggle" aria-haspopup="true">
+              <span>Services</span>
+              <span class="chevron" aria-hidden="true">&#9662;</span>
+            </a>
+
+            <div class="mega-menu" id="servicesMegaMenu">
+              <div class="mega-inner">
+                <div class="mega-tabs" role="tablist" aria-label="Service Pillars">
+                  <button class="mega-tab active" type="button" role="tab" id="tab-design" aria-selected="true" data-target="panel-design">
+                    <span class="tab-icon">&#10024;</span>
+                    <div class="tab-text">
+                      <strong>Design &amp; Branding</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-webmob" aria-selected="false" data-target="panel-webmob">
+                    <span class="tab-icon">&#128187;</span>
+                    <div class="tab-text">
+                      <strong>Web &amp; Mobile Apps</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-platforms" aria-selected="false" data-target="panel-platforms">
+                    <span class="tab-icon">&#128200;</span>
+                    <div class="tab-text">
+                      <strong>Business Platforms</strong>
+                      <small>6 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-ai" aria-selected="false" data-target="panel-ai">
+                    <span class="tab-icon">&#9889;</span>
+                    <div class="tab-text">
+                      <strong>AI &amp; Automation</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+
+                  <button class="mega-tab" type="button" role="tab" id="tab-security" aria-selected="false" data-target="panel-security">
+                    <span class="tab-icon">&#128737;</span>
+                    <div class="tab-text">
+                      <strong>Cybersecurity</strong>
+                      <small>8 Core Services</small>
+                    </div>
+                    <span class="tab-arrow" aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
+
+                <div class="mega-panels">
+                  <!-- Panel: Design & Branding -->
+                  <div class="mega-panel active" id="panel-design" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 01</span>
+                        <h4>Design &amp; Branding</h4>
+                        <p>Identity systems, UI/UX craft, and digital product prototypes.</p>
+                      </div>
+                      <a href="../services/design-branding.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="../services/logo-design.html" class="service-item"><strong>Logo Design</strong><small>Distinctive brand marks.</small></a>
+                      <a href="../services/brand-identity.html" class="service-item"><strong>Brand Identity</strong><small>Design systems &amp; tokens.</small></a>
+                      <a href="../services/print-stationery.html" class="service-item"><strong>Print &amp; Stationery</strong><small>Physical collateral.</small></a>
+                      <a href="../services/ui-ux-design.html" class="service-item"><strong>UI/UX Design</strong><small>User flows &amp; interfaces.</small></a>
+                      <a href="../services/product-prototyping.html" class="service-item"><strong>Product Prototyping</strong><small>Clickable Figma models.</small></a>
+                      <a href="../services/social-media-creatives.html" class="service-item"><strong>Social Media Creatives</strong><small>Performance assets.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Web & Mobile Apps -->
+                  <div class="mega-panel" id="panel-webmob" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 02</span>
+                        <h4>Web &amp; Mobile Apps</h4>
+                        <p>Sub-second web platforms and fluid native mobile applications.</p>
+                      </div>
+                      <a href="../services/web-mobile-apps.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="../services/business-websites.html" class="service-item"><strong>Business Websites</strong><small>High-speed corporate sites.</small></a>
+                      <a href="../services/custom-web-apps.html" class="service-item"><strong>Custom Web Apps</strong><small>Full-stack portal engineering.</small></a>
+                      <a href="../services/mobile-apps.html" class="service-item"><strong>Mobile Apps</strong><small>Flutter &amp; React Native.</small></a>
+                      <a href="../services/pwa.html" class="service-item"><strong>PWAs</strong><small>Installable offline web apps.</small></a>
+                      <a href="../services/api-integrations.html" class="service-item"><strong>API Integrations</strong><small>Secure microservice mesh.</small></a>
+                      <a href="../services/support-maintenance.html" class="service-item"><strong>Support &amp; Maintenance</strong><small>SLA DevOps retainers.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Business Platforms -->
+                  <div class="mega-panel" id="panel-platforms" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 03</span>
+                        <h4>Business Platforms</h4>
+                        <p>Tailored ERP, CRM, and marketplace engines that streamline operations.</p>
+                      </div>
+                      <a href="../services/business-platforms.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="../services/ecommerce-stores.html" class="service-item"><strong>E-Commerce Stores</strong><small>Custom headless carts.</small></a>
+                      <a href="../services/lms-elearning.html" class="service-item"><strong>LMS &amp; E-Learning</strong><small>Courseware &amp; tracking.</small></a>
+                      <a href="../services/custom-erp-systems.html" class="service-item"><strong>Custom ERP Systems</strong><small>Enterprise resource planning.</small></a>
+                      <a href="../services/custom-crm-solutions.html" class="service-item"><strong>Custom CRM Solutions</strong><small>Pipelines &amp; lead flows.</small></a>
+                      <a href="../services/online-marketplaces.html" class="service-item"><strong>Online Marketplaces</strong><small>Multi-vendor commission hubs.</small></a>
+                      <a href="../services/saas-development.html" class="service-item"><strong>SaaS Development</strong><small>Multi-tenant architectures.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: AI & Automation -->
+                  <div class="mega-panel" id="panel-ai" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 04</span>
+                        <h4>AI &amp; Automation</h4>
+                        <p>Bespoke LLM agents and multi-system automated workflows.</p>
+                      </div>
+                      <a href="../services/ai-automation.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="../services/workflow-automation.html" class="service-item"><strong>Workflow Automation</strong><small>Remove repetitive friction.</small></a>
+                      <a href="../services/ai-chatbots.html" class="service-item"><strong>AI Chatbots</strong><small>Conversational support engines.</small></a>
+                      <a href="../services/autonomous-ai-agents.html" class="service-item"><strong>Autonomous AI Agents</strong><small>Task-running execution agents.</small></a>
+                      <a href="../services/ai-voice-assistants.html" class="service-item"><strong>AI Voice Assistants</strong><small>Real-time conversational voice.</small></a>
+                      <a href="../services/custom-llm-solutions.html" class="service-item"><strong>Custom LLM Solutions</strong><small>Private fine-tuning &amp; RAG.</small></a>
+                      <a href="../services/data-predictive-ai.html" class="service-item"><strong>Data &amp; Predictive AI</strong><small>Forecasting &amp; insights.</small></a>
+                      <a href="../services/text-language-ai.html" class="service-item"><strong>Text &amp; Language AI</strong><small>NLP entity extraction.</small></a>
+                      <a href="../services/vision-document-ai.html" class="service-item"><strong>Vision &amp; Document AI</strong><small>OCR invoice parsing.</small></a>
+                    </div>
+                  </div>
+
+                  <!-- Panel: Cybersecurity -->
+                  <div class="mega-panel" id="panel-security" role="tabpanel">
+                    <div class="panel-header">
+                      <div>
+                        <span class="panel-badge">PILLAR 05</span>
+                        <h4>Cybersecurity</h4>
+                        <p>VAPT penetration testing, source code audits, and SOC2 readiness.</p>
+                      </div>
+                      <a href="../services/cybersecurity.html" class="panel-cta">Dedicated Pillar Page &rarr;</a>
+                    </div>
+                    <div class="panel-grid">
+                      <a href="../services/penetration-testing-vapt.html" class="service-item"><strong>Penetration Testing / VAPT</strong><small>Ethical hacking assessments.</small></a>
+                      <a href="../services/source-code-review.html" class="service-item"><strong>Source Code Review</strong><small>Static &amp; dynamic code audits.</small></a>
+                      <a href="../services/web-app-security.html" class="service-item"><strong>Web &amp; App Security</strong><small>OWASP Top 10 hardening.</small></a>
+                      <a href="../services/cloud-security.html" class="service-item"><strong>Cloud Security</strong><small>AWS/GCP IAM governance.</small></a>
+                      <a href="../services/network-audits.html" class="service-item"><strong>Network Audits</strong><small>Perimeter vulnerability checks.</small></a>
+                      <a href="../services/api-security.html" class="service-item"><strong>API Security</strong><small>BOLA &amp; token security.</small></a>
+                      <a href="../services/devsecops.html" class="service-item"><strong>DevSecOps</strong><small>Automated CI/CD security.</small></a>
+                      <a href="../services/compliance-audits.html" class="service-item"><strong>Compliance &amp; Audits</strong><small>SOC2, ISO 27001 &amp; GDPR.</small></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="../industries.html" class="nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="nav-link active">Insights</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="../contact.html" class="btn btn-shimmer btn-compact">
+            <span>Schedule Discovery Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <a href="../index.html" class="logo"><img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="160"></a>
+        <button class="drawer-close-btn" id="mobileClose" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="mobile-drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+          <li><a href="../about.html" class="mobile-nav-link">About Us</a></li>
+          <li><a href="../services.html" class="mobile-nav-link">Services</a></li>
+          <li><a href="../industries.html" class="mobile-nav-link">Industries</a></li>
+          <li><a href="../insights.html" class="mobile-nav-link active">Insights</a></li>
+          <li><a href="../contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <div class="container">
+      <nav class="breadcrumbs-nav" aria-label="Breadcrumb">
+        <ol class="breadcrumbs-list">
+          <li><a href="../index.html">Home</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li><a href="../insights.html">Insights</a></li>
+          <li class="breadcrumbs-separator">/</li>
+          <li class="breadcrumbs-current" aria-current="page">The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Article Main Section -->
+    <article class="article-section">
+      <div class="container article-container">
+        
+        <!-- Header -->
+        <header class="article-header">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>CYBERSECURITY & AUDITS</span>
+          </div>
+          <h1 class="hero-title" style="font-size: clamp(2rem, 3.5vw, 2.9rem); margin: 12px 0 16px;">
+            The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For
+          </h1>
+          <p class="hero-lead" style="font-size: 1.05rem; margin-bottom: 20px;">
+            An exhaustive technical guide covering broken object-level authorization, cloud IAM policies, and dependency supply-chain vulnerabilities that trigger investor red flags during funding rounds.
+          </p>
+
+          <div class="article-meta-row">
+            <span class="article-meta-item author">By UraanLabs Cybersecurity Desk</span>
+            <span>&bull;</span>
+            <span class="article-meta-item">October 2026</span>
+            <span>&bull;</span>
+            <span class="article-meta-item">10 Min Read</span>
+            <span>&bull;</span>
+            <span class="article-meta-item">Verified Production Architecture</span>
+          </div>
+        </header>
+
+        <!-- Executive Summary Takeaways -->
+        <div class="article-summary-card">
+          <div class="article-summary-title">
+            <span>&#9889;</span>
+            <span>Executive Takeaways (Key Insights)</span>
+          </div>
+          <ul>
+            <li>Technical due diligence auditors frequently reject or devalue startups with unhardened API authorization layers.</li>
+            <li>Broken Object-Level Authorization (BOLA/IDOR) remains the #1 vulnerability identified during venture capital security reviews.</li>
+            <li>Publicly readable S3 buckets, stale IAM access keys, and missing CloudTrail logging indicate poor engineering governance.</li>
+            <li>A formal third-party VAPT report with remediation verification letters directly de-risks capital allocation for institutional investors.</li>
+          </ul>
+        </div>
+
+        <!-- Body Content -->
+        <div class="article-content">
+          
+      <h2>Why Technical Due Diligence Has Shifted to Security First</h2>
+      <p>In prior venture cycles, investors focused almost entirely on growth velocity, product-market fit, and team pedigree. Today, institutional funds, growth equity firms, and corporate acquirers routinely employ specialized cybersecurity firms to execute technical due diligence before wiring capital.</p>
+      <p>If an external auditor uncovers unauthenticated admin routes, exposed customer PII, or unpatched remote code execution vulnerabilities in your application layer, the consequences are immediate: funding terms are renegotiated downward, closing dates are delayed by months, or the deal collapses entirely.</p>
+
+      <h2>1. The API Authorization Flaw: BOLA / IDOR</h2>
+      <p>The single most common vulnerability uncovered during our penetration tests is <strong>Broken Object-Level Authorization (BOLA)</strong>, previously classified as Insecure Direct Object References (IDOR). This occurs when an endpoint verifies that a user is authenticated, but fails to verify that the requesting user actually owns the requested resource.</p>
+      <p>For example, an endpoint <code>GET /api/v1/organizations/492/invoices</code> validates the bearer token, but does not check if user <code>user_81</code> belongs to organization <code>492</code>. An attacker can simply iterate through organization IDs and exfiltrate the entire financial history of every tenant on the platform.</p>
+
+      <div class="article-callout">
+        <strong>Remediation Strategy:</strong> Implement centralized row-level security (RLS) in PostgreSQL or enforce attribute-based access control (ABAC) middleware on every API controller before database querying.
+      </div>
+
+      <h2>2. Cloud Infrastructure & IAM Hygiene</h2>
+      <p>Auditors do not stop at your application endpoints; they scrutinize your AWS, GCP, or Azure infrastructure manifests. The primary red flags they seek include:</p>
+      <ul>
+        <li><strong>Long-Lived IAM User Keys:</strong> Developers with static <code>AKIA...</code> credentials stored on local laptops without mandatory MFA or 90-day rotation schedules.</li>
+        <li><strong>Overly Permissive Policies:</strong> EC2 or ECS task roles with <code>AdministratorAccess</code> or wildcard <code>s3:*</code> permissions across all buckets.</li>
+        <li><strong>Disabled Audit Logging:</strong> CloudTrail, VPC Flow Logs, and GuardDuty disabled or directed to storage buckets without immutability (Object Lock) configurations.</li>
+        <li><strong>Database Exposure:</strong> Production database instances (RDS/Aurora) provisioned inside public subnets with <code>0.0.0.0/0</code> ingress rules.</li>
+      </ul>
+
+      <h2>3. Third-Party Supply Chain & Secret Leakage</h2>
+      <p>Modern web applications rely heavily on open-source packages. A typical Next.js or Python backend pulls in hundreds of transitive dependencies. If your package manifest includes unpinned packages with known Critical CVEs, due diligence auditors will flag your repository as vulnerable to software supply chain compromise.</p>
+      <p>Furthermore, automated Git repository scanners (such as Trufflehog or GitGuardian) are run across your entire commit history. If an engineer committed an AWS secret key or Stripe webhook secret three years ago, even on a deleted branch, it will be surfaced during due diligence.</p>
+
+      <h2>Preparing Your Clean Attestation</h2>
+      <p>Entering investor due diligence with a proactive, clean <strong>VAPT Penetration Testing Certificate and Detailed Remediation Report</strong> signals engineering maturity. It demonstrates that your leadership treats data security with the same rigor as revenue growth, transforming security from a potential deal-breaker into a compelling competitive asset.</p>
+    
+        </div>
+
+        <!-- Author Card -->
+        <div class="article-author-card">
+          <div class="author-avatar-badge">UL</div>
+          <div class="author-details">
+            <h4>UraanLabs Cybersecurity Desk</h4>
+            <div class="author-title">Head of Cybersecurity & VAPT</div>
+            <p>Authored by senior systems architects and researchers at UraanLabs. We engineer mission-critical software, autonomous AI pipelines, and bank-grade cybersecurity platforms for high-growth enterprises worldwide.</p>
+          </div>
+        </div>
+
+        <!-- Related Service CTA Banner -->
+        <div class="card" style="margin-top: 40px; padding: 32px; background: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(124, 58, 237, 0.15) 100%); border-color: rgba(56, 189, 248, 0.35);">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+            <div>
+              <span class="panel-badge">RELATED CAPABILITY</span>
+              <h4 style="font-size: 1.25rem; color: #FFFFFF; margin: 8px 0 6px;">Need to Implement This Architecture in Your Stack?</h4>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Explore how our senior engineering team deploys this solution with guaranteed fixed-scope milestones.</p>
+            </div>
+            <a href="../services/cybersecurity.html" class="btn btn-shimmer">
+              <span>Explore Cybersecurity Pillar</span>
+              <span class="btn-arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- Closing Consultation CTA -->
+    <section class="section text-center cta-closing-section">
+      <div class="container max-w-4xl">
+        <div class="section-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>DIRECT ARCHITECT ACCESS</span>
+        </div>
+        <h2 class="section-title">
+          Schedule a 30-Minute <span class="gradient-text">Technical Discovery Call.</span>
+        </h2>
+        <p class="section-subtitle">
+          Connect directly with a Senior Systems Architect. We will diagnose your technical bottlenecks, outline an architectural strategy, and provide a fixed-scope milestone proposal within 24 hours.
+        </p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="../contact.html" class="btn btn-shimmer btn-lg">
+            <span>Book Discovery Call</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="../insights.html" class="btn btn-glass btn-lg">Read More Insights</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <a href="../index.html" class="logo" aria-label="UraanLabs Homepage">
+            <img src="../images/uraanlabs-logo.svg" alt="UraanLabs Logo" width="230" height="35" class="brand-logo-img">
+          </a>
+          <p class="footer-bio">
+            Next-generation software engineering, autonomous AI automation, bespoke business platforms, and bank-grade cybersecurity for high-growth enterprises.
+          </p>
+          <div class="system-status-pill">
+            <span class="status-dot"></span>
+            <span>All Global Systems Live (99.98% Uptime)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="../services/design-branding.html">Design &amp; Branding</a></li>
+            <li><a href="../services/web-mobile-apps.html">Web &amp; Mobile Apps</a></li>
+            <li><a href="../services/business-platforms.html">Business Platforms</a></li>
+            <li><a href="../services/ai-automation.html">AI &amp; Automation</a></li>
+            <li><a href="../services/cybersecurity.html">Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Industries</h4>
+          <ul class="footer-links">
+            <li><a href="../industries.html#retail">Retail &amp; E-Commerce</a></li>
+            <li><a href="../industries.html#fintech">Finance (FinTech)</a></li>
+            <li><a href="../industries.html#healthcare">Healthcare</a></li>
+            <li><a href="../industries.html#saas">Startups &amp; SaaS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html">Our Story</a></li>
+            <li><a href="../careers.html">Careers</a></li>
+            <li><a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a></li>
+            <li><a href="tel:+923170128047">0317-0128047</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 UraanLabs. All Rights Reserved. Production-grade engineering studio.</p>
+        <div class="footer-legal-links">
+          <a href="#header">Back to Top &uarr;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
