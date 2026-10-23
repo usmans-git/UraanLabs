@@ -618,48 +618,16 @@ export default function Header() {
                 </div>
               </li>
 
-              {/* 3. Industries Dropdown (7 Sectors) */}
-              <li className="nav-item has-dropdown">
+              {/* 3. Industries Direct Link */}
+              <li>
                 <Link
                   href="/industries"
-                  className={`nav-link dropdown-toggle ${
+                  className={`nav-link ${
                     pathname === "/industries" ? "active" : ""
                   }`}
-                  aria-haspopup="true"
                 >
-                  <span>Industries</span>
-                  <span className="chevron" aria-hidden="true">&#9662;</span>
+                  Industries
                 </Link>
-                <div className="dropdown-menu dropdown-simple dropdown-industries">
-                  <Link href="/industries#retail" className="dropdown-item">
-                    <span className="dropdown-title">Retail &amp; E-Commerce</span>
-                    <small className="dropdown-desc">Headless stores, automated inventory &amp; checkout funnels.</small>
-                  </Link>
-                  <Link href="/industries#edtech" className="dropdown-item">
-                    <span className="dropdown-title">Education (EdTech)</span>
-                    <small className="dropdown-desc">Interactive LMS, student tracking &amp; AI tutor bots.</small>
-                  </Link>
-                  <Link href="/industries#fintech" className="dropdown-item">
-                    <span className="dropdown-title">Finance (FinTech)</span>
-                    <small className="dropdown-desc">Zero-trust architecture, automated ledger &amp; KYC sync.</small>
-                  </Link>
-                  <Link href="/industries#healthcare" className="dropdown-item">
-                    <span className="dropdown-title">Healthcare</span>
-                    <small className="dropdown-desc">Encrypted patient portals &amp; automated appointment reminders.</small>
-                  </Link>
-                  <Link href="/industries#realestate" className="dropdown-item">
-                    <span className="dropdown-title">Real Estate</span>
-                    <small className="dropdown-desc">Interactive property portals &amp; instant WhatsApp AI triage.</small>
-                  </Link>
-                  <Link href="/industries#logistics" className="dropdown-item">
-                    <span className="dropdown-title">Logistics &amp; Supply Chain</span>
-                    <small className="dropdown-desc">Fleet tracking backends, driver apps &amp; automated BOLs.</small>
-                  </Link>
-                  <Link href="/industries#saas" className="dropdown-item">
-                    <span className="dropdown-title">Startups &amp; SaaS</span>
-                    <small className="dropdown-desc">Fixed-scope 4-week MVP development &amp; Stripe billing.</small>
-                  </Link>
-                </div>
               </li>
 
               {/* 4. Insights (Blog) */}
@@ -822,77 +790,16 @@ export default function Header() {
               </div>
             </li>
 
-            <li
-              className={`mobile-acc-item ${
-                openMobileAccordions.industries ? "is-open" : ""
-              }`}
-            >
-              <button
-                className="mobile-acc-toggle"
-                type="button"
-                onClick={() => toggleAccordion("industries")}
+            <li>
+              <Link
+                href="/industries"
+                className={`mobile-nav-link ${
+                  pathname === "/industries" ? "active" : ""
+                }`}
+                onClick={() => setMobileOpen(false)}
               >
-                <span>Industries</span>
-                <span className="acc-arrow">&#9662;</span>
-              </button>
-              <div className="mobile-acc-panel">
-                <Link
-                  href="/industries"
-                  className="mobile-sublink font-bold text-cyan"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  All 7 Industries &rarr;
-                </Link>
-                <Link
-                  href="/industries#retail"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Retail &amp; E-Commerce
-                </Link>
-                <Link
-                  href="/industries#edtech"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Education (EdTech)
-                </Link>
-                <Link
-                  href="/industries#fintech"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Finance (FinTech)
-                </Link>
-                <Link
-                  href="/industries#healthcare"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Healthcare
-                </Link>
-                <Link
-                  href="/industries#realestate"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Real Estate
-                </Link>
-                <Link
-                  href="/industries#logistics"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Logistics &amp; Supply Chain
-                </Link>
-                <Link
-                  href="/industries#saas"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Startups &amp; SaaS
-                </Link>
-              </div>
+                Industries
+              </Link>
             </li>
 
             <li>
