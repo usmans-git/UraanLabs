@@ -39,6 +39,9 @@ export const metadata = {
   alternates: {
     canonical: "https://uraantech.online",
   },
+  verification: {
+    google: "PeGMytQARHfcoh0empip-BQ0wbcrH5D6Kg",
+  },
   robots: isProduction
     ? {
         index: true,
