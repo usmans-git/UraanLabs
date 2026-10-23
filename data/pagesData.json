@@ -1,9 +1,9 @@
 {
   "home": {
     "meta": {
-      "title": "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
+      "title": "UraanTech | Software Engineering, AI & Cyber Studio",
       "description": "UraanTech engineers intelligent software systems, bespoke AI automations, scalable SaaS products, and bank-grade cybersecurity for ambitious companies.",
-      "ogTitle": "UraanTech | Next-Gen Software Engineering, AI &amp; Cybersecurity Studio",
+      "ogTitle": "UraanTech | Software Engineering, AI & Cyber Studio",
       "ogDescription": "We engineer intelligent software systems, bespoke AI workflow automations, and category-defining digital products.",
       "ogImage": "https://uraantech.online/images/herobanner.png",
       "schemas": [
@@ -29,10 +29,10 @@
   },
   "about": {
     "meta": {
-      "title": "About UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
-      "description": "Discover why UraanTech was established. We unify distinctive brand design, scalable distributed software engineering, deterministic AI workflows, and bank-grade cybersecurity under one elite studio.",
-      "ogTitle": "About UraanTech | Next-Gen Software Engineering, AI &amp; Cybersecurity Studio",
-      "ogDescription": "Unifying distinctive design, scalable software engineering, deterministic AI workflows, and bank-grade cybersecurity under one multidisciplinary studio.",
+      "title": "About Us | Software Engineering & AI Studio | UraanTech",
+      "description": "Learn how UraanTech delivers scalable software engineering, autonomous AI workflows, and zero-trust cybersecurity for ambitious tech-driven businesses.",
+      "ogTitle": "About Us | Software Engineering & AI Studio | UraanTech",
+      "ogDescription": "Learn how UraanTech delivers scalable software engineering, autonomous AI workflows, and zero-trust cybersecurity for ambitious tech-driven businesses.",
       "ogImage": "https://uraantech.online/images/herobanner.png",
       "schemas": [
         {
@@ -54,9 +54,9 @@
   "careers": {
     "meta": {
       "title": "Careers at UraanTech | Senior Software, AI & Security Roles",
-      "description": "Join our high-craft engineering and design studio. We hire senior full-stack developers, AI researchers, and cybersecurity engineers worldwide. Zero corporate politics.",
+      "description": "Join our high-craft engineering studio. We hire senior full-stack engineers, AI researchers, and cybersecurity specialists worldwide with zero politics.",
       "ogTitle": "Careers at UraanTech | Senior Software, AI &amp; Security Roles",
-      "ogDescription": "Work with a team of 100% senior craftspeople. Flexible remote culture, modern tech stack, and meritocratic equity.",
+      "ogDescription": "Join our high-craft engineering studio. We hire senior full-stack engineers, AI researchers, and cybersecurity specialists worldwide with zero politics.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -96,9 +96,9 @@
   "contact": {
     "meta": {
       "title": "Contact Us & Book an Architecture Audit | UraanTech Studio",
-      "description": "Schedule a 30-minute discovery call directly with a Senior Systems Architect or submit your project scope. Fast 24-hour turnaround, strict mutual NDA, zero sales pressure.",
+      "description": "Book a 30-minute discovery call directly with a Senior Systems Architect or submit your scope. 24-hour turnaround, mutual NDA, and zero sales pressure.",
       "ogTitle": "Contact Us &amp; Book an Architecture Audit | UraanTech Studio",
-      "ogDescription": "Schedule a 30-minute discovery call directly with a Senior Systems Architect. Strict NDA, fixed-scope milestone delivery.",
+      "ogDescription": "Book a 30-minute discovery call directly with a Senior Systems Architect or submit your scope. 24-hour turnaround, mutual NDA, and zero sales pressure.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -143,9 +143,9 @@
   },
   "industries": {
     "meta": {
-      "title": "Industry Solutions | Software, AI & Security for 7 Sectors | UraanTech",
+      "title": "Industry Solutions & Software Architecture | UraanTech",
       "description": "Tailored engineering architectures for Retail & E-Commerce, EdTech, FinTech, Healthcare, Real Estate, Logistics & Supply Chain, and Startups & SaaS.",
-      "ogTitle": "Industry Solutions | Software, AI &amp; Security for 7 Sectors | UraanTech",
+      "ogTitle": "Industry Solutions & Software Architecture | UraanTech",
       "ogDescription": "Purpose-built architectures and regulatory compliance frameworks mapped to your specific industry domain.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -228,9 +228,9 @@
   "privacy": {
     "meta": {
       "title": "Privacy Policy | Data Security & Compliance | UraanTech",
-      "description": "Read UraanTech",
+      "description": "Read the official UraanTech privacy policy detailing our data protection standards, client confidentiality protocols, and regulatory security compliance.",
       "ogTitle": "Privacy Policy | Data Security &amp; Compliance | UraanTech",
-      "ogDescription": "Transparent privacy policies, strict NDAs, zero model training on client datasets, and robust enterprise encryption.",
+      "ogDescription": "Read the official UraanTech privacy policy detailing our data protection standards, client confidentiality protocols, and regulatory security compliance.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -269,10 +269,10 @@
   },
   "services": {
     "meta": {
-      "title": "Our Services | 5 Engineering Pillars & 34 Capabilities | UraanTech",
-      "description": "Explore UraanTech",
-      "ogTitle": "Our Services | 5 Engineering Pillars &amp; 34 Capabilities | UraanTech",
-      "ogDescription": "Explore our 5 core engineering pillars and 34 child capabilities engineered for venture-backed startups and growing enterprises.",
+      "title": "Engineering Services | AI, Cloud & Security | UraanTech",
+      "description": "Explore UraanTech engineering capabilities across AI automation, high-scale web platforms, zero-trust cybersecurity, mobile apps, and enterprise systems.",
+      "ogTitle": "Engineering Services | AI, Cloud & Security | UraanTech",
+      "ogDescription": "Explore UraanTech engineering capabilities across AI automation, high-scale web platforms, zero-trust cybersecurity, mobile apps, and enterprise systems.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -320,9 +320,9 @@
   "terms": {
     "meta": {
       "title": "Terms of Service | Master Services Agreement | UraanTech",
-      "description": "Review UraanTech",
+      "description": "Review the UraanTech terms of service and master services agreement covering intellectual property, project deliverables, payment terms, and confidentiality.",
       "ogTitle": "Terms of Service | Master Services Agreement | UraanTech",
-      "ogDescription": "Transparent master service terms, 100% intellectual property assignment, and enterprise milestone warranties.",
+      "ogDescription": "Review the UraanTech terms of service and master services agreement covering intellectual property, project deliverables, payment terms, and confidentiality.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {

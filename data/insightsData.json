@@ -2,10 +2,10 @@
   "ai-workflow-automation-roi-playbook": {
     "slug": "ai-workflow-automation-roi-playbook",
     "meta": {
-      "title": "Enterprise AI Workflow Automation: The CIO Playbook for Eliminating 400+ Hours of Manual Ops | UraanTech Insights",
-      "description": "A practical CIO playbook for implementing enterprise AI workflow automation, calculating operational ROI, and eliminating manual work across finance, HR, and logistics.",
-      "ogTitle": "Enterprise AI Workflow Automation: The CIO Playbook for Eliminating 400+ Hours of Manual Ops | UraanTech Insights",
-      "ogDescription": "A practical CIO playbook for implementing enterprise AI workflow automation, calculating operational ROI, and eliminating manual work across finance, HR, and logistics.",
+      "title": "Enterprise AI Workflow Automation Playbook | UraanTech",
+      "description": "A practical CIO playbook for enterprise AI workflow automation, calculating operational ROI, and eliminating manual work across business operations.",
+      "ogTitle": "Enterprise AI Workflow Automation Playbook | UraanTech",
+      "ogDescription": "A practical CIO playbook for enterprise AI workflow automation, calculating operational ROI, and eliminating manual work across business operations.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -64,10 +64,10 @@
   "deterministic-ai-agents-rag-json-schemas": {
     "slug": "deterministic-ai-agents-rag-json-schemas",
     "meta": {
-      "title": "Building Deterministic AI Agents: Why RAG + JSON Schemas Beat Raw Prompt Engineering in Production | UraanTech Insights",
-      "description": "Learn how to build deterministic enterprise AI agents using JSON schema enforcement, private RAG vector pipelines, and state machines to prevent hallucinations.",
-      "ogTitle": "Building Deterministic AI Agents: Why RAG + JSON Schemas Beat Raw Prompt Engineering in Production | UraanTech Insights",
-      "ogDescription": "Learn how to build deterministic enterprise AI agents using JSON schema enforcement, private RAG vector pipelines, and state machines to prevent hallucinations.",
+      "title": "Deterministic AI Agents: RAG & JSON Schemas | UraanTech",
+      "description": "Why structured JSON schemas and hybrid RAG retrieval architectures outperform raw prompt engineering in production enterprise AI deployments.",
+      "ogTitle": "Deterministic AI Agents: RAG & JSON Schemas | UraanTech",
+      "ogDescription": "Why structured JSON schemas and hybrid RAG retrieval architectures outperform raw prompt engineering in production enterprise AI deployments.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -126,10 +126,10 @@
   "figma-to-react-design-tokens-guide": {
     "slug": "figma-to-react-design-tokens-guide",
     "meta": {
-      "title": "From Figma to React: Structuring Design Tokens to Eliminate Frontend Friction | UraanTech Insights",
-      "description": "A practical technical guide for structuring design tokens from Figma to React, TypeScript, and CSS variables to eliminate UI friction and design debt.",
-      "ogTitle": "From Figma to React: Structuring Design Tokens to Eliminate Frontend Friction | UraanTech Insights",
-      "ogDescription": "A practical technical guide for structuring design tokens from Figma to React, TypeScript, and CSS variables to eliminate UI friction and design debt.",
+      "title": "Figma to React: Design Tokens Architecture | UraanTech",
+      "description": "How to structure cross-platform design tokens from Figma to React, eliminating frontend engineering friction and ensuring strict visual consistency.",
+      "ogTitle": "Figma to React: Design Tokens Architecture | UraanTech",
+      "ogDescription": "How to structure cross-platform design tokens from Figma to React, eliminating frontend engineering friction and ensuring strict visual consistency.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -188,10 +188,10 @@
   "migrating-monolithic-erps-to-microservices": {
     "slug": "migrating-monolithic-erps-to-microservices",
     "meta": {
-      "title": "Migrating from Monolithic ERPs to Modular Microservices Without Downtime | UraanTech Insights",
-      "description": "A technical step-by-step blueprint for migrating legacy monolithic ERP systems to modern microservices using the Strangler Fig pattern and CDC with zero downtime.",
-      "ogTitle": "Migrating from Monolithic ERPs to Modular Microservices Without Downtime | UraanTech Insights",
-      "ogDescription": "A technical step-by-step blueprint for migrating legacy monolithic ERP systems to modern microservices using the Strangler Fig pattern and CDC with zero downtime.",
+      "title": "Migrating Monolithic ERPs to Microservices | UraanTech",
+      "description": "A step-by-step technical blueprint for migrating legacy monolithic ERP systems to modular microservices using the Strangler Fig pattern with zero downtime.",
+      "ogTitle": "Migrating Monolithic ERPs to Microservices | UraanTech",
+      "ogDescription": "A step-by-step technical blueprint for migrating legacy monolithic ERP systems to modular microservices using the Strangler Fig pattern with zero downtime.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -250,10 +250,10 @@
   "offline-first-mobile-crdt-synchronization": {
     "slug": "offline-first-mobile-crdt-synchronization",
     "meta": {
-      "title": "Offline-First Mobile Data Synchronization: Handling Edge Conflicts with CRDTs | UraanTech Insights",
-      "description": "A technical deep-dive into engineering offline-first mobile applications using CRDTs, SQLite, and vector clocks to resolve distributed synchronization conflicts.",
-      "ogTitle": "Offline-First Mobile Data Synchronization: Handling Edge Conflicts with CRDTs | UraanTech Insights",
-      "ogDescription": "A technical deep-dive into engineering offline-first mobile applications using CRDTs, SQLite, and vector clocks to resolve distributed synchronization conflicts.",
+      "title": "Offline-First Mobile Apps with CRDT Sync | UraanTech",
+      "description": "An engineering deep-dive into building offline-first mobile applications using CRDTs, SQLite, and vector clocks to resolve data synchronization conflicts.",
+      "ogTitle": "Offline-First Mobile Apps with CRDT Sync | UraanTech",
+      "ogDescription": "An engineering deep-dive into building offline-first mobile applications using CRDTs, SQLite, and vector clocks to resolve data synchronization conflicts.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -312,10 +312,10 @@
   "postgresql-immutable-double-entry-ledger": {
     "slug": "postgresql-immutable-double-entry-ledger",
     "meta": {
-      "title": "Designing Immutable Double-Entry Ledger Systems in PostgreSQL | UraanTech Insights",
-      "description": "A technical engineering guide to designing bulletproof immutable double-entry ledger systems in PostgreSQL with strict ACID transactions and append-only audits.",
-      "ogTitle": "Designing Immutable Double-Entry Ledger Systems in PostgreSQL | UraanTech Insights",
-      "ogDescription": "A technical engineering guide to designing bulletproof immutable double-entry ledger systems in PostgreSQL with strict ACID transactions and append-only audits.",
+      "title": "Immutable Double-Entry Ledgers in PostgreSQL | UraanTech",
+      "description": "Architecting tamper-proof financial ledgers in PostgreSQL using append-only tables, cryptographic hash chains, and ACID transaction isolation guarantees.",
+      "ogTitle": "Immutable Double-Entry Ledgers in PostgreSQL | UraanTech",
+      "ogDescription": "Architecting tamper-proof financial ledgers in PostgreSQL using append-only tables, cryptographic hash chains, and ACID transaction isolation guarantees.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -374,10 +374,10 @@
   "pre-fundraising-vapt-security-checklist": {
     "slug": "pre-fundraising-vapt-security-checklist",
     "meta": {
-      "title": "The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For | UraanTech Insights",
-      "description": "A comprehensive pre-fundraising VAPT and cybersecurity checklist for founders and CTOs preparing for Series A/B technical due diligence audits.",
-      "ogTitle": "The Pre-Fundraising VAPT Checklist: What Technical Due Diligence Looks For | UraanTech Insights",
-      "ogDescription": "A comprehensive pre-fundraising VAPT and cybersecurity checklist for founders and CTOs preparing for Series A/B technical due diligence audits.",
+      "title": "Pre-Fundraising VAPT Security Checklist | UraanTech",
+      "description": "The essential technical security checklist for venture-backed startups preparing for investor due diligence, penetration tests, and SOC2 audits.",
+      "ogTitle": "Pre-Fundraising VAPT Security Checklist | UraanTech",
+      "ogDescription": "The essential technical security checklist for venture-backed startups preparing for investor due diligence, penetration tests, and SOC2 audits.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -436,10 +436,10 @@
   "zero-trust-cloud-architecture-aws-iam": {
     "slug": "zero-trust-cloud-architecture-aws-iam",
     "meta": {
-      "title": "Zero-Trust Cloud Architecture on AWS: Container Security & Ephemeral IAM | UraanTech Insights",
-      "description": "A technical cloud security architectural blueprint for implementing Zero-Trust on AWS with ephemeral IAM roles, ECS/EKS container isolation, and mTLS.",
-      "ogTitle": "Zero-Trust Cloud Architecture on AWS: Container Security & Ephemeral IAM | UraanTech Insights",
-      "ogDescription": "A technical cloud security architectural blueprint for implementing Zero-Trust on AWS with ephemeral IAM roles, ECS/EKS container isolation, and mTLS.",
+      "title": "Zero-Trust AWS Architecture & Ephemeral IAM | UraanTech",
+      "description": "Implementing zero-trust cloud security on AWS using least-privilege ephemeral IAM credentials, private VPC subnets, and automated secret rotation.",
+      "ogTitle": "Zero-Trust AWS Architecture & Ephemeral IAM | UraanTech",
+      "ogDescription": "Implementing zero-trust cloud security on AWS using least-privilege ephemeral IAM credentials, private VPC subnets, and automated secret rotation.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {

@@ -32,7 +32,7 @@ const isProduction =
   (!process.env.VERCEL_ENV && process.env.NODE_ENV === "production");
 
 export const metadata = {
-  title: "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
+  title: "UraanTech | Software Engineering, AI & Cyber Studio",
   description:
     "UraanTech engineers intelligent software systems, bespoke AI automations, scalable SaaS products, and bank-grade cybersecurity for ambitious companies.",
   metadataBase: new URL("https://uraantech.online"),
@@ -62,7 +62,7 @@ export const metadata = {
   },
   openGraph: {
     type: "website",
-    title: "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
+    title: "UraanTech | Software Engineering, AI & Cyber Studio",
     description:
       "We engineer intelligent software systems, bespoke AI workflow automations, and category-defining digital products.",
     url: "https://uraantech.online",
@@ -78,7 +78,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
+    title: "UraanTech | Software Engineering, AI & Cyber Studio",
     description:
       "We engineer intelligent software systems, bespoke AI workflow automations, and category-defining digital products.",
     images: ["/images/herobanner.png"],

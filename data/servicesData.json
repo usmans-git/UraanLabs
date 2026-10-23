@@ -29,9 +29,9 @@
   "ai-chatbots": {
     "slug": "ai-chatbots",
     "meta": {
-      "title": "Custom AI Chatbot Development & Support Automation | UraanTech",
+      "title": "AI Chatbots & Support Automation Services | UraanTech",
       "description": "Context-aware AI chatbots that resolve 70%+ of customer tickets 24/7. Grounded in your private knowledge base with zero hallucinations and human handoff.",
-      "ogTitle": "Custom AI Chatbot Development & Support Automation | UraanTech",
+      "ogTitle": "AI Chatbots & Support Automation Services | UraanTech",
       "ogDescription": "Context-aware AI chatbots that resolve 70%+ of customer tickets 24/7. Grounded in your private knowledge base with zero hallucinations and human handoff.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -140,9 +140,9 @@
   "ai-voice-assistants": {
     "slug": "ai-voice-assistants",
     "meta": {
-      "title": "Real-Time AI Voice Assistant & Telephony Development | UraanTech",
+      "title": "AI Voice Assistants & Telephony Solutions | UraanTech",
       "description": "Sub-second real-time AI voice assistants for inbound customer support & outbound sales. Natural human intonation, zero latency, and CRM integration.",
-      "ogTitle": "Real-Time AI Voice Assistant & Telephony Development | UraanTech",
+      "ogTitle": "AI Voice Assistants & Telephony Solutions | UraanTech",
       "ogDescription": "Sub-second real-time AI voice assistants for inbound customer support & outbound sales. Natural human intonation, zero latency, and CRM integration.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -473,9 +473,9 @@
   "autonomous-ai-agents": {
     "slug": "autonomous-ai-agents",
     "meta": {
-      "title": "Autonomous AI Agent Development & Multi-Agent Systems | UraanTech",
+      "title": "Autonomous AI Agents & Multi-Agent Systems | UraanTech",
       "description": "Engineered autonomous AI agents that execute complex multi-step business tasks. State machine orchestration, tool calling, and zero runaway loops.",
-      "ogTitle": "Autonomous AI Agent Development & Multi-Agent Systems | UraanTech",
+      "ogTitle": "Autonomous AI Agents & Multi-Agent Systems | UraanTech",
       "ogDescription": "Engineered autonomous AI agents that execute complex multi-step business tasks. State machine orchestration, tool calling, and zero runaway loops.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -585,9 +585,9 @@
     "slug": "brand-identity",
     "meta": {
       "title": "Corporate Brand Identity Design & Style Systems | UraanTech",
-      "description": "Scalable corporate brand identity systems, design tokens, and style guides engineered for growing tech companies. Consistent visual authority across touchpoints.",
+      "description": "Scalable corporate brand identity systems, design tokens, and style guides engineered for tech companies to establish lasting visual authority.",
       "ogTitle": "Corporate Brand Identity Design & Style Systems | UraanTech",
-      "ogDescription": "Scalable corporate brand identity systems, design tokens, and style guides engineered for growing tech companies. Consistent visual authority across touchpoints.",
+      "ogDescription": "Scalable corporate brand identity systems, design tokens, and style guides engineered for tech companies to establish lasting visual authority.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -696,9 +696,9 @@
     "slug": "business-platforms",
     "meta": {
       "title": "Custom ERP, CRM & Business Platforms | UraanTech Studio",
-      "description": "Centralized enterprise operations software built around how your company works. Custom ERPs, CRMs, LMS platforms, and multi-tenant SaaS with zero seat licensing bloat.",
+      "description": "Centralized enterprise software built around your workflows. Custom ERPs, CRMs, LMS platforms, and multi-tenant SaaS with zero licensing bloat.",
       "ogTitle": "Custom ERP, CRM &amp; Business Platforms | UraanTech Studio",
-      "ogDescription": "Centralized operations software connecting finance, inventory, staff, and customer pipelines with 100% code ownership.",
+      "ogDescription": "Centralized enterprise software built around your workflows. Custom ERPs, CRMs, LMS platforms, and multi-tenant SaaS with zero licensing bloat.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
@@ -992,9 +992,9 @@
   "compliance-audits": {
     "slug": "compliance-audits",
     "meta": {
-      "title": "SOC2, ISO 27001 & GDPR Security Compliance Audits | UraanTech",
+      "title": "SOC2, ISO 27001 & GDPR Security Audits | UraanTech",
       "description": "Accelerate SOC2 Type II, ISO 27001, HIPAA & GDPR compliance. Technical gap analysis, policy creation, evidence collection, and auditor management.",
-      "ogTitle": "SOC2, ISO 27001 & GDPR Security Compliance Audits | UraanTech",
+      "ogTitle": "SOC2, ISO 27001 & GDPR Security Audits | UraanTech",
       "ogDescription": "Accelerate SOC2 Type II, ISO 27001, HIPAA & GDPR compliance. Technical gap analysis, policy creation, evidence collection, and auditor management.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -1325,9 +1325,9 @@
   "custom-llm-solutions": {
     "slug": "custom-llm-solutions",
     "meta": {
-      "title": "Custom LLM Fine-Tuning & Private RAG Architecture | UraanTech",
+      "title": "Custom LLM Fine-Tuning & Private RAG | UraanTech",
       "description": "Domain-specific LLM fine-tuning (LoRA/QLoRA) and private RAG systems deployed inside your isolated cloud. 100% proprietary data control and zero leaks.",
-      "ogTitle": "Custom LLM Fine-Tuning & Private RAG Architecture | UraanTech",
+      "ogTitle": "Custom LLM Fine-Tuning & Private RAG | UraanTech",
       "ogDescription": "Domain-specific LLM fine-tuning (LoRA/QLoRA) and private RAG systems deployed inside your isolated cloud. 100% proprietary data control and zero leaks.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -1636,9 +1636,9 @@
   "data-predictive-ai": {
     "slug": "data-predictive-ai",
     "meta": {
-      "title": "Data Engineering & Predictive AI Analytics Services | UraanTech",
+      "title": "Data Engineering & Predictive AI Analytics | UraanTech",
       "description": "Transform raw data into predictive revenue engines. Scalable ETL/ELT pipelines, real-time ML forecasting, and executive BI dashboards. 100% code ownership.",
-      "ogTitle": "Data Engineering & Predictive AI Analytics Services | UraanTech",
+      "ogTitle": "Data Engineering & Predictive AI Analytics | UraanTech",
       "ogDescription": "Transform raw data into predictive revenue engines. Scalable ETL/ELT pipelines, real-time ML forecasting, and executive BI dashboards. 100% code ownership.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -1822,9 +1822,9 @@
   "devsecops": {
     "slug": "devsecops",
     "meta": {
-      "title": "Automated DevSecOps CI/CD Pipeline Implementation | UraanTech",
+      "title": "DevSecOps CI/CD Automation & Security | UraanTech",
       "description": "Embed automated security into GitHub Actions & GitLab CI/CD pipelines. SAST, secret scanning, container audits, and automated compliance gates.",
-      "ogTitle": "Automated DevSecOps CI/CD Pipeline Implementation | UraanTech",
+      "ogTitle": "DevSecOps CI/CD Automation & Security | UraanTech",
       "ogDescription": "Embed automated security into GitHub Actions & GitLab CI/CD pipelines. SAST, secret scanning, container audits, and automated compliance gates.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -1933,9 +1933,9 @@
   "ecommerce-stores": {
     "slug": "ecommerce-stores",
     "meta": {
-      "title": "Custom E-Commerce Development & Headless Architecture | UraanTech",
+      "title": "Custom E-Commerce & Headless Storefronts | UraanTech",
       "description": "High-conversion custom e-commerce stores & headless Shopify/Medusa solutions. Sub-second page loads, custom checkout funnels, and enterprise ERP sync.",
-      "ogTitle": "Custom E-Commerce Development & Headless Architecture | UraanTech",
+      "ogTitle": "Custom E-Commerce & Headless Storefronts | UraanTech",
       "ogDescription": "High-conversion custom e-commerce stores & headless Shopify/Medusa solutions. Sub-second page loads, custom checkout funnels, and enterprise ERP sync.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -2377,9 +2377,9 @@
   "network-audits": {
     "slug": "network-audits",
     "meta": {
-      "title": "Enterprise Network Vulnerability Audits & Penetration Testing | UraanTech",
+      "title": "Network Vulnerability Audits & Pentesting | UraanTech",
       "description": "Comprehensive internal & external network security audits. Uncover open ports, unpatched routers, rogue devices, and perimeter vulnerabilities.",
-      "ogTitle": "Enterprise Network Vulnerability Audits & Penetration Testing | UraanTech",
+      "ogTitle": "Network Vulnerability Audits & Pentesting | UraanTech",
       "ogDescription": "Comprehensive internal & external network security audits. Uncover open ports, unpatched routers, rogue devices, and perimeter vulnerabilities.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -3154,9 +3154,9 @@
   "social-media-creatives": {
     "slug": "social-media-creatives",
     "meta": {
-      "title": "Performance Marketing & Social Media Creative Design | UraanTech",
+      "title": "Social Media Creative & Performance Design | UraanTech",
       "description": "High-conversion ad creatives, social brand systems, and performance marketing assets engineered for LinkedIn, Meta, and Twitter. Stop the scroll.",
-      "ogTitle": "Performance Marketing & Social Media Creative Design | UraanTech",
+      "ogTitle": "Social Media Creative & Performance Design | UraanTech",
       "ogDescription": "High-conversion ad creatives, social brand systems, and performance marketing assets engineered for LinkedIn, Meta, and Twitter. Stop the scroll.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -3487,9 +3487,9 @@
   "text-language-ai": {
     "slug": "text-language-ai",
     "meta": {
-      "title": "Text Analysis & Natural Language Processing (NLP) | UraanTech",
+      "title": "Natural Language Processing & Text AI | UraanTech",
       "description": "Custom NLP pipelines for automated document summarization, entity extraction, sentiment analysis, and multilingual translation. Private cloud deployment.",
-      "ogTitle": "Text Analysis & Natural Language Processing (NLP) | UraanTech",
+      "ogTitle": "Natural Language Processing & Text AI | UraanTech",
       "ogDescription": "Custom NLP pipelines for automated document summarization, entity extraction, sentiment analysis, and multilingual translation. Private cloud deployment.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -3709,9 +3709,9 @@
   "vision-document-ai": {
     "slug": "vision-document-ai",
     "meta": {
-      "title": "Computer Vision & Intelligent Document Processing (IDP) | UraanTech",
+      "title": "Computer Vision & Intelligent Document AI | UraanTech",
       "description": "Automated document processing, OCR, and computer vision AI. Extract complex tables, handwritten notes, and IDs into structured JSON with 99%+ accuracy.",
-      "ogTitle": "Computer Vision & Intelligent Document Processing (IDP) | UraanTech",
+      "ogTitle": "Computer Vision & Intelligent Document AI | UraanTech",
       "ogDescription": "Automated document processing, OCR, and computer vision AI. Extract complex tables, handwritten notes, and IDs into structured JSON with 99%+ accuracy.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
@@ -4007,9 +4007,9 @@
     "slug": "workflow-automation",
     "meta": {
       "title": "Enterprise AI Workflow Automation Services | UraanTech",
-      "description": "Eliminate repetitive manual bottlenecks with custom enterprise AI workflow pipelines, event-driven integrations, error-resilient cron jobs, and human-in-the-loop triggers.",
+      "description": "Eliminate repetitive bottlenecks with custom AI workflow pipelines, event-driven integrations, error-resilient cron jobs, and human-in-the-loop triggers.",
       "ogTitle": "Enterprise AI Workflow Automation Services | UraanTech",
-      "ogDescription": "Eliminate repetitive manual bottlenecks with custom enterprise AI workflow pipelines, event-driven integrations, error-resilient cron jobs, and human-in-the-loop triggers.",
+      "ogDescription": "Eliminate repetitive bottlenecks with custom AI workflow pipelines, event-driven integrations, error-resilient cron jobs, and human-in-the-loop triggers.",
       "ogImage": "https://uraantech.online/images/uraantech-mark.svg",
       "schemas": [
         {
