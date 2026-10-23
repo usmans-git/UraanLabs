@@ -27,6 +27,10 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+const isProduction =
+  process.env.VERCEL_ENV === "production" ||
+  (!process.env.VERCEL_ENV && process.env.NODE_ENV === "production");
+
 export const metadata = {
   title: "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
   description:
@@ -35,6 +39,24 @@ export const metadata = {
   alternates: {
     canonical: "https://uraantech.online",
   },
+  robots: isProduction
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      }
+    : {
+        index: false,
+        follow: false,
+        nocache: true,
+        noarchive: true,
+      },
   icons: {
     icon: "/images/uraantech-mark.svg",
   },
