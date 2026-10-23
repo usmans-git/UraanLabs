@@ -166,6 +166,13 @@ body.dark-canvas {
   z-index: 1;
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .max-w-4xl {
   max-width: 900px;
   margin-left: auto;
