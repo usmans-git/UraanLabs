@@ -78,7 +78,7 @@ export default function ClientEffects() {
 
       const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-      const submitHandler = (e) => {
+      const submitHandler = async (e) => {
         e.preventDefault();
 
         if (nameError) nameError.textContent = "";
@@ -137,74 +137,67 @@ export default function ClientEffects() {
         const originalBtnHtml = submitBtn ? submitBtn.innerHTML : "";
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = `<span>Connecting to WhatsApp...</span> <span style="display:inline-block; animation: spin 1s linear infinite;">&#8987;</span>`;
+          submitBtn.innerHTML = `<span>Saving to Google Sheet...</span> <span style="display:inline-block; animation: spin 1s linear infinite;">⏳</span>`;
         }
 
         const phoneVal = phoneInput ? phoneInput.value.trim() : "";
-        const waNumber = "923170128047";
 
-        const waText = [
-          `🚀 *New Project Inquiry — UraanLabs*`,
-          `━━━━━━━━━━━━━━━━━━━━`,
-          `👤 *Client Name:* ${nameVal}`,
-          `📧 *Work Email:* ${emailVal}`,
-          `📱 *Phone / WhatsApp:* ${phoneVal || "Not provided"}`,
-          `⚡ *Capability Required:* ${serviceVal}`,
-          `━━━━━━━━━━━━━━━━━━━━`,
-          `📝 *Project Overview & Goals:*`,
-          `${msgVal}`,
-          `━━━━━━━━━━━━━━━━━━━━`,
-          `🌐 *Source:* ${typeof window !== "undefined" ? window.location.href : "https://uraanlabs.vercel.app"}`,
-        ].join("\n");
+        try {
+          // Direct submission to Next.js API route (saves directly to Google Sheet)
+          const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: nameVal,
+              email: emailVal,
+              phone: phoneVal,
+              service: serviceVal,
+              message: msgVal,
+              source: typeof window !== "undefined" ? window.location.href : "https://uraanlabs.vercel.app",
+            }),
+          });
 
-        const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
+          if (!res.ok) {
+            throw new Error(`Server returned ${res.status}`);
+          }
 
-        // Asynchronously post to backend API (logs and syncs to Google Sheets webhook if configured)
-        fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: nameVal,
-            email: emailVal,
-            phone: phoneVal,
-            service: serviceVal,
-            message: msgVal,
-            source: typeof window !== "undefined" ? window.location.href : "",
-          }),
-        }).catch((err) => console.warn("API dispatch error:", err));
-
-        // Open WhatsApp directly in new window
-        if (typeof window !== "undefined") {
-          window.open(waUrl, "_blank", "noopener,noreferrer");
-        }
-
-        // Show prominent confirmation with one-click WhatsApp button fallback
-        if (formSuccess) {
-          formSuccess.style.display = "block";
-          formSuccess.innerHTML = `
-            <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 10px; padding: 18px 20px; color: #FFFFFF; text-align: left; margin-top: 14px;">
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                <span style="font-size: 1.25rem; color: #34D399;">✔</span>
-                <strong style="color: #34D399; font-size: 1.05rem;">Inquiry Recorded & Forwarded!</strong>
+          // Show prominent success feedback
+          if (formSuccess) {
+            formSuccess.style.display = "block";
+            formSuccess.innerHTML = `
+              <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 10px; padding: 18px 20px; color: #FFFFFF; text-align: left; margin-top: 14px;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="font-size: 1.25rem; color: #34D399;">✔</span>
+                  <strong style="color: #34D399; font-size: 1.05rem;">Inquiry Recorded Successfully!</strong>
+                </div>
+                <p style="font-size: 0.88rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
+                  Thank you, <strong>${nameVal}</strong>. Your project details have been recorded in our Google Sheet. Redirecting to Homepage...
+                </p>
               </div>
-              <p style="font-size: 0.88rem; color: #E2E8F0; line-height: 1.5; margin-bottom: 12px;">
-                Thank you, <strong>${nameVal}</strong>. Your project details have been recorded. You can now chat directly with our Senior Systems Architecture team on WhatsApp:
-              </p>
-              <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-shimmer btn-sm" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-weight: 600;">
-                <span>💬 Chat on WhatsApp with Usman Ahmed (+92 317 0128047)</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          `;
-        }
+            `;
+          }
 
-        form.reset();
-        generateCaptcha();
-        if (submitBtn) {
+          form.reset();
+          generateCaptcha();
+
+          // Redirect to Homepage
           setTimeout(() => {
+            window.location.href = "/";
+          }, 1200);
+        } catch (err) {
+          console.error("Submission error:", err);
+          if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnHtml;
-          }, 3000);
+          }
+          if (formFail) {
+            formFail.style.display = "block";
+            formFail.innerHTML = `
+              <div style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 10px; padding: 14px 18px; color: #FCA5A5; text-align: left; margin-top: 14px;">
+                <strong>Submission Error:</strong> Unable to record inquiry right now. Please try again.
+              </div>
+            `;
+          }
         }
       };
 

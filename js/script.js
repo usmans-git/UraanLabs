@@ -526,33 +526,46 @@ function initLeadForm() {
       return;
     }
 
-    // If valid: simulate submission state
+    // If valid: send directly to Google Sheet API
     const submitBtn = document.getElementById("submitBtn");
     const originalText = submitBtn ? submitBtn.innerHTML : "";
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.innerHTML = "<span>Submitting Inquiry...</span>";
+      submitBtn.innerHTML = "<span>Saving to Google Sheet...</span>";
     }
 
-    setTimeout(() => {
-      if (formSuccess) formSuccess.style.display = "block";
-      if (formFail) formFail.style.display = "none";
-      form.reset();
-      if (itiInstance) {
-        itiInstance.setCountry("pk");
-      }
-      generateCaptcha();
+    const phoneVal = phoneInput ? phoneInput.value.trim() : "";
 
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }
-
-      // Hide success message after 7 seconds
-      setTimeout(() => {
-        if (formSuccess) formSuccess.style.display = "none";
-      }, 7000);
-    }, 800);
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: nameVal,
+        email: emailVal,
+        phone: phoneVal,
+        service: serviceVal,
+        message: msgVal,
+        source: window.location.href,
+      }),
+    })
+      .then((r) => r.json())
+      .then(() => {
+        if (formSuccess) formSuccess.style.display = "block";
+        if (formFail) formFail.style.display = "none";
+        form.reset();
+        generateCaptcha();
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 1200);
+      })
+      .catch((err) => {
+        console.error("Submission error:", err);
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+        if (formFail) formFail.style.display = "block";
+      });
   });
 }
 
