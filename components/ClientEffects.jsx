@@ -153,7 +153,7 @@ export default function ClientEffects() {
               phone: phoneVal,
               service: serviceVal,
               message: msgVal,
-              source: typeof window !== "undefined" ? window.location.href : "https://uraanlabs.vercel.app",
+              source: typeof window !== "undefined" ? window.location.href : "https://uraantech.vercel.app",
             }),
           });
 

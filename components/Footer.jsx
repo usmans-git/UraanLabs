@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Col 1: Brand Info */}
           <div className="footer-col-brand">
-            <Link href="/" className="logo" aria-label="UraanLabs Homepage">
+            <Link href="/" className="logo" aria-label="UraanTech Homepage">
               <img
-                src="/images/uraanlabs-logo.svg"
-                alt="UraanLabs Logo"
+                src="/images/uraantech-logo.svg"
+                alt="UraanTech Logo"
                 width={290}
                 height={64}
                 loading="lazy"
@@ -86,7 +86,7 @@ export default function Footer() {
                 <Link href="/about#story">Our Story</Link>
               </li>
               <li>
-                <Link href="/about#why-uraanlabs">Why UraanLabs</Link>
+                <Link href="/about#why-uraantech">Why UraanTech</Link>
               </li>
               <li>
                 <Link href="/careers">Careers</Link>
@@ -102,7 +102,7 @@ export default function Footer() {
             <h4 className="footer-heading">Contact Us</h4>
             <ul className="footer-links">
               <li>
-                <a href="mailto:info@uraanlabs.com">info@uraanlabs.com</a>
+                <a href="mailto:info@uraantech.online">info@uraantech.online</a>
               </li>
               <li>
                 <a href="tel:+923170128047">+92 317 0128047</a>
@@ -112,7 +112,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/923170128047?text=Hello%20UraanLabs%20Team%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                  href="https://wa.me/923170128047?text=Hello%20UraanTech%20Team%2C%20I%20would%20like%20to%20discuss%20a%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "var(--cyan-sonic)" }}
@@ -129,7 +129,7 @@ export default function Footer() {
 
         <div className="footer-bottom-bar">
           <p>
-            &copy; {new Date().getFullYear()} UraanLabs. All Rights Reserved. Built with precision and venture-grade craft.
+            &copy; {new Date().getFullYear()} UraanTech. All Rights Reserved. Built with precision and venture-grade craft.
           </p>
           <div className="footer-legal-links">
             <Link href="/privacy">Privacy Policy</Link>

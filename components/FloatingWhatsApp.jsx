@@ -5,11 +5,11 @@ import React from "react";
 export default function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/923170128047?text=Hello%20UraanLabs%20Team%2C%20I%20would%20like%20to%20discuss%20a%20project."
+      href="https://wa.me/923170128047?text=Hello%20UraanTech%20Team%2C%20I%20would%20like%20to%20discuss%20a%20project."
       className="floating-whatsapp"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with UraanLabs on WhatsApp"
+      aria-label="Chat with UraanTech on WhatsApp"
       id="floatingWhatsAppBtn"
     >
       <div className="floating-whatsapp-pulse"></div>

@@ -1,5 +1,5 @@
 /**
- * UraanLabs - Main Interactions & Application Script
+ * UraanTech - Main Interactions & Application Script
  * Precision-engineered for high performance & micro-interactions
  */
 
@@ -297,7 +297,7 @@ function initSmoothScrollAndSpy() {
           }
 
           if (intentParam === "careers" && messageInput) {
-            messageInput.placeholder = "Tell us about your background, GitHub/portfolio links, and what you would like to build with UraanLabs...";
+            messageInput.placeholder = "Tell us about your background, GitHub/portfolio links, and what you would like to build with UraanTech...";
           }
         }
 
@@ -443,7 +443,7 @@ function initLeadForm() {
     }
 
     if (intentParam === "careers" && messageInput) {
-      messageInput.placeholder = "Tell us about your background, GitHub/portfolio links, and what you would like to build with UraanLabs...";
+      messageInput.placeholder = "Tell us about your background, GitHub/portfolio links, and what you would like to build with UraanTech...";
     }
   } catch (err) {
     // Ignore URL param parsing errors
@@ -685,14 +685,14 @@ function initUraanChatbot() {
   const isSubDir = window.location.pathname.includes("/services/") || window.location.pathname.includes("/insights/");
   const basePath = isSubDir ? "../" : "./";
   const WA_NUMBER = "923170128047";
-  const WA_DEFAULT_LINK = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs Team, I would like to discuss a project.");
+  const WA_DEFAULT_LINK = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech Team, I would like to discuss a project.");
 
   // 1. Create Floating Launcher Button
   const launcher = document.createElement("button");
   launcher.id = "uraanChatbotLauncher";
   launcher.className = "uraan-chatbot-launcher";
   launcher.setAttribute("type", "button");
-  launcher.setAttribute("aria-label", "Open UraanLabs Live AI Chatbot");
+  launcher.setAttribute("aria-label", "Open UraanTech Live AI Chatbot");
   launcher.innerHTML = `
     <div class="launcher-pulse-ring"></div>
     <span class="launcher-live-pip" title="AI Concierge Online"></span>
@@ -715,7 +715,7 @@ function initUraanChatbot() {
   modal.id = "uraanChatbotWindow";
   modal.className = "uraan-chatbot-window";
   modal.setAttribute("role", "dialog");
-  modal.setAttribute("aria-label", "UraanLabs AI Systems Concierge");
+  modal.setAttribute("aria-label", "UraanTech AI Systems Concierge");
   modal.innerHTML = `
     <div class="chatbot-header">
       <div class="chatbot-header-left">
@@ -869,7 +869,7 @@ function initUraanChatbot() {
   }
 
   function initWelcomeMessage() {
-    const initialText = "Hello! 👋 I'm <strong>UraanBot</strong>, your AI Engineering Concierge at UraanLabs.<br><br>How can I assist you today? Ask me about our <strong>services</strong>, <strong>tech stack</strong>, <strong>founder & company credentials</strong>, or connect directly with our senior team.";
+    const initialText = "Hello! 👋 I'm <strong>UraanBot</strong>, your AI Engineering Concierge at UraanTech.<br><br>How can I assist you today? Ask me about our <strong>services</strong>, <strong>tech stack</strong>, <strong>founder & company credentials</strong>, or connect directly with our senior team.";
     renderMessage("bot", initialText, null, getTimeString(), defaultQuickChips);
     saveHistory([{ role: "bot", text: initialText, cta: null, time: getTimeString(), chips: defaultQuickChips }]);
   }
@@ -908,15 +908,15 @@ function initUraanChatbot() {
         cta: {
           title: "Direct Engineering Access",
           links: [
-            { label: "💬 Chat on WhatsApp (+92 317 0128047)", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs Team, I would like to discuss a project."), isWA: true },
+            { label: "💬 Chat on WhatsApp (+92 317 0128047)", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech Team, I would like to discuss a project."), isWA: true },
             { label: "📅 Book 30-Min Discovery Call", url: basePath + "contact.html", isPrimary: true },
             { label: "📞 Call Direct +92 317 0128047", url: "tel:+923170128047", isOutline: true },
-            { label: "✉️ Email info@uraanlabs.com", url: "mailto:info@uraanlabs.com", isOutline: true }
+            { label: "✉️ Email info@uraantech.online", url: "mailto:info@uraantech.online", isOutline: true }
           ]
         },
         chips: [
           { label: "⚡ Browse Services", query: "What services do you offer?" },
-          { label: "🏢 About Founder & Team", query: "Who is the founder of UraanLabs?" }
+          { label: "🏢 About Founder & Team", query: "Who is the founder of UraanTech?" }
         ]
       };
     }
@@ -932,7 +932,7 @@ function initUraanChatbot() {
             { label: "🤖 AI & Automation Overview", url: basePath + "services/ai-automation.html", isPrimary: true },
             { label: "⚡ Autonomous AI Agents", url: basePath + "services/autonomous-ai-agents.html", isOutline: true },
             { label: "💬 AI Chatbots", url: basePath + "services/ai-chatbots.html", isOutline: true },
-            { label: "🟢 Discuss AI on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs, I am interested in your AI & Automation solutions."), isWA: true }
+            { label: "🟢 Discuss AI on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech, I am interested in your AI & Automation solutions."), isWA: true }
           ]
         },
         chips: [
@@ -954,7 +954,7 @@ function initUraanChatbot() {
             { label: "🛡️ Cybersecurity Overview", url: basePath + "services/cybersecurity.html", isPrimary: true },
             { label: "🔍 Penetration Testing (VAPT)", url: basePath + "services/penetration-testing-vapt.html", isOutline: true },
             { label: "📜 Source Code Review", url: basePath + "services/source-code-review.html", isOutline: true },
-            { label: "🟢 Request Audit via WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs, I need a security audit / VAPT consultation."), isWA: true }
+            { label: "🟢 Request Audit via WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech, I need a security audit / VAPT consultation."), isWA: true }
           ]
         },
         chips: [
@@ -975,7 +975,7 @@ function initUraanChatbot() {
             { label: "📱 Web & Mobile Apps Overview", url: basePath + "services/web-mobile-apps.html", isPrimary: true },
             { label: "💻 Custom Web Apps", url: basePath + "services/custom-web-apps.html", isOutline: true },
             { label: "📲 Mobile App Development", url: basePath + "services/mobile-apps.html", isOutline: true },
-            { label: "🟢 Talk to App Architect", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs, I would like to build a web or mobile app."), isWA: true }
+            { label: "🟢 Talk to App Architect", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech, I would like to build a web or mobile app."), isWA: true }
           ]
         },
         chips: [
@@ -997,7 +997,7 @@ function initUraanChatbot() {
             { label: "🏢 Business Platforms Overview", url: basePath + "services/business-platforms.html", isPrimary: true },
             { label: "⚙️ Custom ERP Systems", url: basePath + "services/custom-erp-systems.html", isOutline: true },
             { label: "🚀 SaaS Development", url: basePath + "services/saas-development.html", isOutline: true },
-            { label: "🟢 Discuss Platform on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs, I want to build a custom business platform / ERP."), isWA: true }
+            { label: "🟢 Discuss Platform on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech, I want to build a custom business platform / ERP."), isWA: true }
           ]
         },
         chips: [
@@ -1018,7 +1018,7 @@ function initUraanChatbot() {
             { label: "🎨 UI/UX Design & Branding", url: basePath + "services/design-branding.html", isPrimary: true },
             { label: "✨ UI/UX Product Design", url: basePath + "services/ui-ux-design.html", isOutline: true },
             { label: "💠 Brand Identity & Logos", url: basePath + "services/brand-identity.html", isOutline: true },
-            { label: "🟢 Share Design Brief on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs, I have a UI/UX or Branding design project."), isWA: true }
+            { label: "🟢 Share Design Brief on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech, I have a UI/UX or Branding design project."), isWA: true }
           ]
         },
         chips: [
@@ -1029,15 +1029,15 @@ function initUraanChatbot() {
     }
 
     // 7. ABOUT COMPANY / FOUNDER / HQ
-    const aboutTriggers = ["about", "who are you", "uraanlabs", "usman", "founder", "team", "company", "location", "karachi", "office", "experience", "credentials", "story", "vision", "mission"];
+    const aboutTriggers = ["about", "who are you", "uraantech", "usman", "founder", "team", "company", "location", "karachi", "office", "experience", "credentials", "story", "vision", "mission"];
     if (hasMatch(q, aboutTriggers)) {
       return {
-        text: "<strong>UraanLabs</strong> is a venture engineering studio headquartered in Karachi, Pakistan, delivering mission-critical software globally across 6 international markets (US, UK, UAE, Saudi Arabia, Australia, and Canada).<br><br>Founded by <strong>Usman Ahmed</strong> (Principal Systems Architect), we operate with a strict <em>zero-sales-fluff</em> philosophy—putting senior engineers directly at the table with founders and business leaders from day zero.",
+        text: "<strong>UraanTech</strong> is a venture engineering studio headquartered in Karachi, Pakistan, delivering mission-critical software globally across 6 international markets (US, UK, UAE, Saudi Arabia, Australia, and Canada).<br><br>Founded by <strong>Usman Ahmed</strong> (Principal Systems Architect), we operate with a strict <em>zero-sales-fluff</em> philosophy—putting senior engineers directly at the table with founders and business leaders from day zero.",
         cta: {
           title: "Learn More About Us",
           links: [
             { label: "🏢 Our Story, Vision & Accreditations", url: basePath + "about.html", isPrimary: true },
-            { label: "🟢 Connect on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello Usman & UraanLabs Team, I would like to connect."), isWA: true }
+            { label: "🟢 Connect on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello Usman & UraanTech Team, I would like to connect."), isWA: true }
           ]
         },
         chips: [
@@ -1051,12 +1051,12 @@ function initUraanChatbot() {
     const servicesTriggers = ["service", "services", "kya kaam", "kya krty", "capabilities", "what do you do", "solutions"];
     if (hasMatch(q, servicesTriggers)) {
       return {
-        text: "UraanLabs delivers <strong>5 Core Engineering Pillars</strong> with zero agency bloat:<br><br>1️⃣ <strong>UI/UX Design & Branding</strong> (Figma Design Systems & Brand Kits)<br>2️⃣ <strong>Web & Mobile Apps</strong> (Next.js 15, Flutter, React Native, Swift)<br>3️⃣ <strong>Business Platforms</strong> (Custom ERP, CRM, SaaS & E-Commerce)<br>4️⃣ <strong>AI & Automation</strong> (Autonomous Agents, RAG & Voice Bots)<br>5️⃣ <strong>Cybersecurity & Audits</strong> (Full VAPT, Source Code Review & ISO/SOC 2)",
+        text: "UraanTech delivers <strong>5 Core Engineering Pillars</strong> with zero agency bloat:<br><br>1️⃣ <strong>UI/UX Design & Branding</strong> (Figma Design Systems & Brand Kits)<br>2️⃣ <strong>Web & Mobile Apps</strong> (Next.js 15, Flutter, React Native, Swift)<br>3️⃣ <strong>Business Platforms</strong> (Custom ERP, CRM, SaaS & E-Commerce)<br>4️⃣ <strong>AI & Automation</strong> (Autonomous Agents, RAG & Voice Bots)<br>5️⃣ <strong>Cybersecurity & Audits</strong> (Full VAPT, Source Code Review & ISO/SOC 2)",
         cta: {
           title: "Browse Services",
           links: [
             { label: "🌐 All 34 Specialized Services", url: basePath + "services.html", isPrimary: true },
-            { label: "💬 Quick WhatsApp Inquiry", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs, I want to learn more about your services."), isWA: true }
+            { label: "💬 Quick WhatsApp Inquiry", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech, I want to learn more about your services."), isWA: true }
           ]
         },
         chips: [
@@ -1071,12 +1071,12 @@ function initUraanChatbot() {
     const greetTriggers = ["hi", "hello", "hey", "salam", "assalam", "kese ho", "kaise ho", "good morning", "good evening", "good afternoon"];
     if (hasMatch(q, greetTriggers)) {
       return {
-        text: "Hello! 👋 Welcome to <strong>UraanLabs</strong>. I'm your AI Architectural Concierge.<br><br>How can I assist you today? You can ask me about our <strong>engineering services</strong>, <strong>pricing & timeline</strong>, <strong>founder & company credentials</strong>, or connect directly with our senior team.",
+        text: "Hello! 👋 Welcome to <strong>UraanTech</strong>. I'm your AI Architectural Concierge.<br><br>How can I assist you today? You can ask me about our <strong>engineering services</strong>, <strong>pricing & timeline</strong>, <strong>founder & company credentials</strong>, or connect directly with our senior team.",
         cta: {
           title: "Quick Options",
           links: [
             { label: "⚡ Explore Our Services", url: basePath + "services.html", isPrimary: true },
-            { label: "💬 Speak with Team on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs Team, I am exploring your services."), isWA: true }
+            { label: "💬 Speak with Team on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech Team, I am exploring your services."), isWA: true }
           ]
         },
         chips: defaultQuickChips
@@ -1091,7 +1091,7 @@ function initUraanChatbot() {
         cta: {
           title: "Connect with Us",
           links: [
-            { label: "💬 Chat on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs Team!"), isWA: true },
+            { label: "💬 Chat on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech Team!"), isWA: true },
             { label: "📅 Book a Call", url: basePath + "contact.html", isOutline: true }
           ]
         },
@@ -1105,7 +1105,7 @@ function initUraanChatbot() {
       cta: {
         title: "Speak with Our Engineering Team",
         links: [
-          { label: "💬 Chat Directly on WhatsApp (+92 317 0128047)", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanLabs, I have an inquiry: " + rawQuery), isWA: true },
+          { label: "💬 Chat Directly on WhatsApp (+92 317 0128047)", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello UraanTech, I have an inquiry: " + rawQuery), isWA: true },
           { label: "📅 Book 30-Min Engineering Call", url: basePath + "contact.html", isPrimary: true },
           { label: "🌐 Browse Services Directory", url: basePath + "services.html", isOutline: true }
         ]

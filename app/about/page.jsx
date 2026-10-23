@@ -4,12 +4,12 @@ export const metadata = {
   title: pagesData.about.meta.title,
   description: pagesData.about.meta.description,
   alternates: {
-    canonical: "https://uraanlabs.com/about",
+    canonical: "https://uraantech.online/about",
   },
   openGraph: {
     title: pagesData.about.meta.ogTitle,
     description: pagesData.about.meta.ogDescription,
-    url: "https://uraanlabs.com/about",
+    url: "https://uraantech.online/about",
     images: [{ url: pagesData.about.meta.ogImage }],
   },
 };

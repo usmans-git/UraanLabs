@@ -1,7 +1,7 @@
 const https = require('https');
 const { performance } = require('perf_hooks');
 
-const TARGET_URL = 'https://uraanlabs.vercel.app';
+const TARGET_URL = 'https://uraantech.vercel.app';
 
 async function fetchHead(url) {
   return new Promise((resolve, reject) => {

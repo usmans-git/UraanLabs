@@ -38,7 +38,7 @@ export async function POST(request) {
       phone: rawPhone,
       service: service ? String(service).trim().slice(0, 100) : "General Inquiry",
       message: String(message).trim().slice(0, 3000),
-      source: source ? String(source).slice(0, 200) : "https://uraanlabs.vercel.app",
+      source: source ? String(source).slice(0, 200) : "https://uraantech.vercel.app",
     };
 
     console.log("[LEAD_RECEIVED]", JSON.stringify(leadPayload));

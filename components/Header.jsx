@@ -99,10 +99,10 @@ export default function Header() {
         <div className="container">
           <nav className="navbar" aria-label="Main Navigation">
             {/* Logo */}
-            <Link href="/" className="logo" aria-label="UraanLabs Homepage">
+            <Link href="/" className="logo" aria-label="UraanTech Homepage">
               <img
-                src="/images/uraanlabs-logo.svg"
-                alt="UraanLabs Logo"
+                src="/images/uraantech-logo.svg"
+                alt="UraanTech Logo"
                 width={255}
                 height={56}
                 fetchPriority="high"
@@ -138,11 +138,11 @@ export default function Header() {
                   <Link href="/about#story" className="dropdown-item">
                     <span className="dropdown-title">Our Story</span>
                     <small className="dropdown-desc">
-                      Why UraanLabs was built and our mission.
+                      Why UraanTech was built and our mission.
                     </small>
                   </Link>
-                  <Link href="/about#why-uraanlabs" className="dropdown-item">
-                    <span className="dropdown-title">Why UraanLabs</span>
+                  <Link href="/about#why-uraantech" className="dropdown-item">
+                    <span className="dropdown-title">Why UraanTech</span>
                     <small className="dropdown-desc">
                       Our 4 core engineering differentiators.
                     </small>
@@ -741,8 +741,8 @@ export default function Header() {
         <div className="mobile-drawer-header">
           <Link href="/" onClick={() => setMobileOpen(false)}>
             <img
-              src="/images/uraanlabs-logo.svg"
-              alt="UraanLabs Logo"
+              src="/images/uraantech-logo.svg"
+              alt="UraanTech Logo"
               className="brand-logo-img"
               width={140}
               height={31}
@@ -794,11 +794,11 @@ export default function Header() {
                   Our Story
                 </Link>
                 <Link
-                  href="/about#why-uraanlabs"
+                  href="/about#why-uraantech"
                   className="mobile-sublink"
                   onClick={() => setMobileOpen(false)}
                 >
-                  Why UraanLabs
+                  Why UraanTech
                 </Link>
                 <Link
                   href="/careers"

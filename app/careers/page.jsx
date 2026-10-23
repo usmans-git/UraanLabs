@@ -4,12 +4,12 @@ export const metadata = {
   title: pagesData.careers.meta.title,
   description: pagesData.careers.meta.description,
   alternates: {
-    canonical: "https://uraanlabs.com/careers",
+    canonical: "https://uraantech.online/careers",
   },
   openGraph: {
     title: pagesData.careers.meta.ogTitle,
     description: pagesData.careers.meta.ogDescription,
-    url: "https://uraanlabs.com/careers",
+    url: "https://uraantech.online/careers",
     images: [{ url: pagesData.careers.meta.ogImage }],
   },
 };

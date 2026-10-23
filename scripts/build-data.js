@@ -63,7 +63,7 @@ function extractMetadata(fullHtml) {
   }
 
   return {
-    title: titleMatch ? titleMatch[1].trim().replace(/&amp;/g, '&') : 'UraanLabs | Next-Gen Software Studio',
+    title: titleMatch ? titleMatch[1].trim().replace(/&amp;/g, '&') : 'UraanTech | Next-Gen Software Studio',
     description: descMatch ? descMatch[1].trim().replace(/&amp;/g, '&') : '',
     ogTitle: ogTitleMatch ? ogTitleMatch[1].trim() : (titleMatch ? titleMatch[1].trim() : ''),
     ogDescription: ogDescMatch ? ogDescMatch[1].trim() : (descMatch ? descMatch[1].trim() : ''),

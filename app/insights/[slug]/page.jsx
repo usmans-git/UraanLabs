@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 
   if (!article) {
     return {
-      title: "Article Not Found | UraanLabs Insights",
+      title: "Article Not Found | UraanTech Insights",
     };
   }
 
@@ -21,12 +21,12 @@ export async function generateMetadata({ params }) {
     title: article.meta.title,
     description: article.meta.description,
     alternates: {
-      canonical: `https://uraanlabs.com/insights/${slug}`,
+      canonical: `https://uraantech.online/insights/${slug}`,
     },
     openGraph: {
       title: article.meta.ogTitle,
       description: article.meta.ogDescription,
-      url: `https://uraanlabs.com/insights/${slug}`,
+      url: `https://uraantech.online/insights/${slug}`,
       images: [{ url: article.meta.ogImage }],
     },
   };

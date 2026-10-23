@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://uraanlabs.com/sitemap.xml
+Sitemap: https://uraantech.online/sitemap.xml

@@ -1,12 +1,12 @@
-# UraanLabs — Next-Gen Software Engineering, AI & Cybersecurity Studio
+# UraanTech — Next-Gen Software Engineering, AI & Cybersecurity Studio
 
-Official repository and source code for **UraanLabs** (`uraanlabs.com`), engineered with **Next.js 14 App Router**, static-site generation (SSG), interactive WebGL/CSS 3D parallax, and an integrated real-time AI concierge.
+Official repository and source code for **UraanTech** (`uraantech.online`), engineered with **Next.js 14 App Router**, static-site generation (SSG), interactive WebGL/CSS 3D parallax, and an integrated real-time AI concierge.
 
 ---
 
 ## 🚀 Overview
 
-- **Studio**: UraanLabs
+- **Studio**: UraanTech
 - **Founding Architect**: Usman Ahmed
 - **Headquarters**: Karachi, Pakistan (Serving Global Clients in US, UK, UAE, Saudi Arabia, Canada, Australia)
 - **Framework**: Next.js 14 (App Router) with React 18 & SSG
@@ -22,7 +22,7 @@ Official repository and source code for **UraanLabs** (`uraanlabs.com`), enginee
 ## 🛠️ Project Structure
 
 ```text
-UraanLabs/
+UraanTech/
 ├── app/
 │   ├── about/             # /about (Story, Team, Credentials)
 │   ├── careers/           # /careers

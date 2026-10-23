@@ -28,35 +28,35 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "UraanLabs | Next-Gen Software Engineering, AI & Cybersecurity Studio",
+  title: "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
   description:
-    "UraanLabs engineers intelligent software systems, bespoke AI automations, scalable SaaS products, and bank-grade cybersecurity for ambitious companies.",
-  metadataBase: new URL("https://uraanlabs.com"),
+    "UraanTech engineers intelligent software systems, bespoke AI automations, scalable SaaS products, and bank-grade cybersecurity for ambitious companies.",
+  metadataBase: new URL("https://uraantech.online"),
   alternates: {
-    canonical: "https://uraanlabs.com",
+    canonical: "https://uraantech.online",
   },
   icons: {
-    icon: "/images/uraanlabs-mark.svg",
+    icon: "/images/uraantech-mark.svg",
   },
   openGraph: {
     type: "website",
-    title: "UraanLabs | Next-Gen Software Engineering, AI & Cybersecurity Studio",
+    title: "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
     description:
       "We engineer intelligent software systems, bespoke AI workflow automations, and category-defining digital products.",
-    url: "https://uraanlabs.com",
-    siteName: "UraanLabs",
+    url: "https://uraantech.online",
+    siteName: "UraanTech",
     images: [
       {
         url: "/images/herobanner.png",
         width: 1200,
         height: 630,
-        alt: "UraanLabs Venture & AI Studio",
+        alt: "UraanTech Venture & AI Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "UraanLabs | Next-Gen Software Engineering, AI & Cybersecurity Studio",
+    title: "UraanTech | Next-Gen Software Engineering, AI & Cybersecurity Studio",
     description:
       "We engineer intelligent software systems, bespoke AI workflow automations, and category-defining digital products.",
     images: ["/images/herobanner.png"],

@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 
   if (!service) {
     return {
-      title: "Service Not Found | UraanLabs",
+      title: "Service Not Found | UraanTech",
     };
   }
 
@@ -21,12 +21,12 @@ export async function generateMetadata({ params }) {
     title: service.meta.title,
     description: service.meta.description,
     alternates: {
-      canonical: `https://uraanlabs.com/services/${slug}`,
+      canonical: `https://uraantech.online/services/${slug}`,
     },
     openGraph: {
       title: service.meta.ogTitle,
       description: service.meta.ogDescription,
-      url: `https://uraanlabs.com/services/${slug}`,
+      url: `https://uraantech.online/services/${slug}`,
       images: [{ url: service.meta.ogImage }],
     },
   };
