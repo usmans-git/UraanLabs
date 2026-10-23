@@ -147,12 +147,6 @@ export default function Header() {
                       Our 4 core engineering differentiators.
                     </small>
                   </Link>
-                  <Link href="/about#founder-message" className="dropdown-item">
-                    <span className="dropdown-title">Founder's Message</span>
-                    <small className="dropdown-desc">
-                      Executive perspective from Usman Ahmed.
-                    </small>
-                  </Link>
                   <Link href="/careers" className="dropdown-item">
                     <span className="dropdown-title">Careers</span>
                     <small className="dropdown-desc">
