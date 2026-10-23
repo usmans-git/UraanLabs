@@ -29,11 +29,13 @@ export async function POST(request) {
       );
     }
 
+    const rawPhone = phone ? String(phone).trim().slice(0, 40) : "Not provided";
+
     const leadPayload = {
       timestamp: new Date().toISOString(),
       name: String(name).trim().slice(0, 120),
       email: String(email).trim().slice(0, 160),
-      phone: phone ? String(phone).trim().slice(0, 40) : "Not provided",
+      phone: rawPhone,
       service: service ? String(service).trim().slice(0, 100) : "General Inquiry",
       message: String(message).trim().slice(0, 3000),
       source: source ? String(source).slice(0, 200) : "https://uraanlabs.vercel.app",
@@ -41,16 +43,24 @@ export async function POST(request) {
 
     console.log("[LEAD_RECEIVED]", JSON.stringify(leadPayload));
 
-    // 3. Optional Google Sheet Webhook Dispatch
-    const googleSheetUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
+    // 3. Google Sheet Webhook Dispatch (Automatic Sync)
+    const googleSheetUrl =
+      process.env.GOOGLE_SHEET_WEBHOOK_URL ||
+      "https://script.google.com/macros/s/AKfycbyU4nGzLD8aYDG9dUpB4gBQU5jhJAkDdl5BvPjhwY8NAQS2jGwubUDwO5UQhhIIUW1o/exec";
+
     if (googleSheetUrl) {
       try {
+        const sheetPayload = {
+          ...leadPayload,
+          phone: rawPhone.startsWith("+") ? "'" + rawPhone : rawPhone,
+        };
         await fetch(googleSheetUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(leadPayload),
+          body: JSON.stringify(sheetPayload),
+          redirect: "follow",
         });
       } catch (sheetErr) {
         console.error("[GOOGLE_SHEET_DISPATCH_ERROR]", sheetErr);
