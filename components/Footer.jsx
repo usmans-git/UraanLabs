@@ -14,6 +14,8 @@ export default function Footer() {
                 alt="UraanLabs Logo"
                 width={290}
                 height={64}
+                loading="lazy"
+                decoding="async"
                 className="brand-logo-img"
               />
             </Link>

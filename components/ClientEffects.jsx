@@ -156,7 +156,7 @@ export default function ClientEffects() {
       cleanups.push(() => clearInterval(telemetryInterval));
     }
 
-    // 4. Hero 3D Parallax Tilt
+    // 4. Hero 3D Parallax Tilt (High Performance Idle-Paused Animation)
     const heroSection = document.querySelector(".hero-section");
     const scene = document.getElementById("cyber3DScene");
     if (heroSection && scene) {
@@ -164,29 +164,41 @@ export default function ClientEffects() {
       let targetX = 0, targetY = 0;
       let animFrameId = null;
 
+      const animateTilt = () => {
+        currentX += (targetX - currentX) * 0.08;
+        currentY += (targetY - currentY) * 0.08;
+        scene.style.transform = `rotateY(${currentX.toFixed(2)}deg) rotateX(${currentY.toFixed(2)}deg)`;
+        if (Math.abs(targetX - currentX) > 0.02 || Math.abs(targetY - currentY) > 0.02) {
+          animFrameId = requestAnimationFrame(animateTilt);
+        } else {
+          animFrameId = null;
+          if (targetX === 0 && targetY === 0) {
+            scene.style.transform = "";
+          }
+        }
+      };
+
       const handleMove = (e) => {
         const rect = heroSection.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
         targetX = x * 22;
         targetY = -y * 18;
+        if (!animFrameId) {
+          animFrameId = requestAnimationFrame(animateTilt);
+        }
       };
 
       const handleLeave = () => {
         targetX = 0;
         targetY = 0;
-      };
-
-      const animateTilt = () => {
-        currentX += (targetX - currentX) * 0.08;
-        currentY += (targetY - currentY) * 0.08;
-        scene.style.transform = `rotateY(${currentX.toFixed(2)}deg) rotateX(${currentY.toFixed(2)}deg)`;
-        animFrameId = requestAnimationFrame(animateTilt);
+        if (!animFrameId) {
+          animFrameId = requestAnimationFrame(animateTilt);
+        }
       };
 
       heroSection.addEventListener("mousemove", handleMove, { passive: true });
       heroSection.addEventListener("mouseleave", handleLeave);
-      animFrameId = requestAnimationFrame(animateTilt);
 
       cleanups.push(() => {
         heroSection.removeEventListener("mousemove", handleMove);
@@ -195,7 +207,7 @@ export default function ClientEffects() {
       });
     }
 
-    // 5. Pillars 3D Parallax Tilt
+    // 5. Pillars 3D Parallax Tilt (High Performance Idle-Paused Animation)
     const pillarCards = document.querySelectorAll(".pillar-card-wrapper");
     pillarCards.forEach((card) => {
       const cardScene = card.querySelector(".pillar-3d-scene");
@@ -205,29 +217,41 @@ export default function ClientEffects() {
       let targetX = 0, targetY = 0;
       let animId = null;
 
+      const animatePillar = () => {
+        currentX += (targetX - currentX) * 0.08;
+        currentY += (targetY - currentY) * 0.08;
+        cardScene.style.transform = `rotateY(${currentX.toFixed(2)}deg) rotateX(${currentY.toFixed(2)}deg)`;
+        if (Math.abs(targetX - currentX) > 0.02 || Math.abs(targetY - currentY) > 0.02) {
+          animId = requestAnimationFrame(animatePillar);
+        } else {
+          animId = null;
+          if (targetX === 0 && targetY === 0) {
+            cardScene.style.transform = "";
+          }
+        }
+      };
+
       const onMouseMove = (e) => {
         const rect = card.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
         targetX = x * 20;
         targetY = -y * 16;
+        if (!animId) {
+          animId = requestAnimationFrame(animatePillar);
+        }
       };
 
       const onMouseLeave = () => {
         targetX = 0;
         targetY = 0;
-      };
-
-      const animatePillar = () => {
-        currentX += (targetX - currentX) * 0.08;
-        currentY += (targetY - currentY) * 0.08;
-        cardScene.style.transform = `rotateY(${currentX.toFixed(2)}deg) rotateX(${currentY.toFixed(2)}deg)`;
-        animId = requestAnimationFrame(animatePillar);
+        if (!animId) {
+          animId = requestAnimationFrame(animatePillar);
+        }
       };
 
       card.addEventListener("mousemove", onMouseMove, { passive: true });
       card.addEventListener("mouseleave", onMouseLeave);
-      animId = requestAnimationFrame(animatePillar);
 
       cleanups.push(() => {
         card.removeEventListener("mousemove", onMouseMove);

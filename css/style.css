@@ -47,9 +47,9 @@
   --grad-gloss: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(56, 189, 248, 0.06) 100%);
 
   /* Fonts */
-  --font-display: 'Sora', sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'Space Grotesk', monospace;
+  --font-display: var(--font-sora), 'Sora', sans-serif;
+  --font-body: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: var(--font-space-grotesk), 'Space Grotesk', monospace;
 
   /* Layout */
   --max-w: 1240px;
@@ -7151,5 +7151,48 @@ article .card[style*="background: linear-gradient"] .btn {
 .hero-cta-group .btn-lg {
   padding: 10px 22px !important;
   font-size: 0.86rem !important;
+}
+
+/* ==========================================================================
+   High-Performance Rendering Optimizations (Zero Layout Shifts, 60fps GPU)
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* GPU Hardware-Acceleration for 3D Cards */
+.pillar-3d-scene,
+.hero-scene-3d,
+.cyber-3d-scene {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Off-screen Content Rendering Virtualization */
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+#faqAccordion,
+.accordion-wrapper {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
+}
+
+#deliverables {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 650px;
+}
+
+/* Image Rendering Stability */
+img {
+  content-visibility: auto;
+}
+.brand-logo-img {
+  content-visibility: visible;
 }
 

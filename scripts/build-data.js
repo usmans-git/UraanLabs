@@ -10,6 +10,8 @@ function cleanHtmlContent(html, context = 'root') {
   // Normalize images
   let cleaned = html.replace(/src=["'](?:\.\.\/|\.\/)?images\/([^"']+)["']/g, 'src="/images/$1"');
   cleaned = cleaned.replace(/srcset=["'](?:\.\.\/|\.\/)?images\/([^"']+)["']/g, 'srcset="/images/$1"');
+  // Add loading="lazy" and decoding="async" to content images
+  cleaned = cleaned.replace(/<img(?![^>]*\bloading=)([^>]*)>/gi, '<img loading="lazy" decoding="async"$1>');
 
   // Normalize links
   cleaned = cleaned.replace(/href=["'](?:\.\.\/)?index\.html(#?[^"']*)["']/g, 'href="/$1"');

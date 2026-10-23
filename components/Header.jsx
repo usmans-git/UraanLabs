@@ -17,37 +17,53 @@ export default function Header() {
   });
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    let headerEl = null;
+    let lightSections = null;
+
+    const updateHeaderState = () => {
       const scrollY = window.pageYOffset || document.documentElement.scrollTop;
       setIsScrolled(scrollY > 20);
 
-      const lightSections = document.querySelectorAll(".section-light");
-      if (lightSections.length > 0) {
-        const header = document.getElementById("header");
-        if (header) {
-          const headerRect = header.getBoundingClientRect();
-          const headerMiddle = headerRect.top + (headerRect.height / 2 || 35);
-          let overLight = false;
-          for (let i = 0; i < lightSections.length; i++) {
-            const secRect = lightSections[i].getBoundingClientRect();
-            if (secRect.top <= headerMiddle && secRect.bottom >= headerMiddle) {
-              overLight = true;
-              break;
-            }
+      if (!headerEl) headerEl = document.getElementById("header");
+      if (!lightSections) lightSections = document.querySelectorAll(".section-light");
+
+      if (lightSections && lightSections.length > 0 && headerEl) {
+        const headerRect = headerEl.getBoundingClientRect();
+        const headerMiddle = headerRect.top + (headerRect.height / 2 || 35);
+        let overLight = false;
+        for (let i = 0; i < lightSections.length; i++) {
+          const secRect = lightSections[i].getBoundingClientRect();
+          if (secRect.top <= headerMiddle && secRect.bottom >= headerMiddle) {
+            overLight = true;
+            break;
           }
-          setIsOverLight(overLight);
         }
+        setIsOverLight(overLight);
       } else {
         setIsOverLight(false);
       }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderState);
+        ticking = true;
+      }
+    };
+
+    const handleResize = () => {
+      lightSections = document.querySelectorAll(".section-light");
+      handleScroll();
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener("resize", handleResize, { passive: true });
+    updateHeaderState();
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, [pathname]);
 
@@ -89,6 +105,8 @@ export default function Header() {
                 alt="UraanLabs Logo"
                 width={255}
                 height={56}
+                fetchPriority="high"
+                decoding="sync"
                 className="brand-logo-img"
               />
             </Link>
@@ -743,6 +761,9 @@ export default function Header() {
               alt="UraanLabs Logo"
               className="brand-logo-img"
               width={140}
+              height={31}
+              loading="lazy"
+              decoding="async"
             />
           </Link>
           <button

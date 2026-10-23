@@ -1,9 +1,31 @@
 import "./globals.css";
+import { Inter, Sora, Space_Grotesk } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import UraanBot from "../components/UraanBot";
 import ClientEffects from "../components/ClientEffects";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-sora",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 
 export const metadata = {
   title: "UraanLabs | Next-Gen Software Engineering, AI & Cybersecurity Studio",
@@ -43,15 +65,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="en"
+      className={`${inter.variable} ${sora.variable} ${spaceGrotesk.variable}`}
+    >
       <body className="dark-canvas">
         {/* Background Ambient Glow Orbs */}
         <div className="ambient-glow orb-top-left" aria-hidden="true"></div>
