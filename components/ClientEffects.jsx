@@ -133,10 +133,79 @@ export default function ClientEffects() {
           return;
         }
 
-        // Success state
-        if (formSuccess) formSuccess.style.display = "block";
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnHtml = submitBtn ? submitBtn.innerHTML : "";
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = `<span>Connecting to WhatsApp...</span> <span style="display:inline-block; animation: spin 1s linear infinite;">&#8987;</span>`;
+        }
+
+        const phoneVal = phoneInput ? phoneInput.value.trim() : "";
+        const waNumber = "923170128047";
+
+        const waText = [
+          `🚀 *New Project Inquiry — UraanLabs*`,
+          `━━━━━━━━━━━━━━━━━━━━`,
+          `👤 *Client Name:* ${nameVal}`,
+          `📧 *Work Email:* ${emailVal}`,
+          `📱 *Phone / WhatsApp:* ${phoneVal || "Not provided"}`,
+          `⚡ *Capability Required:* ${serviceVal}`,
+          `━━━━━━━━━━━━━━━━━━━━`,
+          `📝 *Project Overview & Goals:*`,
+          `${msgVal}`,
+          `━━━━━━━━━━━━━━━━━━━━`,
+          `🌐 *Source:* ${typeof window !== "undefined" ? window.location.href : "https://uraanlabs.vercel.app"}`,
+        ].join("\n");
+
+        const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
+
+        // Asynchronously post to backend API (logs and syncs to Google Sheets webhook if configured)
+        fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: nameVal,
+            email: emailVal,
+            phone: phoneVal,
+            service: serviceVal,
+            message: msgVal,
+            source: typeof window !== "undefined" ? window.location.href : "",
+          }),
+        }).catch((err) => console.warn("API dispatch error:", err));
+
+        // Open WhatsApp directly in new window
+        if (typeof window !== "undefined") {
+          window.open(waUrl, "_blank", "noopener,noreferrer");
+        }
+
+        // Show prominent confirmation with one-click WhatsApp button fallback
+        if (formSuccess) {
+          formSuccess.style.display = "block";
+          formSuccess.innerHTML = `
+            <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 10px; padding: 18px 20px; color: #FFFFFF; text-align: left; margin-top: 14px;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="font-size: 1.25rem; color: #34D399;">✔</span>
+                <strong style="color: #34D399; font-size: 1.05rem;">Inquiry Recorded & Forwarded!</strong>
+              </div>
+              <p style="font-size: 0.88rem; color: #E2E8F0; line-height: 1.5; margin-bottom: 12px;">
+                Thank you, <strong>${nameVal}</strong>. Your project details have been recorded. You can now chat directly with our Senior Systems Architecture team on WhatsApp:
+              </p>
+              <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-shimmer btn-sm" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; padding: 8px 18px; border-radius: 8px; font-weight: 600;">
+                <span>💬 Chat on WhatsApp with Usman Ahmed (+92 317 0128047)</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          `;
+        }
+
         form.reset();
         generateCaptcha();
+        if (submitBtn) {
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHtml;
+          }, 3000);
+        }
       };
 
       form.addEventListener("submit", submitHandler);
