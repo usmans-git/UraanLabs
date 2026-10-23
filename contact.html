@@ -506,89 +506,76 @@
 
         <!-- Unified Two-Column Bento Card -->
         <div class="contact-card-wrapper card">
-          <!-- Left Info Column -->
-          <div class="contact-info-col">
+                    <!-- Left Info Column: Balanced, Compact, Modern -->
+          <div class="contact-info-col" style="display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <span class="chip-badge">DIRECT TECHNICAL DESK</span>
-              <h2 style="font-size: 1.55rem; color: #FFFFFF; margin: 12px 0 10px;">Immediate Engineering Access</h2>
-              <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px;">
-                Whether you need a custom enterprise application, an autonomous AI pipeline, or a pre-fundraising penetration test, our technical team responds rapidly without account manager layers.
+              <!-- Top Row: Badge + Status Pill -->
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+                <span class="chip-badge">DIRECT TECHNICAL DESK</span>
+                <span class="system-status-pill" style="margin: 0; padding: 4px 10px; font-size: 0.7rem;">
+                  <span class="status-dot"></span>
+                  <span>Desk Online &bull; &lt;4h SLA</span>
+                </span>
+              </div>
+
+              <h2 style="font-size: 1.48rem; color: #FFFFFF; margin: 0 0 10px; letter-spacing: -0.015em;">Immediate Engineering Access</h2>
+              <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.55; margin-bottom: 20px;">
+                Whether you need a custom enterprise application, an autonomous AI pipeline, or a pre-fundraising penetration test, speak directly with principal engineers without agency account manager layers.
               </p>
 
-              <!-- Visual Engineering Center Preview Card -->
-              <div class="contact-visual-card" style="position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 22px; border: 1px solid rgba(255,255,255,0.18); box-shadow: 0 10px 25px rgba(0,0,0,0.35);">
-                <img src="images/about.png" alt="UraanLabs Systems Engineering Hub" style="width: 100%; height: 165px; object-fit: cover; display: block; filter: brightness(0.92) contrast(1.06);">
-                <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,20,52,0.1) 0%, rgba(14,20,52,0.85) 100%);"></div>
-                <div style="position: absolute; bottom: 10px; left: 12px; right: 12px; display: flex; align-items: center; justify-content: space-between; z-index: 2;">
-                  <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #FFFFFF; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-                    <span style="width: 7px; height: 7px; border-radius: 50%; background: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></span>
-                    Karachi HQ &bull; Systems Architecture Center
-                  </span>
-                  <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #38BDF8; background: rgba(56,189,248,0.15); border: 1px solid rgba(56,189,248,0.35); padding: 2px 7px; border-radius: 4px;">
-                    LIVE
-                  </span>
-                </div>
-              </div>
-
-              <div style="display: flex; flex-direction: column; gap: 16px;">
-                <div style="display: flex; gap: 14px; align-items: flex-start;">
-                  <div class="diff-icon" style="width: 38px; height: 38px; font-size: 1rem; margin: 0; flex-shrink: 0;">&#128205;</div>
+              <!-- Compact Contact Details Card -->
+              <div class="contact-details-compact" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.09); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 13px; margin-bottom: 18px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="font-size: 1.05rem; line-height: 1.2;">📍</span>
                   <div>
-                    <strong style="color: #FFFFFF; font-size: 0.85rem; display: block;">Engineering Headquarters</strong>
-                    <span style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.4;">Karachi, Pakistan (Serving UAE, KSA, UK, US &amp; Global Enterprises)</span>
+                    <strong style="color: #FFFFFF; font-size: 0.84rem; display: block;">Engineering Headquarters</strong>
+                    <span style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.4;">Karachi, Pakistan (Serving UAE, KSA, UK, US &amp; Global)</span>
                   </div>
                 </div>
 
-                <div style="display: flex; gap: 14px; align-items: flex-start;">
-                  <div class="diff-icon" style="width: 38px; height: 38px; font-size: 1rem; margin: 0; flex-shrink: 0;">&#9993;</div>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                  <span style="font-size: 1.05rem; line-height: 1.2;">✉️</span>
                   <div>
-                    <strong style="color: #FFFFFF; font-size: 0.85rem; display: block;">Technical Inquiries</strong>
-                    <a href="mailto:info@uraanlabs.com" style="color: var(--cyan-sonic); text-decoration: none; font-size: 0.88rem;">info@uraanlabs.com</a>
+                    <strong style="color: #FFFFFF; font-size: 0.84rem; display: inline; margin-right: 6px;">Technical Inquiries:</strong>
+                    <a href="mailto:info@uraanlabs.com" style="color: var(--cyan-sonic); text-decoration: none; font-size: 0.84rem; font-weight: 500;">info@uraanlabs.com</a>
                   </div>
                 </div>
 
-                <div style="display: flex; gap: 14px; align-items: flex-start;">
-                  <div class="diff-icon" style="width: 38px; height: 38px; font-size: 1rem; margin: 0; flex-shrink: 0;">&#9742;</div>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                  <span style="font-size: 1.05rem; line-height: 1.2;">📞</span>
                   <div>
-                    <strong style="color: #FFFFFF; font-size: 0.85rem; display: block;">Direct Telephone &amp; Hotline</strong>
-                    <a href="tel:+923170128047" style="color: var(--cyan-sonic); text-decoration: none; font-size: 0.88rem;">+92 317 0128047 (0317-0128047)</a>
+                    <strong style="color: #FFFFFF; font-size: 0.84rem; display: inline; margin-right: 6px;">Hotline:</strong>
+                    <a href="tel:+923170128047" style="color: var(--cyan-sonic); text-decoration: none; font-size: 0.84rem; font-weight: 500;">+92 317 0128047</a>
                   </div>
                 </div>
               </div>
 
-              <!-- Instant WhatsApp Direct Button -->
+              <!-- Instant WhatsApp Direct Button (Compact & Sleek) -->
               <a href="https://wa.me/923170128047?text=Hello%20UraanLabs%20Team%2C%20I%20would%20like%20to%20discuss%20a%20project." 
                  target="_blank" 
                  rel="noopener noreferrer" 
                  class="contact-direct-btn-wa"
-                 style="margin-top: 18px;">
-                <svg viewBox="0 0 32 32" width="20" height="20" fill="#FFFFFF" aria-hidden="true">
+                 style="margin: 0 0 16px; padding: 10px 18px; font-size: 0.86rem;">
+                <svg viewBox="0 0 32 32" width="18" height="18" fill="#FFFFFF" aria-hidden="true">
                   <path d="M16.002 0C7.164 0 0 7.164 0 16.002c0 2.825.74 5.577 2.146 7.994L.073 31.927l8.132-2.032a15.932 15.932 0 007.797 2.032c8.838 0 16.002-7.164 16.002-16.002C32.004 7.164 24.84 0 16.002 0zm9.36 22.617c-.389 1.096-1.929 2.008-2.67 2.138-.707.123-1.63.176-2.64-.15a22.56 22.56 0 01-2.42-.968c-4.274-1.85-7.05-6.196-7.265-6.482-.212-.284-1.74-2.316-1.74-4.417 0-2.102 1.102-3.136 1.492-3.56.39-.425.85-.53 1.134-.53.284 0 .567.002.815.015.263.013.616-.1.963.734.355.85 1.206 2.946 1.312 3.16.106.213.178.46.036.744-.142.284-.213.46-.425.71-.213.248-.448.555-.64.745-.213.213-.437.443-.188.87.248.425 1.102 1.816 2.366 2.942 1.624 1.448 2.994 1.897 3.42 2.11.425.213.674.177.923-.106.248-.284 1.063-1.24 1.347-1.666.284-.425.567-.355.957-.213.39.142 2.481 1.17 2.906 1.383.425.213.709.319.815.5.107.177.107 1.028-.283 2.124z"/>
                 </svg>
                 <span>Instant Consultation on WhatsApp</span>
               </a>
-
-              <!-- Telemetry & Security Guarantees -->
-              <div class="contact-trust-strip" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.1);">
-                <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 6px;">
-                  <div style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: #FFFFFF;">&lt; 24h</div>
-                  <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; margin-top: 2px;">Roadmap SLA</div>
-                </div>
-                <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 6px;">
-                  <div style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: #FFFFFF;">100%</div>
-                  <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; margin-top: 2px;">Client IP</div>
-                </div>
-                <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 6px;">
-                  <div style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700; color: #FFFFFF;">Strict</div>
-                  <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; margin-top: 2px;">Mutual NDA</div>
-                </div>
-              </div>
             </div>
 
-            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08);">
-              <div class="system-status-pill">
-                <span class="status-dot"></span>
-                <span>Engineering Desk Online &bull; Avg Response: &lt;4 Hours</span>
+            <!-- Telemetry & Security Guarantees: Compact 3-Box Row -->
+            <div class="contact-trust-strip" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+              <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 8px 4px;">
+                <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">&lt; 24h</div>
+                <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-top: 1px;">Roadmap SLA</div>
+              </div>
+              <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 8px 4px;">
+                <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">100%</div>
+                <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-top: 1px;">Sovereign IP</div>
+              </div>
+              <div style="text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 8px 4px;">
+                <div style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: #FFFFFF;">Strict</div>
+                <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-top: 1px;">Mutual NDA</div>
               </div>
             </div>
           </div>

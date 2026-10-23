@@ -4951,14 +4951,19 @@ body.chatbot-is-open .floating-whatsapp {
 .contact-page-section .contact-card-wrapper {
   max-width: 980px;
   margin: 0 auto;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: stretch;
 }
 
 .contact-page-section .contact-info-col {
-  padding: 30px 28px;
+  padding: 28px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contact-page-section .contact-form-col {
-  padding: 30px 30px;
+  padding: 28px 28px;
 }
 
 .contact-page-section .contact-visual-card img {
@@ -4966,31 +4971,30 @@ body.chatbot-is-open .floating-whatsapp {
 }
 
 .contact-page-header {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .contact-direct-btn-wa {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
   color: #FFFFFF !important;
   border: 1px solid rgba(37, 211, 102, 0.4) !important;
-  font-weight: 700;
-  font-size: 0.92rem;
-  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 0.86rem;
+  padding: 10px 18px;
   border-radius: var(--radius-md);
   text-decoration: none;
-  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  margin-top: 16px;
   width: 100%;
 }
 
 .contact-direct-btn-wa:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
   color: #FFFFFF !important;
 }
 
