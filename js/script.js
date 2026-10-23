@@ -1024,8 +1024,7 @@ function initUraanChatbot() {
           title: "Learn More About Us",
           links: [
             { label: "🏢 Our Story, Vision & Accreditations", url: basePath + "about.html", isPrimary: true },
-            { label: "✉️ Founder's Letter by Usman Ahmed", url: basePath + "about.html#founder-message", isOutline: true },
-            { label: "🟢 Connect with Founder on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello Usman & UraanLabs Team, I would like to connect."), isWA: true }
+            { label: "🟢 Connect on WhatsApp", url: "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent("Hello Usman & UraanLabs Team, I would like to connect."), isWA: true }
           ]
         },
         chips: [

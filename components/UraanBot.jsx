@@ -242,9 +242,8 @@ function resolveBotResponse(rawQuery) {
         title: "Learn More About Us",
         links: [
           { label: "🏢 Our Story, Vision & Accreditations", url: "/about", isPrimary: true },
-          { label: "✉️ Founder's Letter by Usman Ahmed", url: "/about#founder-message", isOutline: true },
           {
-            label: "🚀 Connect with Founder on WhatsApp",
+            label: "🚀 Connect on WhatsApp",
             url: `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
               "Hello Usman & UraanLabs Team, I would like to connect."
             )}`,
