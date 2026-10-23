@@ -9,7 +9,7 @@ export default function ClientEffects() {
   useEffect(() => {
     // 1. FAQ Accordions
     const accordions = document.querySelectorAll(
-      "#faqAccordion, .accordion-wrapper, .faq-modern-list"
+      "#faqAccordion, .accordion-wrapper, .faq-modern-list, .faq-modern-grid"
     );
     const cleanups = [];
 

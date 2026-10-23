@@ -345,7 +345,9 @@ function initSmoothScrollAndSpy() {
    06. Interactive FAQ Accordion
    ========================================================================== */
 function initAccordion() {
-  const accordions = document.querySelectorAll("#faqAccordion, .accordion-wrapper, .faq-modern-list");
+  const accordions = document.querySelectorAll(
+    "#faqAccordion, .accordion-wrapper, .faq-modern-list, .faq-modern-grid"
+  );
   if (!accordions.length) return;
 
   accordions.forEach((accordion) => {

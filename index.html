@@ -1170,7 +1170,7 @@
     </section>
 
 
-    <!-- ================= 06. INTERACTIVE FAQ ================= -->
+        <!-- ================= 06. INTERACTIVE FAQ ================= -->
     <section class="section faq-section section-light" id="faq">
       <div class="container">
         
@@ -1190,100 +1190,125 @@
 
         <div class="faq-container">
 
-          <!-- High-Density Modern Accordion List -->
-          <div class="faq-modern-list" id="faqAccordion">
+          <!-- 2-Column High-Density Modern Accordion Grid -->
+          <div class="faq-modern-grid" id="faqAccordion">
 
-            <!-- Item 1: IP & Ownership -->
-            <div class="accordion-item is-open">
-              <button class="accordion-header" type="button" aria-expanded="true">
-                <div class="faq-header-content">
-                  <span class="faq-num">01</span>
-                  <span class="accordion-title">Who owns the code and intellectual property?</span>
+            <!-- Left Column (Items 01 - 03) -->
+            <div class="faq-col">
+              <!-- Item 1: IP & Ownership -->
+              <div class="accordion-item is-open">
+                <button class="accordion-header" type="button" aria-expanded="true">
+                  <div class="faq-header-content">
+                    <span class="faq-num">01</span>
+                    <span class="accordion-title">Who owns the code and intellectual property?</span>
+                  </div>
+                  <div class="faq-pill-tag">100% Client IP</div>
+                  <div class="faq-chevron-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                </button>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <p><strong>You retain 100% unconditional ownership of all source code, Figma design files, database schemas, and intellectual property from day one.</strong> Complete GitHub repositories and infrastructure keys are transferred directly to your organization with zero studio lock-in or recurring licensing fees.</p>
+                  </div>
                 </div>
-                <div class="faq-pill-tag">100% Client IP</div>
-                <div class="faq-chevron-circle" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </div>
+
+              <!-- Item 2: Kickoff & Velocity -->
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="faq-header-content">
+                    <span class="faq-num">02</span>
+                    <span class="accordion-title">How fast can we kick off a new build?</span>
+                  </div>
+                  <div class="faq-pill-tag">48h Kickoff</div>
+                  <div class="faq-chevron-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                </button>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <p>We kick off discovery within <strong>48 to 72 hours</strong>. Following a 3-day architectural alignment sprint, core development begins immediately with weekly staging builds and recorded walk-throughs.</p>
+                  </div>
                 </div>
-              </button>
-              <div class="accordion-collapse">
-                <div class="accordion-body">
-                  <p><strong>You retain 100% unconditional ownership of all source code, Figma design files, database schemas, and intellectual property from day one.</strong> Upon final milestone settlement, complete GitHub repositories and infrastructure keys are transferred directly to your organization with zero studio lock-in or recurring licensing fees.</p>
+              </div>
+
+              <!-- Item 3: Tech Stacks -->
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="faq-header-content">
+                    <span class="faq-num">03</span>
+                    <span class="accordion-title">What tech stacks and frameworks do you specialize in?</span>
+                  </div>
+                  <div class="faq-pill-tag">Modern Stacks</div>
+                  <div class="faq-chevron-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                </button>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <p>We engineer production systems using <strong>Next.js, React, TypeScript, Python, Node.js, PostgreSQL, Docker, and AWS</strong>. For mobile, <strong>Flutter &amp; React Native</strong>; for AI, <strong>Claude, OpenAI, LangChain, and vector stores</strong>.</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Item 2: Kickoff & Velocity -->
-            <div class="accordion-item">
-              <button class="accordion-header" type="button" aria-expanded="false">
-                <div class="faq-header-content">
-                  <span class="faq-num">02</span>
-                  <span class="accordion-title">How fast can we kick off a new build?</span>
-                </div>
-                <div class="faq-pill-tag">48h Kickoff</div>
-                <div class="faq-chevron-circle" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </div>
-              </button>
-              <div class="accordion-collapse">
-                <div class="accordion-body">
-                  <p>We kick off discovery within <strong>48 to 72 hours</strong> of mutual agreement. Following a 3-day architectural alignment sprint, core development begins immediately. You receive weekly staging builds and recorded walk-throughs to verify progress with zero guesswork.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item 3: Tech Stacks -->
-            <div class="accordion-item">
-              <button class="accordion-header" type="button" aria-expanded="false">
-                <div class="faq-header-content">
-                  <span class="faq-num">03</span>
-                  <span class="accordion-title">What tech stacks and frameworks do you specialize in?</span>
-                </div>
-                <div class="faq-pill-tag">Modern Stacks</div>
-                <div class="faq-chevron-circle" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </div>
-              </button>
-              <div class="accordion-collapse">
-                <div class="accordion-body">
-                  <p>We engineer production-grade platforms using <strong>Next.js, React, TypeScript, Python, Node.js, PostgreSQL, Redis, Docker, and AWS</strong>. For mobile, we build fluid 120Hz apps with <strong>Flutter and React Native</strong>. For AI, we engineer custom pipelines with <strong>OpenAI API, Claude, LangChain, PyTorch, and Pinecone vector stores</strong>.</p>
+            <!-- Right Column (Items 04 - 06) -->
+            <div class="faq-col">
+              <!-- Item 4: AI Data Privacy & Security -->
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="faq-header-content">
+                    <span class="faq-num">04</span>
+                    <span class="accordion-title">How do you ensure data privacy &amp; security when using AI?</span>
+                  </div>
+                  <div class="faq-pill-tag">Zero-Retention</div>
+                  <div class="faq-chevron-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                </button>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <p>Security is foundational. We implement <strong>Zero-Trust architectures</strong>, role-based access control (RBAC), and AES-256 encryption. Enterprise LLM endpoints are bound by <strong>strict Zero-Data-Retention agreements</strong> so customer data is never trained on.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Item 4: AI Data Privacy & Security -->
-            <div class="accordion-item">
-              <button class="accordion-header" type="button" aria-expanded="false">
-                <div class="faq-header-content">
-                  <span class="faq-num">04</span>
-                  <span class="accordion-title">How do you ensure data privacy &amp; security when using AI?</span>
-                </div>
-                <div class="faq-pill-tag">Zero-Retention</div>
-                <div class="faq-chevron-circle" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </div>
-              </button>
-              <div class="accordion-collapse">
-                <div class="accordion-body">
-                  <p>Security is foundational to our studio. We implement <strong>Zero-Trust architectures</strong>, role-based access control (RBAC), and AES-256 encryption. We utilize enterprise LLM endpoints bound by <strong>strict Zero-Data-Retention agreements</strong>, ensuring your proprietary customer data is never cached or used for model training.</p>
+              <!-- Item 5: Post-Launch Support & Retainers -->
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="faq-header-content">
+                    <span class="faq-num">05</span>
+                    <span class="accordion-title">Do you provide ongoing maintenance and post-launch support?</span>
+                  </div>
+                  <div class="faq-pill-tag">30-Day SLA</div>
+                  <div class="faq-chevron-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                </button>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <p>Every deployment includes a <strong>complimentary 30-day post-launch warranty</strong> covering bug fixes and latency tuning. Following warranty, we offer flexible month-to-month DevOps and feature retainers with guaranteed SLA response times.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Item 5: Post-Launch Support & Retainers -->
-            <div class="accordion-item">
-              <button class="accordion-header" type="button" aria-expanded="false">
-                <div class="faq-header-content">
-                  <span class="faq-num">05</span>
-                  <span class="accordion-title">Do you provide ongoing maintenance and post-launch support?</span>
-                </div>
-                <div class="faq-pill-tag">30-Day SLA</div>
-                <div class="faq-chevron-circle" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </div>
-              </button>
-              <div class="accordion-collapse">
-                <div class="accordion-body">
-                  <p>Every deployment includes a <strong>complimentary 30-day post-launch warranty</strong> covering bug fixes, latency tuning, and dependency updates. Following warranty, we offer flexible month-to-month DevOps and feature retainers with guaranteed SLA response times.</p>
+              <!-- Item 6: Milestone Billing -->
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="faq-header-content">
+                    <span class="faq-num">06</span>
+                    <span class="accordion-title">How does deliverable milestone billing work?</span>
+                  </div>
+                  <div class="faq-pill-tag">Milestone-Based</div>
+                  <div class="faq-chevron-circle" aria-hidden="true">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                </button>
+                <div class="accordion-collapse">
+                  <div class="accordion-body">
+                    <p>We work on transparent, deliverable-based milestone stages. You test and approve functional staging deployments and code commits before milestone funds are released—with <strong>zero runaway hourly billing</strong> or surprise invoices.</p>
+                  </div>
                 </div>
               </div>
             </div>
