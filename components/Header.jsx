@@ -697,16 +697,6 @@ export default function Header() {
                   Insights
                 </Link>
               </li>
-
-              {/* 5. Contact Us */}
-              <li>
-                <Link
-                  href="/contact"
-                  className={`nav-link ${pathname === "/contact" ? "active" : ""}`}
-                >
-                  Contact Us
-                </Link>
-              </li>
             </ul>
 
             {/* Action: Book a Call & AI/Cyber Badge */}
@@ -964,15 +954,6 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
               >
                 Insights
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="mobile-nav-link"
-                onClick={() => setMobileOpen(false)}
-              >
-                Contact Us
               </Link>
             </li>
           </ul>
