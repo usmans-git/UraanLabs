@@ -122,38 +122,14 @@ export default function Header() {
                 </Link>
               </li>
 
-              {/* 1. About Us Dropdown */}
-              <li className="nav-item has-dropdown">
+              {/* 1. About Us Direct Link */}
+              <li>
                 <Link
                   href="/about"
-                  className={`nav-link dropdown-toggle ${
-                    pathname === "/about" ? "active" : ""
-                  }`}
-                  aria-haspopup="true"
+                  className={`nav-link ${pathname === "/about" ? "active" : ""}`}
                 >
-                  <span>About Us</span>
-                  <span className="chevron" aria-hidden="true">&#9662;</span>
+                  About Us
                 </Link>
-                <div className="dropdown-menu dropdown-simple">
-                  <Link href="/about#story" className="dropdown-item">
-                    <span className="dropdown-title">Our Story</span>
-                    <small className="dropdown-desc">
-                      Why UraanTech was built and our mission.
-                    </small>
-                  </Link>
-                  <Link href="/about#why-uraantech" className="dropdown-item">
-                    <span className="dropdown-title">Why UraanTech</span>
-                    <small className="dropdown-desc">
-                      Our 4 core engineering differentiators.
-                    </small>
-                  </Link>
-                  <Link href="/careers" className="dropdown-item">
-                    <span className="dropdown-title">Careers</span>
-                    <small className="dropdown-desc">
-                      Join our senior technical &amp; creative studio.
-                    </small>
-                  </Link>
-                </div>
               </li>
 
               {/* 2. Services Mega Menu (5 Pillars, 34 Child Services) */}
@@ -772,42 +748,14 @@ export default function Header() {
               </Link>
             </li>
 
-            <li
-              className={`mobile-acc-item ${
-                openMobileAccordions.about ? "is-open" : ""
-              }`}
-            >
-              <button
-                className="mobile-acc-toggle"
-                type="button"
-                onClick={() => toggleAccordion("about")}
+            <li>
+              <Link
+                href="/about"
+                className={`mobile-nav-link ${pathname === "/about" ? "active" : ""}`}
+                onClick={() => setMobileOpen(false)}
               >
-                <span>About Us</span>
-                <span className="acc-arrow">&#9662;</span>
-              </button>
-              <div className="mobile-acc-panel">
-                <Link
-                  href="/about#story"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Our Story
-                </Link>
-                <Link
-                  href="/about#why-uraantech"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Why UraanTech
-                </Link>
-                <Link
-                  href="/careers"
-                  className="mobile-sublink"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Careers
-                </Link>
-              </div>
+                About Us
+              </Link>
             </li>
 
             <li

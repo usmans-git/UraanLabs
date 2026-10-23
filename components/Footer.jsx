@@ -83,13 +83,13 @@ export default function Footer() {
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-links">
               <li>
+                <Link href="/about">About Us</Link>
+              </li>
+              <li>
                 <Link href="/about#story">Our Story</Link>
               </li>
               <li>
                 <Link href="/about#why-uraantech">Why UraanTech</Link>
-              </li>
-              <li>
-                <Link href="/careers">Careers</Link>
               </li>
               <li>
                 <Link href="/insights">Insights</Link>
