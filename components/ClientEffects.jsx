@@ -78,6 +78,83 @@ export default function ClientEffects() {
 
       const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
+      const showToastNotification = ({ title, message, duration = 3000 }) => {
+        const existing = document.getElementById("uraan-toast-notification");
+        if (existing) existing.remove();
+
+        const toast = document.createElement("div");
+        toast.id = "uraan-toast-notification";
+        toast.style.cssText = `
+          position: fixed;
+          top: 24px;
+          right: 24px;
+          z-index: 9999999;
+          max-width: 420px;
+          width: calc(100vw - 48px);
+          background: rgba(10, 16, 32, 0.95);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(16, 185, 129, 0.45);
+          box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.85), 0 0 30px rgba(16, 185, 129, 0.25);
+          border-radius: 16px;
+          overflow: hidden;
+          transform: translateX(120%);
+          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+          opacity: 0;
+          pointer-events: auto;
+        `;
+
+        toast.innerHTML = `
+          <div style="display: flex; align-items: flex-start; gap: 14px; padding: 18px 20px;">
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(16, 185, 129, 0.16); border: 1.5px solid #10B981; display: flex; align-items: center; justify-content: center; color: #10B981; font-size: 1.2rem; flex-shrink: 0; box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);">
+              ✓
+            </div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="font-family: var(--font-display, 'Sora', sans-serif); font-weight: 700; color: #FFFFFF; font-size: 0.96rem; margin-bottom: 4px; letter-spacing: -0.01em;">
+                ${title}
+              </div>
+              <div style="color: #94A3B8; font-size: 0.84rem; line-height: 1.45;">
+                ${message}
+              </div>
+            </div>
+            <button type="button" aria-label="Close" style="background: none; border: none; color: #64748B; font-size: 1.35rem; line-height: 1; cursor: pointer; padding: 0 4px; margin-top: -2px; transition: color 0.2s;">&times;</button>
+          </div>
+          <div style="height: 3px; background: rgba(255, 255, 255, 0.08); width: 100%; position: relative;">
+            <div id="uraan-toast-bar" style="height: 100%; width: 100%; background: linear-gradient(90deg, #10B981, #38BDF8); transform-origin: left; transition: transform ${duration}ms linear;"></div>
+          </div>
+        `;
+
+        document.body.appendChild(toast);
+
+        const closeBtn = toast.querySelector("button");
+        if (closeBtn) {
+          closeBtn.addEventListener("click", () => {
+            toast.style.transform = "translateX(120%)";
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 400);
+          });
+        }
+
+        requestAnimationFrame(() => {
+          toast.style.transform = "translateX(0)";
+          toast.style.opacity = "1";
+          const bar = toast.querySelector("#uraan-toast-bar");
+          if (bar) {
+            requestAnimationFrame(() => {
+              bar.style.transform = "scaleX(0)";
+            });
+          }
+        });
+
+        setTimeout(() => {
+          if (toast.parentNode) {
+            toast.style.transform = "translateX(120%)";
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 400);
+          }
+        }, duration);
+      };
+
       const submitHandler = async (e) => {
         e.preventDefault();
 
@@ -137,13 +214,13 @@ export default function ClientEffects() {
         const originalBtnHtml = submitBtn ? submitBtn.innerHTML : "";
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.innerHTML = `<span>Saving to Google Sheet...</span> <span style="display:inline-block; animation: spin 1s linear infinite;">⏳</span>`;
+          submitBtn.innerHTML = `<span>Submitting...</span> <span style="display:inline-block; width:14px; height:14px; border:2px solid rgba(255,255,255,0.3); border-top-color:#38BDF8; border-radius:50%; animation:spin 0.8s linear infinite; vertical-align:middle; margin-left:6px;"></span>`;
         }
 
         const phoneVal = phoneInput ? phoneInput.value.trim() : "";
 
         try {
-          // Direct submission to Next.js API route (saves directly to Google Sheet)
+          // Direct submission to Next.js API route
           const res = await fetch("/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -153,7 +230,7 @@ export default function ClientEffects() {
               phone: phoneVal,
               service: serviceVal,
               message: msgVal,
-              source: typeof window !== "undefined" ? window.location.href : "https://uraantech.vercel.app",
+              source: typeof window !== "undefined" ? window.location.href : "https://uraantech.online",
             }),
           });
 
@@ -161,17 +238,28 @@ export default function ClientEffects() {
             throw new Error(`Server returned ${res.status}`);
           }
 
-          // Show prominent success feedback
+          if (submitBtn) {
+            submitBtn.innerHTML = `<span>Submitted ✓</span>`;
+          }
+
+          // Trigger side toast notification
+          showToastNotification({
+            title: "Query Submitted Successfully!",
+            message: `Thank you, ${nameVal}. Your inquiry has been received. Redirecting to Homepage...`,
+            duration: 2500,
+          });
+
+          // Show in-form feedback
           if (formSuccess) {
             formSuccess.style.display = "block";
             formSuccess.innerHTML = `
               <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 10px; padding: 18px 20px; color: #FFFFFF; text-align: left; margin-top: 14px;">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
                   <span style="font-size: 1.25rem; color: #34D399;">✔</span>
-                  <strong style="color: #34D399; font-size: 1.05rem;">Inquiry Recorded Successfully!</strong>
+                  <strong style="color: #34D399; font-size: 1.05rem;">Query Submitted Successfully!</strong>
                 </div>
                 <p style="font-size: 0.88rem; color: #E2E8F0; line-height: 1.5; margin: 0;">
-                  Thank you, <strong>${nameVal}</strong>. Your project details have been recorded in our Google Sheet. Redirecting to Homepage...
+                  Thank you, <strong>${nameVal}</strong>. Your project inquiry has been received. Redirecting to Homepage...
                 </p>
               </div>
             `;
@@ -180,10 +268,10 @@ export default function ClientEffects() {
           form.reset();
           generateCaptcha();
 
-          // Redirect to Homepage
+          // Redirect to Homepage after allowing user to view the toast
           setTimeout(() => {
             window.location.href = "/";
-          }, 1200);
+          }, 2000);
         } catch (err) {
           console.error("Submission error:", err);
           if (submitBtn) {
