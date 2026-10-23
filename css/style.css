@@ -5504,7 +5504,328 @@ body.chatbot-is-open .floating-whatsapp {
   font-weight: 600;
 }
 
-/* Founder's Executive Letter Card */
+/* ==========================================================================
+   MODERN COMPACT FOUNDER SPOTLIGHT CARD
+   ========================================================================== */
+.founder-spotlight-card {
+  position: relative;
+  background: linear-gradient(145deg, #FCFBF9 0%, #F7F3EB 100%);
+  border: 1.5px solid #E8E2D8;
+  border-radius: 20px;
+  padding: 30px 34px;
+  box-shadow: 0 16px 36px -10px rgba(45, 35, 25, 0.07), 0 2px 8px rgba(45, 35, 25, 0.03);
+  overflow: hidden;
+  max-width: 880px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.founder-spotlight-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(2, 132, 199, 0.35);
+  box-shadow: 0 22px 48px -10px rgba(45, 35, 25, 0.1), 0 0 25px rgba(2, 132, 199, 0.08);
+}
+
+.founder-card-glow {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, rgba(217, 180, 130, 0.08) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.founder-spotlight-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #E8E2D8;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.founder-avatar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.founder-avatar-frame {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.founder-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 18px;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 8px 20px rgba(45, 35, 25, 0.12);
+  display: block;
+}
+
+.founder-status-indicator {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #10B981;
+  border: 2.5px solid #FCFBF9;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+.founder-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.founder-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.founder-name {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: #1C1917;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.founder-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0284C7;
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.founder-role-sub {
+  font-size: 0.82rem;
+  color: #78716C;
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.founder-availability-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #F5EFE6;
+  border: 1px solid #E8E2D8;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #44403C;
+  letter-spacing: 0.06em;
+}
+
+.status-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.9);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.founder-statement {
+  position: relative;
+  z-index: 1;
+  padding: 18px 0 14px;
+}
+
+.founder-quote {
+  font-size: 1.02rem !important;
+  line-height: 1.7 !important;
+  color: #332F2B !important;
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+}
+
+.founder-guarantees-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 14px 0 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.founder-guarantee-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(245, 239, 230, 0.65);
+  border: 1px solid #E8E2D8;
+  border-radius: 10px;
+  padding: 11px 13px;
+  transition: all 0.2s ease;
+}
+
+.founder-guarantee-item:hover {
+  background: #F5EFE6;
+  border-color: rgba(2, 132, 199, 0.3);
+  transform: translateY(-1px);
+}
+
+.guarantee-icon {
+  font-size: 1.05rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.guarantee-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.guarantee-text strong {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1C1917;
+  line-height: 1.2;
+}
+
+.guarantee-text span {
+  font-size: 0.74rem;
+  color: #57534E;
+  line-height: 1.35;
+}
+
+.founder-spotlight-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #E8E2D8;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.founder-signature-mark {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.sig-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1C1917;
+  letter-spacing: -0.01em;
+}
+
+.sig-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #78716C;
+}
+
+.founder-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.founder-whatsapp-btn {
+  background: #F5EFE6 !important;
+  color: #1C1917 !important;
+  border: 1px solid #E8E2D8 !important;
+  font-size: 0.82rem !important;
+  padding: 8px 16px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+}
+
+.founder-whatsapp-btn:hover {
+  background: #EAE3D6 !important;
+  border-color: #0284C7 !important;
+  color: #0284C7 !important;
+}
+
+.founder-whatsapp-btn .whatsapp-icon {
+  font-size: 1rem;
+}
+
+.founder-actions .btn-shimmer {
+  font-size: 0.82rem !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+}
+
+@media (max-width: 860px) {
+  .founder-guarantees-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .founder-spotlight-card {
+    padding: 22px 18px;
+  }
+  .founder-spotlight-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .founder-spotlight-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .founder-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .founder-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Founder's Executive Letter Card (Legacy fallback) */
 .founder-letter-card {
   background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
   border: 1.5px solid #E8E2D8;
